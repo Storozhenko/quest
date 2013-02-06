@@ -7,8 +7,6 @@ import junit.framework.TestSuite;
 import com.sam.quest.dao.*;
 import com.sam.quest.entity.*;
 
-import java.nio.file.attribute.UserPrincipalLookupService;
-
 public class AppTest extends TestCase {
     /**
      * Create the test case
@@ -29,9 +27,13 @@ public class AppTest extends TestCase {
     public void testApp() {
         DAOFactory fact = new DAOFactory();
         HiberDAOFactory hibfact = fact.getFactory(1);
-        UserDAO user = hibfact.getUserDAO();
-        Users
-        user.insertUser();
-        assertTrue( /*forms.addForm() */ true);
+        UserDAO userdao = hibfact.getUserDAO();
+        Users user = new Users();
+        user.setUsername("test");
+        user.setPassword("test");
+        user.setType("user");
+        user.setLang("eng");
+        boolean res = userdao.insertUser();
+        assertTrue(res);
     }
 }
