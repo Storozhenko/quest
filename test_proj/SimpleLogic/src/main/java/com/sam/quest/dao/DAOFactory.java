@@ -4,6 +4,8 @@ public abstract class DAOFactory {
     public static final int HIBERNATE = 1;
     public static final int JDBC = 2;
 
+    public abstract UserDAO getUserDAO();
+
     public static DAOFactory getFactory(int factoryType) {
 
         switch (factoryType) {
@@ -15,5 +17,4 @@ public abstract class DAOFactory {
                 return null;
         }
     }
-
 }
