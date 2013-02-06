@@ -3,23 +3,23 @@ package com.sam.quest.entity;
 public class Users {
     private String username;
     private String password;
-    private String user_type;
-    private String user_lang;
+    private String userType;
+    private String userLang;
 
-    public String getUser_type() {
-        return user_type;
+    public String getUserType() {
+        return userType;
     }
 
-    public void setUser_type(String user_type) {
-        this.user_type = user_type;
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 
-    public String getUser_lang() {
-        return user_lang;
+    public String getUserLang() {
+        return userLang;
     }
 
-    public void setUser_lang(String user_lang) {
-        this.user_lang = user_lang;
+    public void setUserLang(String userLang) {
+        this.userLang = userLang;
     }
 
     public String getUsername() {

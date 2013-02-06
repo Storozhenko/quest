@@ -21,8 +21,8 @@ public class JDBCUserDAO implements UserDAO {
             prepStmt = con.prepareStatement("insert into forms_db.users values (default, ?, ?, ?, ?);");
             prepStmt.setString(1, user.getUsername());
             prepStmt.setString(2, user.getPassword());
-            prepStmt.setString(3, user.getUser_type());
-            prepStmt.setString(4, user.getUser_lang());
+            prepStmt.setString(3, user.getUserType());
+            prepStmt.setString(4, user.getUserLang());
             prepStmt.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -61,8 +61,8 @@ public class JDBCUserDAO implements UserDAO {
                     "where username=?;");
             prepStmt.setString(4, user.getUsername());
             prepStmt.setString(1, user.getPassword());
-            prepStmt.setString(2, user.getUser_type());
-            prepStmt.setString(3, user.getUser_lang());
+            prepStmt.setString(2, user.getUserType());
+            prepStmt.setString(3, user.getUserLang());
             prepStmt.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
