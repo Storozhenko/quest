@@ -233,7 +233,7 @@
       <file leaf-file-name="AppTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="540" selection-end="540" vertical-scroll-proportion="0.5164034">
+            <state line="25" column="20" selection-start="540" selection-end="540" vertical-scroll-proportion="0.5164034">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -305,10 +305,10 @@
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/HiberUserDAO.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCUserDAO.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/DAOFactory.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCDAOFactory.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/HiberDAOFactory.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
       </list>
     </option>
   </component>
@@ -800,30 +800,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCUserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="45" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="29" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCDAOFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="44" selection-start="77" selection-end="77" vertical-scroll-proportion="0.08478803">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/DAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -835,9 +814,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCUserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="45" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/DAOFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="42" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/HiberUserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="32" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="29" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -851,7 +851,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="540" selection-end="540" vertical-scroll-proportion="0.5164034">
+        <state line="25" column="20" selection-start="540" selection-end="540" vertical-scroll-proportion="0.5164034">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
