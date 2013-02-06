@@ -1,7 +1,6 @@
 package com.sam.quest.dao.factory;
 
-import com.sam.quest.dao.JDBCUserDAO;
-import com.sam.quest.dao.UserDAO;
+import com.sam.quest.dao.*;
 
 import java.sql.*;
 import javax.naming.*;
@@ -43,5 +42,9 @@ public class JDBCDAOFactory extends DAOFactory{
 
     public UserDAO getUserDAO() {
         return new JDBCUserDAO();
+    }
+
+    public FormDAO getFormDAO() {
+        return new JDBCFormDAO();
     }
 }

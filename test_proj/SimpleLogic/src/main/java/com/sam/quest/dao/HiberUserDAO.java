@@ -10,7 +10,7 @@ public class HiberUserDAO implements UserDAO {
     public boolean deleteUser(Users user){
         return true;
     }
-    public Users findUser(int userId){
+    public Users findUser(long userId){
         return new Users();
     }
     public boolean updateUser(Users user){
