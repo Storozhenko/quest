@@ -49,7 +49,7 @@ public class JDBCUserDAO implements UserDAO {
         return res;
     }
 
-    public Users findUser(int user_id){
+    public Users findUser(int userId){
         return new Users();
     }
 
