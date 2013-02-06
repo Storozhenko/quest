@@ -32,6 +32,6 @@ public class AppTest extends TestCase {
         user.setPassword("test");
         user.setUser_type("user");
         user.setUser_lang("eng");
-        assertTrue(userdao.insertUser(user));
+        assertTrue(userdao.deleteUser(user));
     }
 }

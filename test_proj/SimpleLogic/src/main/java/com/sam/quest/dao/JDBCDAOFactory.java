@@ -14,9 +14,7 @@ public class JDBCDAOFactory extends DAOFactory{
     public static Connection createConnection() throws NamingException {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            //DataSource ds = (DataSource)iniContext.lookup("java:/comp/env/jdbc/forms_db");
             con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/forms_db", "root", "123321");
-           //stmt = con.createStatement();
         }
         catch(SQLException e) {
             e.printStackTrace();
