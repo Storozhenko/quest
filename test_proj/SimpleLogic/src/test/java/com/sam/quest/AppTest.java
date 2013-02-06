@@ -25,14 +25,13 @@ public class AppTest extends TestCase {
     }
 
     public void testApp() {
-        DAOFactory hiberFact = DAOFactory.getFactory(DAOFactory.HIBERNATE);
-        UserDAO userdao = hiberFact.getUserDAO();
+        DAOFactory jdbcFact = DAOFactory.getFactory(DAOFactory.JDBC);
+        UserDAO userdao = jdbcFact.getUserDAO();
         Users user = new Users();
         user.setUsername("test");
         user.setPassword("test");
         user.setUser_type("user");
         user.setUser_lang("eng");
-        boolean res = userdao.insertUser(user);
-        assertTrue(res);
+        assertTrue(userdao.insertUser(user));
     }
 }

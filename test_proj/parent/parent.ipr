@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AntConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
+    <defaultAnt bundledAnt="true" />
   </component>
   <component name="ArtifactManager">
     <artifact type="exploded-war" name="SimpleWEB:SimpleWEB exploded">
