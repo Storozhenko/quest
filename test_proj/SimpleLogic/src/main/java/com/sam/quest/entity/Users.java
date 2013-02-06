@@ -1,10 +1,19 @@
 package com.sam.quest.entity;
 
 public class Users {
+    private Long userId;
     private String username;
     private String password;
     private String userType;
     private String userLang;
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
     public String getUserType() {
         return userType;

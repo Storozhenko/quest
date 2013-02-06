@@ -3,9 +3,18 @@ package com.sam.quest.entity;
 import java.util.Date;
 
 public class Forms {
+    private Long formId;
     private String formName;
     private Users userId;
     private Date formDate;
+
+    public Long getFormId() {
+        return formId;
+    }
+
+    public void setFormId(Long formId) {
+        this.formId = formId;
+    }
 
     public String getFormName() {
         return formName;
