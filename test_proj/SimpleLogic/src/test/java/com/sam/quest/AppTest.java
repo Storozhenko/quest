@@ -29,9 +29,9 @@ public class AppTest extends TestCase {
         UserDAO userdao = jdbcFact.getUserDAO();
         Users user = new Users();
         user.setUsername("test");
-        user.setPassword("test");
-        user.setUser_type("user");
+        user.setPassword("new");
+        user.setUser_type("admin");
         user.setUser_lang("eng");
-        assertTrue(userdao.deleteUser(user));
+        assertTrue(userdao.updateUser(user));
     }
 }
