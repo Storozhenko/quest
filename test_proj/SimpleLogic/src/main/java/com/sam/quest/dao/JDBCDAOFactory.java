@@ -6,7 +6,7 @@ import javax.sql.DataSource;
 
 public class JDBCDAOFactory extends DAOFactory{
 
-    static String str;
+    //static String str;
     static Connection con;
     static Statement stmt;
     static ResultSet rs;

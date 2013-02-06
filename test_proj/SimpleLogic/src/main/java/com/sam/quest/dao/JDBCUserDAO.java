@@ -8,21 +8,30 @@ import java.sql.*;
 
 public class JDBCUserDAO implements UserDAO {
 
+    private boolean res;
     private Statement stmt;
     private ResultSet rs;
+    private Connection con;
     private PreparedStatement prepStmt = null;
 
     public boolean insertUser(Users user){
         try {
-            stmt = JDBCDAOFactory.createConnection();
-
+            res = true;
+            con = JDBCDAOFactory.createConnection();
+            prepStmt = con.prepareStatement("insert into forms_db.users values (default, ?, ?, ?, ?)");
+            prepStmt.setString(1, user.getUsername());
+            prepStmt.setString(2, user.getPassword());
+            prepStmt.setString(3, user.getUser_type());
+            prepStmt.setString(4, user.getUser_lang());
+            prepStmt.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
+            res = false;
         } finally {
             JDBCDAOFactory.closeConnection();
         }
 
-        return true;
+        return res;
     }
     public boolean deleteUser(Users user){
         return true;
