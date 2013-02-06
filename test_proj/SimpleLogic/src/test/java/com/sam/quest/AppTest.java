@@ -4,8 +4,10 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-//import com.sam.quest.dao.*;
-//import com.sam.quest.entity.*;
+import com.sam.quest.dao.*;
+import com.sam.quest.entity.*;
+
+import java.nio.file.attribute.UserPrincipalLookupService;
 
 public class AppTest extends TestCase {
     /**
@@ -25,7 +27,11 @@ public class AppTest extends TestCase {
     }
 
     public void testApp() {
-        //DAOForm forms = new DAOHiberForm();
+        DAOFactory fact = new DAOFactory();
+        HiberDAOFactory hibfact = fact.getFactory(1);
+        UserDAO user = hibfact.getUserDAO();
+        Users
+        user.insertUser();
         assertTrue( /*forms.addForm() */ true);
     }
 }
