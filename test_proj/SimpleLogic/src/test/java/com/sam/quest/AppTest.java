@@ -1,5 +1,6 @@
 package com.sam.quest;
 
+import com.sam.quest.dao.factory.DAOFactory;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

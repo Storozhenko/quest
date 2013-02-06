@@ -1,4 +1,6 @@
-package com.sam.quest.dao;
+package com.sam.quest.dao.factory;
+
+import com.sam.quest.dao.UserDAO;
 
 public abstract class DAOFactory {
     public static final int HIBERNATE = 1;

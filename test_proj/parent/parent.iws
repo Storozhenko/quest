@@ -26,7 +26,7 @@
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AppTest.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360147472769" ignored="false" />
-    <file path="/fragment.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360141014065" ignored="false" />
+    <file path="/fragment.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360147928036" ignored="false" />
     <file path="/DAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360141160162" ignored="false" />
     <file path="/HiberDAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360139931393" ignored="false" />
     <file path="/JDBCDAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360145369796" ignored="false" />
@@ -233,10 +233,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="52" selection-start="533" selection-end="533" vertical-scroll-proportion="0.47509113">
+            <state line="24" column="46" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -244,10 +244,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JDBCUserDAO.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="JDBCUserDAO.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCUserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="70" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.0">
+            <state line="13" column="62" selection-start="287" selection-end="287" vertical-scroll-proportion="0.23572296">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -256,12 +256,32 @@
         </entry>
       </file>
       <file leaf-file-name="JDBCDAOFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCDAOFactory.java">
+        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/factory/JDBCDAOFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="9" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+            <state line="25" column="9" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HiberDAOFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/factory/HiberDAOFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="22" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAOFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/factory/DAOFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="22" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -310,6 +330,7 @@
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Forms.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCUserDAO.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/factory/HiberDAOFactory.java" />
       </list>
     </option>
   </component>
@@ -524,6 +545,9 @@
       <recent name="com.sam.quest.dao" />
       <recent name="com.sam.quest.entity" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sam.quest.dao.factory" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -657,7 +681,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22528364" sideWeight="0.6702002" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20745543" sideWeight="0.6702002" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -809,20 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/HiberDAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="142" selection-end="142" vertical-scroll-proportion="0.10328068">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/DAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="61" selection-start="247" selection-end="247" vertical-scroll-proportion="0.18590522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="50" selection-start="244" selection-end="244" vertical-scroll-proportion="0.06196841">
@@ -837,23 +847,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/HiberUserDAO.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="32" selection-start="111" selection-end="111" vertical-scroll-proportion="0.10328068">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Forms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCDAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="9" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+        <state line="24" column="46" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -867,18 +863,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCUserDAO.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/HiberUserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="70" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.0">
+        <state line="5" column="32" selection-start="111" selection-end="111" vertical-scroll-proportion="0.10598504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/factory/HiberDAOFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="22" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/factory/DAOFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="52" selection-start="533" selection-end="533" vertical-scroll-proportion="0.47509113">
+        <state line="12" column="22" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Forms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="35" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/factory/JDBCDAOFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="9" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/JDBCUserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="62" selection-start="287" selection-end="287" vertical-scroll-proportion="0.23572296">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

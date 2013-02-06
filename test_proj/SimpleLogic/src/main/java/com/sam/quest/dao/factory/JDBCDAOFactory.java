@@ -1,8 +1,10 @@
-package com.sam.quest.dao;
+package com.sam.quest.dao.factory;
+
+import com.sam.quest.dao.JDBCUserDAO;
+import com.sam.quest.dao.UserDAO;
 
 import java.sql.*;
 import javax.naming.*;
-import javax.sql.DataSource;
 
 public class JDBCDAOFactory extends DAOFactory{
 

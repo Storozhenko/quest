@@ -1,9 +1,9 @@
 package com.sam.quest.dao;
 
 
+import com.sam.quest.dao.factory.JDBCDAOFactory;
 import com.sam.quest.entity.Users;
 
-import javax.naming.NamingException;
 import java.sql.*;
 
 public class JDBCUserDAO implements UserDAO {
