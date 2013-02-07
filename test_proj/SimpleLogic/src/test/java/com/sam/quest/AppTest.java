@@ -47,11 +47,9 @@ public class AppTest extends TestCase {
         Date date = new Date(System.currentTimeMillis());
         user.setUserId(1);
         Forms form = new Forms();
-        form.setFormName("form");
+        form.setFormName("form2");
         form.setUserId(user);
         form.setFormDate(date);
         assertTrue(formdao.insertForm(form));
-
-
     }
 }
