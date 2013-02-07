@@ -45,9 +45,9 @@ public class AppTest extends TestCase {
         user = userdao.findUser(1);
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         Date date = new Date(System.currentTimeMillis());
-        user.setUserId(1);
+        user.setUserId(new Long(1));
         Forms form = new Forms();
-        form.setFormName("form2");
+        form.setFormName("form3");
         form.setUserId(user);
         form.setFormDate(date);
         assertTrue(formdao.insertForm(form));

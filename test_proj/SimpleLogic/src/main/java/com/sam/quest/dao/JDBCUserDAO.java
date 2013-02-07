@@ -58,10 +58,10 @@ public class JDBCUserDAO implements UserDAO {
             rs = stmt.executeQuery("select * from forms_db.users where user_id=" + String.valueOf(userId) + ";");
             while (rs.next()) {
                 user.setUserId(rs.getLong("user_id"));
-            user.setUsername(rs.getString("username"));
-            user.setPassword(rs.getString("password"));
-            user.setUserType(rs.getString("user_type"));
-            user.setUserLang(rs.getString("user_lang"));
+                user.setUsername(rs.getString("username"));
+                user.setPassword(rs.getString("password"));
+                user.setUserType(rs.getString("user_type"));
+                user.setUserLang(rs.getString("user_lang"));
             }
         } catch (Exception e) {
             e.printStackTrace();

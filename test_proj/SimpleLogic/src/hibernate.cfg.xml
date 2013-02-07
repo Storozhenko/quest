@@ -25,6 +25,7 @@
   		<property name="hibernate.c3p0.idle_test_period">3000</property>
       
       <!-- Mapping files -->
+        <mapping class="com.sam.quest.entity.Users"/>
 
     </session-factory>
 

@@ -1,17 +1,29 @@
 package com.sam.quest.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="users")
 public class Users {
-    private long userId;
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="user_id")
+    private Long userId;
+    @Column(name="username")
     private String username;
+    @Column(name="password")
     private String password;
+    @Column(name="user_type")
     private String userType;
+    @Column(name="user_lang")
     private String userLang;
 
-    public long getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

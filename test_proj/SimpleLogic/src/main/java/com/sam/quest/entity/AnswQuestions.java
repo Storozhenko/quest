@@ -1,9 +1,18 @@
 package com.sam.quest.entity;
 
 public class AnswQuestions {
+    private Long answQuestId;
     private AnswForms answId;
     private Questions questionId;
     private String userAnswer;
+
+    public Long getAnswQuestId() {
+        return answQuestId;
+    }
+
+    public void setAnswQuestId(Long answQuestId) {
+        this.answQuestId = answQuestId;
+    }
 
     public AnswForms getAnswId() {
         return answId;

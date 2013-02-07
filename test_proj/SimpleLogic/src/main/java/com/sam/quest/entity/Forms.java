@@ -2,6 +2,10 @@ package com.sam.quest.entity;
 
 import java.util.Date;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="forms")
 public class Forms {
     private Long formId;
     private String formName;
