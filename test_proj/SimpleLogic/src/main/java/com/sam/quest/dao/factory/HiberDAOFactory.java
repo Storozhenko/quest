@@ -2,8 +2,26 @@ package com.sam.quest.dao.factory;
 
 import com.sam.quest.dao.*;
 import com.sam.quest.dao.hibernate.*;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
 
 public class HiberDAOFactory extends DAOFactory{
+
+    private static SessionFactory sessionFactory;
+
+    static {
+        try {
+            //creates the session factory from hibernate.cfg.xml
+            sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
+        } catch (ExceptionInInitializerError ex) {
+            System.err.println("Initial SessionFactory creation failed: " + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
 
     public UserDAO getUserDAO() {
         return new HiberUserDAO();

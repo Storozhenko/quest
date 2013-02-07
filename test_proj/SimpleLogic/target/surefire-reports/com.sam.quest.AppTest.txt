@@ -1,4 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: com.sam.quest.AppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.077 sec
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.11 sec <<< FAILURE!
+testApp(com.sam.quest.AppTest)  Time elapsed: 1.094 sec  <<< ERROR!
+java.lang.ExceptionInInitializerError
+	at com.sam.quest.dao.factory.DAOFactory.getFactory(DAOFactory.java:20)
+	at com.sam.quest.AppTest.testApp(AppTest.java:34)
+Caused by: org.hibernate.HibernateException: /hibernate.cfg.xml not found
+	at org.hibernate.util.ConfigHelper.getResourceAsStream(ConfigHelper.java:147)
+	at org.hibernate.cfg.Configuration.getConfigurationInputStream(Configuration.java:1411)
+	at org.hibernate.cfg.Configuration.configure(Configuration.java:1433)
+	at org.hibernate.cfg.Configuration.configure(Configuration.java:1420)
+	at com.sam.quest.dao.factory.HiberDAOFactory.<clinit>(HiberDAOFactory.java:15)
+	... 30 more

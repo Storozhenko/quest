@@ -31,8 +31,11 @@ public class AppTest extends TestCase {
 
     public void testApp() {
         DAOFactory jdbcFact = DAOFactory.getFactory(DAOFactory.JDBC);
+        DAOFactory hibFact = DAOFactory.getFactory(DAOFactory.HIBERNATE);
         UserDAO userdao = jdbcFact.getUserDAO();
+        UserDAO userhib = hibFact.getUserDAO();
         FormDAO formdao = jdbcFact.getFormDAO();
+
         Users user = new Users();
         user.setUsername("test");
         user.setPassword("new");
@@ -40,6 +43,10 @@ public class AppTest extends TestCase {
         user.setUserLang("eng");
         user.setUserId(new Long(1));
         assertTrue(userdao.updateUser(user));
+
+        user.setUsername("cyclone");
+        user.setPassword("test");
+        assertTrue(userhib.insertUser(user));
 
         user = userdao.findUser(1);
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
