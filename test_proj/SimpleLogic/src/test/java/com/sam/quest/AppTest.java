@@ -46,9 +46,9 @@ public class AppTest extends TestCase {
 
         user.setUsername("cyclone");
         user.setPassword("test");
-        assertTrue(userhib.insertUser(user));
+        //assertTrue(userhib.insertUser(user));
 
-        user = userdao.findUser(1);
+        user = userhib.findUser(1);
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         Date date = new Date(System.currentTimeMillis());
         Forms form = new Forms();
