@@ -7,9 +7,17 @@ import javax.persistence.*;
 @Entity
 @Table(name="forms")
 public class Forms {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="form_id")
     private Long formId;
+    @Column(name="form_name")
     private String formName;
+    @ManyToOne(cascade={CascadeType.REFRESH}, fetch=FetchType.EAGER)
+    @JoinColumn(name="user_id")
     private Users userId;
+    @Column(name="form_name")
     private Date formDate;
 
     public Long getFormId() {

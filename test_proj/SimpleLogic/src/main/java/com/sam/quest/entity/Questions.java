@@ -1,9 +1,20 @@
 package com.sam.quest.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="questions")
 public class Questions {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="question_id")
     private Long questionId;
+    @Column(name="question_name")
     private String questionName;
+    @Column(name="question_answer")
     private String questionAnswer;
+    @Column(name="question_type")
     private String questionType;
 
     public Long getQuestionId() {
