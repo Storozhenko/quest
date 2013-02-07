@@ -11,11 +11,10 @@ public class HiberDAOFactory extends DAOFactory{
 
     static {
         try {
-            //creates the session factory from hibernate.cfg.xml
             sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
         } catch (Exception ex) {
             System.err.println("Initial SessionFactory creation failed: " + ex);
-            //throw new ExceptionInInitializerError(ex);
+            //throw new Exception(ex);
         }
     }
 
@@ -23,27 +22,16 @@ public class HiberDAOFactory extends DAOFactory{
         return sessionFactory;
     }
 
-    public UserDAO getUserDAO() {
-        return new HiberUserDAO();
+    public MultiDAO getMultiDAO() {
+        return new HiberMultiDAO();
     }
 
-    public FormDAO getFormDAO() {
-        return new HiberFormDAO();
+    public MultiDAO getFormDAO() {
+        return new HiberMultiDAO();
     }
 
-    public QuestionDAO getQuestionDAO() {
-        return new HiberQuestionDAO();
+    public MultiDAO getUserDAO() {
+        return new HiberMultiDAO();
     }
 
-    public AnswFormDAO getAnswFormDAO() {
-        return new HiberAnswFormDAO();
-    }
-
-    public AnswQuestionDAO getAnswQuestionDAO() {
-        return new HiberAnswQuestionDAO();
-    }
-
-    public FormDataDAO getFormDataDAO() {
-        return new HiberFormDataDAO();
-    }
 }

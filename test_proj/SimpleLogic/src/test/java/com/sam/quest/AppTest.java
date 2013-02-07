@@ -8,6 +8,7 @@ import junit.framework.TestSuite;
 import com.sam.quest.dao.*;
 import com.sam.quest.entity.*;
 import java.util.Date;
+import java.sql.Timestamp;
 
 public class AppTest extends TestCase {
     /**
@@ -29,10 +30,12 @@ public class AppTest extends TestCase {
     public void testApp() {
         DAOFactory jdbcFact = DAOFactory.getFactory(DAOFactory.JDBC);
         DAOFactory hibFact = DAOFactory.getFactory(DAOFactory.HIBERNATE);
-        UserDAO userdao = jdbcFact.getUserDAO();
-        UserDAO userhib = hibFact.getUserDAO();
-        FormDAO formdao = jdbcFact.getFormDAO();
-        FormDAO formhib = hibFact.getFormDAO();
+
+        MultiDAO<Users> userdao = jdbcFact.getUserDAO();
+        MultiDAO<Users> userhib = hibFact.getMultiDAO();
+        MultiDAO<Forms> formdao = jdbcFact.getFormDAO();
+        MultiDAO<Forms> formhib = hibFact.getFormDAO();
+        MultiDAO<AnswForms> answhib = hibFact.getMultiDAO();
 
         Users user = new Users();
         user.setUsername("test");
@@ -40,22 +43,29 @@ public class AppTest extends TestCase {
         user.setUserType("admin");
         user.setUserLang("eng");
         user.setUserId(new Long(1));
-        assertTrue(userdao.updateUser(user));
+        assertTrue(userdao.updateRecord(user));
 
         user.setUsername("admin");
         user.setPassword("test");
-        assertTrue(userhib.insertUser(user));
+        //assertTrue(userhib.insertUser(user));
 
-        user = userhib.findUser(1);
+        user = userhib.findRecord(1, new Users());
         Date date = new Date(System.currentTimeMillis());
         Forms form = new Forms();
         form.setFormName("form");
         form.setUserId(user);
         form.setFormDate(date);
         form.setFormId(new Long(1));
-        assertTrue(formdao.updateForm(form));
+        assertTrue(formdao.updateRecord(form));
 
-        form = formdao.findForm(1);
-        assertTrue(formhib.updateForm(form));
+        form = formdao.findRecord(1, new Forms());
+        assertTrue(formhib.updateRecord(form));
+
+        Timestamp time = new Timestamp(System.currentTimeMillis());
+        AnswForms answ = new AnswForms();
+        answ.setFormId(form);
+        answ.setUserId(user);
+        answ.setAnswDatetime(time);
+        assertTrue(answhib.insertRecord(answ));
     }
 }

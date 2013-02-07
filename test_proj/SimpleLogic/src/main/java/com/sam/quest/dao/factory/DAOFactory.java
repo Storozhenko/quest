@@ -6,12 +6,9 @@ public abstract class DAOFactory {
     public static final int HIBERNATE = 1;
     public static final int JDBC = 2;
 
-    public abstract UserDAO getUserDAO();
-    public abstract FormDAO getFormDAO();
-    public abstract QuestionDAO getQuestionDAO();
-    public abstract AnswFormDAO getAnswFormDAO();
-    public abstract AnswQuestionDAO getAnswQuestionDAO();
-    public abstract FormDataDAO getFormDataDAO();
+    public abstract MultiDAO getMultiDAO();
+    public abstract MultiDAO getFormDAO();
+    public abstract MultiDAO getUserDAO();
 
     public static DAOFactory getFactory(int factoryType) {
 

@@ -41,27 +41,16 @@ public class JDBCDAOFactory extends DAOFactory{
         }
     }
 
-    public UserDAO getUserDAO() {
+    public MultiDAO getMultiDAO() {
+        return null;
+    }
+
+    public MultiDAO getUserDAO() {
         return new JDBCUserDAO();
     }
 
-    public FormDAO getFormDAO() {
+    public MultiDAO getFormDAO() {
         return new JDBCFormDAO();
     }
 
-    public QuestionDAO getQuestionDAO() {
-        return new JDBCQuestionDAO();
-    }
-
-    public AnswFormDAO getAnswFormDAO() {
-        return new JDBCAnswFormDAO();
-    }
-
-    public AnswQuestionDAO getAnswQuestionDAO() {
-        return new JDBCAnswQuestionDAO();
-    }
-
-    public FormDataDAO getFormDataDAO() {
-        return new JDBCFormDataDAO();
-    }
 }

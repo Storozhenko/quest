@@ -1,7 +1,6 @@
 package com.sam.quest.dao.jdbc;
 
-
-import com.sam.quest.dao.FormDAO;
+import com.sam.quest.dao.*;
 import com.sam.quest.dao.factory.JDBCDAOFactory;
 import com.sam.quest.entity.Forms;
 import com.sam.quest.entity.Users;
@@ -13,7 +12,7 @@ import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-public class JDBCFormDAO implements FormDAO {
+public class JDBCFormDAO<E> implements MultiDAO<E> {
 
     private boolean res;
     private Statement stmt;
@@ -21,9 +20,10 @@ public class JDBCFormDAO implements FormDAO {
     private Connection con;
     private PreparedStatement prepStmt = null;
 
-    public boolean insertForm(Forms form){
+    public boolean insertRecord(Object obj){
         try {
             res = true;
+            Forms form = (Forms)obj;
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             con = JDBCDAOFactory.createConnection();
             prepStmt = con.prepareStatement("insert into forms_db.forms values (default, ?, ?, ?);");
@@ -40,9 +40,10 @@ public class JDBCFormDAO implements FormDAO {
         return res;
     }
 
-    public boolean deleteForm(Forms form){
+    public boolean deleteRecord(Object obj){
         try {
             res = true;
+            Forms form = (Forms)obj;
             con = JDBCDAOFactory.createConnection();
             prepStmt = con.prepareStatement("delete from forms_db.forms where form_name=? ;");
             prepStmt.setString(1, form.getFormName());
@@ -56,7 +57,7 @@ public class JDBCFormDAO implements FormDAO {
         return res;
     }
 
-    public Forms findForm(long formId){
+    public E findRecord(long formId, E obj){
         Forms form = new Forms();
         Users user = new Users();
         try {
@@ -77,12 +78,13 @@ public class JDBCFormDAO implements FormDAO {
         } finally {
             JDBCDAOFactory.closeConnection();
         }
-        return form;
+        return (E)form;
     }
 
-    public boolean updateForm(Forms form){
+    public boolean updateRecord(Object obj){
         try {
             res = true;
+            Forms form = (Forms)obj;
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             con = JDBCDAOFactory.createConnection();
             prepStmt = con.prepareStatement("update forms_db.forms set form_name=?, user_id=?, form_date=? " +

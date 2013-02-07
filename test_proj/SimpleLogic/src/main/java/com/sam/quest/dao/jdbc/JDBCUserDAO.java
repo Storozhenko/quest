@@ -1,13 +1,13 @@
 package com.sam.quest.dao.jdbc;
 
 
-import com.sam.quest.dao.UserDAO;
+import com.sam.quest.dao.MultiDAO;
 import com.sam.quest.dao.factory.JDBCDAOFactory;
 import com.sam.quest.entity.Users;
 
 import java.sql.*;
 
-public class JDBCUserDAO implements UserDAO {
+public class JDBCUserDAO<E> implements MultiDAO<E> {
 
     private boolean res;
     private Statement stmt;
@@ -15,9 +15,10 @@ public class JDBCUserDAO implements UserDAO {
     private Connection con;
     private PreparedStatement prepStmt = null;
 
-    public boolean insertUser(Users user){
+    public boolean insertRecord(Object obj){
         try {
             res = true;
+            Users user = (Users)obj;
             con = JDBCDAOFactory.createConnection();
             prepStmt = con.prepareStatement("insert into forms_db.users values (default, ?, ?, ?, ?);");
             prepStmt.setString(1, user.getUsername());
@@ -34,9 +35,10 @@ public class JDBCUserDAO implements UserDAO {
         return res;
     }
 
-    public boolean deleteUser(Users user){
+    public boolean deleteRecord(Object obj){
         try {
             res = true;
+            Users user = (Users)obj;
             con = JDBCDAOFactory.createConnection();
             prepStmt = con.prepareStatement("delete from forms_db.users where username=? ;");
             prepStmt.setString(1, user.getUsername());
@@ -50,8 +52,8 @@ public class JDBCUserDAO implements UserDAO {
         return res;
     }
 
-    public Users findUser(long userId){
-        Users user = new Users();
+    public E findRecord(long userId, E obj){
+        Users user = (Users)obj;
         try {
             res = true;
             con = JDBCDAOFactory.createConnection();
@@ -70,12 +72,13 @@ public class JDBCUserDAO implements UserDAO {
         } finally {
             JDBCDAOFactory.closeConnection();
         }
-        return user;
+        return (E)user;
     }
 
-    public boolean updateUser(Users user){
+    public boolean updateRecord(Object obj){
         try {
             res = true;
+            Users user = (Users)obj;
             con = JDBCDAOFactory.createConnection();
             prepStmt = con.prepareStatement("update forms_db.users set username=?, password=?, user_type=?, user_lang=? " +
                     "where user_id=?;");
