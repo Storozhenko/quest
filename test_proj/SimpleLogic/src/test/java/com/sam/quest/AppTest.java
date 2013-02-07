@@ -7,9 +7,6 @@ import junit.framework.TestSuite;
 
 import com.sam.quest.dao.*;
 import com.sam.quest.entity.*;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AppTest extends TestCase {
@@ -35,6 +32,7 @@ public class AppTest extends TestCase {
         UserDAO userdao = jdbcFact.getUserDAO();
         UserDAO userhib = hibFact.getUserDAO();
         FormDAO formdao = jdbcFact.getFormDAO();
+        FormDAO formhib = hibFact.getFormDAO();
 
         Users user = new Users();
         user.setUsername("test");
@@ -44,18 +42,20 @@ public class AppTest extends TestCase {
         user.setUserId(new Long(1));
         assertTrue(userdao.updateUser(user));
 
-        user.setUsername("cyclone");
+        user.setUsername("admin");
         user.setPassword("test");
-        //assertTrue(userhib.insertUser(user));
+        assertTrue(userhib.insertUser(user));
 
         user = userhib.findUser(1);
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         Date date = new Date(System.currentTimeMillis());
         Forms form = new Forms();
-        form.setFormName("form_new");
+        form.setFormName("form");
         form.setUserId(user);
         form.setFormDate(date);
         form.setFormId(new Long(1));
         assertTrue(formdao.updateForm(form));
+
+        form = formdao.findForm(1);
+        assertTrue(formhib.updateForm(form));
     }
 }

@@ -4,6 +4,7 @@ package com.sam.quest.dao.jdbc;
 import com.sam.quest.dao.FormDAO;
 import com.sam.quest.dao.factory.JDBCDAOFactory;
 import com.sam.quest.entity.Forms;
+import com.sam.quest.entity.Users;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -56,8 +57,27 @@ public class JDBCFormDAO implements FormDAO {
     }
 
     public Forms findForm(long formId){
-        return new Forms();
-        //stub
+        Forms form = new Forms();
+        Users user = new Users();
+        try {
+            res = true;
+            con = JDBCDAOFactory.createConnection();
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("select * from forms_db.forms where form_id=" + String.valueOf(formId) + ";");
+            while (rs.next()) {
+                form.setFormId(rs.getLong("form_id"));
+                form.setFormName(rs.getString("form_name"));
+                user.setUserId(rs.getLong("user_id"));
+                form.setUserId(user);
+                form.setFormDate(rs.getDate("form_date"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            res = false;
+        } finally {
+            JDBCDAOFactory.closeConnection();
+        }
+        return form;
     }
 
     public boolean updateForm(Forms form){

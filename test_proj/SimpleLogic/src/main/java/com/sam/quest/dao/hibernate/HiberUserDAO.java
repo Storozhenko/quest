@@ -25,6 +25,7 @@ public class HiberUserDAO implements UserDAO {
         }
         return res;
     }
+
     public boolean deleteUser(Users user){
         res = true;
         try {
@@ -39,6 +40,7 @@ public class HiberUserDAO implements UserDAO {
         }
         return res;
     }
+
     public Users findUser(long userId){
         res = true;
         Users user = new Users();
@@ -54,6 +56,7 @@ public class HiberUserDAO implements UserDAO {
         }
         return user;
     }
+
     public boolean updateUser(Users user){
         res = true;
         try {
@@ -68,5 +71,4 @@ public class HiberUserDAO implements UserDAO {
         }
         return res;
     }
-
 }
