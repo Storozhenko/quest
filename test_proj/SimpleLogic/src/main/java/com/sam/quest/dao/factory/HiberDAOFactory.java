@@ -11,4 +11,8 @@ public class HiberDAOFactory extends DAOFactory{
     public FormDAO getFormDAO() {
         return new HiberFormDAO();
     }
+
+    public QuestionDAO getQuestionDAO() {
+        return new HiberQuestionDAO();
+    }
 }

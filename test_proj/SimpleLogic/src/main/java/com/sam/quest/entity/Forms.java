@@ -17,7 +17,7 @@ public class Forms {
     @ManyToOne(cascade={CascadeType.REFRESH}, fetch=FetchType.EAGER)
     @JoinColumn(name="user_id")
     private Users userId;
-    @Column(name="form_name")
+    @Column(name="form_date")
     private Date formDate;
 
     public Long getFormId() {

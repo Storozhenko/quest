@@ -1,11 +1,23 @@
 package com.sam.quest.entity;
 
 import java.sql.Timestamp;
+import javax.persistence.*;
 
+@Entity
+@Table(name="answ_forms")
 public class AnswForms {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="answ_id")
     private Long answId;
+    @ManyToOne(cascade={CascadeType.REFRESH}, fetch=FetchType.EAGER)
+    @JoinColumn(name="form_id")
     private Forms formId;
+    @ManyToOne(cascade={CascadeType.REFRESH}, fetch=FetchType.EAGER)
+    @JoinColumn(name="user_id")
     private Users userId;
+    @Column(name="answ_datetime")
     private Timestamp answDatetime;
 
     public Long getAnswId() {

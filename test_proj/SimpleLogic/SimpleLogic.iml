@@ -21,6 +21,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.x" level="application_server_libraries" />
+    <orderEntry type="library" name="persistence-api-1.0" level="project" />
   </component>
 </module>
 

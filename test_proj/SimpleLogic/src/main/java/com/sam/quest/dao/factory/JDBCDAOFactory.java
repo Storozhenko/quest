@@ -47,4 +47,8 @@ public class JDBCDAOFactory extends DAOFactory{
     public FormDAO getFormDAO() {
         return new JDBCFormDAO();
     }
+
+    public QuestionDAO getQuestionDAO() {
+        return new JDBCQuestionDAO();
+    }
 }

@@ -40,16 +40,17 @@ public class AppTest extends TestCase {
         user.setPassword("new");
         user.setUserType("admin");
         user.setUserLang("eng");
+        user.setUserId(new Long(1));
         assertTrue(userdao.updateUser(user));
-
         user = userdao.findUser(1);
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         Date date = new Date(System.currentTimeMillis());
-        user.setUserId(new Long(1));
+
         Forms form = new Forms();
-        form.setFormName("form3");
+        form.setFormName("form_new");
         form.setUserId(user);
         form.setFormDate(date);
-        assertTrue(formdao.insertForm(form));
+        form.setFormId(new Long(15));
+        assertTrue(formdao.updateForm(form));
     }
 }

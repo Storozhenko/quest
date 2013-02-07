@@ -26,6 +26,11 @@
       
       <!-- Mapping files -->
         <mapping class="com.sam.quest.entity.Users"/>
+        <mapping class="com.sam.quest.entity.Forms"/>
+        <mapping class="com.sam.quest.entity.Questions"/>
+        <mapping class="com.sam.quest.entity.AnswForms"/>
+        <mapping class="com.sam.quest.entity.AnswQuestions"/>
+        <mapping class="com.sam.quest.entity.FormsData"/>
 
     </session-factory>
 
