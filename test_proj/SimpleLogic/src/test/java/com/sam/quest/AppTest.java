@@ -55,7 +55,7 @@ public class AppTest extends TestCase {
         form.setFormName("form_new");
         form.setUserId(user);
         form.setFormDate(date);
-        form.setFormId(new Long(15));
+        form.setFormId(new Long(1));
         assertTrue(formdao.updateForm(form));
     }
 }

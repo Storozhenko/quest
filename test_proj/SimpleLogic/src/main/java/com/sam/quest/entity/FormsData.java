@@ -3,7 +3,7 @@ package com.sam.quest.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="forms_date")
+@Table(name="forms_data")
 public class FormsData {
 
     @Id

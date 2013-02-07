@@ -13,9 +13,9 @@ public class HiberDAOFactory extends DAOFactory{
         try {
             //creates the session factory from hibernate.cfg.xml
             sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
-        } catch (ExceptionInInitializerError ex) {
+        } catch (Exception ex) {
             System.err.println("Initial SessionFactory creation failed: " + ex);
-            throw new ExceptionInInitializerError(ex);
+            //throw new ExceptionInInitializerError(ex);
         }
     }
 

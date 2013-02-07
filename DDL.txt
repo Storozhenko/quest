@@ -1,7 +1,7 @@
 CREATE  DATABASE IF NOT EXISTS forms_db;
 
 CREATE  TABLE IF NOT EXISTS `forms_db`.`users` (
-  `user_id` INT NOT NULL AUTO_INCREMENT ,
+  `user_id` BIGINT NOT NULL AUTO_INCREMENT ,
   `username` VARCHAR(45) NOT NULL ,
   `password` VARCHAR(25) NOT NULL ,
   `user_type` VARCHAR(10) NOT NULL ,
@@ -10,9 +10,9 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`users` (
   UNIQUE INDEX `username_UNIQUE` (`username`) );
 
 CREATE  TABLE IF NOT EXISTS `forms_db`.`forms` (
-  `form_id` INT NOT NULL AUTO_INCREMENT ,
+  `form_id` BIGINT NOT NULL AUTO_INCREMENT ,
   `form_name` VARCHAR(45) NOT NULL ,
-  `user_id` INT NOT NULL ,
+  `user_id` BIGINT NOT NULL ,
   `form_date` DATE NOT NULL ,
   PRIMARY KEY (`form_id`) ,
   INDEX `user_id_idx` (`user_id` ASC) ,
@@ -24,9 +24,9 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`forms` (
     ON UPDATE CASCADE);
 
 CREATE  TABLE IF NOT EXISTS `forms_db`.`answ_forms` (
-  `answ_id` INT NOT NULL AUTO_INCREMENT ,
-  `form_id` INT NOT NULL ,
-  `user_id` INT NOT NULL ,
+  `answ_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `form_id` BIGINT NOT NULL ,
+  `user_id` BIGINT NOT NULL ,
   `answ_datetime` DATETIME NOT NULL ,
   PRIMARY KEY (`answ_id`) ,
   INDEX `form_id_idx` (`form_id` ASC) ,
@@ -44,7 +44,7 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`answ_forms` (
     ON UPDATE CASCADE);
 
 CREATE  TABLE IF NOT EXISTS `forms_db`.`questions` (
-  `question_id` INT NOT NULL AUTO_INCREMENT ,
+  `question_id` BIGINT NOT NULL AUTO_INCREMENT ,
   `question_name` VARCHAR(45) NOT NULL ,
   `question_answer` VARCHAR(80) NOT NULL ,
   `question_type` VARCHAR(10) NOT NULL ,
@@ -52,9 +52,9 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`questions` (
   UNIQUE INDEX `question_name_UNIQUE` (`question_name`) );
 
 CREATE  TABLE IF NOT EXISTS `forms_db`.`answ_questions` (
-  `answ_question_id` INT NOT NULL AUTO_INCREMENT ,
-  `answ_id` INT NOT NULL ,
-  `question_id` INT NOT NULL ,
+  `answ_question_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `answ_id` BIGINT NOT NULL ,
+  `question_id` BIGINT NOT NULL ,
   `user_answer` VARCHAR(80) NULL ,
   INDEX `answ_id_idx` (`answ_id` ASC) ,
   INDEX `question_id_idx` (`question_id` ASC) ,
@@ -72,9 +72,9 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`answ_questions` (
     ON UPDATE CASCADE);
 
 CREATE  TABLE IF NOT EXISTS `forms_db`.`forms_data` (
-  `form_data_id` INT NOT NULL AUTO_INCREMENT ,
-  `form_id` INT NOT NULL ,
-  `question_id` INT NOT NULL ,
+  `form_data_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `form_id` BIGINT NOT NULL ,
+  `question_id` BIGINT NOT NULL ,
   INDEX `form_id_idx` (`form_id` ASC) ,
   INDEX `question_id_idx` (`question_id` ASC) ,
   UNIQUE INDEX `form_id_UNIQUE` (`form_id`, `question_id`) ,
