@@ -9,10 +9,8 @@ import com.sam.quest.dao.*;
 import com.sam.quest.entity.*;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 public class AppTest extends TestCase {
     /**
@@ -42,10 +40,10 @@ public class AppTest extends TestCase {
         user.setUserLang("eng");
         user.setUserId(new Long(1));
         assertTrue(userdao.updateUser(user));
+
         user = userdao.findUser(1);
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         Date date = new Date(System.currentTimeMillis());
-
         Forms form = new Forms();
         form.setFormName("form_new");
         form.setUserId(user);
