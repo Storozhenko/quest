@@ -52,12 +52,14 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`questions` (
   UNIQUE INDEX `question_name_UNIQUE` (`question_name`) );
 
 CREATE  TABLE IF NOT EXISTS `forms_db`.`answ_questions` (
+  `answ_question_id` INT NOT NULL AUTO_INCREMENT ,
   `answ_id` INT NOT NULL ,
   `question_id` INT NOT NULL ,
   `user_answer` VARCHAR(80) NULL ,
   INDEX `answ_id_idx` (`answ_id` ASC) ,
   INDEX `question_id_idx` (`question_id` ASC) ,
   UNIQUE INDEX `answ_id_UNIQUE` (`answ_id`, `question_id`) ,
+  PRIMARY KEY (`answ_question_id`) ,
   CONSTRAINT `answ_quest_answ_id`
     FOREIGN KEY (`answ_id` )
     REFERENCES `forms_db`.`answ_forms` (`answ_id` )
@@ -70,11 +72,13 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`answ_questions` (
     ON UPDATE CASCADE);
 
 CREATE  TABLE IF NOT EXISTS `forms_db`.`forms_data` (
+  `forms_data_id` INT NOT NULL AUTO_INCREMENT ,
   `form_id` INT NOT NULL ,
   `question_id` INT NOT NULL ,
   INDEX `form_id_idx` (`form_id` ASC) ,
   INDEX `question_id_idx` (`question_id` ASC) ,
   UNIQUE INDEX `form_id_UNIQUE` (`form_id`, `question_id`) ,
+  PRIMARY KEY (`forms_data_id`) ,
   CONSTRAINT `data_form_id`
     FOREIGN KEY (`form_id` )
     REFERENCES `forms_db`.`forms` (`form_id` )
