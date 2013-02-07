@@ -1,6 +1,7 @@
 package com.sam.quest.dao.factory;
 
 import com.sam.quest.dao.*;
+import com.sam.quest.dao.jdbc.*;
 
 import java.sql.*;
 import javax.naming.*;
@@ -50,5 +51,17 @@ public class JDBCDAOFactory extends DAOFactory{
 
     public QuestionDAO getQuestionDAO() {
         return new JDBCQuestionDAO();
+    }
+
+    public AnswFormDAO getAnswFormDAO() {
+        return new JDBCAnswFormDAO();
+    }
+
+    public AnswQuestionDAO getAnswQuestionDAO() {
+        return new JDBCAnswQuestionDAO();
+    }
+
+    public FormDataDAO getFormDataDAO() {
+        return new JDBCFormDataDAO();
     }
 }
