@@ -8,7 +8,6 @@ import java.sql.*;
 
 public class JDBCDAOFormFactory implements DAOFactory{
 
-    //static String str;
     static Connection con;
     static Statement stmt;
     static ResultSet rs;
@@ -16,7 +15,7 @@ public class JDBCDAOFormFactory implements DAOFactory{
     public static Connection createConnection() throws NamingException {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/forms_db", "root", "123321");
+            con =  DriverManager.getConnection("jdbc:mysql://sc0181:3306/forms_db", "test", "123321");
         }
         catch(SQLException e) {
             e.printStackTrace();
@@ -41,16 +40,8 @@ public class JDBCDAOFormFactory implements DAOFactory{
         }
     }
 
-    public MultiDAO getFactory() {
+    public MultiDAO getDAO() {
         return new JDBCFormDAO();
-    }
-    /*
-    public MultiDAO getUserDAO() {
-        return new JDBCUserDAO();
     }
 
-    public MultiDAO getFormDAO() {
-        return new JDBCFormDAO();
-    }
-     */
 }

@@ -20,7 +20,7 @@ public class JDBCFormDAO<E> implements MultiDAO<E> {
     private Connection con;
     private PreparedStatement prepStmt = null;
 
-    public boolean insertRecord(Object obj){
+    public boolean insertRecord(E obj){
         try {
             res = true;
             Forms form = (Forms)obj;
@@ -40,7 +40,7 @@ public class JDBCFormDAO<E> implements MultiDAO<E> {
         return res;
     }
 
-    public boolean deleteRecord(Object obj){
+    public boolean deleteRecord(E obj){
         try {
             res = true;
             Forms form = (Forms)obj;
@@ -81,7 +81,7 @@ public class JDBCFormDAO<E> implements MultiDAO<E> {
         return (E)form;
     }
 
-    public boolean updateRecord(Object obj){
+    public boolean updateRecord(E obj){
         try {
             res = true;
             Forms form = (Forms)obj;

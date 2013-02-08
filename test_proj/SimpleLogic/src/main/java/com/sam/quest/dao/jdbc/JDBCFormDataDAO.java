@@ -4,11 +4,11 @@ import com.sam.quest.dao.MultiDAO;
 
 public class JDBCFormDataDAO<E> implements MultiDAO<E> {
 
-    public boolean insertRecord(Object obj){
+    public boolean insertRecord(E obj){
         return true;
     }
 
-    public boolean deleteRecord(Object obj){
+    public boolean deleteRecord(E obj){
         return true;
     }
 
@@ -16,7 +16,7 @@ public class JDBCFormDataDAO<E> implements MultiDAO<E> {
         return obj;
     }
 
-    public boolean updateRecord(Object obj){
+    public boolean updateRecord(E obj){
         return true;
     }
 }

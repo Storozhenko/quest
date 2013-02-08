@@ -12,7 +12,7 @@ public class HiberMultiDAO<E> implements MultiDAO<E> {
     private Transaction tr;
     private Session session;
 
-    public boolean insertRecord(Object obj){
+    public boolean insertRecord(E obj){
         res = true;
         try {
             session = HiberDAOFactory.getSessionFactory().openSession();
@@ -27,7 +27,7 @@ public class HiberMultiDAO<E> implements MultiDAO<E> {
         return res;
     }
 
-    public boolean deleteRecord(Object obj){
+    public boolean deleteRecord(E obj){
         res = true;
         try {
             session = HiberDAOFactory.getSessionFactory().openSession();
@@ -57,12 +57,12 @@ public class HiberMultiDAO<E> implements MultiDAO<E> {
         return obj;
     }
 
-    public boolean updateRecord(Object o){
+    public boolean updateRecord(E obj){
         res = true;
         try {
             session = HiberDAOFactory.getSessionFactory().openSession();
             tr = session.beginTransaction();
-            session.update(o);
+            session.update(obj);
             tr.commit();
         } catch (Exception e) {
             res = false;

@@ -14,7 +14,6 @@ public class HiberDAOFactory implements DAOFactory{
             sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
         } catch (Exception ex) {
             System.err.println("Initial SessionFactory creation failed: " + ex);
-            //throw new Exception(ex);
         }
     }
 
@@ -22,15 +21,8 @@ public class HiberDAOFactory implements DAOFactory{
         return sessionFactory;
     }
 
-    public MultiDAO getFactory() {
+    public MultiDAO getDAO() {
         return new HiberMultiDAO();
     }
-    /*//stubs
-    public MultiDAO getFormDAO() {
-        return new HiberMultiDAO();
-    }
-    public MultiDAO getUserDAO() {
-        return new HiberMultiDAO();
-    } */
 
 }

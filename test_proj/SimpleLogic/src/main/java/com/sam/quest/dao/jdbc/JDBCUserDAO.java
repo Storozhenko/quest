@@ -15,7 +15,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
     private Connection con;
     private PreparedStatement prepStmt = null;
 
-    public boolean insertRecord(Object obj){
+    public boolean insertRecord(E obj){
         try {
             res = true;
             Users user = (Users)obj;
@@ -35,7 +35,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
         return res;
     }
 
-    public boolean deleteRecord(Object obj){
+    public boolean deleteRecord(E obj){
         try {
             res = true;
             Users user = (Users)obj;
@@ -75,7 +75,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
         return (E)user;
     }
 
-    public boolean updateRecord(Object obj){
+    public boolean updateRecord(E obj){
         try {
             res = true;
             Users user = (Users)obj;
