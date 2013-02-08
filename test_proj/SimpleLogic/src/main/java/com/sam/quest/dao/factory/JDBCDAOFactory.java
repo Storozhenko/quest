@@ -42,7 +42,8 @@ public class JDBCDAOFactory extends DAOFactory{
     }
 
     public MultiDAO getMultiDAO() {
-        return null;
+        //stub
+        return new JDBCUserDAO();
     }
 
     public MultiDAO getUserDAO() {

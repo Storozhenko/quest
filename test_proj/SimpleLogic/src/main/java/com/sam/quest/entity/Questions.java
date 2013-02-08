@@ -16,6 +16,9 @@ public class Questions {
     private String questionAnswer;
     @Column(name="question_type")
     private String questionType;
+    @Column(name="question_descr")
+    private String questionDescr;
+
 
     public Long getQuestionId() {
         return questionId;
@@ -48,4 +51,13 @@ public class Questions {
     public void setQuestionType(String questionType) {
         this.questionType = questionType;
     }
+
+    public String getQuestionDescr() {
+        return questionDescr;
+    }
+
+    public void setQuestionDescr(String questionDescr) {
+        this.questionDescr = questionDescr;
+    }
+
 }

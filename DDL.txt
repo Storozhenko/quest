@@ -48,8 +48,22 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`questions` (
   `question_name` VARCHAR(45) NOT NULL ,
   `question_answer` VARCHAR(80) NOT NULL ,
   `question_type` VARCHAR(10) NOT NULL ,
+  `question_descr` VARCHAR(45) NULL ,
   PRIMARY KEY (`question_id`) ,
   UNIQUE INDEX `question_name_UNIQUE` (`question_name`) );
+
+CREATE  TABLE IF NOT EXISTS `forms_db`.`questions_data` (
+  `question_data_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `question_id` BIGINT NOT NULL ,
+  `question_variant` INT NOT NULL ,
+  `question_data` VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (`question_data_id`) ,
+  INDEX `question_id_idx` (`question_id` ASC) ,
+  CONSTRAINT `questions_data_question_id`
+    FOREIGN KEY (`question_id` )
+    REFERENCES `forms_db`.`questions` (`question_id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
 
 CREATE  TABLE IF NOT EXISTS `forms_db`.`answ_questions` (
   `answ_question_id` BIGINT NOT NULL AUTO_INCREMENT ,

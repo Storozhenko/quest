@@ -25,11 +25,10 @@ public class HiberDAOFactory extends DAOFactory{
     public MultiDAO getMultiDAO() {
         return new HiberMultiDAO();
     }
-
+    //stubs
     public MultiDAO getFormDAO() {
         return new HiberMultiDAO();
     }
-
     public MultiDAO getUserDAO() {
         return new HiberMultiDAO();
     }
