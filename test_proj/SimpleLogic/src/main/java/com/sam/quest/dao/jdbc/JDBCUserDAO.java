@@ -2,7 +2,7 @@ package com.sam.quest.dao.jdbc;
 
 
 import com.sam.quest.dao.MultiDAO;
-import com.sam.quest.dao.factory.JDBCDAOFactory;
+import com.sam.quest.dao.factory.JDBCDAOUserFactory;
 import com.sam.quest.entity.Users;
 
 import java.sql.*;
@@ -19,7 +19,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
         try {
             res = true;
             Users user = (Users)obj;
-            con = JDBCDAOFactory.createConnection();
+            con = JDBCDAOUserFactory.createConnection();
             prepStmt = con.prepareStatement("insert into forms_db.users values (default, ?, ?, ?, ?);");
             prepStmt.setString(1, user.getUsername());
             prepStmt.setString(2, user.getPassword());
@@ -30,7 +30,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
             e.printStackTrace();
             res = false;
         } finally {
-            JDBCDAOFactory.closeConnection();
+            JDBCDAOUserFactory.closeConnection();
         }
         return res;
     }
@@ -39,7 +39,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
         try {
             res = true;
             Users user = (Users)obj;
-            con = JDBCDAOFactory.createConnection();
+            con = JDBCDAOUserFactory.createConnection();
             prepStmt = con.prepareStatement("delete from forms_db.users where username=? ;");
             prepStmt.setString(1, user.getUsername());
             prepStmt.executeUpdate();
@@ -47,7 +47,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
             e.printStackTrace();
             res = false;
         } finally {
-            JDBCDAOFactory.closeConnection();
+            JDBCDAOUserFactory.closeConnection();
         }
         return res;
     }
@@ -56,7 +56,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
         Users user = (Users)obj;
         try {
             res = true;
-            con = JDBCDAOFactory.createConnection();
+            con = JDBCDAOUserFactory.createConnection();
             stmt = con.createStatement();
             rs = stmt.executeQuery("select * from forms_db.users where user_id=" + String.valueOf(userId) + ";");
             while (rs.next()) {
@@ -70,7 +70,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
             e.printStackTrace();
             res = false;
         } finally {
-            JDBCDAOFactory.closeConnection();
+            JDBCDAOUserFactory.closeConnection();
         }
         return (E)user;
     }
@@ -79,7 +79,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
         try {
             res = true;
             Users user = (Users)obj;
-            con = JDBCDAOFactory.createConnection();
+            con = JDBCDAOUserFactory.createConnection();
             prepStmt = con.prepareStatement("update forms_db.users set username=?, password=?, user_type=?, user_lang=? " +
                     "where user_id=?;");
             prepStmt.setString(1, user.getUsername());
@@ -92,7 +92,7 @@ public class JDBCUserDAO<E> implements MultiDAO<E> {
             e.printStackTrace();
             res = false;
         } finally {
-            JDBCDAOFactory.closeConnection();
+            JDBCDAOUserFactory.closeConnection();
         }
         return res;
     }

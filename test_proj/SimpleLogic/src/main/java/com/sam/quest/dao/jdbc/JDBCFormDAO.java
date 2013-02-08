@@ -1,7 +1,7 @@
 package com.sam.quest.dao.jdbc;
 
 import com.sam.quest.dao.*;
-import com.sam.quest.dao.factory.JDBCDAOFactory;
+import com.sam.quest.dao.factory.JDBCDAOUserFactory;
 import com.sam.quest.entity.Forms;
 import com.sam.quest.entity.Users;
 
@@ -25,7 +25,7 @@ public class JDBCFormDAO<E> implements MultiDAO<E> {
             res = true;
             Forms form = (Forms)obj;
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            con = JDBCDAOFactory.createConnection();
+            con = JDBCDAOUserFactory.createConnection();
             prepStmt = con.prepareStatement("insert into forms_db.forms values (default, ?, ?, ?);");
             prepStmt.setString(1, form.getFormName());
             prepStmt.setString(2, String.valueOf(form.getUserId().getUserId()));
@@ -35,7 +35,7 @@ public class JDBCFormDAO<E> implements MultiDAO<E> {
             e.printStackTrace();
             res = false;
         } finally {
-            JDBCDAOFactory.closeConnection();
+            JDBCDAOUserFactory.closeConnection();
         }
         return res;
     }
@@ -44,7 +44,7 @@ public class JDBCFormDAO<E> implements MultiDAO<E> {
         try {
             res = true;
             Forms form = (Forms)obj;
-            con = JDBCDAOFactory.createConnection();
+            con = JDBCDAOUserFactory.createConnection();
             prepStmt = con.prepareStatement("delete from forms_db.forms where form_name=? ;");
             prepStmt.setString(1, form.getFormName());
             prepStmt.executeUpdate();
@@ -52,17 +52,17 @@ public class JDBCFormDAO<E> implements MultiDAO<E> {
             e.printStackTrace();
             res = false;
         } finally {
-            JDBCDAOFactory.closeConnection();
+            JDBCDAOUserFactory.closeConnection();
         }
         return res;
     }
 
     public E findRecord(long formId, E obj){
-        Forms form = new Forms();
+        Forms form = (Forms)obj;
         Users user = new Users();
         try {
             res = true;
-            con = JDBCDAOFactory.createConnection();
+            con = JDBCDAOUserFactory.createConnection();
             stmt = con.createStatement();
             rs = stmt.executeQuery("select * from forms_db.forms where form_id=" + String.valueOf(formId) + ";");
             while (rs.next()) {
@@ -76,7 +76,7 @@ public class JDBCFormDAO<E> implements MultiDAO<E> {
             e.printStackTrace();
             res = false;
         } finally {
-            JDBCDAOFactory.closeConnection();
+            JDBCDAOUserFactory.closeConnection();
         }
         return (E)form;
     }
@@ -86,7 +86,7 @@ public class JDBCFormDAO<E> implements MultiDAO<E> {
             res = true;
             Forms form = (Forms)obj;
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            con = JDBCDAOFactory.createConnection();
+            con = JDBCDAOUserFactory.createConnection();
             prepStmt = con.prepareStatement("update forms_db.forms set form_name=?, user_id=?, form_date=? " +
                     "where form_id=?;");
             prepStmt.setString(4, String.valueOf(form.getFormId()));
@@ -98,7 +98,7 @@ public class JDBCFormDAO<E> implements MultiDAO<E> {
             e.printStackTrace();
             res = false;
         } finally {
-            JDBCDAOFactory.closeConnection();
+            JDBCDAOUserFactory.closeConnection();
         }
         return res;
     }

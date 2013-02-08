@@ -6,7 +6,7 @@ import com.sam.quest.dao.jdbc.*;
 import java.sql.*;
 import javax.naming.*;
 
-public class JDBCDAOFactory extends DAOFactory{
+public class JDBCDAOUserFactory implements DAOFactory{
 
     //static String str;
     static Connection con;
@@ -41,11 +41,10 @@ public class JDBCDAOFactory extends DAOFactory{
         }
     }
 
-    public MultiDAO getMultiDAO() {
-        //stub
+    public MultiDAO getFactory() {
         return new JDBCUserDAO();
     }
-
+    /*
     public MultiDAO getUserDAO() {
         return new JDBCUserDAO();
     }
@@ -53,5 +52,5 @@ public class JDBCDAOFactory extends DAOFactory{
     public MultiDAO getFormDAO() {
         return new JDBCFormDAO();
     }
-
+     */
 }

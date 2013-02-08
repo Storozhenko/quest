@@ -5,7 +5,7 @@ import com.sam.quest.dao.hibernate.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-public class HiberDAOFactory extends DAOFactory{
+public class HiberDAOFactory implements DAOFactory{
 
     private static SessionFactory sessionFactory;
 
@@ -22,15 +22,15 @@ public class HiberDAOFactory extends DAOFactory{
         return sessionFactory;
     }
 
-    public MultiDAO getMultiDAO() {
+    public MultiDAO getFactory() {
         return new HiberMultiDAO();
     }
-    //stubs
+    /*//stubs
     public MultiDAO getFormDAO() {
         return new HiberMultiDAO();
     }
     public MultiDAO getUserDAO() {
         return new HiberMultiDAO();
-    }
+    } */
 
 }

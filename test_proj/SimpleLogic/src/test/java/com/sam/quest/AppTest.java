@@ -1,6 +1,6 @@
 package com.sam.quest;
 
-import com.sam.quest.dao.factory.DAOFactory;
+import com.sam.quest.dao.factory.*;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -28,14 +28,15 @@ public class AppTest extends TestCase {
     }
 
     public void testApp() {
-        DAOFactory jdbcFact = DAOFactory.getFactory(DAOFactory.JDBC);
-        DAOFactory hibFact = DAOFactory.getFactory(DAOFactory.HIBERNATE);
+        DAOFactory jdbcForm = new JDBCDAOFormFactory();
+        DAOFactory jdbcUser = new JDBCDAOUserFactory();
+        DAOFactory hib = new HiberDAOFactory();
 
-        MultiDAO<Users> userdao = jdbcFact.getUserDAO();
-        MultiDAO<Users> userhib = hibFact.getMultiDAO();
-        MultiDAO<Forms> formdao = jdbcFact.getFormDAO();
-        MultiDAO<Forms> formhib = hibFact.getFormDAO();
-        MultiDAO<AnswForms> answhib = hibFact.getMultiDAO();
+        MultiDAO<Users> userdao = jdbcUser.getFactory();
+        MultiDAO<Users> userhib = hib.getFactory();
+        MultiDAO<Forms> formdao = jdbcForm.getFactory();
+        MultiDAO<Forms> formhib = hib.getFactory();
+        MultiDAO<AnswForms> answhib = hib.getFactory();
 
         Users user = new Users();
         user.setUsername("test");
