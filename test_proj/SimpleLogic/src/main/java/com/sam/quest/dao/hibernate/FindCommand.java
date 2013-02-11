@@ -2,7 +2,7 @@ package com.sam.quest.dao.hibernate;
 
 import org.hibernate.Session;
 
-public class FindCommand<E> implements Command {
+public class FindCommand<E> implements Command <E> {
     E obj;
     long id;
 
@@ -11,8 +11,9 @@ public class FindCommand<E> implements Command {
         this.id = id;
     }
 
-    public void execute(Session session) throws Exception{
+    public E execute(Session session) throws Exception{
         session.update(obj);
         obj = (E)session.get(obj.getClass(), id);
+        return obj;
     }
 }
