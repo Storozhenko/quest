@@ -5,13 +5,11 @@ import com.sam.quest.dao.hibernate.*;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-
 import com.sam.quest.dao.*;
 import com.sam.quest.entity.*;
 import java.util.Date;
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class AppTest extends TestCase {
@@ -55,7 +53,6 @@ public class AppTest extends TestCase {
         //user.setPassword("test");
         //assertTrue(userhib.insertUser(user));
 
-
         user = userhib.findRecord(1, new Users());
         Date date = new Date(System.currentTimeMillis());
         Forms form = new Forms();
@@ -68,8 +65,7 @@ public class AppTest extends TestCase {
         TransactionalPerformer fms = new TransactionalPerformer();
         fms.executeCommand(new UpdateCommand<Forms>(form));
         TransactionalPerformer fm = new TransactionalPerformer<List <Forms>>();
-        List <Forms> list;
-        list = (ArrayList<Forms>)fm.executeCommand(new GetListCommand<ArrayList, Forms>(new ArrayList(), new Forms()));
+        List <Forms> list  = (ArrayList<Forms>)fm.executeCommand(new GetListCommand<ArrayList, Forms>(new ArrayList(), new Forms()));
 
         form = formdao.findRecord(1, new Forms());
         assertTrue(formhib.updateRecord(form));

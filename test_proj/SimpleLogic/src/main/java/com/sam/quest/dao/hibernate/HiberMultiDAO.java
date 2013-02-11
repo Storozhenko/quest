@@ -11,7 +11,6 @@ public class HiberMultiDAO<E> implements MultiDAO<E> {
     private boolean res;
     private Transaction tr;
     private Session session;
-    private Command command;
 
     public boolean insertRecord(E obj){
         res = true;
