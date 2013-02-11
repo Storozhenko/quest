@@ -55,6 +55,7 @@ public class AppTest extends TestCase {
         //user.setPassword("test");
         //assertTrue(userhib.insertUser(user));
 
+
         user = userhib.findRecord(1, new Users());
         Date date = new Date(System.currentTimeMillis());
         Forms form = new Forms();
