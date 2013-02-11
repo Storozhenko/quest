@@ -1,6 +1,7 @@
 package com.sam.quest;
 
 import com.sam.quest.dao.factory.*;
+import com.sam.quest.dao.hibernate.*;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -27,16 +28,16 @@ public class AppTest extends TestCase {
         return new TestSuite( AppTest.class );
     }
 
-    public void testApp() {
+    public void testApp() throws Exception {
         DAOFactory jdbcForm = new JDBCDAOFormFactory();
         DAOFactory jdbcUser = new JDBCDAOUserFactory();
         DAOFactory hib = new HiberDAOFactory();
 
-        MultiDAO<Users> userdao = jdbcUser.getFactory();
-        MultiDAO<Users> userhib = hib.getFactory();
-        MultiDAO<Forms> formdao = jdbcForm.getFactory();
-        MultiDAO<Forms> formhib = hib.getFactory();
-        MultiDAO<AnswForms> answhib = hib.getFactory();
+        MultiDAO<Users> userdao = jdbcUser.getDAO();
+        MultiDAO<Users> userhib = hib.getDAO();
+        MultiDAO<Forms> formdao = jdbcForm.getDAO();
+        MultiDAO<Forms> formhib = hib.getDAO();
+        MultiDAO<AnswForms> answhib = hib.getDAO();
 
         Users user = new Users();
         user.setUsername("test");
@@ -44,10 +45,10 @@ public class AppTest extends TestCase {
         user.setUserType("admin");
         user.setUserLang("eng");
         user.setUserId(new Long(1));
-        assertTrue(userdao.updateRecord(user));
 
-        user.setUsername("admin");
-        user.setPassword("test");
+        assertTrue(userdao.updateRecord(user));
+        //user.setUsername("admin");
+        //user.setPassword("test");
         //assertTrue(userhib.insertUser(user));
 
         user = userhib.findRecord(1, new Users());
@@ -58,6 +59,9 @@ public class AppTest extends TestCase {
         form.setFormDate(date);
         form.setFormId(new Long(1));
         assertTrue(formdao.updateRecord(form));
+
+        TransactionalPerformer fms = new TransactionalPerformer();
+        fms.executeCommand(new UpdateCommand<Forms>(form));
 
         form = formdao.findRecord(1, new Forms());
         assertTrue(formhib.updateRecord(form));
