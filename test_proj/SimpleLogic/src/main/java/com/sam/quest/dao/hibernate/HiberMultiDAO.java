@@ -2,15 +2,16 @@ package com.sam.quest.dao.hibernate;
 
 import com.sam.quest.dao.MultiDAO;
 import com.sam.quest.dao.factory.HiberDAOFactory;
-import com.sam.quest.entity.Forms;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+//deprecated
 public class HiberMultiDAO<E> implements MultiDAO<E> {
 
     private boolean res;
     private Transaction tr;
     private Session session;
+    private Command command;
 
     public boolean insertRecord(E obj){
         res = true;
