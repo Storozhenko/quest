@@ -12,7 +12,6 @@ public class FindCommand<E> implements Command <E> {
     }
 
     public E execute(Session session) throws Exception{
-        session.update(obj);
         obj = (E)session.get(obj.getClass(), id);
         return obj;
     }

@@ -2,8 +2,9 @@ package com.sam.quest.dao.hibernate;
 
 import org.hibernate.Session;
 
-public class InsertCommand<E> implements Command <Void>{
+public class InsertCommand <E> implements Command <Void>{
     E obj;
+
     public InsertCommand(E obj) {
         this.obj = obj;
     }
