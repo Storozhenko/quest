@@ -1,6 +1,7 @@
 package com.sam.quest.entity;
 
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -19,6 +20,18 @@ public class Forms {
     private Users userId;
     @Column(name="form_date")
     private Date formDate;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "formId")
+    private Set<FormsData> formsData;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "formId")
+    private Set<AnswForms> answForms;
+
+    public Set<AnswForms> getAnswForms() {
+        return answForms;
+    }
+
+    public void setAnswForms(Set<AnswForms> answForms) {
+        this.answForms = answForms;
+    }
 
     public Long getFormId() {
         return formId;
@@ -50,5 +63,13 @@ public class Forms {
 
     public void setFormDate(Date formDate) {
         this.formDate = formDate;
+    }
+
+    public Set<FormsData> getFormsData() {
+        return formsData;
+    }
+
+    public void setFormsData(Set<FormsData> formsData) {
+        this.formsData = formsData;
     }
 }
