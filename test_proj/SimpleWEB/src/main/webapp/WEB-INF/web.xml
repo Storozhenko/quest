@@ -4,26 +4,36 @@
 
 <web-app>
 
+    <!-- Описание корневого контейнера, разделяемого всеми сервлетами и фильтрами -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/ApplicationContext.xml</param-value>
+        <param-value>
+            /WEB-INF/spring/root-context.xml
+        </param-value>
     </context-param>
 
+    <!-- Создаёт контейнер Spring, разделяемый всеми сервлетами и фильтрами -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <!-- Базовый сервлет, обрабатывает все запросы к приложению -->
     <servlet>
-        <servlet-name>Action</servlet-name>
+        <servlet-name>appServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Action</servlet-name>
-        <url-pattern>*.form</url-pattern>
+        <servlet-name>appServlet</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
-    <!--
+
+    <!-- Фильтр для перекодировки в utf8 -->
     <filter>
         <filter-name>charsetFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -39,6 +49,16 @@
     <filter-mapping>
         <filter-name>charsetFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping> -->
+    </filter-mapping>
+
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
 
 </web-app>

@@ -40,12 +40,12 @@ public class LoginController {
                 return "main";
             } else {
                 //addFieldError("password", "Invalid password");
-                return "error";
+                return "redirect:/login";
             }
         } else {
-            addFieldError("username", "Invalid username");
-            return "error";
+            //addFieldError("username", "Invalid username");
+            return "redirect:/login";
         }
-        return "login";
+
     }
 }

@@ -5,18 +5,18 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-    <title>Contracts</title>
+    <title>MyQuestions</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <s:head/>
+    <head/>
 </head>
 <body>
-<h1>Contracts</h1>
+<h1>MyQuestions</h1>
 <br/>
 <hr size="2"/>
 <fieldset>
     <legend><b>Please Login</b></legend>
-    <s:form action="loginAction" method="post">
+    <form:form action="login" method="post">
         <table>
             <tr>
                 <td><s:textfield label="Username" size="30" name="username"/></td>
@@ -24,13 +24,10 @@
             <tr>
                 <td><s:password label="Password" size="30" name="password"/></td>
             </tr>
-            <tr>
-                <td><s:combobox label="Language" value="default" headerValue="select" readonly="true" size="5" headerKey="-1" name="request_locale" list="#{'ru':'RU', 'by':'BY', 'en':'EN'}"/></td>
-            </tr>
         </table>
         <br/>
-        <s:submit value="  Login  " align="left"> </s:submit>
-    </s:form>
+        <submit value="  Login  " align="left"> <submit>
+    </form:form>
 </fieldset>
 </body>
 </html>
