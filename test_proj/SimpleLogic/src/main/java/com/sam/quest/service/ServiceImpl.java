@@ -8,6 +8,7 @@ import com.sam.quest.entity.Users;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class ServiceImpl<E> implements MultiService<E>{
 
     public void addRecord(E obj) {

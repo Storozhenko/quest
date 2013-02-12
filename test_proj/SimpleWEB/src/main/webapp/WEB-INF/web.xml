@@ -6,7 +6,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/spring/root-context.xml</param-value>
+        <param-value>/WEB-INF/ApplicationContext.xml</param-value>
     </context-param>
 
     <listener>
@@ -23,7 +23,7 @@
         <servlet-name>Action</servlet-name>
         <url-pattern>*.form</url-pattern>
     </servlet-mapping>
-
+    <!--
     <filter>
         <filter-name>charsetFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -39,6 +39,6 @@
     <filter-mapping>
         <filter-name>charsetFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping> -->
 
 </web-app>
