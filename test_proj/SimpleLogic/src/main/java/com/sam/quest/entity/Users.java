@@ -1,6 +1,7 @@
 package com.sam.quest.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name="users")
@@ -18,6 +19,10 @@ public class Users {
     private String userType;
     @Column(name="user_lang")
     private String userLang;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "userId")
+    private Set<Forms> forms;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "userId")
+    private Set<AnswForms> answForms;
 
     public Long getUserId() {
         return userId;
@@ -57,5 +62,21 @@ public class Users {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Set<Forms> getForms() {
+        return forms;
+    }
+
+    public void setForms(Set<Forms> forms) {
+        this.forms = forms;
+    }
+
+    public Set<AnswForms> getAnswForms() {
+        return answForms;
+    }
+
+    public void setAnswForms(Set<AnswForms> answForms) {
+        this.answForms = answForms;
     }
 }

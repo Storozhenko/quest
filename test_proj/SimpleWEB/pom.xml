@@ -41,8 +41,33 @@
       <artifactId>SimpleLogic</artifactId>
       <version>1.0-SNAPSHOT</version>
 	</dependency>
-
-    <dependency>
+      <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <version>1.2.15</version>
+      </dependency>
+      <dependency>
+          <groupId>commons-lang</groupId>
+          <artifactId>commons-lang</artifactId>
+          <version>2.3</version>
+          <type>jar</type>
+          <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging-api</artifactId>
+          <version>1.0.4</version>
+          <type>jar</type>
+          <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <version>1.2.16</version>
+          <type>jar</type>
+          <scope>compile</scope>
+      </dependency>
+      <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
         <version>3.0.5.RELEASE</version>
@@ -74,11 +99,27 @@
         <version>3.0.5.RELEASE</version>
     </dependency>
       <dependency>
-          <groupId>jstl</groupId>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-core</artifactId>
+          <version>3.0.5.RELEASE</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-web</artifactId>
+          <version>3.0.5.RELEASE</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-config</artifactId>
+          <version>3.0.5.RELEASE</version>
+      </dependency>
+      <dependency>
+          <groupId>javax.servlet</groupId>
           <artifactId>jstl</artifactId>
           <version>1.2</version>
       </dependency>
-
   </dependencies>
 
 </project>

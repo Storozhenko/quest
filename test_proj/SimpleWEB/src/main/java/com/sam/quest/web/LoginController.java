@@ -7,6 +7,7 @@ import com.sam.quest.service.ServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,14 +15,20 @@ import java.util.Map;
 
 @Controller
 public class LoginController {
-
-    private static Map<String, Users> usersMap = new HashMap<String, Users>();
-
-    @RequestMapping("/index")
-    public String startRedirect() {
-        return "login";
+    public void setMessage(String message) {
+        this.message = message;
     }
 
+    private String message;
+    private static Map<String, Users> usersMap = new HashMap<String, Users>();
+
+    @RequestMapping("/login")
+    public String startRedirect(Map<String, Object> session) {
+        //message = "Hello World, Spring 3.0!";
+        session.put("message", message);
+        return "main";
+    }
+       /*
     @RequestMapping("/login")
     public String checkUser(Map<String, Object> session, @ModelAttribute("username") String username,
     @ModelAttribute("password") String password) {
@@ -40,12 +47,12 @@ public class LoginController {
                 return "main";
             } else {
                 //addFieldError("password", "Invalid password");
-                return "redirect:/login";
+                return "login";
             }
         } else {
             //addFieldError("username", "Invalid username");
-            return "redirect:/login";
+            return "login";
         }
 
-    }
+    }     */
 }
