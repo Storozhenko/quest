@@ -13,12 +13,12 @@
 
 	<!-- Всю статику (изображения, css-файлы, javascript) положим в папку webapp/resources 
 		и замаппим их на урл вида /resources/** -->
-	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/resources/**" location="/" />
 
 	<!-- Отображение видов на jsp-файлы, лежащие в папке /WEB-INF/views -->
 	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="prefix" value="/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
