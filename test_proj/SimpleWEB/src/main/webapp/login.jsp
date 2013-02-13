@@ -1,17 +1,17 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-    <title>Sign Up</title>
-    <style type="text/css">
-        span.error {
-            color: red;
-        }
-    </style>
+    <title>Login</title>
+    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h1>Login</h1>
+<h2>Login</h2>
+<br/>
 ${message}
+<br/>
+<br/>
 <form:form method="post" commandName="loginForm" action="loginAction">
     <table>
         <tr>
@@ -25,11 +25,13 @@ ${message}
             <td><span class="error"><form:errors path="password" /></span></td>
         </tr>
         <tr>
-            <td colspan="3"><input type="submit" value="Submit" /></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Submit" /></td>
         </tr>
     </table>
 </form:form>
 
-<a href="${pageContext.request.contextPath}/" title="Home">Home</a>
 </body>
 </html>

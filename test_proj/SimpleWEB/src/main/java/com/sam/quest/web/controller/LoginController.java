@@ -1,13 +1,13 @@
-package com.sam.quest.web;
+package com.sam.quest.web.controller;
 
 import com.sam.quest.entity.Users;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ServiceImpl;
 import com.sam.quest.web.form.LoginForm;
+import com.sam.quest.web.validator.LoginValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -55,11 +55,9 @@ public class LoginController {
                 session.put("user", user);
                 return "main";
             } else {
-                //addFieldError("password", "Invalid password");
                 return "login";
             }
         } else {
-            //addFieldError("username", "Invalid username");
             return "login";
         }
 
