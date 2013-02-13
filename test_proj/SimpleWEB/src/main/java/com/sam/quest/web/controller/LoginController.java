@@ -53,7 +53,10 @@ public class LoginController {
         if(user != null) {
             if (user.getPassword().equals(loginForm.getPassword())) {
                 session.put("user", user);
-                return "main";
+                if (user.getUserType().equals("admin"))
+                    return "admin/main";
+                else
+                    return "user/main";
             } else {
                 return "login";
             }

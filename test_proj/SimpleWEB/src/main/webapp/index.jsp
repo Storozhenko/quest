@@ -5,9 +5,9 @@
 </head>
 <body>
 <h2>Welcome to MyQuest!</h2>
-<br/>
+<br>
 <a href="login">Login</a>
-<br/>
+<br>
 <a href="registration">Registration</a>
 </body>
 </html>

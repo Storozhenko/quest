@@ -10,8 +10,8 @@
 <h2>Login</h2>
 <br/>
 ${message}
-<br/>
-<br/>
+<br>
+<br>
 <form:form method="post" commandName="loginForm" action="loginAction">
     <table>
         <tr>

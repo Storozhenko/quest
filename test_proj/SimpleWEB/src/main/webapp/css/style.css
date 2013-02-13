@@ -1,5 +1,5 @@
 body {
-	background: #E6E6E6;
+	background: GhostWhite;
 	color: #000;
 	font: normal normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
 	margin: 10px;
@@ -7,7 +7,7 @@ body {
 }
 
 table {
-    background: #E6E6E6;
+    background: GhostWhite;
     color: #000;
     font: normal normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
     margin: 10px;
@@ -20,8 +20,8 @@ span.error {
 }
 
 h2 {
-    color: FF6600;
-    font: bold normal 16px Verdana, Geneva, Arial, Helvetica, sans-serif;
+    color: RoyalBlue;
+    font: bold normal 18px Verdana, Geneva, Arial, Helvetica, sans-serif;
 	margin: 0 0 5px 0;
 }
 
