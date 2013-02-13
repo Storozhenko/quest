@@ -43,7 +43,7 @@ public class AppTest extends TestCase {
 
         Users user = new Users();
         user.setUsername("test");
-        user.setPassword("new");
+        user.setPassword("test");
         user.setUserType("admin");
         user.setUserLang("eng");
         user.setUserId(new Long(1));

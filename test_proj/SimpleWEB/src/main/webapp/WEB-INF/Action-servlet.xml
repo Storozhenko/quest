@@ -8,9 +8,9 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <!-- <context:component-scan
-            base-package="com.sam.quest.web" />   -->
-    <bean name="loginController" class="com.sam.quest.web.LoginController">
+     <context:component-scan
+            base-package="com.sam.quest.web" />
+    <!--<bean name="loginController" class="com.sam.quest.web.LoginController">
         <property name="message" value="Hello, Spring" />
     </bean>
 
@@ -20,8 +20,7 @@
                 <prop key="/login">loginController</prop>
             </props>
         </property>
-    </bean>
-
+    </bean>     -->
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="viewClass"

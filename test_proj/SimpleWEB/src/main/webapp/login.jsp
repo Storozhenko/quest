@@ -1,32 +1,36 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
-<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page session="false"%>
 <html>
 <head>
-    <title>MyQuestions</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <head/>
+    <title>Sign Up</title>
+    <style type="text/css">
+        span.error {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-<h1>MyQuestions</h1>
-<br/>
-<hr size="2"/>
-<fieldset>
-    <legend><b>Please Login</b></legend>
-    <form:form action="login" method="post">
-        <table>
-            <tr>
-                <td><textfield label="Username" size="30" name="username"/></td>
-            </tr>
-            <tr>
-                <td><password label="Password" size="30" name="password"/></td>
-            </tr>
-        </table>
-        <br/>
-        <submit value="  Login  " align="left"> <submit>
-    </form:form>
-</fieldset>
+<h1>Login</h1>
+${message}
+<form:form method="post" commandName="loginForm" action="loginAction">
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td><form:input path="username" /></td>
+            <td><span class="error"><form:errors path="username" /></span></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><form:password path="password" /></td>
+            <td><span class="error"><form:errors path="password" /></span></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form:form>
+
+<a href="${pageContext.request.contextPath}/" title="Home">Home</a>
 </body>
 </html>
