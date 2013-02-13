@@ -49,15 +49,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/AdminUsersController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/user/tests.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/admin/users.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/spring/ApplicationSecurity.xml" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/spring/ApplicationSecurity.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleWEB\src\main\webapp\admin\main.jsp" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/admin/tests.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleWEB\src\main\webapp\user\main.jsp" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/user/userMain.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/pom.xml" afterPath="$PROJECT_DIR$/../SimpleWEB/pom.xml" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -328,11 +322,20 @@
       <file leaf-file-name="LoginController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="32" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.52577317">
+            <state line="25" column="26" selection-start="928" selection-end="928" vertical-scroll-proportion="0.2272175">
               <folding>
-                <element signature="e#825#840#0" expanded="true" />
-                <element signature="e#1656#1663#0" expanded="true" />
+                <element signature="e#824#839#0" expanded="true" />
+                <element signature="e#1655#1662#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SimpleWEB/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="41" selection-start="3214" selection-end="3214" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -361,7 +364,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/main.jsp" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/index.jsp" />
@@ -371,12 +373,13 @@
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/spring/ApplicationSecurity.xml" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/AdminUsersController.java" />
-        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/admin/adminMain.jsp" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/admin/tests.jsp" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/admin/users.jsp" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/user/tests.jsp" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/user/userMain.jsp" />
+        <option value="$PROJECT_DIR$/../SimpleWEB/pom.xml" />
+        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java" />
       </list>
     </option>
   </component>
@@ -1187,7 +1190,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="1002" extended-state="1" />
+    <frame x="-4" y="-4" width="1288" height="1002" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.431629" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1212,7 +1215,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2949757" sideWeight="0.73969376" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22609401" sideWeight="0.60188454" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39811543" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39811543" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.18311533" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1336,15 +1339,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="37" selection-start="334" selection-end="334" vertical-scroll-proportion="-0.7360825">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="368" selection-end="368" vertical-scroll-proportion="0.08395062">
@@ -1461,12 +1455,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="41" selection-start="3214" selection-end="3214" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="32" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.52577317">
+        <state line="25" column="26" selection-start="928" selection-end="928" vertical-scroll-proportion="0.2272175">
           <folding>
-            <element signature="e#825#840#0" expanded="true" />
-            <element signature="e#1656#1663#0" expanded="true" />
+            <element signature="e#824#839#0" expanded="true" />
+            <element signature="e#1655#1662#0" expanded="true" />
           </folding>
         </state>
       </provider>
