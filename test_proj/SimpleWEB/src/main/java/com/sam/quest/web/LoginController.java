@@ -4,12 +4,12 @@ import com.sam.quest.entity.Users;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ServiceImpl;
 import com.sam.quest.web.form.LoginForm;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,6 +19,8 @@ import java.util.Map;
 public class LoginController {
     private String message;
     private static Map<String, Users> usersMap = new HashMap<String, Users>();
+    @Autowired
+    private LoginValidator loginValidator;
 
     public void setMessage(String message) {
         this.message = message;
@@ -35,6 +37,10 @@ public class LoginController {
 
     @RequestMapping(value = "/loginAction", method = RequestMethod.POST)
     public String checkUser(Map<String, Object> session, LoginForm loginForm, BindingResult result) {
+        loginValidator.validate(loginForm, result);
+        if (result.hasErrors()) {
+            return "login";
+        }
         MultiService <Users> serv = new ServiceImpl<Users>();
         List<Users> users = serv.listRecord(new Users());
         usersMap.clear();
