@@ -11,10 +11,10 @@
 <body>
 <h2>Registration</h2>
 <span style="float: right">
-    <a href="?locale=en">en</a>
+    <a href="login?locale=en">en</a>
     |
-    <a href="?locale=ru">ru</a>
-</span>
+    <a href="login?locale=ru">ru</a>
+</span
 <br>
 <br>
 <form:form method="post" commandName="regForm" action="registrationAction">

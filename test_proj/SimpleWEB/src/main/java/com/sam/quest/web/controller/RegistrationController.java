@@ -3,7 +3,6 @@ package com.sam.quest.web.controller;
 import com.sam.quest.entity.Users;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ServiceImpl;
-import com.sam.quest.web.form.LoginForm;
 import com.sam.quest.web.form.RegistrationForm;
 import com.sam.quest.web.validator.RegistrationValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Controller
 public class RegistrationController {
@@ -25,7 +20,7 @@ public class RegistrationController {
     private RegistrationValidator regValidator;
 
     @RequestMapping("/registration")
-    public String regRedirect(ModelMap modelMap) {
+    public String startInit(ModelMap modelMap) {
         modelMap.addAttribute("regForm", new RegistrationForm());
         return "registration";
     }

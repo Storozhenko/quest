@@ -13,9 +13,9 @@
 <br/>
 ${message}
 <span style="float: right">
-    <a href="?locale=en">en</a>
+    <a href="login?locale=en">en</a>
     |
-    <a href="?locale=ru">ru</a>
+    <a href="login?locale=ru">ru</a>
 </span>
 <br>
 <br>

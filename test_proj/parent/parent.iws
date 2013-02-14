@@ -49,13 +49,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/Action-servlet.xml" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/Action-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/AdminUsersController.java" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/AdminUsersController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/RegistrationController.java" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/RegistrationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/validator/RegistrationValidator.java" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/validator/RegistrationValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/login.jsp" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/registration.jsp" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/web.xml" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,7 +112,7 @@
     <file path="/LoginController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360842134581" ignored="false" />
     <file path="/UsersServiceImpl.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360584399657" ignored="false" />
     <file path="/web.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360752189275" ignored="false" />
-    <file path="/login.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360831342994" ignored="false" />
+    <file path="/login.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360844799620" ignored="false" />
     <file path="/controllers.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360658195058" ignored="false" />
     <file path="/Action-servlet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360832683258" ignored="false" />
     <file path="/main.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360754097375" ignored="false" />
@@ -130,7 +131,7 @@
     <file path="/messages_ru.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360837741988" ignored="false" />
     <file path="/messages_en.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360837693184" ignored="false" />
     <file path="/RegistrationForm.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360837835139" ignored="false" />
-    <file path="/RegistrationController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360842124139" ignored="false" />
+    <file path="/RegistrationController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360843587483" ignored="false" />
     <file path="/RegistrationValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360837951331" ignored="false" />
     <file path="/ServiceImpl.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360838301126" ignored="false" />
     <file path="/registration.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360843181014" ignored="false" />
@@ -332,41 +333,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RegistrationController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/RegistrationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="34" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.48971194">
-              <folding>
-                <element signature="e#1713#1720#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RegistrationValidator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/validator/RegistrationValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="64" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+            <state line="10" column="29" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java">
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/web.xml">
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="47" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1705#1712#0" expanded="true" />
-              </folding>
+            <state line="11" column="56" selection-start="483" selection-end="483" vertical-scroll-proportion="0.68">
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/login.jsp">
+      <file leaf-file-name="registration.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/registration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="89" selection-start="913" selection-end="913" vertical-scroll-proportion="-15.615385">
+            <state line="11" column="48" selection-start="535" selection-end="535" vertical-scroll-proportion="0.40652174">
               <folding />
             </state>
           </provider>
@@ -396,22 +393,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/resources/lable_en.properties" />
-        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/resources/lable_ru.properties" />
-        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/Action-servlet.xml" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/validator/LoginValidator.java" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/form/RegistrationForm.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/ServiceImpl.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/MultiService.java" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/messages/messages_en.properties" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/messages/messages_ru.properties" />
-        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/login.jsp" />
-        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/AdminUsersController.java" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" />
-        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/registration.jsp" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/validator/RegistrationValidator.java" />
         <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/AdminUsersController.java" />
+        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/Action-servlet.xml" />
+        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/login.jsp" />
+        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/registration.jsp" />
+        <option value="$PROJECT_DIR$/../SimpleWEB/src/main/webapp/index.jsp" />
       </list>
     </option>
   </component>
@@ -666,6 +663,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -851,6 +874,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1326,7 +1379,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="1002" extended-state="0" />
+    <frame x="-4" y="-4" width="1288" height="1002" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.431629" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1475,27 +1528,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/ServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="58" selection-start="603" selection-end="603" vertical-scroll-proportion="0.2891859">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/hibernate/InsertCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="202" selection-end="202" vertical-scroll-proportion="0.19077307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/form/LoginForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="47" selection-end="47" vertical-scroll-proportion="0.06196841">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/form/RegistrationForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="45" selection-start="408" selection-end="408" vertical-scroll-proportion="0.39246657">
@@ -1503,39 +1535,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/Action-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="44" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.7839506">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/validator/LoginValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="31" selection-start="842" selection-end="842" vertical-scroll-proportion="0.39246657">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/AdminUsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="44" selection-start="702" selection-end="702" vertical-scroll-proportion="0.12393682">
-          <folding>
-            <element signature="e#845#852#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="44" selection-start="761" selection-end="761" vertical-scroll-proportion="0.30984205">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="279" selection-end="279" vertical-scroll-proportion="0.25595984">
           <folding />
         </state>
       </provider>
@@ -1560,42 +1562,103 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/login.jsp">
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/RegistrationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="89" selection-start="913" selection-end="913" vertical-scroll-proportion="-15.615385">
+        <state line="17" column="30" selection-start="703" selection-end="703" vertical-scroll-proportion="0.35115433">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1560#1567#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/AdminUsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="43" selection-start="782" selection-end="782" vertical-scroll-proportion="0.1652491">
+          <folding>
+            <element signature="e#841#848#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/hibernate/HiberMultiDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.008505468">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/registration.jsp">
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/user/userMain.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="64" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.3326087">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="44" selection-start="761" selection-end="761" vertical-scroll-proportion="0.52469134">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/Action-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="914" selection-end="914" vertical-scroll-proportion="0.5946502">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/validator/RegistrationValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="29" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="47" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0">
+        <state line="25" column="53" selection-start="966" selection-end="966" vertical-scroll-proportion="0.34979424">
           <folding>
-            <element signature="e#1705#1712#0" expanded="true" />
+            <element signature="e#1551#1558#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/validator/RegistrationValidator.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="64" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+        <state line="11" column="56" selection-start="483" selection-end="483" vertical-scroll-proportion="0.68">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="37" selection-start="521" selection-end="521" vertical-scroll-proportion="0.40652174">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web/controller/RegistrationController.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="34" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.48971194">
-          <folding>
-            <element signature="e#1713#1720#0" expanded="true" />
-          </folding>
+        <state line="12" column="19" selection-start="308" selection-end="308" vertical-scroll-proportion="0.44347826">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleWEB/src/main/webapp/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="48" selection-start="535" selection-end="535" vertical-scroll-proportion="0.40652174">
+          <folding />
         </state>
       </provider>
     </entry>

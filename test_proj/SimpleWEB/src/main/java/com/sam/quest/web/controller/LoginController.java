@@ -19,19 +19,13 @@ import java.util.Map;
 
 @Controller
 public class LoginController {
-    private String message;
-    private static Map<String, Users> usersMap = new HashMap<String, Users>();
     @Autowired
     private LoginValidator loginValidator;
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
+    private static Map<String, Users> usersMap = new HashMap<String, Users>();
 
     @RequestMapping("/login")
-    public String loginRedirect(HttpSession session, ModelMap modelMap) {
-        message = "Hello, Spring 3.0!";
-        session.setAttribute("message", message);
+    public String startInit(HttpSession session, ModelMap modelMap) {
+        session.setAttribute("message", "message");
         modelMap.addAttribute("loginForm", new LoginForm());
         return "login";
     }

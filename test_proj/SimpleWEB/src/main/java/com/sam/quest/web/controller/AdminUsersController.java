@@ -20,7 +20,7 @@ import java.util.Map;
 public class AdminUsersController {
 
     @RequestMapping("/admin/users")
-    public String startRedirect(HttpSession session) {
+    public String startInit(HttpSession session) {
         MultiService <Users> serv = new ServiceImpl<Users>();
         //List<Users> users = serv.listRecord(new Users());
         //session.setAttribute("users", users);
