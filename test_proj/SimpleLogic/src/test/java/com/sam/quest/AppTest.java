@@ -65,7 +65,7 @@ public class AppTest extends TestCase {
         TransactionalPerformer fms = new TransactionalPerformer();
         fms.executeCommand(new UpdateCommand<Forms>(form));
         TransactionalPerformer fm = new TransactionalPerformer<List <Forms>>();
-        List <Forms> list  = (ArrayList<Forms>)fm.executeCommand(new GetListCommand<ArrayList, Forms>(new ArrayList(), new Forms()));
+        List <Forms> list  = (List<Forms>)fm.executeCommand(new GetListCommand<List, Forms>(new ArrayList(), new Forms()));
 
         form = formdao.findRecord(1, new Forms());
         assertTrue(formhib.updateRecord(form));

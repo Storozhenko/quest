@@ -7,6 +7,14 @@ public class RegistrationForm {
     private String confirmPassword;
     private String language;
 
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
+
     public String getLanguage() {
         return language;
     }
@@ -31,12 +39,5 @@ public class RegistrationForm {
         this.password = password;
     }
 
-    public String getConfirmPassword() {
-        return confirmPassword;
-    }
-
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
-    }
 
 }

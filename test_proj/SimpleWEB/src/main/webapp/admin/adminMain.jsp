@@ -6,10 +6,10 @@
 </head>
 <body>
 <h2>Success</h2>
-${username}
+Welcome, ${username}
 <p>Congratulations! Your admin login was successful</p>
 <br>
-<a href="admin/tests">Tests</a> <a href="admin/users">Users</a>
+<a href="tests">Tests</a>  <a href="admin/users">Users</a>
 
 <a href="${pageContext.request.contextPath}/" title="Home">Home</a>
 </body>

@@ -11,14 +11,11 @@
 <body>
 <h2>Login</h2>
 <br/>
-${message}
 <span style="float: right">
     <a href="login?locale=en">en</a>
     |
     <a href="login?locale=ru">ru</a>
 </span>
-<br>
-<br>
 <form:form method="post" commandName="loginForm" action="loginAction">
     <table>
         <tr>
