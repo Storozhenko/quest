@@ -43,7 +43,13 @@ public class LoginController {
             return "login";
         }
         MultiService <Users> serv = new ServiceImpl<Users>();
-        List<Users> users = serv.listRecord(new Users());
+        List<Users> users = null;
+        try {
+            users = serv.listRecord(new Users());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "login";
+        }
         usersMap.clear();
         for (Users u: users) {
             String userKey = u.getUsername();
