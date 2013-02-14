@@ -2,18 +2,18 @@ package com.sam.quest.dao.hibernate;
 
 import org.hibernate.Session;
 
-import java.util.List;
-
 public class GetListCommand <E> implements Command <E> {
 
-    private Object obj;
+    E list;
+    Object obj;
 
-    public GetListCommand(Object obj) {
+    public GetListCommand(E list, Object obj) {
         this.obj = obj;
+        this.list = list;
     }
 
     public E execute(Session session) throws Exception{
-        E list = (E)session.createCriteria(obj.getClass()).list();
+        list = (E)session.createCriteria(obj.getClass()).list();
         return list;
     }
 }

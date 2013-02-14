@@ -33,10 +33,8 @@ public class AdminUsersController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        int a = u.size();
         session.setAttribute("users", u);
         session.setAttribute("forms", f);
-        session.setAttribute("a", a);
         return "admin/users";
     }
 

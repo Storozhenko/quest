@@ -19,12 +19,12 @@ public class Forms {
     @JoinColumn(name="user_id")
     private Users userId;
     @Column(name="form_date")
-    private Date formDate;
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "formId")
+    private Date formDate;  /*
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "formId")
     private Set<FormsData> formsData;
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "formId")
-    private Set<AnswForms> answForms;
-
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "formId")
+    private Set<AnswForms> answForms;     */
+   /*
     public Set<AnswForms> getAnswForms() {
         return answForms;
     }
@@ -33,6 +33,14 @@ public class Forms {
         this.answForms = answForms;
     }
 
+    public Set<FormsData> getFormsData() {
+        return formsData;
+    }
+
+    public void setFormsData(Set<FormsData> formsData) {
+        this.formsData = formsData;
+    }
+         */
     public Long getFormId() {
         return formId;
     }
@@ -65,11 +73,4 @@ public class Forms {
         this.formDate = formDate;
     }
 
-    public Set<FormsData> getFormsData() {
-        return formsData;
-    }
-
-    public void setFormsData(Set<FormsData> formsData) {
-        this.formsData = formsData;
-    }
 }

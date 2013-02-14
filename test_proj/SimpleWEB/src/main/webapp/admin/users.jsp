@@ -7,7 +7,6 @@
 <body>
 <h2>Success</h2>
 Welcome, ${username}
-${a}
 <p>Congratulations! Your admin login was successful</p>
 <table>
 <c:forEach var="users" items="${users}">

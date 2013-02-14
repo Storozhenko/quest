@@ -19,10 +19,10 @@ public class Users {
     private String userType;
     @Column(name="user_lang")
     private String userLang;
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "userId")
+    /*@OneToMany(fetch = FetchType.LAZY, mappedBy = "userId")
     private Set<Forms> forms;
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "userId")
-    private Set<AnswForms> answForms;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "userId")
+    private Set<AnswForms> answForms;   */
 
     public Long getUserId() {
         return userId;
@@ -63,7 +63,7 @@ public class Users {
     public void setPassword(String password) {
         this.password = password;
     }
-
+          /*
     public Set<Forms> getForms() {
         return forms;
     }
@@ -78,5 +78,5 @@ public class Users {
 
     public void setAnswForms(Set<AnswForms> answForms) {
         this.answForms = answForms;
-    }
+    }   */
 }

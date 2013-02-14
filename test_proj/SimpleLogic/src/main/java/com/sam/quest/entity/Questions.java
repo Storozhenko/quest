@@ -18,13 +18,13 @@ public class Questions {
     @Column(name="question_type")
     private String questionType;
     @Column(name="question_descr")
-    private String questionDescr;
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "questionId")
+    private String questionDescr;     /*
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionId")
     private Set<AnswQuestions> answQuestions;
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "questionId")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionId")
     private Set<FormsData> formsData;
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "questionId")
-    private Set<QuestionsData> questionsData;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionId")
+    private Set<QuestionsData> questionsData;      */
 
     public Long getQuestionId() {
         return questionId;
@@ -65,7 +65,7 @@ public class Questions {
     public void setQuestionDescr(String questionDescr) {
         this.questionDescr = questionDescr;
     }
-
+    /*
     public Set<AnswQuestions> getAnswQuestions() {
         return answQuestions;
     }
@@ -88,6 +88,6 @@ public class Questions {
 
     public void setQuestionsData(Set<QuestionsData> questionsData) {
         this.questionsData = questionsData;
-    }
+    }     */
 
 }
