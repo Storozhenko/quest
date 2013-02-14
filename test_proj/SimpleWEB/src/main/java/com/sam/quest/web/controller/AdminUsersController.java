@@ -22,8 +22,8 @@ public class AdminUsersController {
     @RequestMapping("/admin/users")
     public String startRedirect(HttpSession session) {
         MultiService <Users> serv = new ServiceImpl<Users>();
-        List<Users> users = serv.listRecord(new Users());
-        session.setAttribute("users", users);
+        //List<Users> users = serv.listRecord(new Users());
+        //session.setAttribute("users", users);
         return "admin/users";
     }
 

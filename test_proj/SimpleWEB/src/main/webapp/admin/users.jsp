@@ -8,6 +8,13 @@
 <h2>Success</h2>
 ${username}
 <p>Congratulations! Your admin login was successful</p>
+<c:forEach var="users" items="${users}">
+    <tr>
+        <td>${users.getUsername()}<td>
+        <td>${users.getPassword()}<td>
+        <td>${users.getUserType()}</td>
+    </tr>
+</c:forEach>
 <br>
 <a href="${pageContext.request.contextPath}/" title="Home">Home</a>
 </body>

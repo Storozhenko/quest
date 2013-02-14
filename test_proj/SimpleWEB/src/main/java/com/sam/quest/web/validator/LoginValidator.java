@@ -20,12 +20,12 @@ public class LoginValidator implements Validator{
     public void validate(Object target, Errors errors) {
         LoginForm loginForm = (LoginForm) target;
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "username.empty", "Username must not be empty");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "label.validator.usernameEmpty");
         String username = loginForm.getUsername();
         if ((username.length()) > 16) {
-            errors.rejectValue("username", "username.tooLong", "Username must not more than 16 characters");
+            errors.rejectValue("username", "label.validator.usernameTooLong");
         }
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "password.empty", "Password must not be empty");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "label.validator.passwordEmpty");
     }
 
     public String getEmptyUsername() {

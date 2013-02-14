@@ -10,6 +10,11 @@
 <h2>Login</h2>
 <br/>
 ${message}
+<span style="float: right">
+    <a href="?lang=en">en</a>
+    |
+    <a href="?lang=ru">ru</a>
+</span>
 <br>
 <br>
 <form:form method="post" commandName="loginForm" action="loginAction">
