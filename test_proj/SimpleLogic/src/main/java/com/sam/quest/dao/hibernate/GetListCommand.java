@@ -6,7 +6,6 @@ import java.util.List;
 
 public class GetListCommand <E> implements Command <E> {
 
-    private E list;
     private Object obj;
 
     public GetListCommand(Object obj) {
@@ -14,7 +13,7 @@ public class GetListCommand <E> implements Command <E> {
     }
 
     public E execute(Session session) throws Exception{
-        list = (E)session.createCriteria(obj.getClass()).list();
+        E list = (E)session.createCriteria(obj.getClass()).list();
         return list;
     }
 }

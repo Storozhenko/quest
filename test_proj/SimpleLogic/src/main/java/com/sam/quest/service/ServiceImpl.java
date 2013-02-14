@@ -1,8 +1,6 @@
 package com.sam.quest.service;
 
 import com.sam.quest.dao.hibernate.*;
-
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,7 +18,7 @@ public class ServiceImpl<E> implements MultiService<E> {
 
     public List<E> listRecord(E obj) throws Exception{
         TransactionalPerformer tp = new TransactionalPerformer<List<E>>();
-        List <E> list = (ArrayList<E>)tp.executeCommand(new GetListCommand<ArrayList, E>(new ArrayList(), obj));
+        List <E> list = (List<E>)tp.executeCommand(new GetListCommand<List<E>>(obj));
         return list;
     }
 

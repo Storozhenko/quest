@@ -24,5 +24,4 @@ public class TransactionalPerformer <E> {
         return obj;
     }
 
-
 }
