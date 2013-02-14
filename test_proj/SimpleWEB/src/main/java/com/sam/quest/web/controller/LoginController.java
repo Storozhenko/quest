@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpSession;
@@ -28,16 +29,15 @@ public class LoginController {
     }
 
     @RequestMapping("/login")
-    public String startRedirect(HttpSession session, ModelMap modelMap) {
+    public String loginRedirect(HttpSession session, ModelMap modelMap) {
         message = "Hello, Spring 3.0!";
-        LoginForm loginForm = new LoginForm();
         session.setAttribute("message", message);
-        modelMap.addAttribute("loginForm", loginForm);
+        modelMap.addAttribute("loginForm", new LoginForm());
         return "login";
     }
 
     @RequestMapping(value = "/loginAction", method = RequestMethod.POST)
-    public String checkUser(HttpSession session, LoginForm loginForm, BindingResult result) {
+    public String checkUser(HttpSession session, @ModelAttribute("loginForm")LoginForm loginForm, BindingResult result) {
         loginValidator.validate(loginForm, result);
         if (result.hasErrors()) {
             return "login";
@@ -69,6 +69,5 @@ public class LoginController {
         } else {
             return "login";
         }
-
     }
 }

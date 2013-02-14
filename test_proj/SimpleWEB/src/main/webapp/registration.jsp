@@ -4,14 +4,12 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-    <title>Login</title>
+    <title>Registration</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Login</h2>
-<br/>
-${message}
+<h2>Registration</h2>
 <span style="float: right">
     <a href="?locale=en">en</a>
     |
@@ -19,7 +17,7 @@ ${message}
 </span>
 <br>
 <br>
-<form:form method="post" commandName="loginForm" action="loginAction">
+<form:form method="post" commandName="regForm" action="registrationAction">
     <table>
         <tr>
             <td>Username:</td>
@@ -30,6 +28,15 @@ ${message}
             <td>Password:</td>
             <td><form:password path="password" /></td>
             <td><span class="error"><form:errors path="password" /></span></td>
+        </tr>
+        <tr>
+            <td>Confirm Password:</td>
+            <td><form:password path="confirmPassword" /></td>
+            <td><span class="error"><form:errors path="confirmPassword" /></span></td>
+        </tr>
+        <tr>
+            <td>Language:</td>
+            <td><form:password path="language" /></td>
         </tr>
         <tr>
             <td colspan="2"></td>

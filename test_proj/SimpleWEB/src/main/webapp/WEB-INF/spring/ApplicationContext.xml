@@ -12,10 +12,5 @@
 
     <context:component-scan base-package="com.sam.quest.web.*" />
     <mvc:annotation-driven />
-   <!-- <bean id="logValidator" class="com.sam.quest.web.validator.LoginValidator">
-        <property name="emptyUsername" value="Username must not be empty" />
-        <property name="longUsername" value="Username must not more than 16 characters" />
-        <property name="emptyPassword" value="Password must not be empty" />
-    </bean>      -->
 
 </beans>

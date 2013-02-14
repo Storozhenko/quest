@@ -24,8 +24,9 @@ public class RegistrationValidator implements Validator{
             errors.rejectValue("username", "label.validator.usernameTooLong");
         }
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "label.validator.passwordEmpty");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "confirmPassword", "label.validator.passwordEmpty");
 
-        if (regForm.getPassword().equals(regForm.getConfirmPassword())) {
+        if (!regForm.getPassword().equals(regForm.getConfirmPassword())) {
             errors.rejectValue("password", "label.validator.passwordNotMatch");
         }
     }
