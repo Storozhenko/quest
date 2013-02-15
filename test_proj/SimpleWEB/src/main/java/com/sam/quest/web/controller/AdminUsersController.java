@@ -8,6 +8,7 @@ import com.sam.quest.web.form.LoginForm;
 import com.sam.quest.web.validator.LoginValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,19 +23,15 @@ import java.util.Map;
 public class AdminUsersController {
 
     @RequestMapping("/admin/users")
-    public String startInit(HttpSession session) {
+    public String startInit(HttpSession session, ModelMap modelMap) {
         MultiService <Users> serv = new ServiceImpl<Users>();
-        MultiService <Forms> serv2 = new ServiceImpl<Forms>();
         List<Users> u = null;
-        List<Forms> f = null;
         try {
             u = serv.listRecord(new Users());
-            f = serv2.listRecord(new Forms());
         } catch (Exception e) {
             e.printStackTrace();
         }
         session.setAttribute("users", u);
-        session.setAttribute("forms", f);
         return "admin/users";
     }
 

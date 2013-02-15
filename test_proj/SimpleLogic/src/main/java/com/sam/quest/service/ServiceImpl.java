@@ -14,7 +14,7 @@ public class ServiceImpl<E> implements MultiService<E>{
     }
     public List<E> listRecord(E obj) throws Exception{
         TransactionalPerformer tp = new TransactionalPerformer<List<E>>();
-        List <E> list = (List<E>)tp.executeCommand(new GetListCommand<List>(new ArrayList(), obj));
+        List <E> list = (ArrayList<E>)tp.executeCommand(new GetListCommand<ArrayList<E>, E>(new ArrayList<E>(), obj));
         return list;
     }
 

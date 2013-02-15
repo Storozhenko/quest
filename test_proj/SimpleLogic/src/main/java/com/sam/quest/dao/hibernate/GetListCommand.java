@@ -2,12 +2,12 @@ package com.sam.quest.dao.hibernate;
 
 import org.hibernate.Session;
 
-public class GetListCommand <E> implements Command <E> {
+public class GetListCommand <E, T> implements Command <E> {
 
     E list;
-    Object obj;
+    T obj;
 
-    public GetListCommand(E list, Object obj) {
+    public GetListCommand(E list, T obj) {
         this.obj = obj;
         this.list = list;
     }

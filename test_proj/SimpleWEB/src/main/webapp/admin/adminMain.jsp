@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
     <title>Successfull Login</title>
@@ -6,11 +7,14 @@
 </head>
 <body>
 <h2>Success</h2>
-Welcome, ${username}
+<spring:message code="label.welcome"/>, ${username}
 <p>Congratulations! Your admin login was successful</p>
 <br>
-<a href="tests">Tests</a>  <a href="admin/users">Users</a>
-
+<a href="admin/adminForms">Forms</a>
+<br>
+<a href="admin/users">Users</a>
+<br>
+<br>
 <a href="${pageContext.request.contextPath}/" title="Home">Home</a>
 </body>
 </html>

@@ -16,13 +16,6 @@ Welcome, ${username}
     </tr>
 </c:forEach>
 </table>
-<table>
-    <c:forEach var="forms" items="${forms}">
-        <tr>
-            <td>${forms.getFormName()}<td>
-        </tr>
-    </c:forEach>
-</table>
 
 <br>
 <a href="${pageContext.request.contextPath}/" title="Home">Home</a>
