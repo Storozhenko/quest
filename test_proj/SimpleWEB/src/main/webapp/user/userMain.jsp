@@ -9,6 +9,6 @@
 ${username}
 <p>Congratulations! Your user login was successful</p>
 <br>
-<a href="${pageContext.request.contextPath}/" title="Home">Home</a>
+<a href="createForm">Create form</a>
 </body>
 </html>

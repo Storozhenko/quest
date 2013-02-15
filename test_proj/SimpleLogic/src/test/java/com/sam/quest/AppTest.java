@@ -62,13 +62,12 @@ public class AppTest extends TestCase {
         form.setFormId(new Long(1));
         assertTrue(formdao.updateRecord(form));
 
-        TransactionalPerformer fms = new TransactionalPerformer();
+        TransactionalPerformer fms = new TransactionalPerformer<Forms>();
         fms.executeCommand(new UpdateCommand<Forms>(form));
         TransactionalPerformer fm = new TransactionalPerformer<List <Forms>>();
-        List <Forms> list  = (ArrayList<Forms>)fm.executeCommand(new GetListCommand<ArrayList<Forms>>(new ArrayList<Forms>(), new Forms()));
-
         form = formdao.findRecord(1, new Forms());
         assertTrue(formhib.updateRecord(form));
+        List <Forms> list  = (ArrayList<Forms>)fm.executeCommand(new GetListCommand<ArrayList<Forms>>(new ArrayList<Forms>(), new Forms()));
 
         Timestamp time = new Timestamp(System.currentTimeMillis());
         AnswForms answ = new AnswForms();

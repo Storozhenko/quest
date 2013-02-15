@@ -31,7 +31,7 @@ public class AdminUsersController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        session.setAttribute("users", u);
+        modelMap.addAttribute("users", u);
         return "admin/users";
     }
 

@@ -1,12 +1,13 @@
 package com.sam.quest.entity;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Set;
 import javax.persistence.*;
 
 @Entity
 @Table(name="answ_forms")
-public class AnswForms {
+public class AnswForms implements Serializable {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

@@ -10,7 +10,7 @@
 <table>
     <c:forEach var="forms" items="${forms}">
         <tr>
-            <td>${forms.getFormName()}<td>
+            <td>${forms.formName}<td>
         </tr>
     </c:forEach>
 </table>

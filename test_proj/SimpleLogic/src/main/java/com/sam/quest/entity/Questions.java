@@ -1,11 +1,12 @@
 package com.sam.quest.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
 @Table(name="questions")
-public class Questions {
+public class Questions implements Serializable {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

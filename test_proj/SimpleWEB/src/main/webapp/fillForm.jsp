@@ -1,14 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-    <title>Forms</title>
+    <title>Fill form</title>
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Forms</h2>
-<br>
-<a href="createForm">Create form</a>
-<br>
-<a href="fillForm">Fill form</a>
+<h2>Fill form</h2>
+
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.sam.quest.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
@@ -7,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="forms")
-public class Forms {
+public class Forms implements Serializable {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

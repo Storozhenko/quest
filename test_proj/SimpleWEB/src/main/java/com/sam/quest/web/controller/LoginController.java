@@ -52,7 +52,8 @@ public class LoginController {
         Users user = usersMap.get(loginForm.getUsername());
         if(user != null) {
             if (user.getPassword().equals(loginForm.getPassword())) {
-                session.setAttribute("username", loginForm.getUsername());
+                session.setAttribute("username", user.getUsername());
+                session.setAttribute("userId", user.getUserId());
                 if (user.getUserType().equals("admin"))
                     return "admin/adminMain";
                 else
