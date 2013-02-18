@@ -1,4 +1,4 @@
-package com.sam.quest.web.controller;
+package com.sam.quest.web.controller.notinjected;
 
 import com.sam.quest.entity.Users;
 import com.sam.quest.service.MultiService;

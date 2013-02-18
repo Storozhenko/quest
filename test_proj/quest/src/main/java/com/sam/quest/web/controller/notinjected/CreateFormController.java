@@ -1,4 +1,4 @@
-package com.sam.quest.web.controller;
+package com.sam.quest.web.controller.notinjected;
 
 import com.sam.quest.entity.Forms;
 import com.sam.quest.entity.Users;
@@ -22,14 +22,14 @@ public class CreateFormController {
     @Autowired
     private FormValidator formValidator;
 
-    @RequestMapping("**/createForm")
+    @RequestMapping("/**/createForm")
     public String startInit(HttpSession session, ModelMap modelMap) {
         FormDTO form = new FormDTO();
         modelMap.addAttribute("form", form);
         return "createForm";
     }
 
-    @RequestMapping("**/createFormAction")
+    @RequestMapping("/**/createFormAction")
     public String addForm(HttpSession session, ModelMap modelMap, @ModelAttribute("form")FormDTO form, BindingResult result) {
         formValidator.validate(form, result);
         if (result.hasErrors()) {
@@ -57,6 +57,6 @@ public class CreateFormController {
         }
         QuestionDTO question = new QuestionDTO();
         modelMap.addAttribute("question", question);
-        return "addQuestion";
+        return "redirect:/addQuestion";
     }
 }

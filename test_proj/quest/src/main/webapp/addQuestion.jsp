@@ -25,9 +25,11 @@
         <tr>
             <td>Question Type:</td>
             <td>
-                <form:select path="questionType">
-                    <form:options items="${q}" />
-                </form:select>
+                <select name='questionType'>
+                    <c:forEach items="${types}" var="types">
+                            <option value="${types}">${types}</option>
+                    </c:forEach>
+                </select>
             </td>
         </tr>
         <tr>
