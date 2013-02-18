@@ -2,14 +2,14 @@ package com.sam.quest.web.dto;
 
 
 public class OptionDTO {
-    private String optionNum;
+    private int optionNum;
     private String optionData;
 
-    public String getOptionNum() {
+    public int getOptionNum() {
         return optionNum;
     }
 
-    public void setOptionNum(String optionNum) {
+    public void setOptionNum(int optionNum) {
         this.optionNum = optionNum;
     }
 

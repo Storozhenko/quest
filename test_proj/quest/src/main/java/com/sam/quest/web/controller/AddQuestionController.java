@@ -1,5 +1,6 @@
 package com.sam.quest.web.controller;
 
+import com.sam.quest.web.dto.OptionDTO;
 import com.sam.quest.web.dto.QuestionDTO;
 import com.sam.quest.web.validator.QuestionValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -19,32 +19,23 @@ public class AddQuestionController {
     private QuestionValidator questionValidator;
     private List<String> typeList;
 
+
     @RequestMapping("/**/addQuestion")
     public String startInit(HttpSession session, ModelMap modelMap) {
-        QuestionDTO question = new QuestionDTO();
-        modelMap.addAttribute("question", question);
+        modelMap.addAttribute("question", new QuestionDTO());
         modelMap.addAttribute("types", typeList);
         return "addQuestion";
     }
 
     @RequestMapping("/**/addQuestionAction")
-    public String addQuestion(HttpSession session, @ModelAttribute("question")QuestionDTO question, BindingResult result) {
-       // questionValidator = new QuestionValidator();
+    public String addQuestion(HttpSession session, ModelMap modelMap, @ModelAttribute("question")QuestionDTO question, BindingResult result) {
         questionValidator.validate(question, result);
         if (result.hasErrors()) {
+            modelMap.addAttribute("types", typeList);
             return "addQuestion";
         }
-        return "addQuestion";
-    }
-
-    @RequestMapping("/**/addOptionAction")
-    public String addOption(HttpSession session, @ModelAttribute("question")QuestionDTO question, BindingResult result) {
-        // questionValidator = new QuestionValidator();
-        questionValidator.validate(question, result);
-        if (result.hasErrors()) {
-            return "addQuestion";
-        }
-        return "addQuestion";
+        modelMap.addAttribute("option", new OptionDTO());
+        return "redirect:/addOption";
     }
 
     public void setTypeList(List<String> typeList) {

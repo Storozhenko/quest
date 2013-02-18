@@ -4,34 +4,25 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-    <title>Add Question</title>
+    <title>Add Option</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Add Question</h2>
+<h2>Add Option</h2>
 <br>
-<form:form method="post" commandName="question" action="addQuestionAction">
+<form:form method="post" commandName="option" action="addOptionAction">
     <table>
         <tr>
-            <td>Question name:</td>
-            <td><form:input path="questionName" size="40"/></td>
-            <td><span class="error"><form:errors path="questionName" /></span></td>
+            <td>Option number:</td>
+            <td><form:input path="optionNum" readonly="true"/></td>
         </tr>
-        <tr>
-            <td>Description:</td>
-            <td><form:input path="questionDescr" size="40" /></td>
         </tr>
-        <tr>
-            <td>Question Type:</td>
-            <td>
-                <form:select path="questionType">
-                    <c:forEach items="${types}" var="types">
-                        <option value="${types}">${types}</option>
-                    </c:forEach>
-                </form:select>
-            </td>
+        <td>Option data:</td>
+        <td><form:input path="optionData"/></td>
+        <td><span class="error"><form:errors path="optionData" /></span></td>
         </tr>
+
         <tr>
             <td colspan="2"></td>
         </tr>
