@@ -18,11 +18,10 @@ public class FormValidator implements Validator{
     public void validate(Object target, Errors errors) {
         FormDTO form = (FormDTO) target;
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "label.validator.formNameEmpty");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "formName", "label.validator.formNameEmpty");
         String formName = form.getFormName();
         if ((formName.length()) > 20) {
-            errors.rejectValue("username", "label.validator.formNameTooLong");
+            errors.rejectValue("formName", "label.validator.formNameTooLong");
         }
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "label.validator.passwordEmpty");
     }
 }

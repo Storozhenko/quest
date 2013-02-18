@@ -2,22 +2,31 @@ package com.sam.quest.web.dto;
 
 
 public class QuestionDTO {
-    private String formName;
-    private String formDescr;
+    private String questionName;
+    private String questionDescr;
+    private String questionType;
 
-    public String getFormName() {
-        return formName;
+    public String getQuestionName() {
+        return questionName;
     }
 
-    public void setFormName(String formName) {
-        this.formName = formName;
+    public void setQuestionName(String questionName) {
+        this.questionName = questionName;
     }
 
-    public String getFormDescr() {
-        return formDescr;
+    public String getQuestionDescr() {
+        return questionDescr;
     }
 
-    public void setFormDescr(String formDescr) {
-        this.formDescr = formDescr;
+    public void setQuestionDescr(String questionDescr) {
+        this.questionDescr = questionDescr;
+    }
+
+    public String getQuestionType() {
+        return questionType;
+    }
+
+    public void setQuestionType(String questionType) {
+        this.questionType = questionType;
     }
 }

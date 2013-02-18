@@ -7,6 +7,7 @@ import com.sam.quest.service.ServiceImpl;
 import com.sam.quest.web.dto.FormDTO;
 import com.sam.quest.web.dto.QuestionDTO;
 import com.sam.quest.web.validator.FormValidator;
+import com.sam.quest.web.validator.QuestionValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,17 +21,15 @@ import java.util.Date;
 public class CreateFormController {
     @Autowired
     private FormValidator formValidator;
-    @Autowired
-    private QuestionValidator questionValidator;
 
-    @RequestMapping("admin/createForm")
+    @RequestMapping("**/createForm")
     public String startInit(HttpSession session, ModelMap modelMap) {
         FormDTO form = new FormDTO();
         modelMap.addAttribute("form", form);
         return "createForm";
     }
 
-    @RequestMapping("admin/createFormAction")
+    @RequestMapping("**/createFormAction")
     public String addForm(HttpSession session, ModelMap modelMap, @ModelAttribute("form")FormDTO form, BindingResult result) {
         formValidator.validate(form, result);
         if (result.hasErrors()) {
@@ -58,31 +57,6 @@ public class CreateFormController {
         }
         QuestionDTO question = new QuestionDTO();
         modelMap.addAttribute("question", question);
-        return "addQuestion";
-    }
-
-    @RequestMapping("admin/addQuestionAction")
-    public String addQuestion(HttpSession session, @ModelAttribute("question")QuestionDTO question, BindingResult result) {
-        Forms newForm = new Forms();
-        Users user = new Users();
-        Long userId = (Long)session.getAttribute("userId");
-        MultiService <Users> servUsers = new ServiceImpl<Users>();
-        try {
-            user = servUsers.findRecord(userId, user);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "createForm";
-        }
-        newForm.setFormName(form.getFormName());
-        newForm.setUserId(user);
-        newForm.setFormDate(new Date(System.currentTimeMillis()));
-        MultiService <Forms> servForms = new ServiceImpl<Forms>();
-        try {
-            servForms.addRecord(newForm);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "createForm";
-        }
         return "addQuestion";
     }
 }

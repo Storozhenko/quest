@@ -1,6 +1,6 @@
 package com.sam.quest.web.validator;
 
-import com.sam.quest.web.dto.FormDTO;
+import com.sam.quest.web.dto.QuestionDTO;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -11,17 +11,16 @@ import org.springframework.validation.Validator;
 public class QuestionValidator implements Validator{
 
     public boolean supports(Class<?> clazz) {
-        return FormDTO.class.isAssignableFrom(clazz);
+        return QuestionDTO.class.isAssignableFrom(clazz);
     }
 
     public void validate(Object target, Errors errors) {
-        FormDTO form = (FormDTO) target;
+        QuestionDTO question = (QuestionDTO) target;
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "label.validator.formNameEmpty");
-        String formName = form.getFormName();
-        if ((formName.length()) > 20) {
-            errors.rejectValue("username", "label.validator.formNameTooLong");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "questionName", "label.validator.questionNameEmpty");
+        String questName = question.getQuestionName();
+        if ((questName.length()) > 45) {
+            errors.rejectValue("questionName", "label.validator.questionNameTooLong");
         }
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "label.validator.passwordEmpty");
     }
 }

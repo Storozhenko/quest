@@ -4,23 +4,31 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-    <title>Add Questions</title>
+    <title>Add Question</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Add Questions</h2>
+<h2>Add Question</h2>
 <br>
 <form:form method="post" commandName="question" action="addQuestionAction">
     <table>
         <tr>
-            <td>Form name:</td>
-            <td><form:input path="formName"/></td>
-            <td><span class="error"><form:errors path="formName" /></span></td>
+            <td>Question name:</td>
+            <td><form:input path="questionName"/></td>
+            <td><span class="error"><form:errors path="questionName" /></span></td>
         </tr>
         <tr>
             <td>Description:</td>
-            <td><form:input path="formDescr"/></td>
+            <td><form:input path="questionDescr"/></td>
+        </tr>
+        <tr>
+            <td>Question Type:</td>
+            <td>
+                <form:select path="questionType">
+                    <form:options items="${q}" />
+                </form:select>
+            </td>
         </tr>
         <tr>
             <td colspan="2"></td>

@@ -13,7 +13,7 @@ import java.util.List;
 @Controller
 public class AdminUsersController {
 
-    @RequestMapping("/admin/users")
+    @RequestMapping("admin/users")
     public String startInit(HttpSession session, ModelMap modelMap) {
         MultiService <Users> serv = new ServiceImpl<Users>();
         List<Users> u = null;
