@@ -17,18 +17,12 @@ import java.util.List;
 public class AddQuestionController {
     @Autowired
     private QuestionValidator questionValidator;
-    private String type1;
-    private String type2;
-    private String type3;
+    private List<String> typeList;
 
     @RequestMapping("/**/addQuestion")
     public String startInit(HttpSession session, ModelMap modelMap) {
         QuestionDTO question = new QuestionDTO();
         modelMap.addAttribute("question", question);
-        List <String> typeList = new ArrayList<String>();
-        typeList.add(type1);
-        typeList.add(type2);
-        typeList.add(type3);
         modelMap.addAttribute("types", typeList);
         return "addQuestion";
     }
@@ -43,15 +37,17 @@ public class AddQuestionController {
         return "addQuestion";
     }
 
-    public void setType1(String type1) {
-        this.type1 = type1;
+    @RequestMapping("/**/addOptionAction")
+    public String addOption(HttpSession session, @ModelAttribute("question")QuestionDTO question, BindingResult result) {
+        // questionValidator = new QuestionValidator();
+        questionValidator.validate(question, result);
+        if (result.hasErrors()) {
+            return "addQuestion";
+        }
+        return "addQuestion";
     }
 
-    public void setType2(String type2) {
-        this.type2 = type2;
-    }
-
-    public void setType3(String type3) {
-        this.type3 = type3;
+    public void setTypeList(List<String> typeList) {
+        this.typeList = typeList;
     }
 }

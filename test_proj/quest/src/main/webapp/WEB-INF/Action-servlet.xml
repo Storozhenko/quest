@@ -20,9 +20,13 @@
     </bean>
 
     <bean id="AddQuestionController" class="com.sam.quest.web.controller.AddQuestionController">
-        <property name="type1" value="${question.type1}" />
-        <property name="type2" value="${question.type2}" />
-        <property name="type3" value="${question.type3}" />
+        <property name="typeList">
+            <list>
+                <value>${question.type1}</value>
+                <value>${question.type2}</value>
+                <value>${question.type3}</value>
+            </list>
+        </property>
     </bean>
 
         <bean name="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
@@ -30,6 +34,7 @@
                 <props>
                     <prop key="/**/addQuestion">AddQuestionController</prop>
                     <prop key="/**/addQuestionAction">AddQuestionController</prop>
+                    <prop key="/**/addOptionAction">AddQuestionController</prop>
                 </props>
             </property>
         </bean>
