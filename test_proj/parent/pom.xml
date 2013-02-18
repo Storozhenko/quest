@@ -28,7 +28,7 @@
 
   <modules>
     <module>../SimpleLogic</module>
-    <module>../SimpleWEB</module>
+    <module>../quest</module>
   </modules> 
   
 </project>

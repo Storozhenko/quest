@@ -1,7 +1,7 @@
-package com.sam.quest.web.form;
+package com.sam.quest.web.dto;
 
 
-public class RegistrationForm {
+public class RegistrationDTO {
     private String username;
     private String password;
     private String confirmPassword;

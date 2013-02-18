@@ -1,7 +1,7 @@
-package com.sam.quest.web.form;
+package com.sam.quest.web.dto;
 
 
-public class QuestionForm {
+public class FormDTO {
     private String formName;
     private String formDescr;
 

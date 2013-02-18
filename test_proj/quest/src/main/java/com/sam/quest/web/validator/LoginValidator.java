@@ -1,6 +1,6 @@
 package com.sam.quest.web.validator;
 
-import com.sam.quest.web.form.LoginForm;
+import com.sam.quest.web.dto.LoginDTO;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -11,11 +11,11 @@ import org.springframework.validation.Validator;
 public class LoginValidator implements Validator{
 
     public boolean supports(Class<?> clazz) {
-        return LoginForm.class.isAssignableFrom(clazz);
+        return LoginDTO.class.isAssignableFrom(clazz);
     }
 
     public void validate(Object target, Errors errors) {
-        LoginForm loginForm = (LoginForm) target;
+        LoginDTO loginForm = (LoginDTO) target;
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "label.validator.usernameEmpty");
         String username = loginForm.getUsername();

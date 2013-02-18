@@ -3,7 +3,7 @@ package com.sam.quest.web.controller;
 import com.sam.quest.entity.Users;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ServiceImpl;
-import com.sam.quest.web.form.LoginForm;
+import com.sam.quest.web.dto.LoginDTO;
 import com.sam.quest.web.validator.LoginValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,12 +26,12 @@ public class LoginController {
     @RequestMapping("/login")
     public String startInit(HttpSession session, ModelMap modelMap) {
         session.setAttribute("message", "message");
-        modelMap.addAttribute("loginForm", new LoginForm());
+        modelMap.addAttribute("loginForm", new LoginDTO());
         return "login";
     }
 
     @RequestMapping(value = "/loginAction", method = RequestMethod.POST)
-    public String checkUser(HttpSession session, @ModelAttribute("loginForm")LoginForm loginForm, BindingResult result) {
+    public String checkUser(HttpSession session, @ModelAttribute("loginForm")LoginDTO loginForm, BindingResult result) {
         loginValidator.validate(loginForm, result);
         if (result.hasErrors()) {
             return "login";

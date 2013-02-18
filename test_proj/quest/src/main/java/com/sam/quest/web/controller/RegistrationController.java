@@ -3,7 +3,7 @@ package com.sam.quest.web.controller;
 import com.sam.quest.entity.Users;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ServiceImpl;
-import com.sam.quest.web.form.RegistrationForm;
+import com.sam.quest.web.dto.RegistrationDTO;
 import com.sam.quest.web.validator.RegistrationValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,12 +20,12 @@ public class RegistrationController {
 
     @RequestMapping("/registration")
     public String startInit(ModelMap modelMap) {
-        modelMap.addAttribute("regForm", new RegistrationForm());
+        modelMap.addAttribute("regForm", new RegistrationDTO());
         return "registration";
     }
 
     @RequestMapping(value = "/registrationAction", method = RequestMethod.POST)
-    public String addUser(@ModelAttribute("regForm") RegistrationForm regForm, BindingResult result, ModelMap modelMap) {
+    public String addUser(@ModelAttribute("regForm") RegistrationDTO regForm, BindingResult result, ModelMap modelMap) {
         regValidator.validate(regForm, result);
         if (result.hasErrors()) {
             return "registration";

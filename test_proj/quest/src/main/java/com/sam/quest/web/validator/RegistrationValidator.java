@@ -1,6 +1,6 @@
 package com.sam.quest.web.validator;
 
-import com.sam.quest.web.form.RegistrationForm;
+import com.sam.quest.web.dto.RegistrationDTO;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -11,11 +11,11 @@ import org.springframework.validation.Validator;
 public class RegistrationValidator implements Validator{
 
     public boolean supports(Class<?> clazz) {
-        return RegistrationForm.class.isAssignableFrom(clazz);
+        return RegistrationDTO.class.isAssignableFrom(clazz);
     }
 
     public void validate(Object target, Errors errors) {
-        RegistrationForm regForm = (RegistrationForm) target;
+        RegistrationDTO regForm = (RegistrationDTO) target;
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "label.validator.usernameEmpty");
         String username = regForm.getUsername();

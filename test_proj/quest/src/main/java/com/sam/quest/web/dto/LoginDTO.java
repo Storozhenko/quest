@@ -1,7 +1,7 @@
-package com.sam.quest.web.form;
+package com.sam.quest.web.dto;
 
 
-public class LoginForm {
+public class LoginDTO {
     private String username;
     private String password;
 
