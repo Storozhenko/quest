@@ -52,22 +52,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddFormController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddFormController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.ipr" afterPath="$PROJECT_DIR$/parent.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\addOption.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addOption.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\addQuestion.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\admin\adminForms.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/adminForms.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\admin\adminMain.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/adminMain.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\admin\users.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/users.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\createForm.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addForm.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\error.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/error.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\fillForm.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/fillForm.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\index.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/index.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\login.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\registration.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/registration.jsp" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\webapp\user\userMain.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/user/userMain.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/pom.xml" afterPath="$PROJECT_DIR$/../quest/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/quest.iml" afterPath="$PROJECT_DIR$/../quest/quest.iml" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,7 +115,7 @@
     <file path="/web.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361366000348" ignored="false" />
     <file path="/login.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360844799620" ignored="false" />
     <file path="/controllers.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360658195058" ignored="false" />
-    <file path="/Action-servlet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361366405037" ignored="false" />
+    <file path="/Action-servlet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361371983927" ignored="false" />
     <file path="/main.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360754097375" ignored="false" />
     <file path="/index.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360750056935" ignored="false" />
     <file path="/LoginValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360835827263" ignored="false" />
@@ -156,7 +146,7 @@
     <file path="/addQuestions.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361177852144" ignored="false" />
     <file path="/quest.iml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361176011894" ignored="false" />
     <file path="/FormValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361178597666" ignored="false" />
-    <file path="/AddQuestionController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361360022945" ignored="false" />
+    <file path="/AddQuestionController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361372002634" ignored="false" />
     <file path="/addQuestion.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361196252143" ignored="false" />
     <file path="/QuestionValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361181418698" ignored="false" />
     <file path="/QuestionDTO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361181336921" ignored="false" />
@@ -369,27 +359,18 @@
       <file leaf-file-name="Action-servlet.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="39" selection-start="2669" selection-end="2669" vertical-scroll-proportion="0.34979424">
+            <state line="40" column="72" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.71358025">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="addQuestion.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="386" selection-end="386" vertical-scroll-proportion="-6.12">
+            <state line="12" column="35" selection-start="540" selection-end="540" vertical-scroll-proportion="-7.8461537">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -405,19 +386,10 @@
       <file leaf-file-name="AddQuestionController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="50" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.0">
+            <state line="60" column="57" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addQuestion.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="6" selection-start="547" selection-end="547" vertical-scroll-proportion="-8.5">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -446,7 +418,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddOptionController.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/addOption.jsp" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/hibernate/HiberMultiDAO.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/MultiDAO.java" />
@@ -455,13 +426,14 @@
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/admin/adminMain.jsp" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/index.jsp" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/adminForms.jsp" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/user/userMain.jsp" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addForm.jsp" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp" />
-        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddFormController.java" />
+        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp" />
+        <option value="$PROJECT_DIR$/../quest/pom.xml" />
+        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" />
+        <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml" />
       </list>
     </option>
   </component>
@@ -622,6 +594,40 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resource Bundle 'messages'" />
+              <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1331,7 +1337,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="1002" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.431629" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1354,7 +1360,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2949757" sideWeight="0.60306245" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878444" sideWeight="0.60306245" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39693758" sideWeight="0.493517" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39693758" sideWeight="0.493517" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.18311533" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1480,13 +1486,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/MultiDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="223" selection-end="223" vertical-scroll-proportion="0.1652491">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="40" selection-start="443" selection-end="443" vertical-scroll-proportion="0.24485597">
@@ -1511,22 +1510,6 @@
         </state>
       </provider>
       <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="386" selection-end="386" vertical-scroll-proportion="-6.12">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
     </entry>
@@ -1558,29 +1541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="587" selection-end="587" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="547" selection-end="547" vertical-scroll-proportion="-8.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="50" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/adminMain.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="56" selection-start="301" selection-end="301" vertical-scroll-proportion="0.20652173">
@@ -1604,9 +1564,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="386" selection-end="386" vertical-scroll-proportion="-0.04385965">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="31" selection-start="587" selection-end="587" vertical-scroll-proportion="-9.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="35" selection-start="540" selection-end="540" vertical-scroll-proportion="-7.8461537">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="41" selection-start="2088" selection-end="2088" vertical-scroll-proportion="0.21506684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="57" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="39" selection-start="2669" selection-end="2669" vertical-scroll-proportion="0.34979424">
+        <state line="40" column="72" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.71358025">
           <folding />
         </state>
       </provider>

@@ -11,7 +11,6 @@
 <body>
 <h2>Add Question</h2>
 <br>
-${type}
 <form:form method="post" commandName="question" action="addQuestionAction">
     <table>
         <tr>

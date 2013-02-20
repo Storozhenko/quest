@@ -7,6 +7,7 @@ import com.sam.quest.web.dto.OptionDTO;
 import com.sam.quest.web.dto.QuestionDTO;
 import com.sam.quest.web.validator.QuestionValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -21,13 +22,12 @@ public class AddQuestionController {
     @Autowired
     private QuestionValidator questionValidator;
     private List<String> typeList;
-    private String type;
+    private MessageSource messageSource;
 
     @RequestMapping("/**/addQuestion")
     public String startInit(HttpSession session, ModelMap modelMap) {
         modelMap.addAttribute("question", new QuestionDTO());
         modelMap.addAttribute("types", typeList);
-        session.setAttribute("type", type);
         return "addQuestion";
     }
 
@@ -68,15 +68,9 @@ public class AddQuestionController {
         return "redirect:/addOption";
     }
 
-    public List<String> getTypeList() {
-        return typeList;
-    }
-
     public void setTypeList(List<String> typeList) {
         this.typeList = typeList;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
+
 }
