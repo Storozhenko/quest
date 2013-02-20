@@ -52,11 +52,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddOptionController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddOptionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/ServiceImpl.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/ServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/addOption.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/addOption.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/quest.iml" afterPath="$PROJECT_DIR$/../quest/quest.iml" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,7 +111,7 @@
     <file path="/web.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361174910768" ignored="false" />
     <file path="/login.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360844799620" ignored="false" />
     <file path="/controllers.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360658195058" ignored="false" />
-    <file path="/Action-servlet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361353760622" ignored="false" />
+    <file path="/Action-servlet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361355339903" ignored="false" />
     <file path="/main.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360754097375" ignored="false" />
     <file path="/index.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360750056935" ignored="false" />
     <file path="/LoginValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360835827263" ignored="false" />
@@ -145,14 +142,14 @@
     <file path="/addQuestions.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361177852144" ignored="false" />
     <file path="/quest.iml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361176011894" ignored="false" />
     <file path="/FormValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361178597666" ignored="false" />
-    <file path="/AddQuestionController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361352898939" ignored="false" />
+    <file path="/AddQuestionController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361355351925" ignored="false" />
     <file path="/addQuestion.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361196252143" ignored="false" />
     <file path="/QuestionValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361181418698" ignored="false" />
     <file path="/QuestionDTO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361181336921" ignored="false" />
     <file path="/OptionDTO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361200165156" ignored="false" />
     <file path="/OptionValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361197255107" ignored="false" />
-    <file path="/addOption.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361353099468" ignored="false" />
-    <file path="/AddOptionController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361354726271" ignored="false" />
+    <file path="/addOption.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361356641816" ignored="false" />
+    <file path="/AddOptionController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361355918406" ignored="false" />
     <file path="/Singleton.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361199881212" ignored="false" />
     <file path="/error.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361352975481" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -356,7 +353,7 @@
       <file leaf-file-name="AddQuestionController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="55" selection-start="1999" selection-end="1999" vertical-scroll-proportion="0.0">
+            <state line="43" column="28" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -364,22 +361,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddOptionController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddOptionController.java">
+      <file leaf-file-name="addOption.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/addOption.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="81" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.60123456">
-              <folding>
-                <element signature="e#1707#1722#0" expanded="true" />
-              </folding>
+            <state line="23" column="36" selection-start="875" selection-end="875" vertical-scroll-proportion="0.1706399">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddFormController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddFormController.java">
+      <file leaf-file-name="AddOptionController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddOptionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="54" column="23" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1707#1722#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -420,10 +417,10 @@
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/error.jsp" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AdminFormsController.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/ServiceImpl.java" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/addOption.jsp" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml" />
-        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddOptionController.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" />
+        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddOptionController.java" />
+        <option value="$PROJECT_DIR$/../quest/src/main/webapp/addOption.jsp" />
       </list>
     </option>
   </component>
@@ -585,6 +582,130 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resource Bundle 'messages'" />
+              <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1322,28 +1443,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddFormController.java">
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_ru.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="749" selection-end="763" vertical-scroll-proportion="0.24066924">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.1969112">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="13" selection-start="810" selection-end="810" vertical-scroll-proportion="0.10493827">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="39" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.24787363">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="55" selection-start="1999" selection-end="1999" vertical-scroll-proportion="0.0">
+        <state line="43" column="28" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/OptionValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="303" selection-end="303" vertical-scroll-proportion="0.12393682">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddOptionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="81" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.60123456">
+        <state line="54" column="23" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#1707#1722#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/addOption.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="36" selection-start="875" selection-end="875" vertical-scroll-proportion="0.1706399">
+          <folding />
         </state>
       </provider>
     </entry>

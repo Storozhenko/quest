@@ -53,4 +53,13 @@ public class AddOptionController {
         modelMap.addAttribute("option", newOption);
         return "addOption";
     }
+
+    @RequestMapping("/**/finishQuestionAction")
+    public String finishQuestion(HttpSession session, ModelMap modelMap, @ModelAttribute("option")OptionDTO option, BindingResult result) {
+        optionValidator.validate(option, result);
+        if (result.hasErrors()) {
+            return "addOption";
+        }
+        return "addOption";
+    }
 }

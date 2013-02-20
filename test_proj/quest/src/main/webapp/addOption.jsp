@@ -14,25 +14,55 @@
 ${type}
 <br>
 ${questionId}
-<form:form method="post" commandName="option" action="addOptionAction">
-    <table>
-        <tr>
-            <td>Option number:</td>
-            <td><form:input path="optionNum" readonly="true"/></td>
-        </tr>
-        </tr>
-            <td>Option data:</td>
-            <td><form:input path="optionData"/></td>
-            <td><span class="error"><form:errors path="optionData" /></span></td>
-        </tr>
+<c:choose>
+    <c:when test="${type == 1}">
+        <form:form method="post" commandName="option" action="finishQuestionAction">
+            <table>
+                <tr>
+                    <td>Option number:</td>
+                    <td><form:input path="optionNum" readonly="true"/></td>
+                </tr>
+                <tr>
+                    <td>Question data:</td>
+                    <td><form:input path="optionData"/></td>
+                    <td><span class="error"><form:errors path="optionData" /></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Finish question" /></td>
+                </tr>
+            </table>
+        </form:form>
+    </c:when>
+    <c:when test="${type >= 2}">
+        <form:form method="post" commandName="option" action="addOptionAction">
+            <table>
+                <tr>
+                    <td>Option number:</td>
+                    <td><form:input path="optionNum" readonly="true"/></td>
+                </tr>
+                <tr>
+                    <td>Option data:</td>
+                    <td><form:input path="optionData"/></td>
+                    <td><span class="error"><form:errors path="optionData" /></span></td>
+                </tr>
 
-        <tr>
-            <td colspan="2"></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="submit" value="Submit" /></td>
-        </tr>
-    </table>
-</form:form>
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form:form>
+    </c:when>
+</c:choose>
+<c:if test="${option.optionNum >= 2}">
+    <form action="finishQuestionAction">
+        <input type="submit" value="Finish question">
+    </form>
+</c:if>
 </body>
 </html>
