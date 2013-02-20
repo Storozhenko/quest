@@ -20,7 +20,10 @@ public class Forms implements Serializable {
     @JoinColumn(name="user_id")
     private Users userId;
     @Column(name="form_date")
-    private Date formDate;  /*
+    private Date formDate;
+    @Column(name="form_descr")
+    private String formDescr;
+    /*
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "formId")
     private Set<FormsData> formsData;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "formId")
@@ -74,4 +77,11 @@ public class Forms implements Serializable {
         this.formDate = formDate;
     }
 
+    public String getFormDescr() {
+        return formDescr;
+    }
+
+    public void setFormDescr(String formDescr) {
+        this.formDescr = formDescr;
+    }
 }

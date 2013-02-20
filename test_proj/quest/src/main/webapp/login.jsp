@@ -12,9 +12,9 @@
 <h2>Login</h2>
 <br/>
 <span style="float: right">
-    <a href="login?locale=en">en</a>
+    <a href="?locale=en">en</a>
     |
-    <a href="login?locale=ru">ru</a>
+    <a href="?locale=ru">ru</a>
 </span>
 <form:form method="post" commandName="loginForm" action="loginAction">
     <table>

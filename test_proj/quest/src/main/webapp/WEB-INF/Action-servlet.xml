@@ -15,10 +15,6 @@
     <context:component-scan base-package="com.sam.quest.web.controller.notinjected" />
     <context:component-scan base-package="com.sam.quest.web.validator" />
 
-    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations" value="WEB-INF/messages/*" />
-    </bean>
-
     <bean id="AddQuestionController" class="com.sam.quest.web.controller.AddQuestionController">
         <property name="typeList">
             <list>
@@ -29,15 +25,15 @@
         </property>
     </bean>
 
-        <bean name="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-            <property name="mappings">
-                <props>
-                    <prop key="/**/addQuestion">AddQuestionController</prop>
-                    <prop key="/**/addQuestionAction">AddQuestionController</prop>
-                    <prop key="/**/addOptionAction">AddQuestionController</prop>
-                </props>
-            </property>
-        </bean>
+    <bean name="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/**/addQuestion">AddQuestionController</prop>
+                <prop key="/**/addQuestionAction">AddQuestionController</prop>
+            </props>
+        </property>
+    </bean>
+
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="viewClass"
@@ -59,7 +55,7 @@
 
     <bean id="localeResolver"
           class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
-        <property name="defaultLocale" value="ru"/>
+        <property name="defaultLocale" value="en"/>
     </bean>
 
     <bean id="handlerMapping"
@@ -74,5 +70,9 @@
             <property name="paramName" value="locale" />
         </bean>
     </mvc:interceptors>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="WEB-INF/messages/*" />
+    </bean>
 
 </beans>

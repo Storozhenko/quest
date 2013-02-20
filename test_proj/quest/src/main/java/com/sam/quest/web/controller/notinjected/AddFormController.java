@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Date;
 
 @Controller
-public class CreateFormController {
+public class AddFormController {
     @Autowired
     private FormValidator formValidator;
 

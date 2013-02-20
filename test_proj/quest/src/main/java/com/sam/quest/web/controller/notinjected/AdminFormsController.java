@@ -20,6 +20,7 @@ public class AdminFormsController {
             forms = serv.listRecord(new Forms());
         } catch (Exception e) {
             e.printStackTrace();
+            session.setAttribute("error", e.getMessage());
         }
         modelMap.addAttribute("forms", forms);
         return "/admin/adminForms";

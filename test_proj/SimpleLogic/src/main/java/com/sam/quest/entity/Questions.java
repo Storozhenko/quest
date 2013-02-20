@@ -14,10 +14,8 @@ public class Questions implements Serializable {
     private Long questionId;
     @Column(name="question_name")
     private String questionName;
-    @Column(name="question_answer")
-    private String questionAnswer;
     @Column(name="question_type")
-    private String questionType;
+    private Integer questionType;
     @Column(name="question_descr")
     private String questionDescr;     /*
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionId")
@@ -43,19 +41,11 @@ public class Questions implements Serializable {
         this.questionName = questionName;
     }
 
-    public String getQuestionAnswer() {
-        return questionAnswer;
-    }
-
-    public void setQuestionAnswer(String questionAnswer) {
-        this.questionAnswer = questionAnswer;
-    }
-
-    public String getQuestionType() {
+    public Integer getQuestionType() {
         return questionType;
     }
 
-    public void setQuestionType(String questionType) {
+    public void setQuestionType(Integer questionType) {
         this.questionType = questionType;
     }
 

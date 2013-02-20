@@ -14,10 +14,10 @@ public class QuestionsData implements Serializable {
     @ManyToOne(cascade={CascadeType.REFRESH}, fetch=FetchType.EAGER)
     @JoinColumn(name="question_id")
     private Questions questionId;
-    @Column(name="question_variant")
-    private int questionVariant;
-    @Column(name="question_data")
-    private String questionData;
+    @Column(name="question_option")
+    private int questionOption;
+    @Column(name="option_data")
+    private String optionData;
 
     public Long getQuestionDataId() {
         return questionDataId;
@@ -35,19 +35,19 @@ public class QuestionsData implements Serializable {
         this.questionId = questionId;
     }
 
-    public int getQuestionVariant() {
-        return questionVariant;
+    public int getQuestionOption() {
+        return questionOption;
     }
 
-    public void setQuestionVariant(int questionVariant) {
-        this.questionVariant = questionVariant;
+    public void setQuestionOption(int questionVariant) {
+        this.questionOption = questionVariant;
     }
 
-    public String getQuestionData() {
-        return questionData;
+    public String getOptionData() {
+        return optionData;
     }
 
-    public void setQuestionData(String questionData) {
-        this.questionData = questionData;
+    public void setOptionData(String questionData) {
+        this.optionData = questionData;
     }
 }

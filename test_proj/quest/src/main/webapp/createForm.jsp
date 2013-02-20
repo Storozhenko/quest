@@ -11,6 +11,11 @@
 <body>
 <h2>Create Form</h2>
 <br>
+<span style="float: right">
+    <a href="?locale=en">en</a>
+    |
+    <a href="?locale=ru">ru</a>
+</span>
 <form:form method="post" commandName="form" action="createFormAction">
     <table>
         <tr>

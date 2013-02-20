@@ -1,5 +1,8 @@
 package com.sam.quest.web.controller;
 
+import com.sam.quest.entity.Questions;
+import com.sam.quest.service.MultiService;
+import com.sam.quest.service.ServiceImpl;
 import com.sam.quest.web.dto.OptionDTO;
 import com.sam.quest.web.dto.QuestionDTO;
 import com.sam.quest.web.validator.QuestionValidator;
@@ -34,6 +37,32 @@ public class AddQuestionController {
             modelMap.addAttribute("types", typeList);
             return "addQuestion";
         }
+        int type = 0;
+        for (String u : typeList) {
+            type++;
+            if (u.equals(question.getQuestionType()))
+                break;
+        }
+        Questions newQuestion = new Questions();
+        newQuestion.setQuestionName(question.getQuestionName());
+        newQuestion.setQuestionType(type);
+        newQuestion.setQuestionDescr(question.getQuestionDescr());
+        MultiService<Questions> servQuest = new ServiceImpl<Questions>();
+        try {
+            servQuest.addRecord(newQuestion);
+            List<Questions> list = servQuest.listRecord(new Questions());
+            for (Questions q : list) {
+                if (q.getQuestionName().equals(question.getQuestionName()))
+                    session.setAttribute("questionId", q.getQuestionId());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            session.setAttribute("error", e.getMessage());
+            return "redirect:/error";
+        }
+
+        session.setAttribute("type", type);
+        session.setAttribute("type", type);
         modelMap.addAttribute("option", new OptionDTO());
         return "redirect:/addOption";
     }

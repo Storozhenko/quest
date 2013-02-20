@@ -11,8 +11,13 @@
 <body>
 <h2>Add Option</h2>
 <br>
+${type}
 <form:form method="post" commandName="option" action="addOptionAction">
     <table>
+        <tr>
+            <td>Question type:</td>
+            <td><form:input path="questionType" readonly="true"/></td>
+        </tr>
         <tr>
             <td>Option number:</td>
             <td><form:input path="optionNum" readonly="true"/></td>
