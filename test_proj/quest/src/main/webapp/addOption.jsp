@@ -12,20 +12,18 @@
 <h2>Add Option</h2>
 <br>
 ${type}
+<br>
+${questionId}
 <form:form method="post" commandName="option" action="addOptionAction">
     <table>
-        <tr>
-            <td>Question type:</td>
-            <td><form:input path="questionType" readonly="true"/></td>
-        </tr>
         <tr>
             <td>Option number:</td>
             <td><form:input path="optionNum" readonly="true"/></td>
         </tr>
         </tr>
-        <td>Option data:</td>
-        <td><form:input path="optionData"/></td>
-        <td><span class="error"><form:errors path="optionData" /></span></td>
+            <td>Option data:</td>
+            <td><form:input path="optionData"/></td>
+            <td><span class="error"><form:errors path="optionData" /></span></td>
         </tr>
 
         <tr>

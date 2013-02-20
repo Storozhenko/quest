@@ -1,5 +1,9 @@
 package com.sam.quest.web.controller.notinjected;
 
+import com.sam.quest.entity.Questions;
+import com.sam.quest.entity.QuestionsData;
+import com.sam.quest.service.MultiService;
+import com.sam.quest.service.ServiceImpl;
 import com.sam.quest.web.dto.OptionDTO;
 import com.sam.quest.web.validator.OptionValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +34,19 @@ public class AddOptionController {
         optionValidator.validate(option, result);
         if (result.hasErrors()) {
             return "addOption";
+        }
+        QuestionsData qd = new QuestionsData();
+        Questions q = new Questions();
+        q.setQuestionId((Long)session.getAttribute("questionId"));
+        qd.setQuestionId(q);
+        qd.setQuestionOption(option.getOptionNum());
+        qd.setOptionData(option.getOptionData());
+        MultiService<QuestionsData> serv = new ServiceImpl<QuestionsData>();
+        try {
+            serv.addRecord(qd);
+        } catch (Exception e) {
+            session.setAttribute("error", e.getMessage());
+            return "redirect:/error";
         }
         OptionDTO newOption = new OptionDTO();
         newOption.setOptionNum(option.getOptionNum() + 1);

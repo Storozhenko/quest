@@ -56,12 +56,10 @@ public class AddQuestionController {
                     session.setAttribute("questionId", q.getQuestionId());
             }
         } catch (Exception e) {
-            e.printStackTrace();
             session.setAttribute("error", e.getMessage());
             return "redirect:/error";
         }
 
-        session.setAttribute("type", type);
         session.setAttribute("type", type);
         modelMap.addAttribute("option", new OptionDTO());
         return "redirect:/addOption";
