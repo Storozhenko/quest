@@ -5,7 +5,6 @@ import com.sam.quest.dao.factory.HiberDAOFactory;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-//deprecated
 public class HiberMultiDAO<E> implements MultiDAO<E> {
 
     private boolean res;

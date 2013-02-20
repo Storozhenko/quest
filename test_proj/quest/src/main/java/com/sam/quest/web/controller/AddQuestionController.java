@@ -40,8 +40,10 @@ public class AddQuestionController {
         int type = 0;
         for (String u : typeList) {
             type++;
-            if (u.equals(question.getQuestionType()))
+            if (u.equals(question.getQuestionType())) {
+                session.setAttribute("typeTxt", u);
                 break;
+            }
         }
         Questions newQuestion = new Questions();
         newQuestion.setQuestionName(question.getQuestionName());
@@ -57,7 +59,7 @@ public class AddQuestionController {
             }
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
-            return "redirect:/error";
+            return "error";
         }
 
         session.setAttribute("type", type);

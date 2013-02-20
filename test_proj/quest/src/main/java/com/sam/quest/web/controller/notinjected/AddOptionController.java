@@ -46,20 +46,17 @@ public class AddOptionController {
             serv.addRecord(qd);
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
-            return "redirect:/error";
+            return "error";
         }
         OptionDTO newOption = new OptionDTO();
         newOption.setOptionNum(option.getOptionNum() + 1);
         modelMap.addAttribute("option", newOption);
-        return "addOption";
-    }
-
-    @RequestMapping("/**/finishQuestionAction")
-    public String finishQuestion(HttpSession session, ModelMap modelMap, @ModelAttribute("option")OptionDTO option, BindingResult result) {
-        optionValidator.validate(option, result);
-        if (result.hasErrors()) {
+        int type = (Integer)session.getAttribute("type");
+        if (type == 1) {
+            return "redirect:/addQuestion";
+        } else {
             return "addOption";
         }
-        return "addOption";
     }
+
 }

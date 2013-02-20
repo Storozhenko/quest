@@ -2,15 +2,15 @@ body {
 	background: GhostWhite;
 	color: #000;
 	font: normal normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
-	margin: 10px;
-	padding: 0;
+	margin: 15px 15px;
+	padding: 10px 10px;
 }
 
 table {
     background: GhostWhite;
     color: #000;
     font: normal normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
-    margin: 10px;
+    margin: 0;
     padding: 0;
     border-spacing: 1;
 }

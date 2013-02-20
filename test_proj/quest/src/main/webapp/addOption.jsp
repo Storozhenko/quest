@@ -11,12 +11,9 @@
 <body>
 <h2>Add Option</h2>
 <br>
-${type}
-<br>
-${questionId}
 <c:choose>
     <c:when test="${type == 1}">
-        <form:form method="post" commandName="option" action="finishQuestionAction">
+        <form:form method="post" commandName="option" action="addOptionAction">
             <table>
                 <tr>
                     <td>Option number:</td>
@@ -31,7 +28,7 @@ ${questionId}
                     <td colspan="2"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" value="Finish question" /></td>
+                    <td colspan="2"><input type="submit" value="Finish" /></td>
                 </tr>
             </table>
         </form:form>
@@ -57,12 +54,19 @@ ${questionId}
                 </tr>
             </table>
         </form:form>
+        <c:if test="${option.optionNum >= 3}">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <form action="addQuestion">
+                            <input type="submit" value="Finish">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </c:if>
     </c:when>
 </c:choose>
-<c:if test="${option.optionNum >= 2}">
-    <form action="finishQuestionAction">
-        <input type="submit" value="Finish question">
-    </form>
-</c:if>
+
 </body>
 </html>
