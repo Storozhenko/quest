@@ -22,18 +22,18 @@ public class AddFormController {
     @Autowired
     private FormValidator formValidator;
 
-    @RequestMapping("/**/createForm")
+    @RequestMapping("/**/addForm")
     public String startInit(HttpSession session, ModelMap modelMap) {
         FormDTO form = new FormDTO();
         modelMap.addAttribute("form", form);
-        return "createForm";
+        return "addForm";
     }
 
-    @RequestMapping("/**/createFormAction")
+    @RequestMapping("/**/addFormAction")
     public String addForm(HttpSession session, ModelMap modelMap, @ModelAttribute("form")FormDTO form, BindingResult result) {
         formValidator.validate(form, result);
         if (result.hasErrors()) {
-            return "createForm";
+            return "addForm";
         }
         Forms newForm = new Forms();
         Users user = new Users();
@@ -43,7 +43,7 @@ public class AddFormController {
             user = servUsers.findRecord(userId, user);
         } catch (Exception e) {
             e.printStackTrace();
-            return "createForm";
+            return "addForm";
         }
         newForm.setFormName(form.getFormName());
         newForm.setUserId(user);
@@ -53,7 +53,7 @@ public class AddFormController {
             servForms.addRecord(newForm);
         } catch (Exception e) {
             e.printStackTrace();
-            return "createForm";
+            return "addForm";
         }
         QuestionDTO question = new QuestionDTO();
         modelMap.addAttribute("question", question);

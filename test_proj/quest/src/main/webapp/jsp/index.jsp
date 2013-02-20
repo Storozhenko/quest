@@ -6,11 +6,6 @@
 <body>
 <h2>Welcome to MyQuest!</h2>
 <br>
-<span style="float: right">
-    <a href="locale=en">en</a>
-    |
-    <a href="locale=ru">ru</a>
-</span>
 <a href="login">Login</a>
 <br>
 <a href="registration">Registration</a>

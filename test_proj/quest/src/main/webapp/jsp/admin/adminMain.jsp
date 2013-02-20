@@ -10,9 +10,9 @@
 <spring:message code="label.welcome"/>, ${username}
 <p>Congratulations! Your admin login was successful</p>
 <span style="float: right">
-    <a href="/admin/adminMain?locale=en">en</a>
+    <a href="admin/adminMain?locale=en">en</a>
     |
-    <a href="/admin/adminMain?locale=ru">ru</a>
+    <a href="admin/adminMain?locale=ru">ru</a>
 </span>
 <br>
 <a href="admin/adminForms">Forms</a>

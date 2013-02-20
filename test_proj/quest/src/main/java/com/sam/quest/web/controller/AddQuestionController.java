@@ -21,12 +21,13 @@ public class AddQuestionController {
     @Autowired
     private QuestionValidator questionValidator;
     private List<String> typeList;
-
+    private String type;
 
     @RequestMapping("/**/addQuestion")
     public String startInit(HttpSession session, ModelMap modelMap) {
         modelMap.addAttribute("question", new QuestionDTO());
         modelMap.addAttribute("types", typeList);
+        session.setAttribute("type", type);
         return "addQuestion";
     }
 
@@ -67,7 +68,15 @@ public class AddQuestionController {
         return "redirect:/addOption";
     }
 
+    public List<String> getTypeList() {
+        return typeList;
+    }
+
     public void setTypeList(List<String> typeList) {
         this.typeList = typeList;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

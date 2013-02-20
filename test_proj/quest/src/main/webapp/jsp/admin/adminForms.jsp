@@ -15,6 +15,6 @@
     </c:forEach>
 </table>
 <br>
-<a href="createForm">Create form</a>
+<a href="addForm">Add form</a>
 </body>
 </html>

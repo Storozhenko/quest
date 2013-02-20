@@ -4,28 +4,34 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-    <title>Create form</title>
+    <title>Add Question</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Create Form</h2>
+<h2>Add Question</h2>
 <br>
-<span style="float: right">
-    <a href="?locale=en">en</a>
-    |
-    <a href="?locale=ru">ru</a>
-</span>
-<form:form method="post" commandName="form" action="createFormAction">
+${type}
+<form:form method="post" commandName="question" action="addQuestionAction">
     <table>
         <tr>
-            <td>Form name:</td>
-            <td><form:input path="formName"/></td>
-            <td><span class="error"><form:errors path="formName" /></span></td>
+            <td>Question name:</td>
+            <td><form:input path="questionName" size="40"/></td>
+            <td><span class="error"><form:errors path="questionName" /></span></td>
         </tr>
         <tr>
             <td>Description:</td>
-            <td><form:input path="formDescr"/></td>
+            <td><form:input path="questionDescr" size="40" /></td>
+        </tr>
+        <tr>
+            <td>Question Type:</td>
+            <td>
+                <form:select path="questionType">
+                    <c:forEach items="${types}" var="types">
+                        <option value="${types}">${types}</option>
+                    </c:forEach>
+                </form:select>
+            </td>
         </tr>
         <tr>
             <td colspan="2"></td>
