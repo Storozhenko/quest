@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class AddFormController {
@@ -51,6 +52,13 @@ public class AddFormController {
         MultiService <Forms> servForms = new ServiceImpl<Forms>();
         try {
             servForms.addRecord(newForm);
+            List<Forms> list = servForms.listRecord(new Forms());
+            for (Forms f : list) {
+                if (f.getFormName().equals(form.getFormName())) {
+                    session.setAttribute("formId", f.getFormId());
+                    session.setAttribute("questionNum", 1);
+                }
+            }
         } catch (Exception e) {
             e.printStackTrace();
             return "addForm";

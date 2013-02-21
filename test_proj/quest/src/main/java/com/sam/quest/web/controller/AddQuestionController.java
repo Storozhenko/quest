@@ -1,5 +1,7 @@
 package com.sam.quest.web.controller;
 
+import com.sam.quest.entity.Forms;
+import com.sam.quest.entity.FormsData;
 import com.sam.quest.entity.Questions;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ServiceImpl;
@@ -22,7 +24,7 @@ public class AddQuestionController {
     @Autowired
     private QuestionValidator questionValidator;
     private List<String> typeList;
-    private MessageSource messageSource;
+    private int questNum;
 
     @RequestMapping("/**/addQuestion")
     public String startInit(HttpSession session, ModelMap modelMap) {
@@ -55,8 +57,18 @@ public class AddQuestionController {
             servQuest.addRecord(newQuestion);
             List<Questions> list = servQuest.listRecord(new Questions());
             for (Questions q : list) {
-                if (q.getQuestionName().equals(question.getQuestionName()))
+                if (q.getQuestionName().equals(question.getQuestionName())) {
                     session.setAttribute("questionId", q.getQuestionId());
+
+                    FormsData formData = new FormsData();
+                    MultiService<FormsData> servFData = new ServiceImpl<FormsData>();
+
+                    Forms form = new Forms();
+                    form.setFormId((Long)session.getAttribute("questionId"));
+                    formData.setQuestionId(q);
+                    formData.setFormId(form);
+                    servFData.addRecord(formData);
+                }
             }
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
