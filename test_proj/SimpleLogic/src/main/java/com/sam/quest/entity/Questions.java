@@ -12,6 +12,9 @@ public class Questions implements Serializable {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="question_id")
     private Long questionId;
+    @ManyToOne(cascade={CascadeType.REFRESH}, fetch=FetchType.EAGER)
+    @JoinColumn(name="form_id")
+    private Forms formId;
     @Column(name="question_name")
     private String questionName;
     @Column(name="question_type")
@@ -21,8 +24,6 @@ public class Questions implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionId")
     private Set<AnswQuestions> answQuestions;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionId")
-    private Set<FormsData> formsData;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionId")
     private Set<QuestionsData> questionsData;      */
 
     public Long getQuestionId() {
@@ -31,6 +32,14 @@ public class Questions implements Serializable {
 
     public void setQuestionId(Long questionId) {
         this.questionId = questionId;
+    }
+
+    public Forms getFormId() {
+        return formId;
+    }
+
+    public void setFormId(Forms formId) {
+        this.formId = formId;
     }
 
     public String getQuestionName() {
@@ -63,14 +72,6 @@ public class Questions implements Serializable {
 
     public void setAnswQuestions(Set<AnswQuestions> answQuestions) {
         this.answQuestions = answQuestions;
-    }
-
-    public Set<FormsData> getFormsData() {
-        return formsData;
-    }
-
-    public void setFormsData(Set<FormsData> formsData) {
-        this.formsData = formsData;
     }
 
     public Set<QuestionsData> getQuestionsData() {

@@ -44,13 +44,20 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`answ_forms` (
     ON DELETE CASCADE
     ON UPDATE CASCADE);
 
+
 CREATE  TABLE IF NOT EXISTS `forms_db`.`questions` (
   `question_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `form_id` BIGINT NOT NULL ,
   `question_name` VARCHAR(45) NOT NULL ,
   `question_type` INT NOT NULL ,
   `question_descr` VARCHAR(45) NULL ,
   PRIMARY KEY (`question_id`) ,
-  UNIQUE INDEX `question_name_UNIQUE` (`question_name`) );
+  INDEX `form_id_idx` (`form_id` ASC) ,
+  CONSTRAINT `questions_form_id`
+    FOREIGN KEY (`form_id` )
+    REFERENCES `forms_db`.`forms` (`form_id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
 
 CREATE  TABLE IF NOT EXISTS `forms_db`.`questions_data` (
   `question_data_id` BIGINT NOT NULL AUTO_INCREMENT ,
@@ -85,21 +92,3 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`answ_questions` (
     ON DELETE CASCADE
     ON UPDATE CASCADE);
 
-CREATE  TABLE IF NOT EXISTS `forms_db`.`forms_data` (
-  `form_data_id` BIGINT NOT NULL AUTO_INCREMENT ,
-  `form_id` BIGINT NOT NULL ,
-  `question_id` BIGINT NOT NULL ,
-  INDEX `form_id_idx` (`form_id` ASC) ,
-  INDEX `question_id_idx` (`question_id` ASC) ,
-  UNIQUE INDEX `form_id_UNIQUE` (`form_id`, `question_id`) ,
-  PRIMARY KEY (`form_data_id`) ,
-  CONSTRAINT `data_form_id`
-    FOREIGN KEY (`form_id` )
-    REFERENCES `forms_db`.`forms` (`form_id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
-  CONSTRAINT `data_question_id`
-    FOREIGN KEY (`question_id` )
-    REFERENCES `forms_db`.`questions` (`question_id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE);

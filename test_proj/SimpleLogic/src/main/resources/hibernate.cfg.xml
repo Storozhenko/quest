@@ -31,7 +31,6 @@
         <mapping class="com.sam.quest.entity.QuestionsData"/>
         <mapping class="com.sam.quest.entity.AnswForms"/>
         <mapping class="com.sam.quest.entity.AnswQuestions"/>
-        <mapping class="com.sam.quest.entity.FormsData"/>
 
     </session-factory>
 

@@ -1,7 +1,6 @@
 package com.sam.quest.web.controller;
 
 import com.sam.quest.entity.Forms;
-import com.sam.quest.entity.FormsData;
 import com.sam.quest.entity.Questions;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ServiceImpl;
@@ -9,7 +8,6 @@ import com.sam.quest.web.dto.OptionDTO;
 import com.sam.quest.web.dto.QuestionDTO;
 import com.sam.quest.web.validator.QuestionValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -49,25 +47,20 @@ public class AddQuestionController {
             }
         }
         Questions newQuestion = new Questions();
-        newQuestion.setQuestionName(question.getQuestionName());
-        newQuestion.setQuestionType(type);
-        newQuestion.setQuestionDescr(question.getQuestionDescr());
-        MultiService<Questions> servQuest = new ServiceImpl<Questions>();
         try {
+            MultiService<Questions> servQuest = new ServiceImpl<Questions>();
+            newQuestion.setQuestionName(question.getQuestionName());
+            newQuestion.setQuestionType(type);
+            newQuestion.setQuestionDescr(question.getQuestionDescr());
+            Forms form = new Forms();
+            form.setFormId((Long)session.getAttribute("questionId"));
+            newQuestion.setFormId(form);
             servQuest.addRecord(newQuestion);
+
             List<Questions> list = servQuest.listRecord(new Questions());
             for (Questions q : list) {
                 if (q.getQuestionName().equals(question.getQuestionName())) {
                     session.setAttribute("questionId", q.getQuestionId());
-
-                    FormsData formData = new FormsData();
-                    MultiService<FormsData> servFData = new ServiceImpl<FormsData>();
-
-                    Forms form = new Forms();
-                    form.setFormId((Long)session.getAttribute("questionId"));
-                    formData.setQuestionId(q);
-                    formData.setFormId(form);
-                    servFData.addRecord(formData);
                 }
             }
         } catch (Exception e) {

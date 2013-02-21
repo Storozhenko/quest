@@ -25,10 +25,19 @@ public class Forms implements Serializable {
     private String formDescr;
     /*
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "formId")
-    private Set<FormsData> formsData;
+    private Set<Questions> questions;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "formId")
-    private Set<AnswForms> answForms;     */
-   /*
+    private Set<AnswForms> answForms;
+
+    public Set<Questions> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(Set<Questions> questions) {
+        this.questions = questions;
+    }
+
     public Set<AnswForms> getAnswForms() {
         return answForms;
     }
@@ -36,15 +45,7 @@ public class Forms implements Serializable {
     public void setAnswForms(Set<AnswForms> answForms) {
         this.answForms = answForms;
     }
-
-    public Set<FormsData> getFormsData() {
-        return formsData;
-    }
-
-    public void setFormsData(Set<FormsData> formsData) {
-        this.formsData = formsData;
-    }
-         */
+     */
     public Long getFormId() {
         return formId;
     }
