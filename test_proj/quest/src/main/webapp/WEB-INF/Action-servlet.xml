@@ -15,7 +15,7 @@
     <context:component-scan base-package="com.sam.quest.web.validator" />
 
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations" value="WEB-INF/messages/*" />
+        <property name="locations" value="WEB-INF/messages/config.properties" />
     </bean>
 
     <bean id="AddQuestionController" class="com.sam.quest.web.controller.AddQuestionController">

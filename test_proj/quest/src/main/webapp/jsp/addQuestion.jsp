@@ -27,7 +27,7 @@
             <td>
                 <form:select path="questionType">
                     <c:forEach items="${types}" var="types">
-                        <option value="${types}">${types}</option>
+                        <option value="${types}"><spring:message code="${types}"/></option>
                     </c:forEach>
                 </form:select>
             </td>
