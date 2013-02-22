@@ -53,7 +53,7 @@ public class AddQuestionController {
             newQuestion.setQuestionType(type);
             newQuestion.setQuestionDescr(question.getQuestionDescr());
             Forms form = new Forms();
-            form.setFormId((Long)session.getAttribute("questionId"));
+            form.setFormId((Long)session.getAttribute("formId"));
             newQuestion.setFormId(form);
             servQuest.addRecord(newQuestion);
 
@@ -76,6 +76,4 @@ public class AddQuestionController {
     public void setTypeList(List<String> typeList) {
         this.typeList = typeList;
     }
-
-
 }

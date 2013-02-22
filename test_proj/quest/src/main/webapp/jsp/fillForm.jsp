@@ -6,6 +6,12 @@
 </head>
 <body>
 <h2>Fill form</h2>
-
+<table>
+    <c:forEach var="quests" items="${quests}">
+        <tr>
+            <td>${quests.questionName}<td>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>

@@ -20,11 +20,11 @@ public class Questions implements Serializable {
     @Column(name="question_type")
     private Integer questionType;
     @Column(name="question_descr")
-    private String questionDescr;     /*
+    private String questionDescr;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionId")
     private Set<AnswQuestions> answQuestions;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionId")
-    private Set<QuestionsData> questionsData;      */
+    private Set<QuestionsData> questionsData;
 
     public Long getQuestionId() {
         return questionId;
@@ -65,7 +65,7 @@ public class Questions implements Serializable {
     public void setQuestionDescr(String questionDescr) {
         this.questionDescr = questionDescr;
     }
-    /*
+
     public Set<AnswQuestions> getAnswQuestions() {
         return answQuestions;
     }
@@ -80,6 +80,6 @@ public class Questions implements Serializable {
 
     public void setQuestionsData(Set<QuestionsData> questionsData) {
         this.questionsData = questionsData;
-    }     */
+    }
 
 }

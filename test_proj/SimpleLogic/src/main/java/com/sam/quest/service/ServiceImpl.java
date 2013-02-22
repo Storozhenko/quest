@@ -1,12 +1,20 @@
 package com.sam.quest.service;
 
 
+import com.sam.quest.dao.factory.HiberDAOFactory;
 import com.sam.quest.dao.hibernate.*;
+import org.hibernate.Hibernate;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 
 public class ServiceImpl<E> implements MultiService<E>{
+    private Session session;
+    private Transaction tr;
 
     public void addRecord(E obj) throws Exception{
         TransactionalPerformer tp = new TransactionalPerformer<E>();
@@ -14,7 +22,12 @@ public class ServiceImpl<E> implements MultiService<E>{
     }
     public List<E> listRecord(E obj) throws Exception{
         TransactionalPerformer tp = new TransactionalPerformer<List<E>>();
-        List <E> list = (ArrayList<E>)tp.executeCommand(new GetListCommand<ArrayList<E>>(new ArrayList<E>(), obj));
+        List <E> list = (ArrayList<E>)tp.executeCommand(new GetListCommand<ArrayList<E>>(obj));
+        return list;
+    }
+    public List<E> listHQLRecord(String hqlQuery) throws Exception{
+        TransactionalPerformer tp = new TransactionalPerformer<List<E>>();
+        List <E> list = (ArrayList<E>)tp.executeCommand(new GetListHQLCommand<ArrayList<E>>(hqlQuery));
         return list;
     }
     public E findRecord(long id, E obj) throws Exception{

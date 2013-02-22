@@ -7,7 +7,7 @@ public class GetListCommand <E> implements Command <E> {
     E list;
     Object obj;
 
-    public GetListCommand(E list, Object obj) {
+    public GetListCommand(Object obj) {
         this.obj = obj;
         this.list = list;
     }

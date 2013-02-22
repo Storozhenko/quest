@@ -21,8 +21,8 @@ public class AnswForms implements Serializable {
     private Users userId;
     @Column(name="answ_datetime")
     private Timestamp answDatetime;
-    /*@OneToMany(fetch = FetchType.LAZY, mappedBy = "answId")
-    private Set<AnswQuestions> answQuestions;  */
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "answId")
+    private Set<AnswQuestions> answQuestions;
 
     public Long getAnswId() {
         return answId;
@@ -55,12 +55,12 @@ public class AnswForms implements Serializable {
     public void setAnswDatetime(Timestamp answDatetime) {
         this.answDatetime = answDatetime;
     }
-    /*
+
     public Set<AnswQuestions> getAnswQuestions() {
         return answQuestions;
     }
 
     public void setAnswQuestions(Set<AnswQuestions> answQuestions) {
         this.answQuestions = answQuestions;
-    }   */
+    }
 }

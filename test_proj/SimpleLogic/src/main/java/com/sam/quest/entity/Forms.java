@@ -23,10 +23,8 @@ public class Forms implements Serializable {
     private Date formDate;
     @Column(name="form_descr")
     private String formDescr;
-    /*
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "formId")
     private Set<Questions> questions;
-
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "formId")
     private Set<AnswForms> answForms;
 
@@ -45,7 +43,7 @@ public class Forms implements Serializable {
     public void setAnswForms(Set<AnswForms> answForms) {
         this.answForms = answForms;
     }
-     */
+
     public Long getFormId() {
         return formId;
     }

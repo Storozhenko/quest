@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 public class FillFormController {
@@ -26,7 +27,15 @@ public class FillFormController {
             session.setAttribute("error", e.getMessage());
             return "error";
         }
-        List<Questions> questList = new ArrayList<Questions>();
+        ServiceImpl<Questions> servQ = new ServiceImpl<Questions>();
+        List<Questions> questList = null;
+        try {
+            questList = servQ.listHQLRecord("from Questions where form_id = '" + formId + "' ");
+        } catch (Exception e) {
+            session.setAttribute("error", e.getMessage());
+            return "error";
+        }
+        modelMap.addAttribute("quests", questList);
         return "fillForm";
     }
 
