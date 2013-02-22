@@ -69,11 +69,10 @@ public class AppTest extends TestCase {
         assertTrue(formhib.updateRecord(form));
         List <Forms> list  = (ArrayList<Forms>)fm.executeCommand(new GetListCommand<ArrayList<Forms>>(new Forms()));
 
-        Timestamp time = new Timestamp(System.currentTimeMillis());
         AnswForms answ = new AnswForms();
         answ.setFormId(form);
         answ.setUserId(user);
-        answ.setAnswDatetime(time);
+        answ.setAnswDatetime(new Timestamp(System.currentTimeMillis()));
         assertTrue(answhib.insertRecord(answ));
     }
 }
