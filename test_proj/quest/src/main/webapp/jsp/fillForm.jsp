@@ -21,20 +21,17 @@
         <form:form method="post" commandName="answQuestion" action="addAnswerAction">
             <table>
                 <tr>
-                    <td><b>Question № ${answQuestion.questionNumber}:</b></td>
-                    <td><b>${currentQuest.questionName}</b></td>
-                    <td>${currentQuest.questionDescr}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><b>Question № ${questNum}:</b></td>
+                    <td colspan="5"><b>${currentQuest.questionName}</b></td>
+
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td colspan="5">${currentQuest.questionDescr}</td>
                 </tr>
                 <tr>
                     <td>Question:</td>
-                    <td colspan="2">${questOptions}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="5">${questOptions}</td>
                 </tr>
                 <tr>
                     <td colspan="6"><form:input path="questionAnswer" size="60"/></td>
@@ -49,6 +46,19 @@
         <form:form method="post" commandName="answQuestion" action="addAnswerAction">
             <table>
                 <tr>
+                    <td><b>Question № ${questNum}:</b></td>
+                    <td colspan="5"><b>${currentQuest.questionName}</b></td>
+
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td colspan="5">${currentQuest.questionDescr}</td>
+                </tr>
+                <tr>
+                    <td>Question:</td>
+                    <td colspan="5">${questOptions}</td>
+                </tr>
+                <tr>
                     <td><form:radiobuttons items="${questOptions}" path="questionAnswer" delimiter="<br/>"/></td>
                 </tr>
                 <tr>
@@ -60,6 +70,19 @@
     <c:when test="${questType == 3}">
         <form:form method="post" commandName="answQuestion" action="addAnswerAction">
             <table>
+                <tr>
+                    <td><b>Question № ${questNum}:</b></td>
+                    <td colspan="5"><b>${currentQuest.questionName}</b></td>
+
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td colspan="5">${currentQuest.questionDescr}</td>
+                </tr>
+                <tr>
+                    <td>Question:</td>
+                    <td colspan="5">${questOptions}</td>
+                </tr>
                 <tr>
                     <td><form:checkboxes items="${questOptions}" path="questionAnswer" delimiter="<br/>"/></td>
                 </tr>

@@ -7,7 +7,6 @@ import com.sam.quest.service.ServiceImpl;
 import com.sam.quest.web.dto.FormDTO;
 import com.sam.quest.web.dto.QuestionDTO;
 import com.sam.quest.web.validator.FormValidator;
-import com.sam.quest.web.validator.QuestionValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -51,7 +50,7 @@ public class AddFormController {
         newForm.setFormDate(new Date(System.currentTimeMillis()));
         MultiService <Forms> servForms = new ServiceImpl<Forms>();
         try {
-            servForms.addRecord(newForm);
+            servForms.insertRecord(newForm);
             List<Forms> list = servForms.listRecord(new Forms());
             for (Forms f : list) {
                 if (f.getFormName().equals(form.getFormName())) {

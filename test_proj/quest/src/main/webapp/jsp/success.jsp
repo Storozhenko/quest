@@ -1,12 +1,12 @@
 <html>
 <head>
-    <title>Error</title>
+    <title>Success</title>
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Error</h2>
+<h2>Congratulations!</h2>
 <br>
-There was an error: ${error}
+Form was filled successfully.
 <br>
 <br>
 <a href="adminMain">Main page</a>

@@ -43,7 +43,7 @@ public class AddOptionController {
         qd.setOptionData(option.getOptionData());
         MultiService<QuestionsData> serv = new ServiceImpl<QuestionsData>();
         try {
-            serv.addRecord(qd);
+            serv.insertRecord(qd);
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";

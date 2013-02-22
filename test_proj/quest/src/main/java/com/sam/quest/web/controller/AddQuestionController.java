@@ -55,7 +55,7 @@ public class AddQuestionController {
             Forms form = new Forms();
             form.setFormId((Long)session.getAttribute("formId"));
             newQuestion.setFormId(form);
-            servQuest.addRecord(newQuestion);
+            servQuest.insertRecord(newQuestion);
 
             List<Questions> list = servQuest.listRecord(new Questions());
             for (Questions q : list) {

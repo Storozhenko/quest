@@ -37,7 +37,7 @@ public class RegistrationController {
         user.setUserLang(regForm.getLanguage());
         MultiService <Users> serv = new ServiceImpl<Users>();
         try {
-            serv.addRecord(user);
+            serv.insertRecord(user);
         } catch (Exception e) {
             e.printStackTrace();
             return "registration";

@@ -16,7 +16,7 @@ public class ServiceImpl<E> implements MultiService<E>{
     private Session session;
     private Transaction tr;
 
-    public void addRecord(E obj) throws Exception{
+    public void insertRecord(E obj) throws Exception{
         TransactionalPerformer tp = new TransactionalPerformer<E>();
         tp.executeCommand(new InsertCommand(obj));
     }
