@@ -4,8 +4,11 @@ import com.sam.quest.entity.*;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ServiceImpl;
 import com.sam.quest.web.dto.AnswQuestionDTO;
+import com.sam.quest.web.validator.AnswerValidator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +19,8 @@ import java.util.List;
 
 @Controller
 public class FillFormController {
+    @Autowired
+    private AnswerValidator answerValidator;
 
     @RequestMapping("/**/fillForm")
     public String startInit(@RequestParam(value="formId", required=true) String formId, HttpSession session, ModelMap modelMap) {
@@ -77,8 +82,12 @@ public class FillFormController {
     }
 
     @RequestMapping("/**/addAnswerAction")
-    public String addAnswer(HttpSession session, ModelMap modelMap, @ModelAttribute("answQuestion")AnswQuestionDTO answQuestion) {
-
+    public String addAnswer(HttpSession session, ModelMap modelMap, @ModelAttribute("answQuestion")AnswQuestionDTO answQuestion,
+                            BindingResult result) {
+        answerValidator.validate(answQuestion, result);
+        if (result.hasErrors()) {
+            return "fillForm";
+        }
         List <Questions> questList = (List <Questions>)session.getAttribute("questList");
         MultiService <AnswQuestions> servAQ = new ServiceImpl<AnswQuestions>();
         String [] answers = answQuestion.getQuestionAnswer();

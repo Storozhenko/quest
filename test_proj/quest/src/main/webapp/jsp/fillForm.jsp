@@ -35,6 +35,7 @@
                 </tr>
                 <tr>
                     <td colspan="6"><form:input path="questionAnswer" size="60"/></td>
+                    <td><span class="error"><form:errors path="questionAnswer" /></span></td>
                 </tr>
                 <tr>
                     <td colspan="6"><input type="submit" value="Submit" /></td>
@@ -60,6 +61,7 @@
                 </tr>
                 <tr>
                     <td><form:radiobuttons items="${questOptions}" path="questionAnswer" delimiter="<br/>"/></td>
+                    <td><span class="error"><form:errors path="questionAnswer" /></span></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Submit" /></td>
@@ -85,6 +87,7 @@
                 </tr>
                 <tr>
                     <td><form:checkboxes items="${questOptions}" path="questionAnswer" delimiter="<br/>"/></td>
+                    <td><span class="error"><form:errors path="questionAnswer" /></span></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Submit" /></td>
