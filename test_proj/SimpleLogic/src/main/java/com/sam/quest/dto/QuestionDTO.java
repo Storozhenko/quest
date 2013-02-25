@@ -1,4 +1,4 @@
-package com.sam.quest.web.dto;
+package com.sam.quest.dto;
 
 
 public class QuestionDTO {

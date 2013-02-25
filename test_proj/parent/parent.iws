@@ -51,15 +51,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/GetListCommand.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/GetListCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/SimpleLogic.iml" afterPath="$PROJECT_DIR$/../SimpleLogic/SimpleLogic.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/TransactionalPerformer.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/TransactionalPerformer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddFormController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddFormController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddOptionController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddOptionController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/AnswerValidator.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/AnswerValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/FillFormController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/FillFormController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/FormValidator.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/FormValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/ImplService.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/ImplService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/LoginController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/LoginValidator.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/LoginValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/OptionValidator.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/OptionValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/QuestionValidator.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/QuestionValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/RegistrationController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/RegistrationController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/RegistrationValidator.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/RegistrationValidator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\dto\AnswQuestionDTO.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/AnswQuestionDTO.java" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\dto\FormDTO.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/FormDTO.java" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\dto\LoginDTO.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/LoginDTO.java" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\dto\OptionDTO.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/OptionDTO.java" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\dto\QuestionDTO.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/QuestionDTO.java" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\dto\RegistrationDTO.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/RegistrationDTO.java" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AppTest.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361352250136" ignored="false" />
-    <file path="/fragment.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361778149205" ignored="false" />
+    <file path="/fragment.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361801708249" ignored="false" />
     <file path="/DAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360323491870" ignored="false" />
     <file path="/HiberDAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360316450133" ignored="false" />
     <file path="/JDBCDAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360316553155" ignored="false" />
@@ -100,14 +119,14 @@
     <file path="/InsertCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361796222116" ignored="false" />
     <file path="/Command.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361788964500" ignored="false" />
     <file path="/UpdateCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361796251136" ignored="false" />
-    <file path="/FindCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361796475578" ignored="false" />
+    <file path="/FindCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361802274619" ignored="false" />
     <file path="/DeleteCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361796380038" ignored="false" />
-    <file path="/TransactionalPerformer.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361799857310" ignored="false" />
+    <file path="/TransactionalPerformer.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361801344810" ignored="false" />
     <file path="/Dummy.txt" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361777596140" ignored="false" />
     <file path="/GetListCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361796102479" ignored="false" />
     <file path="/MultiService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361518946041" ignored="false" />
     <file path="/MultiServiceImpl.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360583014306" ignored="false" />
-    <file path="/LoginController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360932054740" ignored="false" />
+    <file path="/LoginController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361802720421" ignored="false" />
     <file path="/UsersServiceImpl.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360584399657" ignored="false" />
     <file path="/web.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361795511171" ignored="false" />
     <file path="/login.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360844799620" ignored="false" />
@@ -163,7 +182,8 @@
     <file path="/AnswQuestionDTO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361525769669" ignored="false" />
     <file path="/success.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361534764046" ignored="false" />
     <file path="/AnswerValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361536871607" ignored="false" />
-    <file path="/logicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361799813180" ignored="false" />
+    <file path="/logicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361803051496" ignored="false" />
+    <file path="/LoginService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361803203804" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,10 +382,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="logicApplicationContext.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="logicApplicationContext.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="34" selection-start="2648" selection-end="2648" vertical-scroll-proportion="0.82682514">
+            <state line="32" column="70" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -374,10 +394,39 @@
       <file leaf-file-name="TransactionalPerformer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/TransactionalPerformer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="34" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+            <state line="20" column="5" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FindCommand.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="10" selection-start="525" selection-end="525" vertical-scroll-proportion="0.51952463">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -406,9 +455,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/ApplicationContext.xml" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" />
         <option value="$PROJECT_DIR$/../quest/pom.xml" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml" />
         <option value="$PROJECT_DIR$/../SimpleLogic/pom.xml" />
@@ -418,10 +464,13 @@
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/InsertCommand.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/UpdateCommand.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/DeleteCommand.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/GetListCommand.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/TransactionalPerformer.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java" />
+        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/LoginController.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/ImplService.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java" />
       </list>
     </option>
   </component>
@@ -629,6 +678,10 @@
               <option name="myItemId" value="quest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -653,10 +706,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -927,11 +976,11 @@
       <recent name="Z:\quest\test_proj\SimpleWEB\src\main\webapp\WEB-INF\messages" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sam.quest.dto" />
+      <recent name="com.sam.quest.dto2" />
       <recent name="com.sam.quest.command" />
       <recent name="com.sam.quest.web.controller.notinjected" />
       <recent name="com.sam.quest.web.controller" />
-      <recent name="com.sam.quest.web.controller.injected" />
-      <recent name="com.sam.quest.web.dto" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat Server 7.x">
@@ -1490,41 +1539,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dao/factory/HiberDAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="203" selection-end="203" vertical-scroll-proportion="0.11544991">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="54" selection-start="903" selection-end="903" vertical-scroll-proportion="0.49066213">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="75" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="46" selection-start="785" selection-end="785" vertical-scroll-proportion="0.43377885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="22" selection-start="3428" selection-end="3466" vertical-scroll-proportion="0.8320988">
@@ -1566,28 +1580,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="59" selection-start="526" selection-end="526" vertical-scroll-proportion="0.35115433">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/UpdateCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="48" selection-start="374" selection-end="374" vertical-scroll-proportion="0.2272175">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/GetListHQLCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="54" selection-start="492" selection-end="492" vertical-scroll-proportion="0.37181044">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1609,19 +1607,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/FillFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="13" selection-start="797" selection-end="797" vertical-scroll-proportion="0.15315315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/GetListHQLCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="44" selection-start="275" selection-end="290" vertical-scroll-proportion="0.2693662">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/MultiService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="17" selection-start="95" selection-end="95" vertical-scroll-proportion="0.11544991">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/ImplService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="76" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.8081494">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/TransactionalPerformer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="34" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+        <state line="20" column="5" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="34" selection-start="2648" selection-end="2648" vertical-scroll-proportion="0.82682514">
+        <state line="32" column="70" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="10" selection-start="525" selection-end="525" vertical-scroll-proportion="0.51952463">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

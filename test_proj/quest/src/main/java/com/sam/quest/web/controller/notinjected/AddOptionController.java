@@ -4,7 +4,7 @@ import com.sam.quest.entity.Questions;
 import com.sam.quest.entity.QuestionsData;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ImplService;
-import com.sam.quest.web.dto.OptionDTO;
+import com.sam.quest.dto.OptionDTO;
 import com.sam.quest.web.validator.OptionValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

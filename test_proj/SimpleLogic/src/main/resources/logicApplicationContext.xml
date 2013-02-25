@@ -51,5 +51,8 @@ http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
     <bean id="trPerformer" class="com.sam.quest.command.TransactionalPerformer">
         <property name="hibernateTemplate" ref="hibernateTemplate" />
     </bean>
+    <bean id="loginService" class="com.sam.quest.service.LoginService">
+        <property name="trPerformer" ref="trPerformer" />
+    </bean>
 
 </beans>

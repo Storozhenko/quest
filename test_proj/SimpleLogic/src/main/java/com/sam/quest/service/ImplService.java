@@ -29,7 +29,7 @@ public class ImplService<E> implements MultiService<E>{
     }
     public E findRecord(long id, E obj) throws Exception{
         TransactionalPerformer tp = new TransactionalPerformer<E>();
-        obj = (E)tp.executeCommand(new FindCommand(id, obj));
+        //obj = (E)tp.executeCommand(new FindCommand(id, obj));
         return obj;
     }
     public void deleteRecord(E obj) throws Exception{

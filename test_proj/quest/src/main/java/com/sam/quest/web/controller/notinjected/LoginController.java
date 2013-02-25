@@ -1,9 +1,10 @@
 package com.sam.quest.web.controller.notinjected;
 
 import com.sam.quest.entity.Users;
+import com.sam.quest.service.LoginService;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ImplService;
-import com.sam.quest.web.dto.LoginDTO;
+import com.sam.quest.dto.LoginDTO;
 import com.sam.quest.web.validator.LoginValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +22,6 @@ import java.util.Map;
 public class LoginController {
     @Autowired
     private LoginValidator loginValidator;
-    private static Map<String, Users> usersMap = new HashMap<String, Users>();
 
     @RequestMapping("/login")
     public String startInit(HttpSession session, ModelMap modelMap) {
@@ -36,20 +36,12 @@ public class LoginController {
         if (result.hasErrors()) {
             return "login";
         }
-        MultiService <Users> serv = new ImplService<Users>();
-        List<Users> users = null;
+        Users user = null;
         try {
-            users = serv.listRecord(new Users());
+            user = new LoginService().checkUser(loginForm);
         } catch (Exception e) {
             e.printStackTrace();
-            return "login";
         }
-        usersMap.clear();
-        for (Users u: users) {
-            String userKey = u.getUsername();
-            usersMap.put(userKey, u);
-        }
-        Users user = usersMap.get(loginForm.getUsername());
         if(user != null) {
             if (user.getPassword().equals(loginForm.getPassword())) {
                 session.setAttribute("username", user.getUsername());

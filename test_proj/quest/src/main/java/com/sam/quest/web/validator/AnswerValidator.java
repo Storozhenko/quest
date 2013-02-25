@@ -1,6 +1,6 @@
 package com.sam.quest.web.validator;
 
-import com.sam.quest.web.dto.AnswQuestionDTO;
+import com.sam.quest.dto.AnswQuestionDTO;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
