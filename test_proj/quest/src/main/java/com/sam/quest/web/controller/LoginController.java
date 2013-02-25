@@ -1,4 +1,4 @@
-package com.sam.quest.web.controller.notinjected;
+package com.sam.quest.web.controller;
 
 import com.sam.quest.entity.Users;
 import com.sam.quest.service.LoginService;
@@ -22,6 +22,7 @@ import java.util.Map;
 public class LoginController {
     @Autowired
     private LoginValidator loginValidator;
+    private LoginService loginService;
 
     @RequestMapping("/login")
     public String startInit(HttpSession session, ModelMap modelMap) {
@@ -56,5 +57,8 @@ public class LoginController {
         } else {
             return "login";
         }
+    }
+    public void setLoginService(LoginService loginService) {
+        this.loginService = loginService;
     }
 }

@@ -27,6 +27,9 @@
             </list>
         </property>
     </bean>
+    <bean id="LoginController" class="com.sam.quest.web.controller.LoginController">
+        <property name="loginService" ref="loginService"/>
+    </bean>
 
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
