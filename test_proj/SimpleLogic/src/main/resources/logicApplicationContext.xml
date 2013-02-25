@@ -21,6 +21,11 @@ http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
         <property name="annotatedClasses">
             <list>
                 <value>com.sam.quest.entity.Users</value>
+                <value>com.sam.quest.entity.Forms</value>
+                <value>com.sam.quest.entity.AnswForms</value>
+                <value>com.sam.quest.entity.AnswQuestions</value>
+                <value>com.sam.quest.entity.Questions</value>
+                <value>com.sam.quest.entity.QuestionsData</value>
             </list>
         </property>
         <property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration" />
@@ -38,9 +43,10 @@ http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
     <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
-
-    <bean id="trPerformer" class="com.sam.quest.command.TransactionalPerformer">
-        <property name="sessionFactory" ref="sessionFactory" />
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <constructor-arg>
+            <ref bean="sessionFactory"/>
+        </constructor-arg>
     </bean>
 
 </beans>

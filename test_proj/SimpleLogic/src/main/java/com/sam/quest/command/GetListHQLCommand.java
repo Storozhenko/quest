@@ -2,6 +2,7 @@ package com.sam.quest.command;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.springframework.orm.hibernate3.HibernateTemplate;
 
 public class GetListHQLCommand<E> implements Command <E> {
 
@@ -12,9 +13,8 @@ public class GetListHQLCommand<E> implements Command <E> {
         this.hqlQuery = hqlQuery;
     }
 
-    public E execute(Session session) throws Exception{
-        Query query = session.createQuery(hqlQuery);
-        list = (E)query.list();
+    public E execute(HibernateTemplate hibernateTemplate) throws Exception{
+        list = (E)hibernateTemplate.find(hqlQuery);
         return list;
     }
 }

@@ -1,6 +1,7 @@
 package com.sam.quest.command;
 
 import org.hibernate.Session;
+import org.springframework.orm.hibernate3.HibernateTemplate;
 
 public class FindCommand<E> implements Command <E> {
     E obj;
@@ -11,7 +12,8 @@ public class FindCommand<E> implements Command <E> {
         this.id = id;
     }
 
-    public E execute(Session session) throws Exception{
+    public E execute(HibernateTemplate hibernateTemplate) throws Exception{
+        Session session = hibernateTemplate.getSessionFactory().getCurrentSession();
         obj = (E)session.get(obj.getClass(), id);
         return obj;
     }
