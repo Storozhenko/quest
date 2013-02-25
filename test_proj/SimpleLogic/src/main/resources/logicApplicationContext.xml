@@ -18,10 +18,17 @@ http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="configLocation" value="classpath:/hibernate.cfg.xml" />
+        <property name="annotatedClasses">
+            <list>
+                <value>com.sam.quest.entity.Users</value>
+            </list>
+        </property>
         <property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration" />
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
+                <prop key="hibernate.hbm2ddl.auto">validate</prop>
+                <prop key="hibernate.show_sql">true</prop>
             </props>
         </property>
     </bean>
@@ -32,5 +39,8 @@ http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
+    <bean id="trPerformer" class="com.sam.quest.command.TransactionalPerformer">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
 
 </beans>
