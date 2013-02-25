@@ -39,7 +39,7 @@ public class LoginController {
         }
         Users user = null;
         try {
-            user = new LoginService().checkUser(loginForm);
+            user = loginService.checkUser(loginForm);
         } catch (Exception e) {
             e.printStackTrace();
         }

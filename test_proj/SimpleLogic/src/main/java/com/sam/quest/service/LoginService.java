@@ -14,11 +14,16 @@ import java.util.Map;
 
 
 public class LoginService {
-    private TransactionalPerformer trPerformer;
+    private TransactionalPerformer<List<Users>> trPerformer;
 
     public Users checkUser(LoginDTO loginForm) throws Exception{
-        Users user = (Users)trPerformer.executeCommand(new FindCommand("Select * from Users where username = '" + loginForm.getUsername() + "'"));
-        return user;
+        List<Users> users = trPerformer.executeCommand(new FindCommand("from Users where username = '" + loginForm.getUsername() + "'"));
+        for (Users u: users) {
+            if (u.getUsername().equals(loginForm.getUsername())) {
+                return u;
+            }
+        }
+        return null;
     }
 
     public void setTrPerformer(TransactionalPerformer trPerformer) {
