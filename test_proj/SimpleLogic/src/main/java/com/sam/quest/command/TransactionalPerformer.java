@@ -10,8 +10,8 @@ public class TransactionalPerformer <E> {
 
     private HibernateTemplate hibernateTemplate;
 
-    public void setSessionFactory(SessionFactory sessionFactory) {
-    this.hibernateTemplate = new HibernateTemplate(sessionFactory);
+    public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+    this.hibernateTemplate = hibernateTemplate;
     }
 
     @Transactional

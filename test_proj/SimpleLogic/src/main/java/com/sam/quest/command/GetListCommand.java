@@ -11,7 +11,6 @@ public class GetListCommand <E> implements Command <E> {
 
     public GetListCommand(Object obj) {
         this.obj = obj;
-        this.list = list;
     }
 
     public E execute(HibernateTemplate hibernateTemplate) throws Exception{

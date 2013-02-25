@@ -48,5 +48,8 @@ http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
+    <bean id="trPerformer" class="com.sam.quest.command.TransactionalPerformer">
+        <property name="hibernateTemplate" ref="hibernateTemplate" />
+    </bean>
 
 </beans>
