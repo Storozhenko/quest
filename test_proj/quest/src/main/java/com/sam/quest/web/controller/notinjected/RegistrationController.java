@@ -1,8 +1,8 @@
 package com.sam.quest.web.controller.notinjected;
 
 import com.sam.quest.entity.Users;
+import com.sam.quest.service.ImplService;
 import com.sam.quest.service.MultiService;
-import com.sam.quest.service.ServiceImpl;
 import com.sam.quest.web.dto.RegistrationDTO;
 import com.sam.quest.web.validator.RegistrationValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +35,7 @@ public class RegistrationController {
         user.setPassword(regForm.getPassword());
         user.setUserType("user");
         user.setUserLang(regForm.getLanguage());
-        MultiService <Users> serv = new ServiceImpl<Users>();
+        MultiService <Users> serv = new ImplService<Users>();
         try {
             serv.insertRecord(user);
         } catch (Exception e) {

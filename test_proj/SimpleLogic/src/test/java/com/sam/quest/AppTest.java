@@ -1,7 +1,9 @@
 package com.sam.quest;
 
+import com.sam.quest.command.GetListCommand;
+import com.sam.quest.command.TransactionalPerformer;
+import com.sam.quest.command.UpdateCommand;
 import com.sam.quest.dao.factory.*;
-import com.sam.quest.dao.hibernate.*;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

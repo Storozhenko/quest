@@ -3,7 +3,7 @@ package com.sam.quest.web.controller.notinjected;
 import com.sam.quest.entity.Forms;
 import com.sam.quest.entity.Users;
 import com.sam.quest.service.MultiService;
-import com.sam.quest.service.ServiceImpl;
+import com.sam.quest.service.ImplService;
 import com.sam.quest.web.dto.FormDTO;
 import com.sam.quest.web.dto.QuestionDTO;
 import com.sam.quest.web.validator.FormValidator;
@@ -38,7 +38,7 @@ public class AddFormController {
         Forms newForm = new Forms();
         Users user = new Users();
         Long userId = (Long)session.getAttribute("userId");
-        MultiService <Users> servUsers = new ServiceImpl<Users>();
+        MultiService <Users> servUsers = new ImplService<Users>();
         try {
             user = servUsers.findRecord(userId, user);
         } catch (Exception e) {
@@ -48,7 +48,7 @@ public class AddFormController {
         newForm.setFormName(form.getFormName());
         newForm.setUserId(user);
         newForm.setFormDate(new Date(System.currentTimeMillis()));
-        MultiService <Forms> servForms = new ServiceImpl<Forms>();
+        MultiService <Forms> servForms = new ImplService<Forms>();
         try {
             servForms.insertRecord(newForm);
             List<Forms> list = servForms.listRecord(new Forms());

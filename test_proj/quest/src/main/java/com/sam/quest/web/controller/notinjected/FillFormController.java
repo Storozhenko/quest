@@ -2,7 +2,7 @@ package com.sam.quest.web.controller.notinjected;
 
 import com.sam.quest.entity.*;
 import com.sam.quest.service.MultiService;
-import com.sam.quest.service.ServiceImpl;
+import com.sam.quest.service.ImplService;
 import com.sam.quest.web.dto.AnswQuestionDTO;
 import com.sam.quest.web.validator.AnswerValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +24,9 @@ public class FillFormController {
 
     @RequestMapping("/**/fillForm")
     public String startInit(@RequestParam(value="formId", required=true) String formId, HttpSession session, ModelMap modelMap) {
-        MultiService <Forms> servF = new ServiceImpl<Forms>();
-        MultiService <AnswForms> servAF = new ServiceImpl<AnswForms>();
-        MultiService <Questions> servQ = new ServiceImpl<Questions>();
+        MultiService <Forms> servF = new ImplService<Forms>();
+        MultiService <AnswForms> servAF = new ImplService<AnswForms>();
+        MultiService <Questions> servQ = new ImplService<Questions>();
         MultiService <QuestionsData> servQD;
         List <QuestionsData> questDataList = null;
         List <Questions> questList;
@@ -39,7 +39,7 @@ public class FillFormController {
         }
         try {
             currentQuest = questList.get(0);
-            servQD = new ServiceImpl<QuestionsData>();
+            servQD = new ImplService<QuestionsData>();
             questDataList = servQD.listHQLRecord("from QuestionsData where question_id = '"
                     + currentQuest.getQuestionId().toString() + "' ");
         } catch (Exception e) {
@@ -89,7 +89,7 @@ public class FillFormController {
             return "fillForm";
         }
         List <Questions> questList = (List <Questions>)session.getAttribute("questList");
-        MultiService <AnswQuestions> servAQ = new ServiceImpl<AnswQuestions>();
+        MultiService <AnswQuestions> servAQ = new ImplService<AnswQuestions>();
         String [] answers = answQuestion.getQuestionAnswer();
         AnswQuestions newAQ = new AnswQuestions();
         newAQ.setAnswId((AnswForms)session.getAttribute("answForm"));
@@ -112,7 +112,7 @@ public class FillFormController {
         }
         try {
             currentQuest = questList.get(num - 1);
-            servQD = new ServiceImpl<QuestionsData>();
+            servQD = new ImplService<QuestionsData>();
             questDataList = servQD.listHQLRecord("from QuestionsData where question_id = '"
                     + currentQuest.getQuestionId().toString() + "' ");
         }

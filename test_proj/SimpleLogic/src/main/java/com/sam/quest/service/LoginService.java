@@ -1,18 +1,15 @@
 package com.sam.quest.service;
 
 
-import com.sam.quest.dao.factory.HiberDAOFactory;
-import com.sam.quest.dao.hibernate.*;
-import org.hibernate.Hibernate;
+import com.sam.quest.command.*;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 
-public class ServiceImpl<E> implements MultiService<E>{
+public class LoginService<E> {
     private Session session;
     private Transaction tr;
 

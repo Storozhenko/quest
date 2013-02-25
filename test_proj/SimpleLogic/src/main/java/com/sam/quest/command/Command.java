@@ -1,4 +1,4 @@
-package com.sam.quest.dao.hibernate;
+package com.sam.quest.command;
 
 import org.hibernate.Session;
 

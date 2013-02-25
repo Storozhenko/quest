@@ -3,7 +3,7 @@ package com.sam.quest.web.controller.notinjected;
 import com.sam.quest.entity.Questions;
 import com.sam.quest.entity.QuestionsData;
 import com.sam.quest.service.MultiService;
-import com.sam.quest.service.ServiceImpl;
+import com.sam.quest.service.ImplService;
 import com.sam.quest.web.dto.OptionDTO;
 import com.sam.quest.web.validator.OptionValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +41,7 @@ public class AddOptionController {
         qd.setQuestionId(q);
         qd.setQuestionOption(option.getOptionNum());
         qd.setOptionData(option.getOptionData());
-        MultiService<QuestionsData> serv = new ServiceImpl<QuestionsData>();
+        MultiService<QuestionsData> serv = new ImplService<QuestionsData>();
         try {
             serv.insertRecord(qd);
         } catch (Exception e) {

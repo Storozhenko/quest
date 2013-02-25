@@ -1,8 +1,8 @@
 package com.sam.quest.web.controller.notinjected;
 
 import com.sam.quest.entity.Users;
+import com.sam.quest.service.ImplService;
 import com.sam.quest.service.MultiService;
-import com.sam.quest.service.ServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +15,7 @@ public class AdminUsersController {
 
     @RequestMapping("/admin/users")
     public String startInit(HttpSession session, ModelMap modelMap) {
-        MultiService <Users> serv = new ServiceImpl<Users>();
+        MultiService <Users> serv = new ImplService<Users>();
         List<Users> u = null;
         try {
             u = serv.listRecord(new Users());

@@ -1,14 +1,14 @@
-package com.sam.quest.dao.hibernate;
+package com.sam.quest.command;
 
 import org.hibernate.Session;
 
-public class UpdateCommand<E> implements Command <Void> {
+public class DeleteCommand<E> implements Command <Void> {
     E obj;
-    public UpdateCommand(E obj) {
+    public DeleteCommand(E obj) {
         this.obj = obj;
     }
     public Void execute(Session session) throws Exception{
-        session.update(obj);
+        session.delete(obj);
         return null;
     }
 }

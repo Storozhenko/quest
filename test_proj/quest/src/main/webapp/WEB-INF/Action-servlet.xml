@@ -74,4 +74,6 @@
         </bean>
     </mvc:interceptors>
 
+    <import resource="classpath:/logicApplicationContext.xml" />
+
 </beans>

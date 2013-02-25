@@ -3,7 +3,7 @@ package com.sam.quest.web.controller;
 import com.sam.quest.entity.Forms;
 import com.sam.quest.entity.Questions;
 import com.sam.quest.service.MultiService;
-import com.sam.quest.service.ServiceImpl;
+import com.sam.quest.service.ImplService;
 import com.sam.quest.web.dto.OptionDTO;
 import com.sam.quest.web.dto.QuestionDTO;
 import com.sam.quest.web.validator.QuestionValidator;
@@ -48,7 +48,7 @@ public class AddQuestionController {
         }
         Questions newQuestion = new Questions();
         try {
-            MultiService<Questions> servQuest = new ServiceImpl<Questions>();
+            MultiService<Questions> servQuest = new ImplService<Questions>();
             newQuestion.setQuestionName(question.getQuestionName());
             newQuestion.setQuestionType(type);
             newQuestion.setQuestionDescr(question.getQuestionDescr());
