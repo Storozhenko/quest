@@ -8,34 +8,8 @@ http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
 http://www.springframework.org/schema/tx
 http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
 
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://sc0181:3306/forms_db" />
-        <property name="username" value="test" />
-        <property name="password" value="123321" />
-    </bean>
-
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />
         <property name="configLocation" value="classpath:/hibernate.cfg.xml" />
-        <property name="annotatedClasses">
-            <list>
-                <value>com.sam.quest.entity.Users</value>
-                <value>com.sam.quest.entity.Forms</value>
-                <value>com.sam.quest.entity.AnswForms</value>
-                <value>com.sam.quest.entity.AnswQuestions</value>
-                <value>com.sam.quest.entity.Questions</value>
-                <value>com.sam.quest.entity.QuestionsData</value>
-            </list>
-        </property>
-        <property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration" />
-        <property name="hibernateProperties">
-            <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
-                <prop key="hibernate.hbm2ddl.auto">validate</prop>
-                <prop key="hibernate.show_sql">true</prop>
-            </props>
-        </property>
     </bean>
 
     <tx:annotation-driven transaction-manager="txManager" />
@@ -52,6 +26,9 @@ http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
         <property name="hibernateTemplate" ref="hibernateTemplate" />
     </bean>
     <bean id="loginService" class="com.sam.quest.service.LoginService">
+        <property name="trPerformer" ref="trPerformer" />
+    </bean>
+    <bean id="formsService" class="com.sam.quest.service.FormsService">
         <property name="trPerformer" ref="trPerformer" />
     </bean>
 

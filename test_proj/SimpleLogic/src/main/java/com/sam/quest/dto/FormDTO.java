@@ -5,6 +5,14 @@ public class FormDTO {
     private String formName;
     private String formDescr;
 
+    public FormDTO(String formName, String formDescr) {
+        this.formName = formName;
+        this.formDescr = formDescr;
+    }
+
+    public FormDTO() {
+    }
+
     public String getFormName() {
         return formName;
     }

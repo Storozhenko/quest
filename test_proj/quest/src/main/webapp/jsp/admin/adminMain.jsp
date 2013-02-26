@@ -15,7 +15,7 @@
     <a href="admin/adminMain?locale=ru">ru</a>
 </span>
 <br>
-<a href="admin/adminForms">Forms</a>
+<a href="admin/forms">Forms</a>
 <br>
 <a href="admin/users">Users</a>
 <br>

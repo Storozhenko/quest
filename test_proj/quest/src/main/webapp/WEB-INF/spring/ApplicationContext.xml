@@ -11,5 +11,38 @@
         http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
     <mvc:annotation-driven />
+    <context:annotation-config />
+    <context:component-scan base-package="com.sam.quest.web.controller.notinjected" />
+    <context:component-scan base-package="com.sam.quest.web.validator" />
+    <import resource="classpath:/logicApplicationContext.xml" />
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="WEB-INF/messages/config.properties" />
+    </bean>
+
+    <bean id="AddQuestionController" class="com.sam.quest.web.controller.AddQuestionController">
+        <property name="typeList">
+            <list>
+                <value>${question.type1}</value>
+                <value>${question.type2}</value>
+                <value>${question.type3}</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="LoginController" class="com.sam.quest.web.controller.LoginController">
+        <property name="loginService" ref="loginService"/>
+    </bean>
+    <bean id="FormsController" class="com.sam.quest.web.controller.FormsController">
+        <property name="formsService" ref="formsService"/>
+    </bean>
+
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/**/addQuestion">AddQuestionController</prop>
+                <prop key="/**/addQuestionAction">AddQuestionController</prop>
+            </props>
+        </property>
+    </bean>
 
 </beans>
