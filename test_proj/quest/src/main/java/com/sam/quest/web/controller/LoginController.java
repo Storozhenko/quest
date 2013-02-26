@@ -22,12 +22,12 @@ import java.util.Map;
 public class LoginController {
     @Autowired
     private LoginValidator loginValidator;
+    @Autowired
     private LoginService loginService;
 
     @RequestMapping("/login")
-    public String startInit(HttpSession session, ModelMap modelMap) {
-        session.setAttribute("message", "message");
-        modelMap.addAttribute("loginForm", new LoginDTO());
+    public String startInit(ModelMap modelMap) {
+        //modelMap.addAttribute("loginForm", new LoginDTO());
         return "login";
     }
 
@@ -39,7 +39,7 @@ public class LoginController {
         }
         Users user = null;
         try {
-            user = loginService.checkUser(loginForm);
+            user = loginService.checkUser(loginForm.getUsername());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -47,18 +47,19 @@ public class LoginController {
             if (user.getPassword().equals(loginForm.getPassword())) {
                 session.setAttribute("username", user.getUsername());
                 session.setAttribute("userId", user.getUserId());
-                if (user.getUserType().equals("admin"))
-                    return "admin/adminMain";
-                else
-                    return "user/userMain";
+                if (user.getUserType().equals("ROLE_ADMIN")) {
+                    session.setAttribute("role", "ROLE_ADMIN");
+                    return "admin/main";
+                }
+                else {
+                    session.setAttribute("role", "ROLE_USER");
+                    return "user/main";
+                }
             } else {
                 return "login";
             }
         } else {
             return "login";
         }
-    }
-    public void setLoginService(LoginService loginService) {
-        this.loginService = loginService;
     }
 }

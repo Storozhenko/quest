@@ -6,6 +6,18 @@
                     http://www.springframework.org/schema/security
                     http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
+    <beans:import resource="classpath:/logicApplicationContext.xml" />
+    <beans:import resource="ApplicationContext.xml" />
+    <beans:bean id="customUserDetailsService" class="com.sam.quest.web.security.CustomUserDetailsService" />
+    <beans:bean id="redirectRoleStrategy" class="com.sam.quest.web.security.RoleBasedAuthSuccessHandler">
+        <beans:property name="roleUrlMap">
+            <beans:map>
+                <beans:entry key="ROLE_ADMIN" value="/admin/main"/>
+                <beans:entry key="ROLE_USER" value="/user/main"/>
+            </beans:map>
+        </beans:property>
+    </beans:bean>
+
     <http pattern="/css/**" security="none" />
 
     <http auto-config="true">
@@ -13,11 +25,12 @@
         <intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
         <intercept-url pattern="/login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         <form-login login-page="/login"
-                    authentication-failure-url="/login" default-target-url="/" />
+                    authentication-failure-url="/error"
+                    default-target-url="/" />
     </http>
 
     <authentication-manager>
         <authentication-provider user-service-ref="customUserDetailsService">
         </authentication-provider>
     </authentication-manager>
-</beans:beans>   
+</beans:beans>

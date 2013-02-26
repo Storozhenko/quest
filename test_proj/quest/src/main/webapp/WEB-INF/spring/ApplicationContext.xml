@@ -30,10 +30,8 @@
         </property>
     </bean>
     <bean id="LoginController" class="com.sam.quest.web.controller.LoginController">
-        <property name="loginService" ref="loginService"/>
     </bean>
     <bean id="FormsController" class="com.sam.quest.web.controller.FormsController">
-        <property name="formsService" ref="formsService"/>
     </bean>
 
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">

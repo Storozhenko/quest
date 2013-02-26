@@ -11,6 +11,9 @@
 
     <mvc:annotation-driven />
     <context:annotation-config />
+    <context:component-scan base-package="com.sam.quest.web.controller.notinjected" />
+    <context:component-scan base-package="com.sam.quest.web.validator" />
+    <import resource="spring/ApplicationContext.xml" />
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.UrlBasedViewResolver">

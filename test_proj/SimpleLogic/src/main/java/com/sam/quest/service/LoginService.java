@@ -1,25 +1,24 @@
 package com.sam.quest.service;
 
-
 import com.sam.quest.command.*;
-import com.sam.quest.dto.LoginDTO;
 import com.sam.quest.entity.Users;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
-import java.util.ArrayList;
-import java.util.HashMap;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Map;
 
-
+@Service
 public class LoginService {
     private TransactionalPerformer<List<Users>> trPerformer;
 
-    public Users checkUser(LoginDTO loginForm) throws Exception{
-        List<Users> users = trPerformer.executeCommand(new FindCommand("from Users where username = '" + loginForm.getUsername() + "'"));
+    public Users checkUser(String username) throws UsernameNotFoundException{
+        List<Users> users = null;
+        try {
+            users = trPerformer.executeCommand(new FindCommand("from Users where username = '" + username + "'"));
+        } catch (Exception e) {
+            throw new UsernameNotFoundException( username + " not found" );
+        }
         for (Users u: users) {
-            if (u.getUsername().equals(loginForm.getUsername())) {
+            if (u.getUsername().equals(username)) {
                 return u;
             }
         }

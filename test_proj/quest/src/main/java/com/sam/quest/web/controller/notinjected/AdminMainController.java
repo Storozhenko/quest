@@ -9,9 +9,9 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class AdminMainController {
 
-    @RequestMapping("/admin/adminMain")
+    @RequestMapping("/admin/main")
     public String startInit(HttpSession session, ModelMap modelMap) {
-        return "/admin/adminMain";
+        return "/admin/main";
     }
 
 }

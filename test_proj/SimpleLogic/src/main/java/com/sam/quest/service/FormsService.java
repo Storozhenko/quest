@@ -1,17 +1,14 @@
 package com.sam.quest.service;
 
-
-import com.sam.quest.command.FindCommand;
 import com.sam.quest.command.GetListCommand;
 import com.sam.quest.command.TransactionalPerformer;
 import com.sam.quest.dto.FormDTO;
 import com.sam.quest.entity.Forms;
-
-
+import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Service
 public class FormsService {
     private TransactionalPerformer<List<Forms>> trPerformer;
 

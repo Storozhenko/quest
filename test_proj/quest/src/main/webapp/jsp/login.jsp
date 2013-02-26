@@ -16,18 +16,13 @@
     |
     <a href="?locale=ru">ru</a>
 </span>
-<form:form method="post" commandName="loginForm" action="loginAction">
+<form method="post" action="j_spring_security_check">
     <table>
-        <tr>
-            <td>Username:</td>
-            <td><form:input path="username" /></td>
-            <td><span class="error"><form:errors path="username" /></span></td>
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td><form:password path="password" /></td>
-            <td><span class="error"><form:errors path="password" /></span></td>
-        </tr>
+        <label for="j_username">Username: </label>
+        <input id="j_username" name="j_username" size="20" maxlength="50" type="text" />
+
+        <label for="j_password">Password: </label>
+        <input id="j_password" name="j_password" size="20" maxlength="50" type="password" />
         <tr>
             <td colspan="2"></td>
         </tr>
@@ -35,7 +30,7 @@
             <td colspan="2"><input type="submit" value="Submit" /></td>
         </tr>
     </table>
-</form:form>
+</form>
 
 </body>
 </html>

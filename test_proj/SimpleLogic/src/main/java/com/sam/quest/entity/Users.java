@@ -2,11 +2,16 @@ package com.sam.quest.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name="users")
-public class Users implements Serializable {
+public class Users implements Serializable, UserDetails {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -79,5 +84,34 @@ public class Users implements Serializable {
 
     public void setAnswForms(Set<AnswForms> answForms) {
         this.answForms = answForms;
+    }
+
+
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    public boolean isEnabled() {
+        return true;
+    }
+
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        Collection<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
+        final String role = userType;
+        GrantedAuthority grandAuthority = new GrantedAuthority() {
+            public String getAuthority() {
+                return role;
+            }
+        };
+        authorities.add(grandAuthority);
+        return authorities;
     }
 }
