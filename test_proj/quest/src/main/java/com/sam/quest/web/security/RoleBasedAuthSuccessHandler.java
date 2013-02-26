@@ -1,6 +1,8 @@
 package com.sam.quest.web.security;
 
+import com.sam.quest.entity.Users;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
@@ -18,8 +20,8 @@ public class RoleBasedAuthSuccessHandler implements AuthenticationSuccessHandler
                                         Authentication authentication) throws IOException, ServletException {
 
         if (authentication.getPrincipal() instanceof UserDetails) {
-            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-            String role = userDetails.getAuthorities().toArray()[0].toString();
+            Users user = (Users) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            String role = user.getUserType();
             response.sendRedirect(request.getContextPath() + roleUrlMap.get(role));
         }
     }

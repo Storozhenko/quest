@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Entity
 @Table(name="users")
 public class Users implements Serializable, UserDetails {
+    //private static final long serialVersionUID = -3357675102403861567L;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -105,8 +106,10 @@ public class Users implements Serializable, UserDetails {
 
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
-        final String role = userType;
+        final String role = getUserType();
         GrantedAuthority grandAuthority = new GrantedAuthority() {
+            private static final long serialVersionUID = -1824766736699440960L;
+
             public String getAuthority() {
                 return role;
             }

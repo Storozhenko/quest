@@ -12,14 +12,14 @@ import java.util.List;
 public class FormsService {
     private TransactionalPerformer<List<Forms>> trPerformer;
 
-    public List<FormDTO> getForms() throws Exception{
+    public List<Forms> getForms() throws Exception{
         List<FormDTO> formsDTO = new ArrayList<FormDTO>();
         List<Forms> forms = trPerformer.executeCommand(new GetListCommand<List<Forms>>(new Forms()));
         for (Forms f: forms) {
             FormDTO form = new FormDTO(f.getFormName(), f.getFormDescr());
             formsDTO.add(form);
         }
-        return formsDTO;
+        return forms;
     }
 
     public void setTrPerformer(TransactionalPerformer trPerformer) {

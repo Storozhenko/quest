@@ -15,9 +15,9 @@
     <a href="admin/adminMain?locale=ru">ru</a>
 </span>
 <br>
-<a href="admin/forms">Forms</a>
+<a href="forms">Forms</a>
 <br>
-<a href="admin/users">Users</a>
+<a href="users">Users</a>
 <br>
 <br>
 <a href="${pageContext.request.contextPath}/" title="Home">Home</a>

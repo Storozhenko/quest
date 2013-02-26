@@ -1,6 +1,7 @@
 package com.sam.quest.web.controller;
 
 import com.sam.quest.dto.FormDTO;
+import com.sam.quest.entity.Forms;
 import com.sam.quest.service.FormsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,7 @@ public class FormsController {
 
     @RequestMapping("/**/forms")
     public String startInit(HttpSession session, ModelMap modelMap, HttpServletRequest request) {
-        List<FormDTO> forms = null;
+        List<Forms> forms = null;
         try {
             forms = formsService.getForms();
         } catch (Exception e) {
@@ -27,7 +28,7 @@ public class FormsController {
             return "error";
         }
         modelMap.addAttribute("forms", forms);
-        return request.getRequestURI();
+        return request.getPathInfo();
     }
 
 }

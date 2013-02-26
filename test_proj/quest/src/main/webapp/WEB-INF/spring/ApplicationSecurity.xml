@@ -26,7 +26,7 @@
         <intercept-url pattern="/login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         <form-login login-page="/login"
                     authentication-failure-url="/error"
-                    default-target-url="/" />
+                    authentication-success-handler-ref="redirectRoleStrategy" />
     </http>
 
     <authentication-manager>

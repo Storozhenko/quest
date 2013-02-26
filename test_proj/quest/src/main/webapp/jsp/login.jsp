@@ -16,13 +16,16 @@
     |
     <a href="?locale=ru">ru</a>
 </span>
-<form method="post" action="j_spring_security_check">
+<form:form method="post" action="j_spring_security_check">
     <table>
-        <label for="j_username">Username: </label>
-        <input id="j_username" name="j_username" size="20" maxlength="50" type="text" />
-
-        <label for="j_password">Password: </label>
-        <input id="j_password" name="j_password" size="20" maxlength="50" type="password" />
+        <tr>
+            <td>Username:</td>
+            <td><input id="j_username" name="j_username" size="20" maxlength="50" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input id="j_password" name="j_password" size="20" maxlength="50" type="password" /></td>
+        </tr>
         <tr>
             <td colspan="2"></td>
         </tr>
@@ -30,7 +33,7 @@
             <td colspan="2"><input type="submit" value="Submit" /></td>
         </tr>
     </table>
-</form>
+</form:form>
 
 </body>
 </html>
