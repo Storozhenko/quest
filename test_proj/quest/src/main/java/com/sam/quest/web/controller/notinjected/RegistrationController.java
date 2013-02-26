@@ -33,7 +33,7 @@ public class RegistrationController {
         Users user = new Users();
         user.setUsername(regForm.getUsername());
         user.setPassword(regForm.getPassword());
-        user.setUserType("user");
+        user.setUserType("ROLE_USER");
         user.setUserLang(regForm.getLanguage());
         MultiService <Users> serv = new ImplService<Users>();
         try {

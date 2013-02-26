@@ -12,7 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Entity
 @Table(name="users")
 public class Users implements Serializable, UserDetails {
-    //private static final long serialVersionUID = -3357675102403861567L;
+    private static final long serialVersionUID = -3357675102403861567L;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

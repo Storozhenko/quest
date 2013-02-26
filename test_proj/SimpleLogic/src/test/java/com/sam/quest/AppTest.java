@@ -46,7 +46,7 @@ public class AppTest extends TestCase {
         Users user = new Users();
         user.setUsername("test");
         user.setPassword("test");
-        user.setUserType("admin");
+        user.setUserType("ROLE_ADMIN");
         user.setUserLang("eng");
         user.setUserId(new Long(1));
 
@@ -63,14 +63,14 @@ public class AppTest extends TestCase {
         form.setFormDate(date);
         form.setFormId(new Long(1));
         assertTrue(formdao.updateRecord(form));
-
+        /*
         TransactionalPerformer fms = new TransactionalPerformer<Forms>();
         fms.executeCommand(new UpdateCommand<Forms>(form));
         TransactionalPerformer fm = new TransactionalPerformer<List <Forms>>();
         form = formdao.findRecord(1, new Forms());
         assertTrue(formhib.updateRecord(form));
         List <Forms> list  = (ArrayList<Forms>)fm.executeCommand(new GetListCommand<ArrayList<Forms>>(new Forms()));
-
+        */
         AnswForms answ = new AnswForms();
         answ.setFormId(form);
         answ.setUserId(user);
