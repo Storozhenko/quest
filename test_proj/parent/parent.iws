@@ -51,15 +51,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/FillFormController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/FillFormController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FillFormService.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FillFormService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/fillForm.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/fillForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/SimpleLogic.iml" afterPath="$PROJECT_DIR$/../SimpleLogic/SimpleLogic.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.ipr" afterPath="$PROJECT_DIR$/parent.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/success.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/success.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/pom.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/quest.iml" afterPath="$PROJECT_DIR$/../quest/quest.iml" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -387,14 +384,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FillFormService.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FillFormService.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../quest/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="54" selection-start="912" selection-end="912" vertical-scroll-proportion="0.1652491">
-              <folding>
-                <element signature="e#1348#1356#0" expanded="true" />
-                <element signature="e#3317#3325#0" expanded="true" />
-              </folding>
+            <state line="109" column="33" selection-start="3721" selection-end="3721" vertical-scroll-proportion="2.218712">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -403,15 +397,6 @@
         <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/TransactionalPerformer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="35" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="32" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -441,7 +426,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsService.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AddFormController.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddQuestionService.java" />
@@ -457,6 +441,7 @@
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/success.jsp" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FillFormService.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/pom.xml" />
       </list>
     </option>
   </component>
@@ -1642,20 +1627,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/security/RoleBasedAuthSuccessHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="26" selection-start="758" selection-end="758" vertical-scroll-proportion="0.16957606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/security/CustomUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="57" selection-start="705" selection-end="705" vertical-scroll-proportion="0.2891859">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationSecurity.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="58" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.0">
@@ -1726,9 +1697,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="33" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0">
+        <state line="20" column="32" selection-start="785" selection-end="785" vertical-scroll-proportion="0.30984205">
           <folding />
         </state>
       </provider>
@@ -1740,20 +1711,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FillFormService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="32" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0">
+        <state line="15" column="27" selection-start="591" selection-end="591" vertical-scroll-proportion="0.30984205">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1311#1319#0" expanded="true" />
+            <element signature="e#3280#3288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="33" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FillFormService.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="54" selection-start="912" selection-end="912" vertical-scroll-proportion="0.1652491">
-          <folding>
-            <element signature="e#1348#1356#0" expanded="true" />
-            <element signature="e#3317#3325#0" expanded="true" />
-          </folding>
+        <state line="143" column="36" selection-start="5177" selection-end="5177" vertical-scroll-proportion="0.69015795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="33" selection-start="3721" selection-end="3721" vertical-scroll-proportion="2.218712">
+          <folding />
         </state>
       </provider>
     </entry>

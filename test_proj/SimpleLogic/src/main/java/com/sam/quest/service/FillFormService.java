@@ -5,12 +5,10 @@ import com.sam.quest.command.GetListHQLCommand;
 import com.sam.quest.command.InsertCommand;
 import com.sam.quest.command.TransactionalPerformer;
 import com.sam.quest.dto.AnswQuestionDTO;
-import com.sam.quest.dto.OptionDTO;
 import com.sam.quest.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-
 import javax.servlet.http.HttpSession;
 import java.sql.Timestamp;
 import java.util.ArrayList;
