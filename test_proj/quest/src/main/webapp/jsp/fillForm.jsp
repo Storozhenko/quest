@@ -9,13 +9,6 @@
 </head>
 <body>
 <h2>Fill form</h2>
-<table>
-    <c:forEach var="quests" items="${quests}">
-        <tr>
-            <td>${quests.questionName}<td>
-        </tr>
-    </c:forEach>
-</table>
 <c:choose>
     <c:when test="${questType == 1}">
         <form:form method="post" commandName="answQuestion" action="addAnswerAction">
@@ -54,10 +47,6 @@
                 <tr>
                     <td>Description:</td>
                     <td colspan="5">${currentQuest.questionDescr}</td>
-                </tr>
-                <tr>
-                    <td>Question:</td>
-                    <td colspan="5">${questOptions}</td>
                 </tr>
                 <tr>
                     <td><form:radiobuttons items="${questOptions}" path="questionAnswer" delimiter="<br/>"/></td>

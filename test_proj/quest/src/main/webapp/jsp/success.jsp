@@ -9,6 +9,6 @@
 Form was filled successfully.
 <br>
 <br>
-<a href=adminForms>Main page</a>
+<a href=forms>Main page</a>
 </body>
 </html>

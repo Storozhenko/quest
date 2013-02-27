@@ -29,6 +29,6 @@ public class AddFormService {
         newForm.setFormDate(new Date(System.currentTimeMillis()));
         trPerformer.executeCommand(new InsertCommand(newForm));
         session.setAttribute("newForm", newForm);
-        session.setAttribute("questionNum", 1);
+        session.setAttribute("questionNum", 0);
     }
 }

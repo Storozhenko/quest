@@ -9,7 +9,7 @@
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Add Question</h2>
+<h2>Add Question №${questionNum}</h2>
 <br>
 <form:form method="post" commandName="question" action="addQuestionAction">
     <table>
@@ -40,5 +40,7 @@
         </tr>
     </table>
 </form:form>
+<br>
+<a href="forms">Finish</a>
 </body>
 </html>
