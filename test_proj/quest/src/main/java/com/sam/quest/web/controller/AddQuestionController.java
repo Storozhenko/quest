@@ -2,8 +2,7 @@ package com.sam.quest.web.controller;
 
 import com.sam.quest.entity.Forms;
 import com.sam.quest.entity.Questions;
-import com.sam.quest.service.MultiService;
-import com.sam.quest.service.ImplService;
+import com.sam.quest.service.AddQuestionService;
 import com.sam.quest.dto.OptionDTO;
 import com.sam.quest.dto.QuestionDTO;
 import com.sam.quest.web.validator.QuestionValidator;
@@ -21,8 +20,9 @@ import java.util.List;
 public class AddQuestionController {
     @Autowired
     private QuestionValidator questionValidator;
+    @Autowired
+    private AddQuestionService addQuestionService;
     private List<String> typeList;
-    private int questNum;
 
     @RequestMapping("/**/addQuestion")
     public String startInit(HttpSession session, ModelMap modelMap) {
@@ -38,37 +38,13 @@ public class AddQuestionController {
             modelMap.addAttribute("types", typeList);
             return "addQuestion";
         }
-        int type = 0;
-        for (String u : typeList) {
-            type++;
-            if (u.equals(question.getQuestionType())) {
-                session.setAttribute("typeTxt", u);
-                break;
-            }
-        }
         Questions newQuestion = new Questions();
         try {
-            MultiService<Questions> servQuest = new ImplService<Questions>();
-            newQuestion.setQuestionName(question.getQuestionName());
-            newQuestion.setQuestionType(type);
-            newQuestion.setQuestionDescr(question.getQuestionDescr());
-            Forms form = new Forms();
-            form.setFormId((Long)session.getAttribute("formId"));
-            newQuestion.setFormId(form);
-            servQuest.insertRecord(newQuestion);
-
-            List<Questions> list = servQuest.listRecord(new Questions());
-            for (Questions q : list) {
-                if (q.getQuestionName().equals(question.getQuestionName())) {
-                    session.setAttribute("questionId", q.getQuestionId());
-                }
-            }
+            addQuestionService.addQuestion(question, typeList, session);
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";
         }
-
-        session.setAttribute("type", type);
         modelMap.addAttribute("option", new OptionDTO());
         return "redirect:/addOption";
     }

@@ -5,16 +5,14 @@ import com.sam.quest.command.TransactionalPerformer;
 import com.sam.quest.dto.QuestionDTO;
 import com.sam.quest.entity.Forms;
 import com.sam.quest.entity.Questions;
-import com.sam.quest.entity.Users;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Service
-public class AddQuestionService {
+public class AddOptionService {
     @Autowired
     private TransactionalPerformer<Questions> trPerformer;
 

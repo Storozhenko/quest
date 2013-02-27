@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -19,7 +20,7 @@ public class AddFormService {
     @Autowired
     private TransactionalPerformer<Forms> trPerformer;
 
-    public Forms addForm(FormDTO form) throws Exception{
+    public void addForm(FormDTO form, HttpSession session) throws Exception{
         Users user = (Users) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Forms newForm = new Forms();
         newForm.setUserId(user);
@@ -27,6 +28,7 @@ public class AddFormService {
         newForm.setFormDescr(form.getFormDescr());
         newForm.setFormDate(new Date(System.currentTimeMillis()));
         trPerformer.executeCommand(new InsertCommand(newForm));
-        return newForm;
+        session.setAttribute("newForm", newForm);
+        session.setAttribute("questionNum", 1);
     }
 }

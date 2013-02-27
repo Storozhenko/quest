@@ -1,6 +1,5 @@
 package com.sam.quest.web.controller.autowired;
 
-import com.sam.quest.entity.Forms;
 import com.sam.quest.service.AddFormService;
 import com.sam.quest.dto.FormDTO;
 import com.sam.quest.dto.QuestionDTO;
@@ -33,11 +32,8 @@ public class AddFormController {
         if (result.hasErrors()) {
             return "addForm";
         }
-        Forms newForm;
         try {
-            newForm = addFormService.addForm(form);
-            session.setAttribute("newForm", newForm);
-            session.setAttribute("questionNum", 1);
+            addFormService.addForm(form, session);
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";
