@@ -4,12 +4,14 @@ import com.sam.quest.command.GetListCommand;
 import com.sam.quest.command.TransactionalPerformer;
 import com.sam.quest.dto.FormDTO;
 import com.sam.quest.entity.Forms;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class FormsService {
+    @Autowired
     private TransactionalPerformer<List<Forms>> trPerformer;
 
     public List<Forms> getForms() throws Exception{
@@ -20,9 +22,5 @@ public class FormsService {
             formsDTO.add(form);
         }
         return forms;
-    }
-
-    public void setTrPerformer(TransactionalPerformer trPerformer) {
-        this.trPerformer = trPerformer;
     }
 }

@@ -1,6 +1,5 @@
 package com.sam.quest.service;
 
-import com.sam.quest.command.GetListCommand;
 import com.sam.quest.command.InsertCommand;
 import com.sam.quest.command.TransactionalPerformer;
 import com.sam.quest.dto.FormDTO;
@@ -10,12 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Service
-public class AddFormService {
+public class AddQuestionService {
     @Autowired
     private TransactionalPerformer<Forms> trPerformer;
 

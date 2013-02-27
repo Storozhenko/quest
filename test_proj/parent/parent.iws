@@ -51,27 +51,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AddFormController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/FormsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/LoginController.java" />
-      <change type="DELETED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\controller\notinjected\AddFormController.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/META-INF/beans.xml" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/META-INF/beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddQuestionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsService.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\controller\notinjected\AddOptionController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AddOptionController.java" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\controller\notinjected\AdminMainController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AdminMainController.java" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\controller\notinjected\AdminUsersController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AdminUsersController.java" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\controller\notinjected\FillFormController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/FillFormController.java" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\controller\notinjected\RegistrationController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/RegistrationController.java" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\quest\src\main\java\com\sam\quest\web\controller\notinjected\RolesController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/RolesController.java" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AppTest.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361352250136" ignored="false" />
-    <file path="/fragment.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361957384422" ignored="false" />
+    <file path="/fragment.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361957800088" ignored="false" />
     <file path="/DAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360323491870" ignored="false" />
     <file path="/HiberDAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360316450133" ignored="false" />
     <file path="/JDBCDAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360316553155" ignored="false" />
@@ -115,7 +105,7 @@
     <file path="/FindCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361806278198" ignored="false" />
     <file path="/DeleteCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361796380038" ignored="false" />
     <file path="/TransactionalPerformer.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361801344810" ignored="false" />
-    <file path="/Dummy.txt" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361950799671" ignored="false" />
+    <file path="/Dummy.txt" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361958651100" ignored="false" />
     <file path="/GetListCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361796102479" ignored="false" />
     <file path="/MultiService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361518946041" ignored="false" />
     <file path="/MultiServiceImpl.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360583014306" ignored="false" />
@@ -175,7 +165,7 @@
     <file path="/AnswQuestionDTO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361525769669" ignored="false" />
     <file path="/success.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361534764046" ignored="false" />
     <file path="/AnswerValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361536871607" ignored="false" />
-    <file path="/logicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361956464908" ignored="false" />
+    <file path="/logicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361959596324" ignored="false" />
     <file path="/LoginService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361874004308" ignored="false" />
     <file path="/FormsService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361890574746" ignored="false" />
     <file path="/FormsController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361890555711" ignored="false" />
@@ -184,6 +174,7 @@
     <file path="/RolesController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361876388428" ignored="false" />
     <file path="/RoleBasedAuthSuccessHandler.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361887941793" ignored="false" />
     <file path="/AddFormService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361957002304" ignored="false" />
+    <file path="/AddQuestionService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361959472216" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,10 +267,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <field_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <exception_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -315,6 +303,9 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <field_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -382,31 +373,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Users.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Users.java">
+      <file leaf-file-name="logicApplicationContext.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="28" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2473#2491#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddFormController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AddFormController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="26" selection-start="1244" selection-end="1244" vertical-scroll-proportion="0.5168739">
+            <state line="28" column="21" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddFormService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java">
+      <file leaf-file-name="ApplicationContext.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="43" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
+            <state line="12" column="47" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddQuestionController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="36" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.37777779">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddQuestionService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddQuestionService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="37" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -436,22 +433,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/security/RoleBasedAuthSuccessHandler.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationSecurity.xml" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/FormsController.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsService.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Users.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/RegistrationController.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddFormController.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/notinjected/AddFormController.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AddFormController.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddQuestionService.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsService.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
       </list>
     </option>
   </component>
@@ -598,7 +595,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -658,6 +654,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1008,6 +1008,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewSettings">
@@ -1035,13 +1036,13 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="Z:\quest\test_proj\parent\lib" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="Downloaded.Files.Path" value="Z:\quest\test_proj\parent\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1254,25 +1255,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
-      <option name="LOCAL" value="false" />
-      <deployment />
-      <server-settings>
-        <data>
-          <option name="transportHostId" />
-        </data>
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="4823" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.x">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
@@ -1333,6 +1315,25 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="4823" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="Tomcat Server 7.x" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.x">
@@ -1483,7 +1484,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="1002" extended-state="0" />
+    <frame x="-4" y="-4" width="1288" height="1002" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.431629" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1507,7 +1508,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2949757" sideWeight="0.7243816" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23338735" sideWeight="0.7090695" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2909305" sideWeight="0.49027553" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2909305" sideWeight="0.49027553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.18311533" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1633,50 +1634,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/security/RoleBasedAuthSuccessHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="74" selection-start="610" selection-end="610" vertical-scroll-proportion="0.08262455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/LoginValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="24" selection-start="945" selection-end="945" vertical-scroll-proportion="0.6738739">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="49" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.11171171">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="37" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.45945945">
-          <folding>
-            <element signature="e#1566#1573#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationSecurity.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="53" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.35069445">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="28" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2473#2491#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1701,32 +1662,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="59" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.8559028">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/InsertCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="137" selection-end="137" vertical-scroll-proportion="0.11805555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="43" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="747" selection-end="747" vertical-scroll-proportion="0.15097691">
-          <folding />
-        </state>
+        <state line="5" column="13" selection-start="137" selection-end="137" vertical-scroll-proportion="0.11805555" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/FormsController.java">
@@ -1736,16 +1674,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/ImplService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="38" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.53125">
+        <state line="11" column="13" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AddFormController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="26" selection-start="1244" selection-end="1244" vertical-scroll-proportion="0.5168739">
+        <state line="36" column="20" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.53865653">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="43" selection-start="934" selection-end="934" vertical-scroll-proportion="0.08262455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="46" selection-start="816" selection-end="816" vertical-scroll-proportion="0.3304982">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="38" selection-start="839" selection-end="839" vertical-scroll-proportion="0.2272175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="35" selection-start="621" selection-end="621" vertical-scroll-proportion="0.2272175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddQuestionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="37" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="21" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="47" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/AddQuestionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="36" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.37777779">
           <folding />
         </state>
       </provider>

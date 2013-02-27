@@ -3,10 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
 http://www.springframework.org/schema/tx
-http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
         <property name="configLocation" value="classpath:/hibernate.cfg.xml" />
@@ -25,14 +28,6 @@ http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
     <bean id="trPerformer" class="com.sam.quest.command.TransactionalPerformer">
         <property name="hibernateTemplate" ref="hibernateTemplate" />
     </bean>
-    <bean id="loginService" class="com.sam.quest.service.LoginService">
-        <property name="trPerformer" ref="trPerformer" />
-    </bean>
-    <bean id="formsService" class="com.sam.quest.service.FormsService">
-        <property name="trPerformer" ref="trPerformer" />
-    </bean>
-    <bean id="addFormService" class="com.sam.quest.service.AddFormService">
-        <property name="trPerformer" ref="trPerformer" />
-    </bean>
+    <context:component-scan base-package="com.sam.quest.service" />
 
 </beans>
