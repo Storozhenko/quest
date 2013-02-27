@@ -1,6 +1,5 @@
-package com.sam.quest.web.controller;
+package com.sam.quest.web.controller.autowired;
 
-import com.sam.quest.dto.FormDTO;
 import com.sam.quest.entity.Forms;
 import com.sam.quest.service.FormsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 

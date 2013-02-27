@@ -1,11 +1,6 @@
-package com.sam.quest.web.controller.notinjected;
+package com.sam.quest.web.controller.autowired;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 @Controller
 public class RolesController {/*

@@ -1,4 +1,4 @@
-package com.sam.quest.web.controller.notinjected;
+package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.entity.*;
 import com.sam.quest.service.MultiService;

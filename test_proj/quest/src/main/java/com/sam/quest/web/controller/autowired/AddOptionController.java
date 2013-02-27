@@ -1,4 +1,4 @@
-package com.sam.quest.web.controller.notinjected;
+package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.entity.Questions;
 import com.sam.quest.entity.QuestionsData;

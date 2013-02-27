@@ -1,4 +1,4 @@
-package com.sam.quest.web.controller.notinjected;
+package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.entity.Users;
 import com.sam.quest.service.ImplService;
