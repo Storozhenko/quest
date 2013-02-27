@@ -2,6 +2,7 @@ package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.entity.Questions;
 import com.sam.quest.entity.QuestionsData;
+import com.sam.quest.service.AddOptionService;
 import com.sam.quest.service.MultiService;
 import com.sam.quest.service.ImplService;
 import com.sam.quest.dto.OptionDTO;
@@ -19,7 +20,8 @@ import javax.servlet.http.HttpSession;
 public class AddOptionController {
     @Autowired
     private OptionValidator optionValidator;
-
+    @Autowired
+    private AddOptionService addOptionService;
 
     @RequestMapping("/**/addOption")
     public String startInit(HttpSession session, ModelMap modelMap) {
@@ -35,15 +37,8 @@ public class AddOptionController {
         if (result.hasErrors()) {
             return "addOption";
         }
-        QuestionsData qd = new QuestionsData();
-        Questions q = new Questions();
-        q.setQuestionId((Long)session.getAttribute("questionId"));
-        qd.setQuestionId(q);
-        qd.setQuestionOption(option.getOptionNum());
-        qd.setOptionData(option.getOptionData());
-        MultiService<QuestionsData> serv = new ImplService<QuestionsData>();
         try {
-            serv.insertRecord(qd);
+            addOptionService.addOption(option, session);
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";

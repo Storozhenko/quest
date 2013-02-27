@@ -32,7 +32,7 @@ public class AddQuestionService {
         newQuestion.setQuestionType(type);
         newQuestion.setFormId((Forms)session.getAttribute("newForm"));
         trPerformer.executeCommand(new InsertCommand(newQuestion));
-        session.setAttribute("question", newQuestion);
+        session.setAttribute("newQuestion", newQuestion);
         session.setAttribute("type", type);
     }
 }
