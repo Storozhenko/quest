@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
 <html>
 <head>
     <title>Successfull Login</title>
@@ -8,12 +9,16 @@
 <body>
 <h2>Success</h2>
 <spring:message code="label.welcome"/>, ${username}
-<p>Congratulations! Your admin login was successful</p>
+<br>
+<sec:authorize access="isAuthenticated()">
+    <a href="<c:url value="/logout"/>">Logout</a>
+</sec:authorize>
 <span style="float: right">
-    <a href="admin/adminMain?locale=en">en</a>
+    <a href="?locale=en">en</a>
     |
-    <a href="admin/adminMain?locale=ru">ru</a>
+    <a href="?locale=ru">ru</a>
 </span>
+<br><br>
 <br>
 <a href="forms">Forms</a>
 <br>

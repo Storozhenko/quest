@@ -33,7 +33,7 @@
     <c:forEach var="forms" items="${forms}">
         <tr>
             <td>${forms.formName}<td>
-            <td><a href="fillForm?answId=${forms.formId}">Fill form</a><td>
+            <td><a href="fillForm?formId=${forms.formId}">Fill form</a><td>
         </tr>
     </c:forEach>
     </tbody>

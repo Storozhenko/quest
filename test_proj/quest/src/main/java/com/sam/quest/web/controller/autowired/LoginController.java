@@ -19,7 +19,7 @@ public class LoginController {
     private LoginService loginService;
 
     @RequestMapping("/login")
-    public String startInit(ModelMap modelMap) {
+    public String startInit() {
         //modelMap.addAttribute("loginForm", new LoginDTO());
         return "login";
     }

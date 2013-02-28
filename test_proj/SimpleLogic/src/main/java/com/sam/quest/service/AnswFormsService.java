@@ -43,6 +43,7 @@ public class AnswFormsService {
                 if (questId != id) {
                     AnswQuestionDTO aqDTO = new AnswQuestionDTO();
                     aqDTO.setQuestionName(aq.getQuestionId().getQuestionName());
+                    aqDTO.setQuestionDescr(aq.getQuestionId().getQuestionDescr());
                     List <String> options = (List<String>)trPerformer.executeCommand(new GetListHQLCommand(
                             "select aq.userAnswer from AnswQuestions aq where aq.answId = '" + answId + "' and aq.questionId = '" + aq.getQuestionId().getQuestionId() + "'"));
                     aqDTO.setUserAnswer(options);

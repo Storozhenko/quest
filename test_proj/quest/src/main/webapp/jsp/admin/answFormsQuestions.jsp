@@ -20,6 +20,7 @@
     <thead>
     <tr>
         <th>Question</th>
+        <th>Description</th>
         <th>Answer</th>
     </tr>
     </thead>
@@ -27,6 +28,7 @@
     <c:forEach var="quests" items="${answQuests}">
         <tr>
             <td>${quests.questionName}<td>
+            <td>${quests.questionDescr}<td>
             <td>${quests.userAnswer}<td>
         </tr>
     </c:forEach>
