@@ -4,7 +4,7 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Forms</title>
+    <title>Filled Forms</title>
     <link rel="stylesheet" type="text/css" href="${baseUrl}/css/style.css"/>
     <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.2/css/jquery.dataTables.css">
     <link rel="stylesheet" href="${baseUrl}/css/jquery.dataTables.css">
@@ -14,32 +14,28 @@
 
 
 <body>
-<h2>Forms</h2>
-<br>
-<datatables:table id="formsTableId" data="${forms}">
-    <datatables:column title="Name" property="formName" />
-    <datatables:column title="Description" property="formDescr" />
-</datatables:table>
-<br>
+<h2>Filled Forms</h2>
 <br>
 <table border="1">
     <thead>
     <tr>
-        <th>Name</th>
-        <th>Fill form</th>
+        <th>Form</th>
+        <th>Username</th>
+        <th>Date and time</th>
+        <th>Look</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="forms" items="${forms}">
+    <c:forEach var="forms" items="${answForms}">
         <tr>
             <td>${forms.formName}<td>
-            <td><a href="fillForm?answId=${forms.formId}">Fill form</a><td>
+            <td>${forms.username}<td>
+            <td>${forms.answDatetime}<td>
+            <td><a href="answFormsQuestions?answId=${forms.answId}">Look</a><td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-<br>
-<a href="addForm">Add form</a>
 
 </body>
 </html>

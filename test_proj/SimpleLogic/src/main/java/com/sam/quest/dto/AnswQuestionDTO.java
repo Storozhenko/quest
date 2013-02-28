@@ -1,14 +1,25 @@
 package com.sam.quest.dto;
 
 
-public class AnswQuestionDTO {
-    private String [] questionAnswer;
+import java.util.List;
 
-    public String [] getQuestionAnswer() {
-        return questionAnswer;
+public class AnswQuestionDTO {
+    private String questionName;
+    private List<String> userAnswer;
+
+    public String getQuestionName() {
+        return questionName;
     }
 
-    public void setQuestionAnswer(String [] questionAnswer) {
-        this.questionAnswer = questionAnswer;
+    public void setQuestionName(String questionName) {
+        this.questionName = questionName;
+    }
+
+    public List<String> getUserAnswer() {
+        return userAnswer;
+    }
+
+    public void setUserAnswer(List<String> userAnswer) {
+        this.userAnswer = userAnswer;
     }
 }

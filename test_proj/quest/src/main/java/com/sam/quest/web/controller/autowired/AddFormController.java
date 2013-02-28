@@ -9,7 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -26,8 +29,9 @@ public class AddFormController {
         return "addForm";
     }
 
-    @RequestMapping("/**/addFormAction")
-    public String addForm(HttpSession session, ModelMap modelMap, @ModelAttribute("form")FormDTO form, BindingResult result) {
+    @RequestMapping("/{role}/addFormAction")
+    public String addForm(HttpSession session, ModelMap modelMap, @PathVariable("role") String role,
+                          @ModelAttribute("form")FormDTO form, BindingResult result) {
         formValidator.validate(form, result);
         if (result.hasErrors()) {
             return "addForm";
@@ -39,6 +43,6 @@ public class AddFormController {
             return "error";
         }
         modelMap.addAttribute("question", new QuestionDTO());
-        return "redirect:/addQuestion";
+        return "redirect:/" + role + "/addQuestion";
     }
 }

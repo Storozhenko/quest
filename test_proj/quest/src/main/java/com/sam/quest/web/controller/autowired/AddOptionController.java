@@ -12,8 +12,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -31,8 +33,9 @@ public class AddOptionController {
         return "addOption";
     }
 
-    @RequestMapping("/**/addOptionAction")
-    public String addOption(HttpSession session, ModelMap modelMap, @ModelAttribute("option")OptionDTO option, BindingResult result) {
+    @RequestMapping("/{role}/addOptionAction")
+    public String addOption(HttpSession session, ModelMap modelMap, @PathVariable("role") String role,
+                            @ModelAttribute("option")OptionDTO option, BindingResult result) {
         optionValidator.validate(option, result);
         if (result.hasErrors()) {
             return "addOption";
@@ -48,7 +51,7 @@ public class AddOptionController {
         modelMap.addAttribute("option", newOption);
         int type = (Integer)session.getAttribute("type");
         if (type == 1) {
-            return "redirect:/addQuestion";
+            return "redirect:/" + role + "/addQuestion";
         } else {
             return "addOption";
         }

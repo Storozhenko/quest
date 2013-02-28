@@ -4,7 +4,7 @@ import com.sam.quest.command.FindCommand;
 import com.sam.quest.command.GetListHQLCommand;
 import com.sam.quest.command.InsertCommand;
 import com.sam.quest.command.TransactionalPerformer;
-import com.sam.quest.dto.AnswQuestionDTO;
+import com.sam.quest.dto.AnswerDTO;
 import com.sam.quest.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -22,10 +22,10 @@ public class FillFormService {
 
     public void initForm(String formId, HttpSession session) throws Exception{
         questList = (ArrayList<Questions>)trPerformer.executeCommand(new GetListHQLCommand(
-                "from Questions where form_id = '" + formId + "' "));
+                "from Questions where formId = '" + formId + "' "));
         Questions currentQuest = questList.get(0);
         List <QuestionsData> questDataList = (ArrayList<QuestionsData>)trPerformer.executeCommand(new GetListHQLCommand(
-                "from QuestionsData where question_id = '" + currentQuest.getQuestionId().toString() + "' "));
+                "from QuestionsData where questionId = '" + currentQuest.getQuestionId().toString() + "' "));
         List <String> options = new ArrayList<String>();
         for (QuestionsData qd : questDataList) {
             options.add(qd.getOptionData());
@@ -44,7 +44,7 @@ public class FillFormService {
         session.setAttribute("answForm", newAnswForm);
     }
 
-    public String fillForm(AnswQuestionDTO answQuestion, HttpSession session) throws Exception{
+    public String fillForm(AnswerDTO answQuestion, HttpSession session) throws Exception{
         String [] answers = answQuestion.getQuestionAnswer();
         AnswQuestions newAnswQuest = new AnswQuestions();
         newAnswQuest.setAnswId((AnswForms)session.getAttribute("answForm"));
@@ -59,7 +59,7 @@ public class FillFormService {
         }
         Questions currentQuest = questList.get(num - 1);
         List <QuestionsData> questDataList = (ArrayList<QuestionsData>)trPerformer.executeCommand(new GetListHQLCommand(
-                "from QuestionsData where question_id = '" + currentQuest.getQuestionId().toString() + "' "));
+                "from QuestionsData where questionId = '" + currentQuest.getQuestionId().toString() + "' "));
         List <String> options = new ArrayList<String>();
         for (QuestionsData qd : questDataList) {
             options.add(qd.getOptionData());

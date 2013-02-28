@@ -1,6 +1,6 @@
 package com.sam.quest.web.validator;
 
-import com.sam.quest.dto.AnswQuestionDTO;
+import com.sam.quest.dto.AnswerDTO;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -11,11 +11,11 @@ import org.springframework.validation.Validator;
 public class AnswerValidator implements Validator{
 
     public boolean supports(Class<?> clazz) {
-        return AnswQuestionDTO.class.isAssignableFrom(clazz);
+        return AnswerDTO.class.isAssignableFrom(clazz);
     }
 
     public void validate(Object target, Errors errors) {
-        AnswQuestionDTO answQuestion = (AnswQuestionDTO) target;
+        AnswerDTO answQuestion = (AnswerDTO) target;
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "questionAnswer", "label.validator.answerEmpty");
     }
 }
