@@ -1,8 +1,5 @@
 package com.sam.quest;
 
-import com.sam.quest.command.GetListCommand;
-import com.sam.quest.command.TransactionalPerformer;
-import com.sam.quest.command.UpdateCommand;
 import com.sam.quest.dao.factory.*;
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -16,21 +13,6 @@ import java.util.List;
 
 public class AppTest extends TestCase {
 
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName ) {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite() {
-        return new TestSuite( AppTest.class );
-    }
 
     public void testApp() throws Exception {
         DAOFactory jdbcForm = new JDBCDAOFormFactory();
@@ -69,7 +51,7 @@ public class AppTest extends TestCase {
         TransactionalPerformer fm = new TransactionalPerformer<List <Forms>>();
         form = formdao.findRecord(1, new Forms());
         assertTrue(formhib.updateRecord(form));
-        List <Forms> list  = (ArrayList<Forms>)fm.executeCommand(new GetListCommand<ArrayList<Forms>>(new Forms()));
+        List <Forms> list = (ArrayList<Forms>)fm.executeCommand(new GetListCommand<ArrayList<Forms>>(new Forms()));
         */
         AnswForms answ = new AnswForms();
         answ.setFormId(form);
