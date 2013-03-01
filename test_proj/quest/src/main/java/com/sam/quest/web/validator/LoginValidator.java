@@ -17,11 +17,11 @@ public class LoginValidator implements Validator{
     public void validate(Object target, Errors errors) {
         LoginDTO loginForm = (LoginDTO) target;
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "label.validator.usernameEmpty");
-        String username = loginForm.getUsername();
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "j_username", "label.validator.usernameEmpty");
+        String username = loginForm.getJ_username();
         if ((username.length()) > 16) {
-            errors.rejectValue("username", "label.validator.usernameTooLong");
+            errors.rejectValue("j_username", "label.validator.usernameTooLong");
         }
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "label.validator.passwordEmpty");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "j_password", "label.validator.passwordEmpty");
     }
 }

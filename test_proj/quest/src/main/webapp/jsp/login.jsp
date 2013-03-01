@@ -16,15 +16,17 @@
     |
     <a href="?locale=ru">ru</a>
 </span>
-<form:form method="post" action="j_spring_security_check">
+<form:form method="post" commandName="loginForm" action="loginAction">
     <table>
         <tr>
             <td>Username:</td>
             <td><input id="j_username" name="j_username" size="20" maxlength="50" type="text" /></td>
+            <td><span class="error"><form:errors path="j_username" /></span></td>
         </tr>
         <tr>
             <td>Password:</td>
             <td><input id="j_password" name="j_password" size="20" maxlength="50" type="password" /></td>
+            <td><span class="error"><form:errors path="j_password" /></span></td>
         </tr>
         <tr>
             <td colspan="2"></td>

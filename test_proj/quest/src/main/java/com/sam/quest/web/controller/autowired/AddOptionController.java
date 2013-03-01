@@ -1,10 +1,6 @@
 package com.sam.quest.web.controller.autowired;
 
-import com.sam.quest.entity.Questions;
-import com.sam.quest.entity.QuestionsData;
 import com.sam.quest.service.AddOptionService;
-import com.sam.quest.service.MultiService;
-import com.sam.quest.service.ImplService;
 import com.sam.quest.dto.OptionDTO;
 import com.sam.quest.web.validator.OptionValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller

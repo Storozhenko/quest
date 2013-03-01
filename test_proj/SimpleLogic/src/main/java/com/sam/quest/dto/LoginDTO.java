@@ -2,22 +2,22 @@ package com.sam.quest.dto;
 
 
 public class LoginDTO {
-    private String username;
-    private String password;
+    private String j_username;
+    private String j_password;
 
-    public String getUsername() {
-        return username;
+    public String getJ_username() {
+        return j_username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setJ_username(String j_username) {
+        this.j_username = j_username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getJ_password() {
+        return j_password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setJ_password(String j_password) {
+        this.j_password = j_password;
     }
 }
