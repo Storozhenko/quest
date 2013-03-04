@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
 <html>
 <head>
-    <title>Successfull Login</title>
+    <title>Successful Login</title>
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>

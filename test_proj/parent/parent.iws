@@ -52,11 +52,14 @@
   <component name="ChangeListManager">
     <list default="true" id="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/DeleteCommand.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/DeleteCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Users.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Users.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/AppTest.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362395476123" ignored="false" />
+    <file path="/AppTest.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362402275074" ignored="false" />
     <file path="/fragment.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362125342600" ignored="false" />
     <file path="/DAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360323491870" ignored="false" />
     <file path="/HiberDAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360316450133" ignored="false" />
@@ -161,7 +164,7 @@
     <file path="/AnswQuestionDTO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362053281620" ignored="false" />
     <file path="/success.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361969014048" ignored="false" />
     <file path="/AnswerValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361536871607" ignored="false" />
-    <file path="/logicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362135342784" ignored="false" />
+    <file path="/logicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362396582576" ignored="false" />
     <file path="/LoginService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361874004308" ignored="false" />
     <file path="/FormsService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361890574746" ignored="false" />
     <file path="/FormsController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361890555711" ignored="false" />
@@ -382,48 +385,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RegistrationController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/RegistrationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="24" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegistrationService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/RegistrationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="49" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AppTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="64" selection-start="1725" selection-end="1725" vertical-scroll-proportion="0.0">
+            <state line="65" column="67" selection-start="2649" selection-end="2649" vertical-scroll-proportion="0.53583616">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2788#2789#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp">
+      <file leaf-file-name="main.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="19" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.87857145">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="23" selection-start="238" selection-end="238" vertical-scroll-proportion="-5.8846154">
+            <state line="8" column="27" selection-start="378" selection-end="378" vertical-scroll-proportion="-5.230769">
               <folding />
             </state>
           </provider>
@@ -453,22 +430,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AdminUsersController.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/LoginDTO.java" />
-        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/LoginValidator.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/LoginController.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationSecurity.xml" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/RegistrationController.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/RegistrationService.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/forms.jsp" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_ru.properties" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_en.properties" />
         <option value="$PROJECT_DIR$/../SimpleLogic/pom.xml" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/index.jsp" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/DeleteCommand.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Users.java" />
+        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
       </list>
     </option>
   </component>
@@ -735,6 +712,66 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="command" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1554,10 +1591,10 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33293697" sideWeight="0.48368677" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27561837" sideWeight="0.50405186" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27915195" sideWeight="0.5105348" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936978" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286219" sideWeight="0.49675852" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286219" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1566,7 +1603,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2949757" sideWeight="0.7243816" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25364667" sideWeight="0.7208481" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27915195" sideWeight="0.49027553" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27915195" sideWeight="0.48379254" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.18311533" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1692,123 +1729,118 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddFormService.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="614" selection-end="683" vertical-scroll-proportion="0.12393682">
+        <state line="29" column="25" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="62" selection-start="685" selection-end="685" vertical-scroll-proportion="0.24787363">
+        <state line="26" column="103" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.60535717">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/forms.jsp">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="49" selection-start="883" selection-end="883" vertical-scroll-proportion="0.25515464">
+        <state line="25" column="41" selection-start="663" selection-end="663" vertical-scroll-proportion="0.63993174">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/QuestionsData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="397" selection-end="435" vertical-scroll-proportion="0.21907216">
+        <state line="7" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.17406143">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.1.0.RELEASE/spring-test-3.1.0.RELEASE.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Forms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="85" selection-start="214" selection-end="254" vertical-scroll-proportion="0.11125655">
+        <state line="10" column="13" selection-start="177" selection-end="177" vertical-scroll-proportion="0.17406143">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_ru.properties">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AddQuestionService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="933" selection-end="1071" vertical-scroll-proportion="0.35006434">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_en.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="45" selection-start="917" selection-end="917" vertical-scroll-proportion="0.36215538">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="40" selection-start="5780" selection-end="5780" vertical-scroll-proportion="0.8822526">
+        <state line="16" column="13" selection-start="544" selection-end="544" vertical-scroll-proportion="0.10328068">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/registration.jsp">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="94" selection-start="835" selection-end="835" vertical-scroll-proportion="0.42142856">
+        <state line="12" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="0.10328068">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FillFormService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="608" selection-end="608" vertical-scroll-proportion="0.10328068">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/DeleteCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="50" selection-start="374" selection-end="374" vertical-scroll-proportion="0.2901024">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/InsertCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="137" selection-end="137" vertical-scroll-proportion="0.11604095">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/RegistrationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="49" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
+        <state line="10" column="13" selection-start="339" selection-end="339" vertical-scroll-proportion="0.1450512">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/AnswForms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="238" selection-end="238" vertical-scroll-proportion="-5.8846154">
+        <state line="9" column="13" selection-start="185" selection-end="185" vertical-scroll-proportion="0.17406143">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/RegistrationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="494" selection-end="494" vertical-scroll-proportion="0.17406143">
+        <state line="31" column="24" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.46596858">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/config.properties">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/entity/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="68" column="50" selection-start="1555" selection-end="1555" vertical-scroll-proportion="1.7696246">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="69" selection-start="453" selection-end="459" vertical-scroll-proportion="0.32635254">
+        <state line="8" column="27" selection-start="378" selection-end="378" vertical-scroll-proportion="-5.230769">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="64" selection-start="1725" selection-end="1725" vertical-scroll-proportion="0.0">
+        <state line="65" column="67" selection-start="2649" selection-end="2649" vertical-scroll-proportion="0.53583616">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2788#2789#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="19" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.87857145">
-          <folding />
         </state>
       </provider>
     </entry>

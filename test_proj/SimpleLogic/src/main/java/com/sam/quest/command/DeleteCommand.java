@@ -10,7 +10,6 @@ public class DeleteCommand<E> implements Command <Void> {
     }
     public Void execute(HibernateTemplate hibernateTemplate) throws Exception{
         hibernateTemplate.delete(obj);
-
         return null;
     }
 }
