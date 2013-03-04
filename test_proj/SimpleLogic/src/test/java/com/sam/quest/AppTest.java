@@ -14,7 +14,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -25,7 +24,7 @@ public class AppTest {
     TransactionalPerformer trPerformer;
 
     @Test
-    public void testApp() {
+    public void testCRUD() {
         Users user = new Users();
         user.setUsername("test");
         user.setPassword("test");
@@ -55,7 +54,6 @@ public class AppTest {
         element.click();
         System.out.println("Page title is: " + driver.getTitle());
         driver.quit();
-        assertTrue(true);
     }
 
 }
