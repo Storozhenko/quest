@@ -2,14 +2,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Login</title>
+    <title><spring:message code="label.login"/></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Login</h2>
+<h2><spring:message code="label.login"/></h2>
 <br/>
 <span style="float: right">
     <select onchange="window.location=this.options[this.selectedIndex].value">

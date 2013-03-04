@@ -14,7 +14,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.Proxy;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -65,10 +64,9 @@ public class AppTest {
         WebDriverWait wait = new WebDriverWait(driver, 8);
         wait.until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
-                return d.getTitle().toLowerCase().equals("successful login");
+                return d.getTitle().toLowerCase().equals("quest");
             }
         });
-
         System.out.println("Page title is: " + driver.getTitle());
         driver.quit();
     }

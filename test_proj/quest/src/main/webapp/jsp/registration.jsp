@@ -4,38 +4,40 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-    <title>Registration</title>
+    <title><spring:message code="label.registration"/></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Registration</h2>
+<h2><spring:message code="label.registration"/></h2>
 <span style="float: right">
-    <a href="?locale=en">en</a>
-    |
-    <a href="?locale=ru">ru</a>
+    <select onchange="window.location=this.options[this.selectedIndex].value">
+        <option value=""><spring:message code="label.language"/></option>
+        <option value="registration?locale=en"><spring:message code="label.language.english"/></option>
+        <option value="registration?locale=ru"><spring:message code="label.language.russian"/></option>
+    </select>
 </span>
 <br>
 <br>
 <form:form method="post" commandName="regForm" action="registrationAction">
     <table>
         <tr>
-            <td>Username:</td>
+            <td><spring:message code="label.username"/>:</td>
             <td><form:input path="username" /></td>
             <td><span class="error"><form:errors path="username" /></span></td>
         </tr>
         <tr>
-            <td>Password:</td>
+            <td><spring:message code="label.password"/>:</td>
             <td><form:password path="password" /></td>
             <td><span class="error"><form:errors path="password" /></span></td>
         </tr>
         <tr>
-            <td>Confirm Password:</td>
+            <td><spring:message code="label.password.confirm"/>:</td>
             <td><form:password path="confirmPassword" /></td>
             <td><span class="error"><form:errors path="confirmPassword" /></span></td>
         </tr>
         <tr>
-            <td>Language:</td>
+            <td><spring:message code="label.language"/>:</td>
             <td><form:password path="language" /></td>
         </tr>
         <tr>
