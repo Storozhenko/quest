@@ -1,62 +1,61 @@
 package com.sam.quest;
 
-import com.sam.quest.dao.factory.*;
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-import com.sam.quest.dao.*;
-import com.sam.quest.entity.*;
-import java.util.Date;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
+import com.sam.quest.command.TransactionalPerformer;
+import com.sam.quest.command.UpdateCommand;
+import com.sam.quest.entity.Users;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AppTest extends TestCase {
+import static org.junit.Assert.assertTrue;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:/logicApplicationContext.xml"})
+public class AppTest {
 
-    public void testApp() throws Exception {
-        DAOFactory jdbcForm = new JDBCDAOFormFactory();
-        DAOFactory jdbcUser = new JDBCDAOUserFactory();
-        DAOFactory hib = new HiberDAOFactory();
+    @Autowired
+    TransactionalPerformer trPerformer;
 
-        MultiDAO<Users> userdao = jdbcUser.getDAO();
-        MultiDAO<Users> userhib = hib.getDAO();
-        MultiDAO<Forms> formdao = jdbcForm.getDAO();
-        MultiDAO<Forms> formhib = hib.getDAO();
-        MultiDAO<AnswForms> answhib = hib.getDAO();
-
+    @Test
+    public void testApp() {
         Users user = new Users();
         user.setUsername("test");
         user.setPassword("test");
         user.setUserType("ROLE_ADMIN");
         user.setUserLang("eng");
         user.setUserId(new Long(1));
-
-        assertTrue(userdao.updateRecord(user));
-        //user.setUsername("admin");
-        //user.setPassword("test");
-        //assertTrue(userhib.insertUser(user));
-
-        user = userhib.findRecord(1, new Users());
-        Date date = new Date(System.currentTimeMillis());
-        Forms form = new Forms();
-        form.setFormName("form");
-        form.setUserId(user);
-        form.setFormDate(date);
-        form.setFormId(new Long(1));
-        assertTrue(formdao.updateRecord(form));
-        /*
-        TransactionalPerformer fms = new TransactionalPerformer<Forms>();
-        fms.executeCommand(new UpdateCommand<Forms>(form));
-        TransactionalPerformer fm = new TransactionalPerformer<List <Forms>>();
-        form = formdao.findRecord(1, new Forms());
-        assertTrue(formhib.updateRecord(form));
-        List <Forms> list = (ArrayList<Forms>)fm.executeCommand(new GetListCommand<ArrayList<Forms>>(new Forms()));
-        */
-        AnswForms answ = new AnswForms();
-        answ.setFormId(form);
-        answ.setUserId(user);
-        answ.setAnswDatetime(new Timestamp(System.currentTimeMillis()));
-        assertTrue(answhib.insertRecord(answ));
+        try {
+            trPerformer.executeCommand(new UpdateCommand(user));
+            assertTrue(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            assertTrue(false);
+        }
     }
+
+    @Test
+    public void testLogin() {
+        WebDriver driver = new FirefoxDriver();
+        driver.get("http://localhost:8080/quest/");
+        WebElement element = driver.findElement(By.ById.id("loginLink"));
+        element.click();
+        element = driver.findElement(By.ById.id("j_username"));
+        element.sendKeys("test");
+        element = driver.findElement(By.ById.id("j_password"));
+        element.sendKeys("test");
+        element = driver.findElement(By.ById.id("loginOK"));
+        element.click();
+        System.out.println("Page title is: " + driver.getTitle());
+        driver.quit();
+        assertTrue(true);
+    }
+
 }

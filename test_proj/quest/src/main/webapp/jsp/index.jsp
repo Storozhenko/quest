@@ -6,8 +6,8 @@
 <body>
 <h2>Welcome to MyQuest!</h2>
 <br>
-<a href="login">Login</a>
+<a id="loginLink" href="login">Login</a>
 <br>
-<a href="registration">Registration</a>
+<a id="regLink" href="registration">Registration</a>
 </body>
 </html>
