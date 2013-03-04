@@ -12,7 +12,7 @@
 <spring:message code="label.welcome"/>, ${username}
 <br>
 <sec:authorize access="isAuthenticated()">
-    <a href="<c:url value="/logout"/>">Logout</a>
+    <a href="<c:url value="/logout"/>"><spring:message code="label.logout"/></a>
 </sec:authorize>
 <span style="float: right">
     <select onchange="window.location=this.options[this.selectedIndex].value">
