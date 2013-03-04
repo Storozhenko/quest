@@ -34,7 +34,7 @@
             <td colspan="2"></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="submit" id="loginOK" value="OK" /></td>
+            <td colspan="2"><input type="submit" id="loginSubmit" value="OK" /></td>
         </tr>
     </table>
 </form:form>

@@ -43,14 +43,14 @@ public class AppTest {
     @Test
     public void testLogin() {
         WebDriver driver = new FirefoxDriver();
-        driver.get("http://localhost:8080/quest/");
+        driver.get("http://sc0181:8080/quest/");
         WebElement element = driver.findElement(By.ById.id("loginLink"));
         element.click();
         element = driver.findElement(By.ById.id("j_username"));
         element.sendKeys("test");
         element = driver.findElement(By.ById.id("j_password"));
         element.sendKeys("test");
-        element = driver.findElement(By.ById.id("loginOK"));
+        element = driver.findElement(By.ById.id("loginSubmit"));
         element.click();
         System.out.println("Page title is: " + driver.getTitle());
         driver.quit();
