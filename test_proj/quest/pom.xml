@@ -111,6 +111,11 @@
           <artifactId>datatables4j-core-jsp</artifactId>
           <version>0.8.3</version>
       </dependency>
+      <dependency>
+          <groupId>org.codehaus.jackson</groupId>
+          <artifactId>jackson-jaxrs</artifactId>
+          <version>1.9.12</version>
+      </dependency>
   </dependencies>
     <build>
         <pluginManagement>

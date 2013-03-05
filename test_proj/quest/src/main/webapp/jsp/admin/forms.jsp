@@ -5,16 +5,34 @@
 <html>
 <head>
     <title>Forms</title>
-    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/style.css"/>
-    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.2/css/jquery.dataTables.css">
-    <link rel="stylesheet" href="${baseUrl}/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css"/>
 </head>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.2/jquery.dataTables.min.js"></script>
+<style type="text/css" title="currentStyle">
+    @import "${pageContext.request.contextPath}/media/css/demo_page.css";
+    @import "${pageContext.request.contextPath}/media/css/demo_table.css";
+    @import "${pageContext.request.contextPath}/media/css/jquery.dataTables.css";
+</style>
+<script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/media/js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/media/js/jquery.dataTables.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#example').dataTable();
-    } );
+        $('#formsTable').dataTable({
+            "bProcessing": true,
+            "bJQueryUI": true,
+            "bPaginate"  : true,
+            "bSort"  : true,
+            "sAjaxSource" : '/quest/admin/formsTable.json',
+            "aoColumnDefs": [
+                {
+                    "fnRender": function ( oObj,sVal ) {
+                        return '<a href="fillForm?formId=' + sVal + '">fill</a>';
+                    },
+                    "bUseRendered": false,
+                    "aTargets": [ 2 ]
+                }
+            ]
+        });
+    });
 </script>
 
 <body>
@@ -26,20 +44,15 @@
 </datatables:table>
 <br>
 <br>
-<table border="1">
+<table cellpadding="0" cellspacing="0" border="0" id="formsTable">
     <thead>
     <tr>
-        <th>Name</th>
-        <th>Fill form</th>
+        <th>Form name</th>
+        <th>Description</th>
+        <th>Fill</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="forms" items="${forms}">
-        <tr>
-            <td>${forms.formName}<td>
-            <td><a href="fillForm?formId=${forms.formId}">Fill form</a><td>
-        </tr>
-    </c:forEach>
     </tbody>
 </table>
 <br>
