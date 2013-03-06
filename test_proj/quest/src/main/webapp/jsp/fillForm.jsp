@@ -16,15 +16,10 @@
                 <tr>
                     <td><b>Question № ${questNum}:</b></td>
                     <td colspan="5"><b>${currentQuest.questionName}</b></td>
-
                 </tr>
                 <tr>
                     <td>Description:</td>
                     <td colspan="5">${currentQuest.questionDescr}</td>
-                </tr>
-                <tr>
-                    <td>Question:</td>
-                    <td colspan="5">${questOptions}</td>
                 </tr>
                 <tr>
                     <td colspan="6"><form:input path="questionAnswer" size="60"/></td>
@@ -69,10 +64,6 @@
                 <tr>
                     <td>Description:</td>
                     <td colspan="5">${currentQuest.questionDescr}</td>
-                </tr>
-                <tr>
-                    <td>Question:</td>
-                    <td colspan="5">${questOptions}</td>
                 </tr>
                 <tr>
                     <td><form:checkboxes items="${questOptions}" path="questionAnswer" delimiter="<br/>"/></td>

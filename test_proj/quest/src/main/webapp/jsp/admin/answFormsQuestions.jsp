@@ -16,7 +16,7 @@
 <script type="text/javascript" language="javascript" src="${baseUrl}/media/js/jquery.dataTables.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#answQuestTable').dataTable({
+        $('#answQuestsTable').dataTable({
             "oLanguage": {
                 "sLengthMenu": "<spring:message code="datatables.sLengthMenu"/>",
                 "sZeroRecords": "<spring:message code="datatables.sZeroRecords"/>",
@@ -31,23 +31,14 @@
                 }
             },
             "bProcessing": true,
-            "sAjaxSource" : '/quest/admin/formsTable.json',
-            "aoColumnDefs": [
-                {
-                    "fnRender": function ( oObj,sVal ) {
-                        return '<a href="fillForm?formId=' + sVal + '">fill</a>';
-                    },
-                    "bUseRendered": false,
-                    "aTargets": [ 2 ]
-                }
-            ]
+            "sAjaxSource" : '/quest/admin/answQuestsTable?answId=' + ${answId}
         });
     });
 </script>
 <body>
 <h2>Filled Forms</h2>
 <br>
-<table border="1">
+<table id="answQuestsTable">
     <thead>
     <tr>
         <th>Question</th>
@@ -56,13 +47,6 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="quests" items="${answQuests}">
-        <tr>
-            <td>${quests.questionName}<td>
-            <td>${quests.questionDescr}<td>
-            <td>${quests.userAnswer}<td>
-        </tr>
-    </c:forEach>
     </tbody>
 </table>
 

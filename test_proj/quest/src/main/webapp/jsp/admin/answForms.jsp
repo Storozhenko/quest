@@ -31,14 +31,14 @@
                 }
             },
             "bProcessing": true,
-            "sAjaxSource" : '/quest/admin/formsTable.json',
+            "sAjaxSource" : '/quest/admin/answFormsTable',
             "aoColumnDefs": [
                 {
                     "fnRender": function ( oObj,sVal ) {
-                        return '<a href="fillForm?formId=' + sVal + '">fill</a>';
+                        return '<a href="answFormsQuestions?answId=' + sVal + '">look</a>';
                     },
                     "bUseRendered": false,
-                    "aTargets": [ 2 ]
+                    "aTargets": [ 3 ]
                 }
             ]
         });
@@ -47,7 +47,7 @@
 <body>
 <h2>Filled Forms</h2>
 <br>
-<table border="1">
+<table id="answFormsTable">
     <thead>
     <tr>
         <th>Form</th>
@@ -57,14 +57,6 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="forms" items="${answForms}">
-        <tr>
-            <td>${forms.formName}<td>
-            <td>${forms.username}<td>
-            <td>${forms.answDatetime}<td>
-            <td><a href="answFormsQuestions?answId=${forms.answId}">Look</a><td>
-        </tr>
-    </c:forEach>
     </tbody>
 </table>
 

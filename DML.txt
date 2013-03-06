@@ -1,1 +1,1 @@
-INSERT INTO `forms_db`.`users` (`username`, `password`, `user_type`, `user_lang`) VALUES ('test', 'test', 'admin', 'eng');
+INSERT INTO `forms_db`.`users` (`username`, `password`, `user_type`, `user_lang`) VALUES ('test', 'test', 'ROLE_ADMIN', 'eng');
