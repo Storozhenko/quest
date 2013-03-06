@@ -6,13 +6,44 @@
 <head>
     <title>Filled Forms</title>
     <link rel="stylesheet" type="text/css" href="${baseUrl}/css/style.css"/>
-    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.2/css/jquery.dataTables.css">
-    <link rel="stylesheet" href="${baseUrl}/css/jquery.dataTables.css">
 </head>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.2/jquery.dataTables.min.js"></script>
-
-
+<style type="text/css" title="currentStyle">
+    @import "${baseUrl}/media/css/demo_page.css";
+    @import "${baseUrl}/media/css/demo_table.css";
+    @import "${baseUrl}/media/css/jquery.dataTables.css";
+</style>
+<script type="text/javascript" language="javascript" src="${baseUrl}/media/js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="${baseUrl}/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#answQuestTable').dataTable({
+            "oLanguage": {
+                "sLengthMenu": "<spring:message code="datatables.sLengthMenu"/>",
+                "sZeroRecords": "<spring:message code="datatables.sZeroRecords"/>",
+                "sInfo": "<spring:message code="datatables.sInfo"/>",
+                "sInfoEmpty": "<spring:message code="datatables.sInfoEmpty"/>",
+                "sInfoFiltered": "<spring:message code="datatables.sInfoFiltered"/>",
+                "sSearch": "<spring:message code="datatables.sSearch"/>",
+                "sProcessing": "<spring:message code="datatables.sProcessing"/>",
+                "oPaginate": {
+                    "sPrevious": "<spring:message code="datatables.sPrevious"/>",
+                    "sNext": "<spring:message code="datatables.sNext"/>"
+                }
+            },
+            "bProcessing": true,
+            "sAjaxSource" : '/quest/admin/formsTable.json',
+            "aoColumnDefs": [
+                {
+                    "fnRender": function ( oObj,sVal ) {
+                        return '<a href="fillForm?formId=' + sVal + '">fill</a>';
+                    },
+                    "bUseRendered": false,
+                    "aTargets": [ 2 ]
+                }
+            ]
+        });
+    });
+</script>
 <body>
 <h2>Filled Forms</h2>
 <br>

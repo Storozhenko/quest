@@ -8,19 +8,29 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css"/>
 </head>
 <style type="text/css" title="currentStyle">
-    @import "${pageContext.request.contextPath}/media/css/demo_page.css";
-    @import "${pageContext.request.contextPath}/media/css/demo_table.css";
-    @import "${pageContext.request.contextPath}/media/css/jquery.dataTables.css";
+    @import "${baseUrl}/media/css/demo_page.css";
+    @import "${baseUrl}/media/css/demo_table.css";
+    @import "${baseUrl}/media/css/jquery.dataTables.css";
 </style>
-<script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/media/js/jquery.js"></script>
-<script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript" language="javascript" src="${baseUrl}/media/js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="${baseUrl}/media/js/jquery.dataTables.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $('#formsTable').dataTable({
+            "oLanguage": {
+                "sLengthMenu": "<spring:message code="datatables.sLengthMenu"/>",
+                "sZeroRecords": "<spring:message code="datatables.sZeroRecords"/>",
+                "sInfo": "<spring:message code="datatables.sInfo"/>",
+                "sInfoEmpty": "<spring:message code="datatables.sInfoEmpty"/>",
+                "sInfoFiltered": "<spring:message code="datatables.sInfoFiltered"/>",
+                "sSearch": "<spring:message code="datatables.sSearch"/>",
+                "sProcessing": "<spring:message code="datatables.sProcessing"/>",
+                "oPaginate": {
+                    "sPrevious": "<spring:message code="datatables.sPrevious"/>",
+                    "sNext": "<spring:message code="datatables.sNext"/>"
+                }
+            },
             "bProcessing": true,
-            "bJQueryUI": true,
-            "bPaginate"  : true,
-            "bSort"  : true,
             "sAjaxSource" : '/quest/admin/formsTable.json',
             "aoColumnDefs": [
                 {
@@ -38,13 +48,7 @@
 <body>
 <h2>Forms</h2>
 <br>
-<datatables:table id="formsTableId" data="${forms}">
-    <datatables:column title="Name" property="formName" />
-    <datatables:column title="Description" property="formDescr" />
-</datatables:table>
-<br>
-<br>
-<table cellpadding="0" cellspacing="0" border="0" id="formsTable">
+<table id="formsTable">
     <thead>
     <tr>
         <th>Form name</th>
@@ -55,6 +59,7 @@
     <tbody>
     </tbody>
 </table>
+<br>
 <br>
 <a href="addForm">Add form</a>
 

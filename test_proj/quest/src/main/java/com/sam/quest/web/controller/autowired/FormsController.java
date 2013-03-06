@@ -25,7 +25,7 @@ public class FormsController {
     public String startInit(HttpSession session, ModelMap modelMap, HttpServletRequest request) {
         List<Forms> forms = null;
         try {
-            forms = formsService.getForms();
+            //forms = formsService.getForms();
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";
@@ -50,8 +50,6 @@ public class FormsController {
             i++;
         }
         Map map = new HashMap<String, Object[]>();
-        map.put("iTotalRecords", String.valueOf(10));
-        map.put("iTotalDisplayRecords", String.valueOf(10));
         map.put("aaData", rdArray);
         return map;
     }
