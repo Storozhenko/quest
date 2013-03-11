@@ -5,7 +5,7 @@ CREATE  TABLE IF NOT EXISTS `forms_db`.`users` (
   `username` VARCHAR(45) NOT NULL ,
   `password` VARCHAR(25) NOT NULL ,
   `user_type` VARCHAR(10) NOT NULL ,
-  `user_lang` VARCHAR(3) NOT NULL ,
+  `user_lang` VARCHAR(2) NULL ,
   PRIMARY KEY (`user_id`) ,
   UNIQUE INDEX `username_UNIQUE` (`username`) );
 

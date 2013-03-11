@@ -15,18 +15,15 @@ import org.springframework.test.context.transaction.AfterTransaction;
 import javax.sql.DataSource;
 import java.lang.reflect.Method;
 
-
+@TestExecutionListeners(
+        AbstractDbunitTransactionalJUnit4SpringContextTests.DbunitTestExecutionListener.class)
 public abstract class AbstractDbunitTransactionalJUnit4SpringContextTests
         extends AbstractTransactionalJUnit4SpringContextTests {
 
-    /** Тестировщик DBUnit */
+    /** DBUnit tester */
     private IDatabaseTester databaseTester;
-
-    /** Имя файла с ожидаемым набором данных */
     private String afterDatasetFileName;
 
-
-    /** Метод, выполняющийся по окончании транзакции тестового метода: сверка данных */
     @AfterTransaction
     public void assertAfterTransaction() throws Exception {
         if (databaseTester == null || afterDatasetFileName == null) {
@@ -41,7 +38,6 @@ public abstract class AbstractDbunitTransactionalJUnit4SpringContextTests
 
     static class DbunitTestExecutionListener extends AbstractTestExecutionListener {
 
-        /** Метод, выполняющийся перед запуском тестового метода: предустановка */
         public void beforeTestMethod(TestContext testContext) throws Exception {
             AbstractDbunitTransactionalJUnit4SpringContextTests testInstance = (AbstractDbunitTransactionalJUnit4SpringContextTests) testContext.getTestInstance();
             Method method = testContext.getTestMethod();

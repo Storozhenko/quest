@@ -21,9 +21,6 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:/logicApplicationContext.xml"})
-@TestExecutionListeners(
-        AbstractDbunitTransactionalJUnit4SpringContextTests.DbunitTestExecutionListener.class
-)
 public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests {
 
     @Autowired
@@ -38,14 +35,17 @@ public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests
         user.setUsername("test");
         user.setPassword("test");
         user.setUserType("ROLE_ADMIN");
-        user.setUserLang("eng");
+        user.setUserLang("en");
         user.setUserId(new Long(1));
         try {
             trPerformer.executeCommand(new UpdateCommand(user));
             user = (Users)trPerformer.executeCommand(new FindCommand<Users>(1, new Users()));
+            user = new Users();
             user.setUsername("newtest");
             user.setPassword("newtest");
+            user.setUserType("ROLE_ADMIN");
             trPerformer.executeCommand(new InsertCommand(user));
+            user = (Users)trPerformer.executeCommand(new FindCommand<Users>("from Users where username = 'newtest'"));
             trPerformer.executeCommand(new DeleteCommand(user));
             trPerformer.executeCommand(new InsertCommand(user));
             assertTrue(true);

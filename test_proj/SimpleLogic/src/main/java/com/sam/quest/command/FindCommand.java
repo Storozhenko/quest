@@ -2,6 +2,8 @@ package com.sam.quest.command;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
+import java.util.List;
+
 public class FindCommand<E> implements Command <E> {
     private E obj;
     private long id;
@@ -22,7 +24,8 @@ public class FindCommand<E> implements Command <E> {
     public E execute(HibernateTemplate hibernateTemplate) throws Exception{
         switch (type) {
             case 1:
-                obj = (E)hibernateTemplate.find(hqlQuery);
+                List list = hibernateTemplate.find(hqlQuery);
+                obj = (E)list.get(0);
                 break;
             case 2:
                 obj = (E)hibernateTemplate.get(obj.getClass().getName(), id);
