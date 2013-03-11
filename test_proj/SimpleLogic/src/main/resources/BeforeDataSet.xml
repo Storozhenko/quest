@@ -1,0 +1,6 @@
+<dataset>
+    <users username="test"
+           password="test"
+           user_type="ROLE_ADMIN"
+           user_lang="eng"/>
+</dataset>

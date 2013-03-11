@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.openqa.selenium.By;
@@ -24,6 +26,9 @@ public class AppTest {
     TransactionalPerformer trPerformer;
 
     @Test
+    @Rollback(false)
+    @DbunitDataSets(before = "BeforeDataSet.xml", after = "AfterDataSet.xml")
+    @DirtiesContext
     public void testCRUD() {
         Users user = new Users();
         user.setUsername("test");
