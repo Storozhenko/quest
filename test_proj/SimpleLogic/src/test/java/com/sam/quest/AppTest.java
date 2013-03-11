@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,13 +21,16 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:/logicApplicationContext.xml"})
+@TestExecutionListeners(
+        AbstractDbunitTransactionalJUnit4SpringContextTests.DbunitTestExecutionListener.class
+)
 public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests {
 
     @Autowired
     TransactionalPerformer trPerformer;
 
     @Test
-    @Rollback(false)
+    @Rollback(true)
     @DbunitDataSets(before = "BeforeDataSet.xml", after = "AfterDataSet.xml")
     @DirtiesContext
     public void testCRUD() {
@@ -37,12 +41,13 @@ public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests
         user.setUserLang("eng");
         user.setUserId(new Long(1));
         try {
-            //trPerformer.executeCommand(new UpdateCommand(user));
-            //user = (Users)trPerformer.executeCommand(new FindCommand<Users>(1, new Users()));
+            trPerformer.executeCommand(new UpdateCommand(user));
+            user = (Users)trPerformer.executeCommand(new FindCommand<Users>(1, new Users()));
             user.setUsername("newtest");
             user.setPassword("newtest");
             trPerformer.executeCommand(new InsertCommand(user));
-            //trPerformer.executeCommand(new DeleteCommand(user));
+            trPerformer.executeCommand(new DeleteCommand(user));
+            trPerformer.executeCommand(new InsertCommand(user));
             assertTrue(true);
         } catch (Exception e) {
             e.printStackTrace();

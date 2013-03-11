@@ -6,15 +6,9 @@
         <column>user_type</column>
         <column>user_lang</column>
         <row>
-            <column>user_id</column>
+            <value>1</value>
             <value>test</value>
             <value>test</value>
-            <value>ROLE_ADMIN</value>
-            <value>eng</value>
-        </row>
-        <row>
-            <value>newtest</value>
-            <value>newtest</value>
             <value>ROLE_ADMIN</value>
             <value>eng</value>
         </row>

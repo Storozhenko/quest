@@ -5,6 +5,7 @@ import org.dbunit.DataSourceDatabaseTester;
 import org.dbunit.IDatabaseTester;
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.xml.XmlDataSet;
+import org.dbunit.operation.DatabaseOperation;
 import org.springframework.test.context.TestContext;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
@@ -14,9 +15,7 @@ import org.springframework.test.context.transaction.AfterTransaction;
 import javax.sql.DataSource;
 import java.lang.reflect.Method;
 
-@TestExecutionListeners(
-        AbstractDbunitTransactionalJUnit4SpringContextTests.DbunitTestExecutionListener.class
-)
+
 public abstract class AbstractDbunitTransactionalJUnit4SpringContextTests
         extends AbstractTransactionalJUnit4SpringContextTests {
 
@@ -56,6 +55,8 @@ public abstract class AbstractDbunitTransactionalJUnit4SpringContextTests
             IDatabaseTester databaseTester = new DataSourceDatabaseTester(dataSource);
             databaseTester.setDataSet(
                     new XmlDataSet(ClassLoader.getSystemResourceAsStream(annotation.before())));
+            databaseTester.setSetUpOperation(DatabaseOperation.INSERT);
+            databaseTester.setTearDownOperation(DatabaseOperation.NONE);
             databaseTester.onSetup();
             testInstance.databaseTester = databaseTester;
             testInstance.afterDatasetFileName = annotation.after();

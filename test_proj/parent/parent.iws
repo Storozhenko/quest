@@ -55,12 +55,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/AfterDataSet.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/AfterDataSet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/BeforeDataSet.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/BeforeDataSet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/AppTest.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363003931688" ignored="false" />
+    <file path="/AppTest.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363007132548" ignored="false" />
     <file path="/fragment.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362995641703" ignored="false" />
     <file path="/DAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360323491870" ignored="false" />
     <file path="/HiberDAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360316450133" ignored="false" />
@@ -191,8 +189,8 @@
     <file path="/__dummy.js" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362495772767" ignored="false" />
     <file path="/AppTestDataSet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362990470047" ignored="false" />
     <file path="/BeforeDataSet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363002749442" ignored="false" />
-    <file path="/AbstractDbunitTransactionalJUnit4SpringContextTests.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363002594974" ignored="false" />
-    <file path="/AfterDataSet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363003252074" ignored="false" />
+    <file path="/AbstractDbunitTransactionalJUnit4SpringContextTests.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363007859606" ignored="false" />
+    <file path="/AfterDataSet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363007958316" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,41 +389,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AppTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="40" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0">
+            <state line="36" column="51" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.53654486">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2915#3088#0" expanded="true" />
-                <element signature="e#3077#3078#0" expanded="true" />
+                <element signature="e#3158#3331#0" expanded="true" />
+                <element signature="e#3320#3321#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BeforeDataSet.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/BeforeDataSet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="27" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AfterDataSet.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/AfterDataSet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="49" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractDbunitTransactionalJUnit4SpringContextTests.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AbstractDbunitTransactionalJUnit4SpringContextTests.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AbstractDbunitTransactionalJUnit4SpringContextTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="4" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-0.20203735">
+            <state line="55" column="71" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -470,9 +449,9 @@
         <option value="$PROJECT_DIR$/../SimpleLogic/pom.xml" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/BeforeDataSet.xml" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AbstractDbunitTransactionalJUnit4SpringContextTests.java" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/AfterDataSet.xml" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AbstractDbunitTransactionalJUnit4SpringContextTests.java" />
       </list>
     </option>
   </component>
@@ -1708,34 +1687,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/AfterDataSet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="49" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+        <state line="6" column="64" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/BeforeDataSet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="27" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+        <state line="5" column="35" selection-start="114" selection-end="114" vertical-scroll-proportion="0.14119601">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="40" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2915#3088#0" expanded="true" />
-            <element signature="e#3077#3078#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AbstractDbunitTransactionalJUnit4SpringContextTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="4" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-0.20203735">
+        <state line="55" column="71" selection-start="2435" selection-end="2435" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="51" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.53654486">
+          <folding>
+            <element signature="e#3158#3331#0" expanded="true" />
+            <element signature="e#3320#3321#0" expanded="true" />
           </folding>
         </state>
       </provider>

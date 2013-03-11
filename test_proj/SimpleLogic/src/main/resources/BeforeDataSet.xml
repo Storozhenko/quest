@@ -1,15 +1,5 @@
 <dataset>
     <table name="users">
-        <column>username</column>
-        <column>password</column>
-        <column>user_type</column>
-        <column>user_lang</column>
-        <row>
-            <value>test</value>
-            <value>test</value>
-            <value>ROLE_ADMIN</value>
-            <value>eng</value>
-        </row>
     </table>
     <table name="forms">
     </table>
