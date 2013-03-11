@@ -11,15 +11,21 @@ http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://sc0181:3306/forms_db"/>
+        <property name="username" value="test"/>
+        <property name="password" value="123321"/>
+    </bean>
+
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
         <property name="configLocation" value="classpath:/hibernate.cfg.xml" />
     </bean>
-
-    <tx:annotation-driven transaction-manager="txManager" />
-
-    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
     <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
         <constructor-arg>
             <ref bean="sessionFactory"/>

@@ -1,6 +1,32 @@
 <dataset>
-    <users username="test"
-           password="test"
-           user_type="ROLE_ADMIN"
-           user_lang="eng"/>
+    <table name="users">
+        <column>user_id</column>
+        <column>username</column>
+        <column>password</column>
+        <column>user_type</column>
+        <column>user_lang</column>
+        <row>
+            <column>user_id</column>
+            <value>test</value>
+            <value>test</value>
+            <value>ROLE_ADMIN</value>
+            <value>eng</value>
+        </row>
+        <row>
+            <value>newtest</value>
+            <value>newtest</value>
+            <value>ROLE_ADMIN</value>
+            <value>eng</value>
+        </row>
+    </table>
+    <table name="forms">
+    </table>
+    <table name="questions">
+    </table>
+    <table name="questions_data">
+    </table>
+    <table name="answ_forms">
+    </table>
+    <table name="answ_questions">
+    </table>
 </dataset>
