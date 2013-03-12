@@ -62,6 +62,8 @@
             <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.9" />
             <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.3" />
             <element id="library" level="project" name="Maven: org.dbunit:dbunit:2.4.9" />
+            <element id="library" level="project" name="Maven: org.dbmaintain:dbmaintain:2.4" />
+            <element id="library" level="project" name="Maven: ant:ant:1.6.5" />
             <element id="library" level="project" name="Maven: org.seleniumhq.selenium:selenium-java:2.31.0" />
             <element id="library" level="project" name="Maven: org.seleniumhq.selenium:selenium-android-driver:2.31.0" />
             <element id="library" level="project" name="Maven: org.seleniumhq.selenium:selenium-remote-driver:2.31.0" />
@@ -386,6 +388,17 @@
       </CLASSES>
       <JAVADOC />
       <SOURCES />
+    </library>
+    <library name="Maven: ant:ant:1.6.5">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/ant/ant/1.6.5/ant-1.6.5.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/ant/ant/1.6.5/ant-1.6.5-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/ant/ant/1.6.5/ant-1.6.5-sources.jar!/" />
+      </SOURCES>
     </library>
     <library name="Maven: antlr:antlr:2.7.6">
       <CLASSES>
@@ -924,6 +937,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.9.12/jackson-mapper-asl-1.9.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.dbmaintain:dbmaintain:2.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/dbmaintain/dbmaintain/2.4/dbmaintain-2.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/dbmaintain/dbmaintain/2.4/dbmaintain-2.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/dbmaintain/dbmaintain/2.4/dbmaintain-2.4-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.dbunit:dbunit:2.4.9">

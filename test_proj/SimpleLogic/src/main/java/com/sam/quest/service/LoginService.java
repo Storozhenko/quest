@@ -10,20 +10,15 @@ import java.util.List;
 @Service
 public class LoginService {
     @Autowired
-    private TransactionalPerformer<List<Users>> trPerformer;
+    private TransactionalPerformer<Users> trPerformer;
 
     public Users checkUser(String username) throws UsernameNotFoundException{
-        List<Users> users = null;
+        Users user = null;
         try {
-            users = trPerformer.executeCommand(new FindCommand("from Users where username = '" + username + "'"));
+            user = trPerformer.executeCommand(new FindCommand("from Users where username = '" + username + "'"));
         } catch (Exception e) {
             throw new UsernameNotFoundException( username + " not found" );
         }
-        for (Users u: users) {
-            if (u.getUsername().equals(username)) {
-                return u;
-            }
-        }
-        return null;
+        return user;
     }
 }

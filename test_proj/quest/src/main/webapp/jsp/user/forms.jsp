@@ -31,7 +31,7 @@
                 }
             },
             "bProcessing": true,
-            "sAjaxSource" : '/quest/admin/formsTable',
+            "sAjaxSource" : '/quest/user/formsTable',
             "aoColumnDefs": [
                 {
                     "fnRender": function ( oObj,sVal ) {
