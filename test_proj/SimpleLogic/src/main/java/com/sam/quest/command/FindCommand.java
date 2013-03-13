@@ -1,7 +1,6 @@
 package com.sam.quest.command;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
-
 import java.util.List;
 
 public class FindCommand<E> implements Command <E> {

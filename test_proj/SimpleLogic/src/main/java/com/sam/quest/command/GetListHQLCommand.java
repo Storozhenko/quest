@@ -1,7 +1,5 @@
 package com.sam.quest.command;
 
-import org.hibernate.Query;
-import org.hibernate.Session;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
 public class GetListHQLCommand<E> implements Command <E> {

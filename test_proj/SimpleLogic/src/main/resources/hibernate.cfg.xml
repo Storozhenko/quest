@@ -7,12 +7,12 @@
 
     <session-factory>
 
-      <!-- Database connection settings -->
+      <!-- Database connection settings
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://sc0181:3306/forms_db</property>
         <property name="hibernate.connection.username">test</property>
         <property name="hibernate.connection.password">123321</property>
-
+       -->
         <property name="hibernate.current_session_context_class">org.hibernate.context.ThreadLocalSessionContext</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
         <property name="hibernate.hbm2ddl.auto">validate</property>

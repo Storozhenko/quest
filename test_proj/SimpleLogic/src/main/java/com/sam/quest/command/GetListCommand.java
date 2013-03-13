@@ -1,6 +1,5 @@
 package com.sam.quest.command;
 
-import org.hibernate.Session;
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 

@@ -9,6 +9,6 @@
 There was an error: ${error}
 <br>
 <br>
-<a href=adminForms>Main page</a>
+<a href=main>Main page</a>
 </body>
 </html>
