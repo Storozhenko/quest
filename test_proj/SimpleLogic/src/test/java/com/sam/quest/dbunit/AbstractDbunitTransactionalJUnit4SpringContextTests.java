@@ -1,5 +1,8 @@
 package com.sam.quest.dbunit;
 
+import org.dbmaintain.DbMaintainer;
+import org.dbmaintain.MainFactory;
+import org.dbmaintain.structure.clean.DBCleaner;
 import org.dbunit.Assertion;
 import org.dbunit.DataSourceDatabaseTester;
 import org.dbunit.IDatabaseTester;
@@ -13,7 +16,14 @@ import org.springframework.test.context.support.AbstractTestExecutionListener;
 import org.springframework.test.context.transaction.AfterTransaction;
 
 import javax.sql.DataSource;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Properties;
 
 @TestExecutionListeners(
         AbstractDbunitTransactionalJUnit4SpringContextTests.DbunitTestExecutionListener.class)
@@ -35,18 +45,46 @@ public abstract class AbstractDbunitTransactionalJUnit4SpringContextTests
         Assertion.assertEquals(expectedDataSet, databaseDataSet);
         databaseTester.onTearDown();
     }
-
+    /** Listener */
     static class DbunitTestExecutionListener extends AbstractTestExecutionListener {
 
+        protected static DbMaintainer dbMaintainer;
+        protected static DBCleaner dbCleaner;
+        protected static MainFactory dbMaintainMainFactory;
+
+        protected void initDataBase() throws FileNotFoundException, URISyntaxException, IOException {
+            createDBMaintainer().updateDatabase(false);
+            createDBCleaner().cleanDatabase();
+        }
+        private MainFactory createDBMaintainMainFactory() throws URISyntaxException, FileNotFoundException, IOException {
+            if (dbMaintainMainFactory == null) {
+                URI resource = ClassLoader.getSystemClassLoader().getResource("dbmaintain.test.properties").toURI();
+                File file = new File(resource);
+                Properties properties = new Properties();
+                properties.load(new FileInputStream(file));
+                dbMaintainMainFactory = new MainFactory(properties);
+            }
+            return dbMaintainMainFactory;
+        }
+        private DBCleaner createDBCleaner() throws FileNotFoundException, URISyntaxException, IOException {
+            createDBMaintainMainFactory();
+            dbCleaner = dbMaintainMainFactory.createDBCleaner();
+            return dbCleaner;
+        }
+        private DbMaintainer createDBMaintainer() throws FileNotFoundException, URISyntaxException, IOException {
+            createDBMaintainMainFactory();
+            dbMaintainer = dbMaintainMainFactory.createDbMaintainer();
+            return dbMaintainer;
+        }
+
         public void beforeTestMethod(TestContext testContext) throws Exception {
+            initDataBase();
             AbstractDbunitTransactionalJUnit4SpringContextTests testInstance = (AbstractDbunitTransactionalJUnit4SpringContextTests) testContext.getTestInstance();
             Method method = testContext.getTestMethod();
-
             DbunitDataSets annotation = method.getAnnotation(DbunitDataSets.class);
             if (annotation == null) {
                 return;
             }
-
             DataSource dataSource = testContext.getApplicationContext().getBean(DataSource.class);
             IDatabaseTester databaseTester = new DataSourceDatabaseTester(dataSource);
             databaseTester.setDataSet(

@@ -23,4 +23,6 @@
     </table>
     <table name="answ_questions">
     </table>
+    <table name="dbmaintain_scripts">
+    </table>
 </dataset>

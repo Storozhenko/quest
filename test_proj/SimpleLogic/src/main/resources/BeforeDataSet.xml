@@ -1,5 +1,17 @@
 <dataset>
     <table name="users">
+        <column>user_id</column>
+        <column>username</column>
+        <column>password</column>
+        <column>user_type</column>
+        <column>user_lang</column>
+        <row>
+            <value>1</value>
+            <value>test</value>
+            <value>test</value>
+            <value>ROLE_ADMIN</value>
+            <value>en</value>
+        </row>
     </table>
     <table name="forms">
     </table>
@@ -10,5 +22,7 @@
     <table name="answ_forms">
     </table>
     <table name="answ_questions">
+    </table>
+    <table name="dbmaintain_scripts">
     </table>
 </dataset>

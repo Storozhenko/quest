@@ -32,39 +32,6 @@ public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests
     @Autowired
     Users user;
 
-    protected static DbMaintainer dbMaintainer;
-    protected static DBCleaner dbCleaner;
-    protected static MainFactory dbMaintainMainFactory;
-
-
-    protected void initDataBase() throws FileNotFoundException, URISyntaxException, IOException {
-        createDBMaintainer().updateDatabase(false);
-        //createDBCleaner().cleanDatabase();
-    }
-
-    private MainFactory createDBMaintainMainFactory() throws URISyntaxException, FileNotFoundException, IOException {
-        if (dbMaintainMainFactory == null) {
-            URI resource = ClassLoader.getSystemClassLoader().getResource("dbmaintain.test.properties").toURI();
-            File file = new File(resource);
-            Properties properties = new Properties();
-            properties.load(new FileInputStream(file));
-            dbMaintainMainFactory = new MainFactory(properties);
-        }
-        return dbMaintainMainFactory;
-    }
-
-    private DBCleaner createDBCleaner() throws FileNotFoundException, URISyntaxException, IOException {
-        createDBMaintainMainFactory();
-        dbCleaner = dbMaintainMainFactory.createDBCleaner();
-        return dbCleaner;
-    }
-
-    private DbMaintainer createDBMaintainer() throws FileNotFoundException, URISyntaxException, IOException {
-        createDBMaintainMainFactory();
-        dbMaintainer = dbMaintainMainFactory.createDbMaintainer();
-        return dbMaintainer;
-    }
-
 
     @Test
     @Rollback(true)
@@ -72,7 +39,6 @@ public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests
     @DirtiesContext
     public void testCRUD() {
         try {
-            initDataBase();
             trPerformer.executeCommand(new UpdateCommand(user));
             user = (Users)trPerformer.executeCommand(new FindCommand<Users>(1, new Users()));
             user = new Users();
