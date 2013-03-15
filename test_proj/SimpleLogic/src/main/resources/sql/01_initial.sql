@@ -1,0 +1,94 @@
+CREATE  DATABASE IF NOT EXISTS test_forms_db;
+
+CREATE  TABLE IF NOT EXISTS `test_forms_db`.`users` (
+  `user_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `username` VARCHAR(45) NOT NULL ,
+  `password` VARCHAR(25) NOT NULL ,
+  `user_type` VARCHAR(10) NOT NULL ,
+  `user_lang` VARCHAR(2) NULL ,
+  PRIMARY KEY (`user_id`) ,
+  UNIQUE INDEX `username_UNIQUE` (`username`) );
+
+CREATE  TABLE IF NOT EXISTS `test_forms_db`.`forms` (
+  `form_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `form_name` VARCHAR(45) NOT NULL ,
+  `user_id` BIGINT NOT NULL ,
+  `form_date` DATE NOT NULL ,
+  `form_descr` VARCHAR(45) NULL ,
+  PRIMARY KEY (`form_id`) ,
+  INDEX `user_id_idx` (`user_id` ASC) ,
+  UNIQUE INDEX `form_name_UNIQUE` (`form_name`) ,
+  CONSTRAINT `form_user_id`
+  FOREIGN KEY (`user_id` )
+  REFERENCES `forms_db`.`users` (`user_id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+
+CREATE  TABLE IF NOT EXISTS `test_forms_db`.`answ_forms` (
+  `answ_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `form_id` BIGINT NOT NULL ,
+  `user_id` BIGINT NOT NULL ,
+  `answ_datetime` DATETIME NOT NULL ,
+  PRIMARY KEY (`answ_id`) ,
+  INDEX `form_id_idx` (`form_id` ASC) ,
+  INDEX `user_id_idx` (`user_id` ASC) ,
+  UNIQUE INDEX `user_answ_UNIQUE` (`form_id`, `user_id`, `answ_datetime`) ,
+  CONSTRAINT `answ_forms_form_id`
+  FOREIGN KEY (`form_id` )
+  REFERENCES `forms_db`.`forms` (`form_id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `answ_forms_user_id`
+  FOREIGN KEY (`user_id` )
+  REFERENCES `forms_db`.`users` (`user_id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+
+
+CREATE  TABLE IF NOT EXISTS `test_forms_db`.`questions` (
+  `question_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `form_id` BIGINT NOT NULL ,
+  `question_name` VARCHAR(45) NOT NULL ,
+  `question_type` INT NOT NULL ,
+  `question_descr` VARCHAR(45) NULL ,
+  PRIMARY KEY (`question_id`) ,
+  INDEX `form_id_idx` (`form_id` ASC) ,
+  CONSTRAINT `questions_form_id`
+  FOREIGN KEY (`form_id` )
+  REFERENCES `forms_db`.`forms` (`form_id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+
+CREATE  TABLE IF NOT EXISTS `test_forms_db`.`questions_data` (
+  `question_data_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `question_id` BIGINT NOT NULL ,
+  `question_option` INT NOT NULL ,
+  `option_data` VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (`question_data_id`) ,
+  INDEX `question_id_idx` (`question_id` ASC) ,
+  UNIQUE INDEX `question_id_UNIQUE` (`question_id`,`question_option`) ,
+  CONSTRAINT `questions_data_question_id`
+  FOREIGN KEY (`question_id` )
+  REFERENCES `forms_db`.`questions` (`question_id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+
+CREATE  TABLE IF NOT EXISTS `test_forms_db`.`answ_questions` (
+  `answ_question_id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `answ_id` BIGINT NOT NULL ,
+  `question_id` BIGINT NOT NULL ,
+  `user_answer` VARCHAR(80) NULL ,
+  INDEX `answ_id_idx` (`answ_id` ASC) ,
+  INDEX `question_id_idx` (`question_id` ASC) ,
+  PRIMARY KEY (`answ_question_id`) ,
+  CONSTRAINT `answ_quest_answ_id`
+  FOREIGN KEY (`answ_id` )
+  REFERENCES `forms_db`.`answ_forms` (`answ_id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `answ_quest_question_id`
+  FOREIGN KEY (`question_id` )
+  REFERENCES `forms_db`.`questions` (`question_id` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+

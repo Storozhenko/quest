@@ -19,8 +19,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.Properties;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -44,8 +44,8 @@ public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests
 
     private MainFactory createDBMaintainMainFactory() throws URISyntaxException, FileNotFoundException, IOException {
         if (dbMaintainMainFactory == null) {
-            URL resource = ClassLoader.getSystemClassLoader().getResource("dbmaintain.test.properties");
-            File file = new File(resource.toURI());
+            URI resource = ClassLoader.getSystemClassLoader().getResource("dbmaintain.test.properties").toURI();
+            File file = new File(resource);
             Properties properties = new Properties();
             properties.load(new FileInputStream(file));
             dbMaintainMainFactory = new MainFactory(properties);

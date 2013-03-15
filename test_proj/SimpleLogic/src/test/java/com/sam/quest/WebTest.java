@@ -38,5 +38,4 @@ public class WebTest {
         System.out.println("Page title is: " + driver.getTitle());
         driver.quit();
     }
-
 }
