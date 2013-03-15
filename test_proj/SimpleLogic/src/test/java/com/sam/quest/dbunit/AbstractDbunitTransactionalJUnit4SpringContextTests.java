@@ -1,4 +1,4 @@
-package com.sam.quest;
+package com.sam.quest.dbunit;
 
 import org.dbunit.Assertion;
 import org.dbunit.DataSourceDatabaseTester;

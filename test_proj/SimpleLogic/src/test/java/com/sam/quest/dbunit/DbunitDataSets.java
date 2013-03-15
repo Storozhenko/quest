@@ -1,4 +1,4 @@
-package com.sam.quest;
+package com.sam.quest.dbunit;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
