@@ -13,7 +13,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:/test/testLogicApplicationContext.xml"})
+@ContextConfiguration(locations = {"classpath:/testLogicApplicationContext.xml"})
 public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests {
 
     @Autowired
@@ -24,8 +24,8 @@ public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests
 
     @Test
     @Rollback(true)
-    @DbunitDataSets(before = "test/BeforeDataSet.xml",
-                    after = "test/AfterDataSet.xml")
+    @DbunitDataSets(before = "BeforeDataSet.xml",
+                    after = "AfterDataSet.xml")
     @DirtiesContext
     public void testCRUD() {
         try {

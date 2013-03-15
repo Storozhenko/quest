@@ -58,7 +58,7 @@ public abstract class AbstractDbunitTransactionalJUnit4SpringContextTests
         }
         private MainFactory createDBMaintainMainFactory() throws URISyntaxException, FileNotFoundException, IOException {
             if (dbMaintainMainFactory == null) {
-                URI resource = ClassLoader.getSystemClassLoader().getResource("test/dbmaintain.test.properties").toURI();
+                URI resource = ClassLoader.getSystemClassLoader().getResource("dbmaintain.test.properties").toURI();
                 File file = new File(resource);
                 Properties properties = new Properties();
                 properties.load(new FileInputStream(file));

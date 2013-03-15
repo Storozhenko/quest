@@ -11,7 +11,6 @@ public class TransactionalPerformer <E> {
     this.hibernateTemplate = hibernateTemplate;
     }
 
-    @Transactional
     public E executeCommand(Command <E> command) throws Exception {
         E obj = command.execute(hibernateTemplate);
         return obj;

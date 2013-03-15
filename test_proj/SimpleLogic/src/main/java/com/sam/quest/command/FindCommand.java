@@ -1,6 +1,8 @@
 package com.sam.quest.command;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 public class FindCommand<E> implements Command <E> {
@@ -19,7 +21,7 @@ public class FindCommand<E> implements Command <E> {
         this.id = id;
         this.type = 2;
     }
-
+    @Transactional
     public E execute(HibernateTemplate hibernateTemplate) throws Exception{
         switch (type) {
             case 1:
