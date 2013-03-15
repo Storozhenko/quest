@@ -11,20 +11,9 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.dbmaintain.DbMaintainer;
-import org.dbmaintain.MainFactory;
-import org.dbmaintain.structure.clean.DBCleaner;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.Properties;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:/logicApplicationContext.xml"})
+@ContextConfiguration(locations = {"classpath:/test/testLogicApplicationContext.xml"})
 public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests {
 
     @Autowired
@@ -35,7 +24,8 @@ public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests
 
     @Test
     @Rollback(true)
-    @DbunitDataSets(before = "BeforeDataSet.xml", after = "AfterDataSet.xml")
+    @DbunitDataSets(before = "test/BeforeDataSet.xml",
+                    after = "test/AfterDataSet.xml")
     @DirtiesContext
     public void testCRUD() {
         try {

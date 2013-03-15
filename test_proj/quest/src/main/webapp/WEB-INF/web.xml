@@ -48,7 +48,6 @@
         <param-value>
             /WEB-INF/spring/ApplicationContext.xml
             /WEB-INF/spring/ApplicationSecurity.xml
-            classpath:/logicApplicationContext.xml
         </param-value>
     </context-param>
     <filter>

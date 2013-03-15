@@ -51,20 +51,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/002_forms.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/003_questions.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/004_answ_forms.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/005_answ_questions.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/006_questions_data.sql" />
-      <change type="DELETED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\02_test_user.sql" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/testLogicApplicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/dbunit/AbstractDbunitTransactionalJUnit4SpringContextTests.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/dbunit/AbstractDbunitTransactionalJUnit4SpringContextTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/AfterDataSet.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/AfterDataSet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/BeforeDataSet.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/BeforeDataSet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.ipr" afterPath="$PROJECT_DIR$/parent.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\01_initial.sql" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/001_users.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\AfterDataSet.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/AfterDataSet.xml" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\BeforeDataSet.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/BeforeDataSet.xml" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\dbmaintain.test.properties" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/dbmaintain.test.properties" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\01_v1\0\001_users.sql" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/001_users.sql" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\01_v1\0\002_forms.sql" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/002_forms.sql" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\01_v1\0\003_questions.sql" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/003_questions.sql" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\01_v1\0\004_answ_forms.sql" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/004_answ_forms.sql" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\01_v1\0\005_answ_questions.sql" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/005_answ_questions.sql" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\01_v1\0\006_questions_data.sql" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/006_questions_data.sql" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,7 +131,7 @@
     <file path="/LoginValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362127561745" ignored="false" />
     <file path="/LoginForm.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360851570086" ignored="false" />
     <file path="/style.css" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360827307730" ignored="false" />
-    <file path="/ApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361878477316" ignored="false" />
+    <file path="/ApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363347238725" ignored="false" />
     <file path="/ApplicationSecurity.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363096697912" ignored="false" />
     <file path="/adminMain.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361868646597" ignored="false" />
     <file path="/tests.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360918676403" ignored="false" />
@@ -201,8 +204,9 @@
     <file path="/BeforeDataSet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363002749442" ignored="false" />
     <file path="/AbstractDbunitTransactionalJUnit4SpringContextTests.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363346133380" ignored="false" />
     <file path="/AfterDataSet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363013449740" ignored="false" />
-    <file path="/dbmaintain.test.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363341397268" ignored="false" />
+    <file path="/dbmaintain.test.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363347470951" ignored="false" />
     <file path="/001_initial.sql" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363341797272" ignored="false" />
+    <file path="/testLogicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363346820426" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -401,19 +405,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="logicApplicationContext.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml">
+      <file leaf-file-name="AppTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="11" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+            <state line="34" column="32" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.6777409">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractDbunitTransactionalJUnit4SpringContextTests.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AbstractDbunitTransactionalJUnit4SpringContextTests.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/dbunit/AbstractDbunitTransactionalJUnit4SpringContextTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="37" selection-start="2690" selection-end="2690" vertical-scroll-proportion="1.057725">
+            <state line="89" column="0" selection-start="4163" selection-end="4163" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -422,9 +426,9 @@
         </entry>
       </file>
       <file leaf-file-name="dbmaintain.test.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/dbmaintain.test.properties">
+        <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/dbmaintain.test.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="34" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.0">
+            <state line="5" column="83" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -461,13 +465,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../SimpleLogic/pom.xml" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FillFormService.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/001_initial.sql" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/02_test_user.sql" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/dbmaintain.test.properties" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/001_users.sql" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/002_forms.sql" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/003_questions.sql" />
@@ -476,7 +473,14 @@
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/006_questions_data.sql" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/AfterDataSet.xml" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/BeforeDataSet.xml" />
+        <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/resources/testLogicApplicationContext.xml" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/resources/dbmaintain.test.properties" />
+        <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/dbunit/AbstractDbunitTransactionalJUnit4SpringContextTests.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/dbmaintain.test.properties" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
       </list>
     </option>
   </component>
@@ -682,21 +686,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dbunit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -713,92 +735,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleLogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleLogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleLogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -849,6 +785,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1097,11 +1063,11 @@
       <recent name="com.sam.quest.web.controller.notinjected" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\quest\test_proj\SimpleLogic\src\test\resources" />
       <recent name="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\01_v1\0" />
       <recent name="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql" />
       <recent name="Z:\quest\test_proj\parent" />
       <recent name="Z:\quest\test_proj\SimpleLogic\src\main\resources" />
-      <recent name="Z:\quest\test_proj\quest\src\main\webapp\jsp\user" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sam.quest.dao" />
@@ -1115,11 +1081,11 @@
       <recent name="com.sam.quest.service.security" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="Z:\quest\test_proj\SimpleLogic\src\main\resources\test" />
+      <recent name="Z:\quest\test_proj\SimpleLogic\src\main\resources" />
+      <recent name="Z:\quest\test_proj\SimpleLogic\src\test\resources" />
       <recent name="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\01_v1\0" />
       <recent name="Z:\quest\test_proj\quest\src\main\webapp\jsp" />
-      <recent name="Z:\quest\test_proj\quest\src\main\webapp.jsp" />
-      <recent name="Z:\quest\test_proj\SimpleWEB\src\main\webapp\admin" />
-      <recent name="Z:\quest\test_proj\SimpleWEB\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.AppTest">
@@ -1676,119 +1642,126 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="80" selection-start="353" selection-end="374" vertical-scroll-proportion="0.21052632">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/WebTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="5" selection-start="1629" selection-end="1629" vertical-scroll-proportion="0.8023256">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="36" selection-start="6228" selection-end="6228" vertical-scroll-proportion="0.43521595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FillFormService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="36" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.028239202">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="13" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.53654486">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/dbmaintain.test.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="34" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/002_forms.sql">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/002_forms.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="59" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/001_users.sql">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/001_users.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="44" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/003_questions.sql">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/003_questions.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="24" selection-start="471" selection-end="471" vertical-scroll-proportion="0.33887044">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/004_answ_forms.sql">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/004_answ_forms.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/006_questions_data.sql">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/006_questions_data.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="46" selection-start="554" selection-end="554" vertical-scroll-proportion="0.36710963">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/sql/01_v1/0/005_answ_questions.sql">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/sql/005_answ_questions.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="14" selection-start="633" selection-end="633" vertical-scroll-proportion="0.45182723">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/AfterDataSet.xml">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/AfterDataSet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="47" selection-start="565" selection-end="565" vertical-scroll-proportion="0.59302324">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/BeforeDataSet.xml">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/BeforeDataSet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="38" selection-start="535" selection-end="535" vertical-scroll-proportion="0.56478405">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/Action-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="32" selection-start="1670" selection-end="1670" vertical-scroll-proportion="0.3830156">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="53" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.6777409">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/testLogicApplicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="78" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.25415283">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+        <state line="37" column="0" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.77408636">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/dbunit/AbstractDbunitTransactionalJUnit4SpringContextTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="37" selection-start="2690" selection-end="2690" vertical-scroll-proportion="1.057725">
+        <state line="89" column="0" selection-start="4163" selection-end="4163" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/test/dbmaintain.test.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="83" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="32" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.6777409">
+          <folding />
         </state>
       </provider>
     </entry>
