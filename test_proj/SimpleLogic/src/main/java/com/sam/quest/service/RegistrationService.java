@@ -1,16 +1,16 @@
 package com.sam.quest.service;
 
 import com.sam.quest.command.InsertCommand;
-import com.sam.quest.command.TransactionalPerformer;
 import com.sam.quest.dto.RegistrationDTO;
 import com.sam.quest.entity.Users;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RegistrationService {
     @Autowired
-    private TransactionalPerformer<Users> trPerformer;
+    private HibernateTemplate hibernateTemplate;
 
     public void addUser(RegistrationDTO regForm) throws Exception{
         Users newUser = new Users();
@@ -18,6 +18,6 @@ public class RegistrationService {
         newUser.setUserType("ROLE_USER");
         newUser.setPassword(regForm.getPassword());
         newUser.setUserLang(regForm.getLanguage());
-        trPerformer.executeCommand(new InsertCommand(newUser));
+        new InsertCommand(newUser).execute(hibernateTemplate);
     }
 }

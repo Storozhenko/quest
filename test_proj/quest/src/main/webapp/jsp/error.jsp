@@ -8,7 +8,5 @@
 <br>
 There was an error: ${error}
 <br>
-<br>
-<a href=main>Main page</a>
 </body>
 </html>

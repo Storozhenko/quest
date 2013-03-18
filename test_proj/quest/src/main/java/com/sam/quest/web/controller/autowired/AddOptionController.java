@@ -2,7 +2,7 @@ package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.service.AddOptionService;
 import com.sam.quest.dto.OptionDTO;
-import com.sam.quest.web.validator.OptionValidator;
+import com.sam.quest.web.validator.GeneralValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class AddOptionController {
     @Autowired
-    private OptionValidator optionValidator;
+    private GeneralValidator optionValidator;
     @Autowired
     private AddOptionService addOptionService;
 

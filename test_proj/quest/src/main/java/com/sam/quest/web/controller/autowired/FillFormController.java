@@ -2,7 +2,7 @@ package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.dto.AnswerDTO;
 import com.sam.quest.service.FillFormService;
-import com.sam.quest.web.validator.AnswerValidator;
+import com.sam.quest.web.validator.GeneralValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class FillFormController {
     @Autowired
-    private AnswerValidator answerValidator;
+    private GeneralValidator answerValidator;
     @Autowired
     private FillFormService fillFormService;
 

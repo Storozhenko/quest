@@ -4,7 +4,7 @@ import com.sam.quest.entity.Questions;
 import com.sam.quest.service.AddQuestionService;
 import com.sam.quest.dto.OptionDTO;
 import com.sam.quest.dto.QuestionDTO;
-import com.sam.quest.web.validator.QuestionValidator;
+import com.sam.quest.web.validator.GeneralValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -13,14 +13,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
 public class AddQuestionController {
     @Autowired
-    private QuestionValidator questionValidator;
+    private GeneralValidator questionValidator;
     @Autowired
     private AddQuestionService addQuestionService;
     private List<String> typeList;

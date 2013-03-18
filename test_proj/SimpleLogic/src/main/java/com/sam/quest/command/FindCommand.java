@@ -2,7 +2,6 @@ package com.sam.quest.command;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 
 public class FindCommand<E> implements Command <E> {
@@ -10,6 +9,11 @@ public class FindCommand<E> implements Command <E> {
     private long id;
     private String hqlQuery;
     private int type;
+    private HibernateTemplate hibernateTemplate;
+
+    public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+        this.hibernateTemplate = hibernateTemplate;
+    }
 
     public FindCommand(String hqlQuery) {
         this.hqlQuery = hqlQuery;

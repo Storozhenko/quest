@@ -1,6 +1,9 @@
 package com.sam.quest.dto;
 
+import com.sam.quest.dto.annotations.Required;
+import com.sam.quest.dto.annotations.Validatable;
 
+@Validatable
 public class OptionDTO {
     private int optionNum;
     private String optionData;
@@ -13,6 +16,7 @@ public class OptionDTO {
         this.optionNum = optionNum;
     }
 
+    @Required
     public String getOptionData() {
         return optionData;
     }

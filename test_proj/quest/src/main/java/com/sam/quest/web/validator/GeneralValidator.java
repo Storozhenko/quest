@@ -24,10 +24,9 @@ public class GeneralValidator <E> implements Validator{
         final PropertyDescriptor[] propertyDescriptors
                 = BeanUtils.getPropertyDescriptors(obj.getClass());
         for (final PropertyDescriptor propertyDescriptor : propertyDescriptors) {
-            // see if the property (getter) is annotated as required
+            // see if the getter is annotated as required
             final Method method = propertyDescriptor.getReadMethod();
             if (method != null && method.isAnnotationPresent(Required.class)) {
-                // reject with "field.required" if null/empty
                 String field = propertyDescriptor.getName();
                 ValidationUtils.rejectIfEmpty(errors, field, "label.validator." + field + ".required");
                 if (method.isAnnotationPresent(TextLength.class)) {

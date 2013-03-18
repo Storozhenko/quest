@@ -5,9 +5,13 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.transaction.annotation.Transactional;
 
 public class GetListCommand <E> implements Command <E> {
-
     E list;
     Object obj;
+    private HibernateTemplate hibernateTemplate;
+
+    public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+        this.hibernateTemplate = hibernateTemplate;
+    }
 
     public GetListCommand(Object obj) {
         this.obj = obj;

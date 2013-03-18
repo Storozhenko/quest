@@ -7,6 +7,7 @@ import com.sam.quest.entity.Users;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
@@ -17,10 +18,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests {
 
     @Autowired
-    TransactionalPerformer trPerformer;
+    private HibernateTemplate hibernateTemplate;
     @Autowired
-    Users user;
-
+    private Users user;
 
     @Test
     @Rollback(true)
@@ -29,16 +29,16 @@ public class AppTest extends AbstractDbunitTransactionalJUnit4SpringContextTests
     @DirtiesContext
     public void testCRUD() {
         try {
-            trPerformer.executeCommand(new UpdateCommand(user));
-            user = (Users)trPerformer.executeCommand(new FindCommand<Users>(1, new Users()));
+            new UpdateCommand(user).execute(hibernateTemplate);
+            user = new FindCommand<Users>(1, new Users()).execute(hibernateTemplate);
             user = new Users();
             user.setUsername("newtest");
             user.setPassword("newtest");
             user.setUserType("ROLE_ADMIN");
-            trPerformer.executeCommand(new InsertCommand(user));
-            user = (Users)trPerformer.executeCommand(new FindCommand<Users>("from Users where username = 'newtest'"));
-            trPerformer.executeCommand(new DeleteCommand(user));
-            trPerformer.executeCommand(new InsertCommand(user));
+            new InsertCommand(user).execute(hibernateTemplate);
+            user = new FindCommand<Users>("from Users where username = 'newtest'").execute(hibernateTemplate);
+            new DeleteCommand(user).execute(hibernateTemplate);
+            new InsertCommand(user).execute(hibernateTemplate);
         } catch (Exception e) {
             e.printStackTrace();
         }

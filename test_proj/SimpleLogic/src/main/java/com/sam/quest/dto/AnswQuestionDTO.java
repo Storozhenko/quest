@@ -1,6 +1,5 @@
 package com.sam.quest.dto;
 
-
 import java.util.List;
 
 public class AnswQuestionDTO {

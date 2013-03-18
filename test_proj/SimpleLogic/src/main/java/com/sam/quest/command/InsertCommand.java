@@ -5,6 +5,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 public class InsertCommand <E> implements Command <Void>{
     E obj;
+    private HibernateTemplate hibernateTemplate;
+
+    public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+        this.hibernateTemplate = hibernateTemplate;
+    }
 
     public InsertCommand(E obj) {
         this.obj = obj;
