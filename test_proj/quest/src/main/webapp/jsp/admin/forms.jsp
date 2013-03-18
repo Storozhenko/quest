@@ -16,6 +16,29 @@
 <script type="text/javascript" language="javascript" src="${baseUrl}/media/js/jquery.dataTables.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+
+        $(".display tr").mouseover(function() {
+            $(this).addClass("over");
+        });
+
+        $(".display tr").mouseout(function() {
+            $(this).removeClass("over");
+        });
+
+        $(".display tr").click(function() {
+            if ($(this).hasClass("select")) {
+                $(this).removeClass("select");
+            } else {
+                if($(this).parent().find('tr').hasClass("select")) {
+                    $(this).parent().find('tr').removeClass("select");
+                    $(this).addClass("select");
+                } else {
+                    $(this).addClass("select");
+                }
+            }
+        });
+    });
+    $(document).ready(function() {
         $('#formsTable').dataTable({
             "oLanguage": {
                 "sLengthMenu": "<spring:message code="datatables.sLengthMenu"/>",

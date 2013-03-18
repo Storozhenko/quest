@@ -32,9 +32,6 @@ http://www.springframework.org/schema/context/spring-context.xsd">
             <ref bean="sessionFactory"/>
         </constructor-arg>
     </bean>
-    <bean id="trPerformer" class="com.sam.quest.command.TransactionalPerformer">
-        <property name="hibernateTemplate" ref="hibernateTemplate" />
-    </bean>
     <bean id="testUser" class="com.sam.quest.entity.Users">
         <property name="userId" value="1" />
         <property name="username" value="test" />

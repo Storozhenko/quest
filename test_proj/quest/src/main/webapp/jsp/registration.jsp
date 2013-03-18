@@ -2,11 +2,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<spring:url value="/" var="baseUrl" />
 <html>
 <head>
     <title><spring:message code="label.registration"/></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <h2><spring:message code="label.registration"/></h2>
@@ -38,13 +40,18 @@
         </tr>
         <tr>
             <td><spring:message code="label.language"/>:</td>
-            <td><form:password path="language" /></td>
+            <td><form:select path="language">
+                    <option value=""><spring:message code="label.language"/></option>
+                    <option value="en"><spring:message code="label.language.english"/></option>
+                    <option value="ru"><spring:message code="label.language.russian"/></option>
+                </form:select>
+            </td>
         </tr>
         <tr>
             <td colspan="2"></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="submit" value="Submit" /></td>
+            <td colspan="2"><button class="action bluebtn" type="submit" /><span class="label">OK</span></td>
         </tr>
     </table>
 </form:form>

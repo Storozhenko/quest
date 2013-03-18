@@ -79,7 +79,7 @@ public abstract class AbstractDbunitTransactionalJUnit4SpringContextTests
 
         public void beforeTestMethod(TestContext testContext) throws Exception {
             //dbMaintainer performs scripts
-            initDataBase();
+            //initDataBase();
             AbstractDbunitTransactionalJUnit4SpringContextTests testInstance = (AbstractDbunitTransactionalJUnit4SpringContextTests) testContext.getTestInstance();
             Method method = testContext.getTestMethod();
             DbunitDataSets annotation = method.getAnnotation(DbunitDataSets.class);
@@ -90,8 +90,8 @@ public abstract class AbstractDbunitTransactionalJUnit4SpringContextTests
             IDatabaseTester databaseTester = new DataSourceDatabaseTester(dataSource);
             databaseTester.setDataSet(
                     new XmlDataSet(ClassLoader.getSystemResourceAsStream(annotation.before())));
-            databaseTester.setSetUpOperation(DatabaseOperation.INSERT);
-            databaseTester.setTearDownOperation(DatabaseOperation.NONE);
+            databaseTester.setSetUpOperation(DatabaseOperation.CLEAN_INSERT);
+            databaseTester.setTearDownOperation(DatabaseOperation.REFRESH);
             databaseTester.onSetup();
             testInstance.databaseTester = databaseTester;
             testInstance.afterDatasetFileName = annotation.after();
