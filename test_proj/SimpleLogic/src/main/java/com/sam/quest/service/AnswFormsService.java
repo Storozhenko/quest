@@ -31,27 +31,26 @@ public class AnswFormsService {
             afDTO.setAnswDatetime(af.getAnswDatetime());
             answFormsDTO.add(afDTO);
         }
-        id = 0;
         return answFormsDTO;
     }
-    public List<AnswQuestionDTO> getAnswQuestions(String answId) throws Exception{
+    public List<AnswQuestionDTO> getAnswQuestions(long answId) throws Exception{
         List<AnswQuestionDTO> answQuestDTO = new ArrayList<AnswQuestionDTO>();
-        List<AnswQuestions> answQuests = (List<AnswQuestions>)trPerformer.executeCommand(new GetListCommand<List<AnswQuestions>>(new AnswQuestions()));
+        List<AnswQuestions> answQuests = (List<AnswQuestions>)trPerformer.executeCommand(new GetListHQLCommand<List<AnswQuestions>>(
+                "from AnswQuestions where answId = '" + answId + "'"));
         for (AnswQuestions aq: answQuests) {
-            if (aq.getAnswId().getAnswId() == Long.valueOf(answId).longValue()) {
-                long questId = aq.getQuestionId().getQuestionId().longValue();
-                if (questId != id) {
-                    AnswQuestionDTO aqDTO = new AnswQuestionDTO();
-                    aqDTO.setQuestionName(aq.getQuestionId().getQuestionName());
-                    aqDTO.setQuestionDescr(aq.getQuestionId().getQuestionDescr());
-                    List <String> options = (List<String>)trPerformer.executeCommand(new GetListHQLCommand(
-                            "select aq.userAnswer from AnswQuestions aq where aq.answId = '" + answId + "' and aq.questionId = '" + aq.getQuestionId().getQuestionId() + "'"));
-                    aqDTO.setUserAnswer(options);
-                    answQuestDTO.add(aqDTO);
-                    id = questId;
-                }
+            long questId = aq.getQuestionId().getQuestionId().longValue();
+            if (questId != id) {
+                AnswQuestionDTO aqDTO = new AnswQuestionDTO();
+                aqDTO.setQuestionName(aq.getQuestionId().getQuestionName());
+                aqDTO.setQuestionDescr(aq.getQuestionId().getQuestionDescr());
+                List <String> options = (List<String>)trPerformer.executeCommand(new GetListHQLCommand(
+                        "select userAnswer from AnswQuestions where answId = " + answId + " and questionId = '" + aq.getQuestionId().getQuestionId() + "'"));
+                aqDTO.setUserAnswer(options);
+                answQuestDTO.add(aqDTO);
+                id = questId;
             }
         }
+        id = 0;
         return answQuestDTO;
     }
 }

@@ -78,6 +78,7 @@ public abstract class AbstractDbunitTransactionalJUnit4SpringContextTests
         }
 
         public void beforeTestMethod(TestContext testContext) throws Exception {
+            //dbMaintainer performs scripts
             initDataBase();
             AbstractDbunitTransactionalJUnit4SpringContextTests testInstance = (AbstractDbunitTransactionalJUnit4SpringContextTests) testContext.getTestInstance();
             Method method = testContext.getTestMethod();

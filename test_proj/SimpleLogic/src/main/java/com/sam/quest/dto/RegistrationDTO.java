@@ -1,6 +1,8 @@
 package com.sam.quest.dto;
 
+import com.sam.quest.dto.annotations.Validatable;
 
+@Validatable
 public class RegistrationDTO {
     private String username;
     private String password;

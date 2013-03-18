@@ -8,7 +8,7 @@ import org.springframework.validation.Validator;
 
 
 @Component
-public class AnswerValidator implements Validator{
+public class AnswerValidator <E> implements Validator{
 
     public boolean supports(Class<?> clazz) {
         return AnswerDTO.class.isAssignableFrom(clazz);

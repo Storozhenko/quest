@@ -1,6 +1,7 @@
 package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.dto.LoginDTO;
+import com.sam.quest.web.validator.GeneralValidator;
 import com.sam.quest.web.validator.LoginValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LoginController {
     @Autowired
-    private LoginValidator loginValidator;
+    private GeneralValidator <LoginDTO> loginValidator;
 
     @RequestMapping("/login")
     public String startInit(ModelMap modelMap) {

@@ -62,6 +62,7 @@
 <br>
 <br>
 <a href="addForm">Add form</a>
-
+<br>
+<a href=main>Main page</a>
 </body>
 </html>

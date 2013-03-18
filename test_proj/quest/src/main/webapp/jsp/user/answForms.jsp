@@ -59,6 +59,7 @@
     <tbody>
     </tbody>
 </table>
-
+<br>
+<a href=main>Main page</a>
 </body>
 </html>

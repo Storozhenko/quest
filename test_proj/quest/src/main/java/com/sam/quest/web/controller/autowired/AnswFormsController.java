@@ -27,28 +27,12 @@ public class AnswFormsController {
 
     @RequestMapping("/**/answForms")
     public String startInit(HttpSession session, ModelMap modelMap, HttpServletRequest request) {
-        List<AnswFormDTO> answForms = null;
-        try {
-            answForms = answFormsService.getAnswForms();
-        } catch (Exception e) {
-            session.setAttribute("error", e.getMessage());
-            return "error";
-        }
-        modelMap.addAttribute("answForms", answForms);
         return request.getPathInfo();
     }
 
     @RequestMapping("/**/answFormsQuestions")
     public String answList(@RequestParam(value="answId", required=true) String answId, HttpSession session, ModelMap modelMap, HttpServletRequest request) {
-        List<AnswQuestionDTO> answQuests = null;
-        try {
-            answQuests = answFormsService.getAnswQuestions(answId);
-        } catch (Exception e) {
-            session.setAttribute("error", e.getMessage());
-            return "error";
-        }
         session.setAttribute("answId", answId);
-        modelMap.addAttribute("answQuests", answQuests);
         return request.getPathInfo();
     }
 
@@ -76,7 +60,7 @@ public class AnswFormsController {
     public @ResponseBody Map<String, Object[]> getAnswQuestions(@RequestParam(value="answId", required=true) String answId) {
         List<AnswQuestionDTO> answQuests = null;
         try {
-            answQuests = answFormsService.getAnswQuestions(answId);
+            answQuests = answFormsService.getAnswQuestions(Long.valueOf(answId));
         } catch (Exception e) {
             e.printStackTrace();
         }

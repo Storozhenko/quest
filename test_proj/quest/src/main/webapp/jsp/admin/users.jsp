@@ -18,6 +18,6 @@ Welcome, ${username}
 </table>
 
 <br>
-<a href="${pageContext.request.contextPath}/" title="Home">Home</a>
+<a href=main>Main page</a>
 </body>
 </html>
