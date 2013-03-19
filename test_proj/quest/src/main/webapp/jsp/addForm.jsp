@@ -8,6 +8,7 @@
     <title>Create form</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <h2>Create Form</h2>
@@ -27,7 +28,7 @@
             <td colspan="2"></td>
         </tr>
         <tr>
-            <td colspan="2"><button type="submit" value="Submit" /></td>
+            <td colspan="2"><button class="action bluebtn" type="submit" id="addFormSubmit" /><span class="label">OK</span></td>
         </tr>
     </table>
 </form:form>

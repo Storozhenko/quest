@@ -23,7 +23,7 @@ public class FormDTO {
     public void setFormName(String formName) {
         this.formName = formName;
     }
-    @Required
+
     public String getFormDescr() {
         return formDescr;
     }

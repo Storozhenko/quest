@@ -2,11 +2,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<spring:url value="/" var="baseUrl" />
 <html>
 <head>
     <title>Add Option</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <h2>Add Option</h2>
@@ -28,7 +30,7 @@
                     <td colspan="2"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" value="Finish" /></td>
+                    <td colspan="2"><button class="action bluebtn" type="submit" id="addTextQuestionFinish" /><span class="label">Finish</span></td>
                 </tr>
             </table>
         </form:form>
@@ -50,7 +52,7 @@
                     <td colspan="2"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" value="Submit" /></td>
+                    <td colspan="2"><button class="action bluebtn" type="submit" id="addOptionSubmit" /><span class="label">OK</span></td>
                 </tr>
             </table>
         </form:form>
@@ -59,7 +61,7 @@
                 <tr>
                     <td colspan="2">
                         <form action="addQuestion">
-                            <input type="submit" value="Finish">
+                            <button class="action redbtn" type="submit" id="addQuestionFinish" /><span class="label">Finish</span>
                         </form>
                     </td>
                 </tr>

@@ -50,6 +50,8 @@ public class FormsController {
             i++;
         }
         Map map = new HashMap<String, Object[]>();
+        map.put("iTotalRecords", forms.size());
+        map.put("iTotalDisplayRecords", forms.size());
         map.put("aaData", rdArray);
         return map;
     }

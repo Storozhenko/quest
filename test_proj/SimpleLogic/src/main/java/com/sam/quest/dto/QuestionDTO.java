@@ -17,7 +17,7 @@ public class QuestionDTO {
     public void setQuestionName(String questionName) {
         this.questionName = questionName;
     }
-    @Required
+
     public String getQuestionDescr() {
         return questionDescr;
     }
@@ -25,7 +25,7 @@ public class QuestionDTO {
     public void setQuestionDescr(String questionDescr) {
         this.questionDescr = questionDescr;
     }
-
+    @Required
     public String getQuestionType() {
         return questionType;
     }

@@ -22,7 +22,7 @@ public class AddFormController {
     private AddFormService addFormService;
 
     @RequestMapping("/**/addForm")
-    public String startInit(HttpSession session, ModelMap modelMap) {
+    public String startInit(ModelMap modelMap) {
         FormDTO form = new FormDTO();
         modelMap.addAttribute("form", form);
         return "addForm";
