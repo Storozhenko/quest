@@ -353,13 +353,68 @@ td.details {
 }
 
 table.display tr.even.row_selected td {
-	background-color: #B0BED9;
+	background-color: #FFCC00;
 }
 
 table.display tr.odd.row_selected td {
-	background-color: #9FAFD1;
+	background-color: #FFCC00;
 }
 
+table.display tr.odd.row_selected td.sorting_1 {
+    background-color: #FFCC00;
+}
+
+table.display tr.odd.row_selected td.sorting_2 {
+    background-color: #FFCC00;
+}
+
+table.display tr.odd.row_selected td.sorting_3 {
+    background-color: #FFCC00;
+}
+
+table.display tr.even.row_selected td.sorting_1 {
+    background-color: #FFCC00;
+}
+
+table.display tr.even.row_selected td.sorting_2 {
+    background-color: #FFCC00;
+}
+
+table.display tr.even.row_selected td.sorting_3 {
+    background-color: #FFCC00;
+}
+
+table.display tr.even.mouse_over td {
+    background-color: #FFFF99;
+}
+
+table.display tr.odd.mouse_over td {
+    background-color: #FFFF99;
+}
+
+table.display tr.odd.mouse_over td.sorting_1 {
+    background-color: #FFFF99;
+}
+
+table.display tr.odd.mouse_over td.sorting_2 {
+    background-color: #FFFF99;
+}
+
+table.display tr.odd.mouse_over td.sorting_3 {
+    background-color: #FFFF99;
+}
+
+table.display tr.even.mouse_over td.sorting_1 {
+    background-color: #FFFF99;
+}
+
+table.display tr.even.mouse_over td.sorting_2 {
+    background-color: #FFFF99;
+}
+
+table.display tr.even.mouse_over td.sorting_3 {
+    background-color: #FFFF99;
+}
 
 /*
  * Sorting classes for columns

@@ -16,29 +16,6 @@
 <script type="text/javascript" language="javascript" src="${baseUrl}/media/js/jquery.dataTables.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-
-        $(".display tr").mouseover(function() {
-            $(this).addClass("over");
-        });
-
-        $(".display tr").mouseout(function() {
-            $(this).removeClass("over");
-        });
-
-        $(".display tr").click(function() {
-            if ($(this).hasClass("select")) {
-                $(this).removeClass("select");
-            } else {
-                if($(this).parent().find('tr').hasClass("select")) {
-                    $(this).parent().find('tr').removeClass("select");
-                    $(this).addClass("select");
-                } else {
-                    $(this).addClass("select");
-                }
-            }
-        });
-    });
-    $(document).ready(function() {
         $('#formsTable').dataTable({
             "oLanguage": {
                 "sLengthMenu": "<spring:message code="datatables.sLengthMenu"/>",
@@ -66,12 +43,37 @@
             ]
         });
     });
+    $(document).ready(function() {
+        $('#formsTable tbody').on( 'click', 'tr', function () {
+            if ($(this).hasClass("row_selected")) {
+                $(this).removeClass("row_selected");
+            } else {
+                if($(this).parent().find('tr').hasClass("row_selected")) {
+                    $(this).parent().find('tr').removeClass("row_selected");
+                    $(this).addClass("row_selected");
+                    $(this).removeClass("mouse_over");
+                } else {
+                    $(this).addClass("row_selected");
+                    $(this).removeClass("mouse_over");
+                }
+            }
+        });
+        $('#formsTable tbody').on( 'mouseover', 'tr', function (event) {
+            if (!$(this).hasClass("row_selected")) {
+                $(event.target.parentNode).addClass("mouse_over");
+            }
+        });
+        $('#formsTable tbody').on( 'mouseout', 'tr', function () {
+            $(this).removeClass("mouse_over");
+        });
+    });
+
 </script>
 
 <body>
 <h2>Forms</h2>
 <br>
-<table id="formsTable">
+<table id="formsTable" class="display">
     <thead>
     <tr>
         <th>Form name</th>
