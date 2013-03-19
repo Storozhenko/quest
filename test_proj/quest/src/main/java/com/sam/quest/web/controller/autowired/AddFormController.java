@@ -42,6 +42,7 @@ public class AddFormController {
             return "error";
         }
         modelMap.addAttribute("question", new QuestionDTO());
+        session.setAttribute("questionNum", 1);
         return "redirect:/" + role + "/addQuestion";
     }
 }

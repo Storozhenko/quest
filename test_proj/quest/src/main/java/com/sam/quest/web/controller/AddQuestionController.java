@@ -26,10 +26,7 @@ public class AddQuestionController {
 
     @RequestMapping("/**/addQuestion")
     public String startInit(HttpSession session, ModelMap modelMap) {
-        int qNum = (Integer)session.getAttribute("questionNum");
-        qNum++;
-        session.setAttribute("questionNum", qNum);
-        modelMap.addAttribute("question", new QuestionDTO());
+                modelMap.addAttribute("question", new QuestionDTO());
         modelMap.addAttribute("types", typeList);
         return "addQuestion";
     }
@@ -50,6 +47,9 @@ public class AddQuestionController {
             return "error";
         }
         modelMap.addAttribute("option", new OptionDTO());
+        int qNum = (Integer)session.getAttribute("questionNum");
+        qNum++;
+        session.setAttribute("questionNum", qNum);
         return "redirect:/" + role + "/addOption";
     }
 

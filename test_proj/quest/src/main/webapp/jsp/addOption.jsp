@@ -30,7 +30,7 @@
                     <td colspan="2"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button class="action bluebtn" type="submit" id="addTextQuestionFinish" /><span class="label">Finish</span></td>
+                    <td colspan="2"><button class="action bluebtn" type="submit" id="addTextQuestionFinish"><span class="label">Finish</span></button></td>
                 </tr>
             </table>
         </form:form>
@@ -52,7 +52,7 @@
                     <td colspan="2"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button class="action bluebtn" type="submit" id="addOptionSubmit" /><span class="label">OK</span></td>
+                    <td colspan="2"><button class="action bluebtn" type="submit" id="addOptionSubmit"><span class="label">OK</span></button></td>
                 </tr>
             </table>
         </form:form>
@@ -61,7 +61,7 @@
                 <tr>
                     <td colspan="2">
                         <form action="addQuestion">
-                            <button class="action redbtn" type="submit" id="addQuestionFinish" /><span class="label">Finish</span>
+                            <button class="action redbtn" type="submit" id="addQuestionFinish"><span class="label">Finish</span></button>
                         </form>
                     </td>
                 </tr>

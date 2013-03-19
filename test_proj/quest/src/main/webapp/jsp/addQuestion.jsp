@@ -38,7 +38,7 @@
             <td colspan="2"></td>
         </tr>
         <tr>
-            <td colspan="2"><button class="action bluebtn" type="submit" id="addQuestionSubmit" /><span class="label">OK</span></td>
+            <td colspan="2"><button class="action bluebtn" type="submit" id="addQuestionSubmit"><span class="label">OK</span></button></td>
         </tr>
     </table>
 </form:form>

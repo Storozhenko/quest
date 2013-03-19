@@ -12,7 +12,7 @@ table {
     font: normal normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
     margin: 1;
     padding: 1;
-    border-spacing: 2;
+    border-spacing: 1;
 }
 
 span.error {

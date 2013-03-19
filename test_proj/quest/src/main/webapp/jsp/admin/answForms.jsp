@@ -43,6 +43,32 @@
             ]
         });
     });
+    $(document).ready(function() {
+        $('#answFormsTable tbody').on( 'click', 'tr', function () {
+            if ($(this).hasClass("row_selected")) {
+                $(this).removeClass("row_selected");
+            } else {
+                if($(this).parent().find('tr').hasClass("row_selected")) {
+                    $(this).parent().find('tr').removeClass("row_selected");
+                    $(this).addClass("row_selected");
+                    $(this).removeClass("mouse_over");
+                } else {
+                    $(this).addClass("row_selected");
+                    $(this).removeClass("mouse_over");
+                }
+            }
+        });
+        $('#answFormsTable tbody').on( 'mouseover', 'tr', function () {
+            if (!$(this).hasClass("row_selected")) {
+                $(this).addClass("mouse_over");
+            }
+        });
+        $('#answFormsTable tbody').on( 'mouseout', 'tr', function () {
+            $(this).removeClass("mouse_over");
+        });
+    });
+
+
 </script>
 <body>
 <h2>Filled Forms</h2>

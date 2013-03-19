@@ -1,5 +1,6 @@
 package com.sam.quest.web.controller.autowired;
 
+import com.sam.quest.dto.FormDTO;
 import com.sam.quest.entity.Forms;
 import com.sam.quest.service.FormsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,8 @@ public class FormsController {
             session.setAttribute("error", e.getMessage());
             return "error";
         }
+        FormDTO form = new FormDTO();
+        modelMap.addAttribute("form", form);
         modelMap.addAttribute("forms", forms);
         return request.getPathInfo();
     }
