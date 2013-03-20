@@ -6,7 +6,8 @@
 <html>
 <head>
     <title>Forms</title>
-    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/style.css"/>
+    <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <style type="text/css" title="currentStyle">
     @import "${baseUrl}/media/css/demo_page.css";
@@ -34,21 +35,27 @@
             "bProcessing": true,
             "sAjaxSource" : '/quest/admin/formsTable',
             "aoColumnDefs": [
-                {
+                {   /*
                     "fnRender": function ( oObj,sVal ) {
                         return '<a href="fillForm?formId=' + sVal + '">fill</a>';
                     },
                     "bUseRendered": false,
-                    "aTargets": [ 2 ]
+                    "aTargets": [ 2 ] */
+                    "bSearchable": true,
+                    "bVisible": true,
+                    "aTargets": [ 0 ]
                 }
             ]
         });
     });
     $(document).ready(function() {
-        $('#formsTable tbody').on( 'click', 'tr', function () {
+        $('#formsTable tbody').on( 'click', 'td', function () {
             var cells=$(this).parent('tr').children('td');
-            $('#inputForm :input[id="formName"]').val("fds");
-            $('#inputForm :input[name="formDescr"]').val($(cells[1]).text().trim());
+            $('#inputForm :input[id="formID"]').val($(cells[0]).text().trim());
+            $('#inputForm :input[id="formName"]').val($(cells[1]).text().trim());
+            $('#inputForm :input[id="formDescr"]').val($(cells[2]).text().trim());
+        });
+        $('#formsTable tbody').on( 'click', 'tr', function () {
             if ($(this).hasClass("row_selected")) {
                 $(this).removeClass("row_selected");
             } else {
@@ -69,7 +76,6 @@
         });
         $('#formsTable tbody').on( 'mouseout', 'tr', function () {
             $(this).removeClass("mouse_over");
-
         });
     });
 </script>
@@ -77,41 +83,52 @@
 <body>
 <h2>Forms</h2>
 <br>
-<div id="container">
-    <table id="formsTable" class="display">
-        <thead>
-        <tr>
-            <th>Form name</th>
-            <th>Description</th>
-            <th>Fill</th>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
- </div>
+<table id="formsTable" class="display">
+    <thead>
+    <tr>
+        <th>Form ID</th>
+        <th>Form name</th>
+        <th>Description</th>
+        <th>Username</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
 <br>
-<form id="inputForm" method="post">
+<br>
+<br>
+<form:form method="post" id="inputForm" commandName="form" action="updateFormAction">
     <table>
         <tr>
+            <td>Form ID:</td>
+            <td><form:input path="formID" id="formID" readonly="true"/></td>
+        </tr>
+        <tr>
             <td>Form name:</td>
-            <td><input id="formName"/></td>
+            <td><form:input path="formName" id="formName"/></td>
+            <td><span class="error"><form:errors path="formName" id="formName" /></span></td>
         </tr>
         <tr>
             <td>Description:</td>
-            <td><input id="formDescr"/></td>
+            <td><form:input path="formDescr" id="formDescr"/></td>
         </tr>
         <tr>
             <td colspan="2"></td>
         </tr>
         <tr>
-            <td colspan="2"><button class="action bluebtn" type="submit" id="addFormSubmit" /><span class="label">OK</span></td>
+            <td colspan="2"><button class="action bluebtn" type="submit" id="updateFormSubmit" /><span class="label">OK</span></td>
         </tr>
     </table>
-</form>
+</form:form>
 <br>
-<a href="addForm">Add form</a>
-<br>
-<a href=main>Main page</a>
+<div>
+    <form action="addForm">
+        <button class="action bluebtn" type="submit" id="addFormLink" /><span class="label">Add form</span></button>
+    </form>
+    <form action="main">
+        <button class="action greenbtn" type="submit" id="formsToMainLink" /><span class="label">Main page</span></button>
+    </form>
+</div>
 </body>
 </html>

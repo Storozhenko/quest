@@ -5,8 +5,10 @@ import com.sam.quest.dto.annotations.Validatable;
 
 @Validatable
 public class FormDTO {
+    private long formID;
     private String formName;
     private String formDescr;
+    private String username;
 
     public FormDTO(String formName, String formDescr) {
         this.formName = formName;
@@ -30,5 +32,21 @@ public class FormDTO {
 
     public void setFormDescr(String formDescr) {
         this.formDescr = formDescr;
+    }
+
+    public long getFormID() {
+        return formID;
+    }
+
+    public void setFormID(long formID) {
+        this.formID = formID;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

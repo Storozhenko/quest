@@ -37,8 +37,8 @@ public class FormsController {
         return request.getPathInfo();
     }
 
-    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/**/formsTable")
-    public @ResponseBody Map<String, Object[]> getForms() {
+    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/admin/formsTable")
+    public @ResponseBody Map<String, Object[]> getAdminForms() {
         List<Forms> forms = null;
         try {
             forms = formsService.getForms();
@@ -48,7 +48,8 @@ public class FormsController {
         Object[] rdArray = new Object[forms.size()];
         int i = 0;
         for (Forms f : forms) {
-            Object[] us = new String[]{f.getFormName(), f.getFormDescr(), String.valueOf(f.getFormId())};
+            Object[] us = new String[]{String.valueOf(f.getFormId()), f.getFormName(),
+                    f.getFormDescr(), f.getUserId().getUsername()};
             rdArray[i] = us;
             i++;
         }
@@ -59,4 +60,25 @@ public class FormsController {
         return map;
     }
 
+    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/user/formsTable")
+    public @ResponseBody Map<String, Object[]> getUserForms() {
+        List<Forms> forms = null;
+        try {
+            forms = formsService.getForms();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Object[] rdArray = new Object[forms.size()];
+        int i = 0;
+        for (Forms f : forms) {
+            Object[] us = new String[]{f.getFormId().toString(), f.getFormName(), f.getFormDescr(), String.valueOf(f.getFormId())};
+            rdArray[i] = us;
+            i++;
+        }
+        Map map = new HashMap<String, Object[]>();
+        map.put("iTotalRecords", forms.size());
+        map.put("iTotalDisplayRecords", forms.size());
+        map.put("aaData", rdArray);
+        return map;
+    }
 }

@@ -15,12 +15,8 @@ public class FormsService {
     private HibernateTemplate hibernateTemplate;
 
     public List<Forms> getForms() throws Exception{
-        List<FormDTO> formsDTO = new ArrayList<FormDTO>();
+        //List<FormDTO> formsDTO = new ArrayList<FormDTO>();
         List<Forms> forms = new GetListCommand<List<Forms>>(new Forms()).execute(hibernateTemplate);
-        for (Forms f: forms) {
-            FormDTO form = new FormDTO(f.getFormName(), f.getFormDescr());
-            formsDTO.add(form);
-        }
         return forms;
     }
 }

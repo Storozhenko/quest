@@ -34,7 +34,7 @@
 	position: relative;
 	clear: both;
 	zoom: 1; /* Feeling sorry for IE */
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
