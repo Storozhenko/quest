@@ -87,6 +87,9 @@
     function fillForm() {
         window.location = "fillForm?formId=" + document.getElementById("formId").value;
     }
+    function deleteForm() {
+        window.location = "deleteForm?formId=" + document.getElementById("formId").value;
+    }
 </script>
 
 <body>
@@ -107,7 +110,6 @@
 </table>
 <br>
 <br>
-<br>
 <form:form method="post" id="inputForm" commandName="form" action="updateFormAction" style="display:none">
     <table>
         <tr>
@@ -124,14 +126,19 @@
             <td><form:input path="formDescr" id="formDescr"/></td>
         </tr>
         <tr>
-            <td colspan="2"></td>
+            <td colspan="3"></td>
         </tr>
         <tr>
             <td><button class="action bluebtn" type="submit" id="updateFormSubmit" /><span class="label">Update</span></td>
-            <td><button class="action greenbtn" type="button" id="fillFormLink" onclick="fillForm()" /><span class="label">Fill form</span></td>
+            <td><button class="action redbtn" type="button" id="deleteFormLink" onclick="deleteForm()" /><span class="label">Delete</span></td>
+            <td><button class="action bluebtn" type="button" id="fillFormLink" onclick="fillForm()" /><span class="label">Fill form</span></td>
+        </tr>
+        <tr>
         </tr>
     </table>
 </form:form>
+<br>
+<br>
 <div>
     <form action="addForm">
         <button class="action bluebtn" type="submit" id="addFormLink" /><span class="label">Add form</span></button>

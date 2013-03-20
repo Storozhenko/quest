@@ -20,7 +20,7 @@
     </select>
 </span>
 <br/>
-<form:form method="post" commandName="loginForm" action="loginAction">
+<form:form method="post" commandName="loginForm" action="loginAction" style="margin: 0px; padding: 0px;">
     <table >
         <tr>
             <td><spring:message code="label.username"/>: </td>

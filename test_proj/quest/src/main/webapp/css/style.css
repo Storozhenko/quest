@@ -15,6 +15,11 @@ table {
     border-spacing: 1;
 }
 
+form {
+    margin: 0;
+    padding:0;
+}
+
 span.error {
     color: red;
     font: bold normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;

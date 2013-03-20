@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 
@@ -19,10 +20,10 @@ public class FormController {
     @Autowired
     private GeneralValidator formValidator;
     @Autowired
-    private FormService addFormService;
+    private FormService formService;
 
-    @RequestMapping("/**/addForm")
-    public String startInit(ModelMap modelMap) {
+    @RequestMapping("/{role}/addForm")
+    public String startInit(ModelMap modelMap, @PathVariable("role") String role) {
         FormDTO form = new FormDTO();
         modelMap.addAttribute("form", form);
         return "addForm";
@@ -36,7 +37,7 @@ public class FormController {
             return "addForm";
         }
         try {
-            addFormService.addForm(form, session);
+            formService.addForm(form, session);
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";
@@ -54,7 +55,17 @@ public class FormController {
             return "addForm";
         }
         try {
-            addFormService.updateForm(form);
+            formService.updateForm(form);
+        } catch (Exception e) {
+            session.setAttribute("error", e.getMessage());
+            return "error";
+        }
+        return "redirect:/admin/forms";
+    }
+    @RequestMapping("/admin/deleteForm")
+    public String startInit(@RequestParam(value="formId", required=true) String formId, HttpSession session, ModelMap modelMap) {
+        try {
+            formService.deleteForm(formId);
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";

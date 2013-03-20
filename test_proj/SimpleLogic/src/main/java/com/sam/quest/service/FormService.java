@@ -1,5 +1,6 @@
 package com.sam.quest.service;
 
+import com.sam.quest.command.DeleteCommand;
 import com.sam.quest.command.InsertCommand;
 import com.sam.quest.command.UpdateCommand;
 import com.sam.quest.dto.FormDTO;
@@ -39,5 +40,11 @@ public class FormService {
         newForm.setFormDescr(form.getFormDescr());
         newForm.setFormDate(new Date(System.currentTimeMillis()));
         new UpdateCommand(newForm).execute(hibernateTemplate);
+    }
+
+    public void deleteForm(String formId) throws Exception{
+        Forms delForm = new Forms();
+        delForm.setFormId(Long.valueOf(formId));
+        new DeleteCommand(delForm).execute(hibernateTemplate);
     }
 }
