@@ -2,7 +2,7 @@ package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.dto.FormDTO;
 import com.sam.quest.entity.Forms;
-import com.sam.quest.service.FormsService;
+import com.sam.quest.service.FormsListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Controller
-public class FormsController {
+public class FormsListController {
     @Autowired
-    private FormsService formsService;
+    private FormsListService formsService;
 
     @RequestMapping("/**/forms")
     public String startInit(HttpSession session, ModelMap modelMap, HttpServletRequest request) {
@@ -48,8 +48,10 @@ public class FormsController {
         Object[] rdArray = new Object[forms.size()];
         int i = 0;
         for (Forms f : forms) {
-            Object[] us = new String[]{String.valueOf(f.getFormId()), f.getFormName(),
-                    f.getFormDescr(), f.getUserId().getUsername()};
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            String date = sdf.format(f.getFormDate());
+            Object[] us = new String[]{f.getFormId().toString(), f.getFormName(),
+                    f.getFormDescr(), f.getUserId().getUsername(), date};
             rdArray[i] = us;
             i++;
         }
@@ -71,7 +73,7 @@ public class FormsController {
         Object[] rdArray = new Object[forms.size()];
         int i = 0;
         for (Forms f : forms) {
-            Object[] us = new String[]{f.getFormId().toString(), f.getFormName(), f.getFormDescr(), String.valueOf(f.getFormId())};
+            Object[] us = new String[]{f.getFormName(), f.getFormDescr(), String.valueOf(f.getFormId())};
             rdArray[i] = us;
             i++;
         }

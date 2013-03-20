@@ -51,21 +51,27 @@
     $(document).ready(function() {
         $('#formsTable tbody').on( 'click', 'td', function () {
             var cells=$(this).parent('tr').children('td');
-            $('#inputForm :input[id="formID"]').val($(cells[0]).text().trim());
+            $('#inputForm :input[id="formId"]').val($(cells[0]).text().trim());
             $('#inputForm :input[id="formName"]').val($(cells[1]).text().trim());
             $('#inputForm :input[id="formDescr"]').val($(cells[2]).text().trim());
         });
         $('#formsTable tbody').on( 'click', 'tr', function () {
             if ($(this).hasClass("row_selected")) {
                 $(this).removeClass("row_selected");
+                var inputForm = document.getElementById('inputForm');
+                inputForm.style.display = "none";
             } else {
                 if($(this).parent().find('tr').hasClass("row_selected")) {
                     $(this).parent().find('tr').removeClass("row_selected");
                     $(this).addClass("row_selected");
                     $(this).removeClass("mouse_over");
+                    var inputForm = document.getElementById('inputForm');
+                    inputForm.style.display = "block";
                 } else {
                     $(this).addClass("row_selected");
                     $(this).removeClass("mouse_over");
+                    var inputForm = document.getElementById('inputForm');
+                    inputForm.style.display = "block";
                 }
             }
         });
@@ -78,6 +84,9 @@
             $(this).removeClass("mouse_over");
         });
     });
+    function fillForm() {
+        window.location = "fillForm?formId=" + document.getElementById("formId").value;
+    }
 </script>
 
 <body>
@@ -90,6 +99,7 @@
         <th>Form name</th>
         <th>Description</th>
         <th>Username</th>
+        <th>Create date</th>
     </tr>
     </thead>
     <tbody>
@@ -98,11 +108,11 @@
 <br>
 <br>
 <br>
-<form:form method="post" id="inputForm" commandName="form" action="updateFormAction">
+<form:form method="post" id="inputForm" commandName="form" action="updateFormAction" style="display:none">
     <table>
         <tr>
             <td>Form ID:</td>
-            <td><form:input path="formID" id="formID" readonly="true"/></td>
+            <td><form:input path="formId" id="formId" readonly="true"/></td>
         </tr>
         <tr>
             <td>Form name:</td>
@@ -117,11 +127,11 @@
             <td colspan="2"></td>
         </tr>
         <tr>
-            <td colspan="2"><button class="action bluebtn" type="submit" id="updateFormSubmit" /><span class="label">OK</span></td>
+            <td><button class="action bluebtn" type="submit" id="updateFormSubmit" /><span class="label">Update</span></td>
+            <td><button class="action greenbtn" type="button" id="fillFormLink" onclick="fillForm()" /><span class="label">Fill form</span></td>
         </tr>
     </table>
 </form:form>
-<br>
 <div>
     <form action="addForm">
         <button class="action bluebtn" type="submit" id="addFormLink" /><span class="label">Add form</span></button>

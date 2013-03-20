@@ -6,6 +6,7 @@
 <head>
     <title>Quest</title>
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <h2>Quest</h2>
@@ -23,10 +24,16 @@
 </span>
 <br><br>
 <br>
-<a href="forms"><spring:message code="label.forms"/></a>
-<br>
-<a href="answForms"><spring:message code="label.forms.filled"/></a>
-<br>
-<a href="users"><spring:message code="label.users"/></a>
+<div>
+    <form action="forms">
+        <button class="action bluebtn" type="submit" id="adminFormsLink" /><span class="label"><spring:message code="label.forms"/></span></button>
+    </form>
+    <form action="answForms">
+        <button class="action bluebtn" type="submit" id="adminAnswFormsLink" /><span class="label"><spring:message code="label.forms.filled"/></span></button>
+    </form>
+    <form action="users">
+        <button class="action bluebtn" type="submit" id="adminUsersLink" /><span class="label"><spring:message code="label.users"/></span></button>
+    </form>
+</div>
 </body>
 </html>

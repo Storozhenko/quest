@@ -10,8 +10,8 @@ table {
     background: GhostWhite;
     color: #000;
     font: normal normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
-    margin: 1;
-    padding: 1;
+    margin: 0;
+    padding: 0;
     border-spacing: 1;
 }
 

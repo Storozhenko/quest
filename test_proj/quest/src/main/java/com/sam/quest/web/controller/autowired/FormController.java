@@ -1,6 +1,6 @@
 package com.sam.quest.web.controller.autowired;
 
-import com.sam.quest.service.AddFormService;
+import com.sam.quest.service.FormService;
 import com.sam.quest.dto.FormDTO;
 import com.sam.quest.dto.QuestionDTO;
 import com.sam.quest.web.validator.GeneralValidator;
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpSession;
 
 @Controller
-public class AddFormController {
+public class FormController {
     @Autowired
     private GeneralValidator formValidator;
     @Autowired
-    private AddFormService addFormService;
+    private FormService addFormService;
 
     @RequestMapping("/**/addForm")
     public String startInit(ModelMap modelMap) {
@@ -44,5 +44,21 @@ public class AddFormController {
         modelMap.addAttribute("question", new QuestionDTO());
         session.setAttribute("questionNum", 1);
         return "redirect:/" + role + "/addQuestion";
+    }
+
+    @RequestMapping("/admin/updateFormAction")
+    public String updateForm(HttpSession session, ModelMap modelMap, @ModelAttribute("form")FormDTO form,
+                             BindingResult result) {
+        formValidator.validate(form, result);
+        if (result.hasErrors()) {
+            return "addForm";
+        }
+        try {
+            addFormService.updateForm(form);
+        } catch (Exception e) {
+            session.setAttribute("error", e.getMessage());
+            return "error";
+        }
+        return "redirect:/admin/forms";
     }
 }

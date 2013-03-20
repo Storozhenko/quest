@@ -2,10 +2,7 @@ package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.dto.AnswFormDTO;
 import com.sam.quest.dto.AnswQuestionDTO;
-import com.sam.quest.entity.AnswForms;
-import com.sam.quest.entity.Forms;
 import com.sam.quest.service.AnswFormsService;
-import com.sam.quest.service.FormsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,7 +45,9 @@ public class AnswFormsController {
         Object[] rdArray = new Object[answForms.size()];
         int i = 0;
         for (AnswFormDTO f : answForms) {
-            Object[] us = new String[]{f.getFormName(), f.getUsername(), f.getAnswDatetime().toString(), String.valueOf(f.getAnswId())};
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String date = sdf.format(f.getAnswDatetime());
+            Object[] us = new String[]{f.getFormName(), f.getUsername(), date, String.valueOf(f.getAnswId())};
             rdArray[i] = us;
             i++;
         }

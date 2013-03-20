@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class FormsService {
+public class FormsListService {
     @Autowired
     private HibernateTemplate hibernateTemplate;
 
