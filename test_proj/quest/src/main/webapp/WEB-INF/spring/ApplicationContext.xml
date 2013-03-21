@@ -19,22 +19,22 @@
         <property name="locations" value="WEB-INF/messages/config.properties" />
     </bean>
 
-    <bean id="AddQuestionController" class="com.sam.quest.web.controller.AddQuestionController">
-        <property name="typeList">
+    <bean id="typeList" class="java.util.ArrayList">
+        <constructor-arg>
             <list>
                 <value>${question.type1}</value>
                 <value>${question.type2}</value>
                 <value>${question.type3}</value>
             </list>
-        </property>
+        </constructor-arg>
     </bean>
 
-    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-        <property name="mappings">
-            <props>
-                <prop key="/**/addQuestion">AddQuestionController</prop>
-                <prop key="/**/addQuestionAction">AddQuestionController</prop>
-            </props>
-        </property>
+    <bean id="addQuestionController" class="com.sam.quest.web.controller.QuestionController">
+        <property name="typeList" ref="typeList"/>
     </bean>
+
+    <bean id="formsListController" class="com.sam.quest.web.controller.FormsListController">
+        <property name="typeList" ref="typeList"/>
+    </bean>
+
 </beans>

@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-public class AddQuestionController {
+public class QuestionController {
     @Autowired
     private GeneralValidator questionValidator;
     @Autowired

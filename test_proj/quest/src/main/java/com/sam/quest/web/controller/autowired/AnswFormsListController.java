@@ -2,7 +2,7 @@ package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.dto.AnswFormDTO;
 import com.sam.quest.dto.AnswQuestionDTO;
-import com.sam.quest.service.AnswFormsService;
+import com.sam.quest.service.AnswFormsListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -19,9 +19,9 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class AnswFormsController {
+public class AnswFormsListController {
     @Autowired
-    private AnswFormsService answFormsService;
+    private AnswFormsListService answFormsListService;
 
     @RequestMapping("/**/answForms")
     public String startInit(HttpSession session, ModelMap modelMap, HttpServletRequest request) {
@@ -38,7 +38,7 @@ public class AnswFormsController {
     public @ResponseBody Map<String, Object[]> getAnswForms() {
         List<AnswFormDTO> answForms = null;
         try {
-            answForms = answFormsService.getAnswForms();
+            answForms = answFormsListService.getAnswForms();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -60,7 +60,7 @@ public class AnswFormsController {
     public @ResponseBody Map<String, Object[]> getAnswQuestions(@RequestParam(value="answId", required=true) String answId) {
         List<AnswQuestionDTO> answQuests = null;
         try {
-            answQuests = answFormsService.getAnswQuestions(Long.valueOf(answId));
+            answQuests = answFormsListService.getAnswQuestions(Long.valueOf(answId));
         } catch (Exception e) {
             e.printStackTrace();
         }

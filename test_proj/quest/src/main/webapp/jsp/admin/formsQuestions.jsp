@@ -33,19 +33,7 @@
                 }
             },
             "bProcessing": true,
-            "sAjaxSource" : '/quest/admin/formsTable',
-            "aoColumnDefs": [
-                {   /*
-                    "fnRender": function ( oObj,sVal ) {
-                        return '<a href="fillForm?formId=' + sVal + '">fill</a>';
-                    },
-                    "bUseRendered": false,
-                    "aTargets": [ 2 ] */
-                    "bSearchable": true,
-                    "bVisible": true,
-                    "aTargets": [ 0 ]
-                }
-            ]
+            "sAjaxSource" : '/quest/admin/formsQuestsTable?formId=' + ${formId}
         });
     });
     $(document).ready(function() {
@@ -90,8 +78,8 @@
     function deleteForm() {
         window.location = "deleteForm?formId=" + document.getElementById("formId").value;
     }
-    function formsQuestions() {
-        window.location = "formsQuestions?formId=" + document.getElementById("formId").value;
+    function formQuestions() {
+        window.location = "formQuestions?formId=" + document.getElementById("formId").value;
     }
 </script>
 
@@ -101,11 +89,10 @@
 <table id="formsTable" class="display">
     <thead>
     <tr>
-        <th>Form ID</th>
-        <th>Form name</th>
+        <th>Question ID</th>
+        <th>Question name</th>
         <th>Description</th>
-        <th>Username</th>
-        <th>Create date</th>
+        <th>Question Type</th>
     </tr>
     </thead>
     <tbody>
@@ -113,20 +100,30 @@
 </table>
 <br>
 <br>
-<form:form method="post" id="inputForm" commandName="form" action="updateFormAction" style="display:none">
+<form:form method="post" id="inputQuestion" commandName="question" action="updateFormQuestionAction" style="display:none">
     <table>
         <tr>
-            <td>Form ID:</td>
-            <td><form:input path="formId" id="formId" readonly="true"/></td>
+            <td>Question ID:</td>
+            <td><form:input path="questionId" id="questionId" readonly="true"/></td>
         </tr>
         <tr>
-            <td>Form name:</td>
-            <td><form:input path="formName" id="formName"/></td>
-            <td><span class="error"><form:errors path="formName"/></span></td>
+            <td>Question name:</td>
+            <td><form:input path="questionName" id="questionName"/></td>
+            <td><span class="error"><form:errors path="questionName"/></span></td>
         </tr>
         <tr>
             <td>Description:</td>
-            <td><form:input path="formDescr" id="formDescr"/></td>
+            <td><form:input path="questionDescr" id="questionDescr"/></td>
+        </tr>
+        <tr>
+            <td>Question Type:</td>
+            <td>
+                <form:select path="questionType">
+                    <c:forEach items="${types}" var="types">
+                        <option value="${types}">${types}</option>
+                    </c:forEach>
+                </form:select>
+            </td>
         </tr>
         <tr>
             <td colspan="3"></td>
@@ -134,7 +131,7 @@
         <tr>
             <td><button class="action redbtn" type="button" id="deleteFormLink" onclick="deleteForm()" /><span class="label">Delete</span></td>
             <td><button class="action bluebtn" type="submit" id="updateFormSubmit" /><span class="label">Update</span></td>
-            <td><button class="action bluebtn" type="button" id="formQuestionsLink" onclick="formsQuestions()" /><span class="label">Form questions</span></td>
+            <td><button class="action bluebtn" type="button" id="formQuestionsLink" onclick="formQuestions()" /><span class="label">Form questions</span></td>
             <td><button class="action bluebtn" type="button" id="fillFormLink" onclick="fillForm()" /><span class="label">Fill form</span></td>
         </tr>
         <tr>

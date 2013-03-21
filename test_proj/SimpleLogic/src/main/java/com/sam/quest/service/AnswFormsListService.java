@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class AnswFormsService {
+public class AnswFormsListService {
     @Autowired
     private HibernateTemplate hibernateTemplate;
     private static long id;

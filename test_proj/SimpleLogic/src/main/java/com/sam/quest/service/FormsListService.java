@@ -1,8 +1,10 @@
 package com.sam.quest.service;
 
 import com.sam.quest.command.GetListCommand;
+import com.sam.quest.command.GetListHQLCommand;
 import com.sam.quest.dto.FormDTO;
 import com.sam.quest.entity.Forms;
+import com.sam.quest.entity.Questions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.stereotype.Service;
@@ -15,8 +17,12 @@ public class FormsListService {
     private HibernateTemplate hibernateTemplate;
 
     public List<Forms> getForms() throws Exception{
-        //List<FormDTO> formsDTO = new ArrayList<FormDTO>();
         List<Forms> forms = new GetListCommand<List<Forms>>(new Forms()).execute(hibernateTemplate);
         return forms;
+    }
+
+    public List<Questions> getFormsQuestions(long formId) throws Exception{
+        List<Questions> quests = new GetListHQLCommand<List<Questions>>("from Questions where formId = '" + formId + "'").execute(hibernateTemplate);
+        return quests;
     }
 }

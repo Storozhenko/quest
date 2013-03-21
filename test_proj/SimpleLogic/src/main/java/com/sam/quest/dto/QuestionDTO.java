@@ -5,6 +5,7 @@ import com.sam.quest.dto.annotations.Validatable;
 
 @Validatable
 public class QuestionDTO {
+    private long questionId;
     private String questionName;
     private String questionDescr;
     private String questionType;
@@ -32,5 +33,13 @@ public class QuestionDTO {
 
     public void setQuestionType(String questionType) {
         this.questionType = questionType;
+    }
+
+    public long getQuestionId() {
+        return questionId;
+    }
+
+    public void setQuestionId(long questionId) {
+        this.questionId = questionId;
     }
 }

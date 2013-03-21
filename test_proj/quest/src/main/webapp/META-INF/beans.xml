@@ -15,7 +15,7 @@
     <context:component-scan base-package="com.sam.quest.web.controller.autowired" />
     <context:component-scan base-package="com.sam.quest.web.validator" />
 
-    <bean id="AddQuestionController" class="com.sam.quest.web.controller.AddQuestionController">
+    <bean id="AddQuestionController" class="com.sam.quest.web.controller.QuestionController">
         <property name="typeList">
             <list>
                 <value>${question.type1}</value>
