@@ -3,12 +3,15 @@ package com.sam.quest.dto;
 import com.sam.quest.dto.annotations.Required;
 import com.sam.quest.dto.annotations.Validatable;
 
+import java.util.List;
+
 @Validatable
 public class QuestionDTO {
     private long questionId;
     private String questionName;
     private String questionDescr;
     private String questionType;
+    private List<String> questionOptions;
 
     @Required
     public String getQuestionName() {
@@ -41,5 +44,13 @@ public class QuestionDTO {
 
     public void setQuestionId(long questionId) {
         this.questionId = questionId;
+    }
+
+    public List<String> getQuestionOptions() {
+        return questionOptions;
+    }
+
+    public void setQuestionOptions(List<String> questionOptions) {
+        this.questionOptions = questionOptions;
     }
 }

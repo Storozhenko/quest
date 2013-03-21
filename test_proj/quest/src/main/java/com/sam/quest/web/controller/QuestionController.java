@@ -1,7 +1,7 @@
 package com.sam.quest.web.controller;
 
 import com.sam.quest.entity.Questions;
-import com.sam.quest.service.AddQuestionService;
+import com.sam.quest.service.QuestionService;
 import com.sam.quest.dto.OptionDTO;
 import com.sam.quest.dto.QuestionDTO;
 import com.sam.quest.web.validator.GeneralValidator;
@@ -21,7 +21,7 @@ public class QuestionController {
     @Autowired
     private GeneralValidator questionValidator;
     @Autowired
-    private AddQuestionService addQuestionService;
+    private QuestionService questionService;
     private List<String> typeList;
 
     @RequestMapping("/**/addQuestion")
@@ -41,7 +41,29 @@ public class QuestionController {
         }
         Questions newQuestion = new Questions();
         try {
-            addQuestionService.addQuestion(question, typeList, session);
+            questionService.addQuestion(question, typeList, session);
+        } catch (Exception e) {
+            session.setAttribute("error", e.getMessage());
+            return "error";
+        }
+        modelMap.addAttribute("option", new OptionDTO());
+        int qNum = (Integer)session.getAttribute("questionNum");
+        qNum++;
+        session.setAttribute("questionNum", qNum);
+        return "redirect:/" + role + "/addOption";
+    }
+
+    @RequestMapping("/{role}/deleteQuestionAction")
+    public String deleteQuestion(HttpSession session, ModelMap modelMap, @PathVariable("role") String role,
+                              @ModelAttribute("question")QuestionDTO question, BindingResult result) {
+        questionValidator.validate(question, result);
+        if (result.hasErrors()) {
+            modelMap.addAttribute("types", typeList);
+            return "addQuestion";
+        }
+        Questions newQuestion = new Questions();
+        try {
+            questionService.addQuestion(question, typeList, session);
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";

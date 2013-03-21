@@ -74,7 +74,7 @@ public class FormsListController {
 
     @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/admin/formQuestsTable")
     public @ResponseBody Map<String, Object[]> getAdminFormsQuests(@RequestParam(value="formId", required=true) String formId) {
-        List<Questions> quests = null;
+        List<QuestionDTO> quests = null;
         try {
             quests = formsListService.getFormsQuestions(Long.valueOf(formId));
         } catch (Exception e) {
@@ -82,10 +82,18 @@ public class FormsListController {
         }
         Object[] rdArray = new Object[quests.size()];
         int i = 0;
-        for (Questions q : quests) {
-            int type = q.getQuestionType();
-            Object[] us = new String[]{q.getQuestionId().toString(), q.getQuestionName(),
-                    q.getQuestionDescr(),  typeListText.get(type-1) };
+        for (QuestionDTO q : quests) {
+            int type = Integer.valueOf(q.getQuestionType());
+            StringBuffer sb = new StringBuffer();
+            int j = 0;
+            for (String option: q.getQuestionOptions()) {
+                if (j > 0)
+                    sb.append(", ");
+                sb.append(option);
+                j++;
+            }
+            Object[] us = new String[]{String.valueOf(q.getQuestionId()), q.getQuestionName(),
+                    q.getQuestionDescr(),  typeListText.get(type-1), sb.toString() };
             rdArray[i] = us;
             i++;
         }

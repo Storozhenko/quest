@@ -1,6 +1,8 @@
 package com.sam.quest.service;
 
+import com.sam.quest.command.DeleteCommand;
 import com.sam.quest.command.InsertCommand;
+import com.sam.quest.command.UpdateCommand;
 import com.sam.quest.dto.QuestionDTO;
 import com.sam.quest.entity.Forms;
 import com.sam.quest.entity.Questions;
@@ -12,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Service
-public class AddQuestionService {
+public class QuestionService {
     @Autowired
     private HibernateTemplate hibernateTemplate;
 
@@ -32,5 +34,27 @@ public class AddQuestionService {
         new InsertCommand(newQuestion).execute(hibernateTemplate);
         session.setAttribute("newQuestion", newQuestion);
         session.setAttribute("type", type);
+    }
+
+    public void deleteQuestion(long questId) throws Exception{
+        Questions quest = new Questions();
+        quest.setQuestionId(questId);
+        new DeleteCommand(quest).execute(hibernateTemplate);
+    }
+
+    public void updateQuestion(QuestionDTO quest, List<String> typeList) throws Exception{
+        int type = 0;
+        for (String u : typeList) {
+            type++;
+            if (u.equals(quest.getQuestionType())) {
+                break;
+            }
+        }
+        Questions newQuest = new Questions();
+        newQuest.setQuestionId(quest.getQuestionId());
+        newQuest.setQuestionName(quest.getQuestionName());
+        newQuest.setQuestionDescr(quest.getQuestionDescr());
+        newQuest.setQuestionType(type);
+        new UpdateCommand(newQuest).execute(hibernateTemplate);
     }
 }

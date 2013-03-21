@@ -88,7 +88,7 @@
         window.location = "fillForm?formId=" + document.getElementById("formId").value;
     }
     function deleteForm() {
-        window.location = "deleteForm?formId=" + document.getElementById("formId").value;
+        window.location = "deleteFormAction?formId=" + document.getElementById("formId").value;
     }
     function formQuestions() {
         window.location = "formQuestions?formId=" + document.getElementById("formId").value;
@@ -97,6 +97,19 @@
 
 <body>
 <h2>Forms</h2>
+<br>
+<br>
+<div>
+    <form action="main">
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="formsToMainLink" /><span class="label">Main page</span></button>
+    </form>
+    <form action="addForm">
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="addFormLink" /><span class="label">Add form</span></button>
+    </form>
+</div>
+<br>
+<br>
+<br>
 <br>
 <table id="formsTable" class="display">
     <thead>
@@ -132,24 +145,15 @@
             <td colspan="3"></td>
         </tr>
         <tr>
-            <td><button class="action redbtn" type="button" id="deleteFormLink" onclick="deleteForm()" /><span class="label">Delete</span></td>
-            <td><button class="action bluebtn" type="submit" id="updateFormSubmit" /><span class="label">Update</span></td>
-            <td><button class="action bluebtn" type="button" id="formQuestionsLink" onclick="formQuestions()" /><span class="label">Form questions</span></td>
-            <td><button class="action bluebtn" type="button" id="fillFormLink" onclick="fillForm()" /><span class="label">Fill form</span></td>
+            <td><button class="action redbtn" style="width: 100px" type="button" id="deleteFormLink" onclick="deleteForm()" /><span class="label">Delete</span></td>
+            <td><button class="action bluebtn" style="width: 100px" type="submit" id="updateFormSubmit" /><span class="label">Update</span></td>
         </tr>
         <tr>
+            <td><button class="action bluebtn" style="width: 100px" type="button" id="formQuestionsLink" onclick="formQuestions()" /><span class="label">Questions</span></td>
+            <td><button class="action bluebtn" style="width: 100px" type="button" id="fillFormLink" onclick="fillForm()" /><span class="label">Fill form</span></td>
         </tr>
     </table>
 </form:form>
 <br>
-<br>
-<div>
-    <form action="addForm">
-        <button class="action bluebtn" type="submit" id="addFormLink" /><span class="label">Add form</span></button>
-    </form>
-    <form action="main">
-        <button class="action greenbtn" type="submit" id="formsToMainLink" /><span class="label">Main page</span></button>
-    </form>
-</div>
 </body>
 </html>

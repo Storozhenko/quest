@@ -42,6 +42,7 @@
             $('#inputQuestion :input[id="questionId"]').val($(cells[0]).text().trim());
             $('#inputQuestion :input[id="questionName"]').val($(cells[1]).text().trim());
             $('#inputQuestion :input[id="questionDescr"]').val($(cells[2]).text().trim());
+            $('#inputQuestion :input[id="questionOptions"]').val($(cells[4]).text().trim());
         });
         $('#questsTable tbody').on( 'click', 'tr', function () {
             if ($(this).hasClass("row_selected")) {
@@ -73,15 +74,22 @@
         });
     });
     function deleteQuestion() {
-        window.location = "deleteQuestion?formId=" + document.getElementById("questionId").value;
-    }
-    function questOptions() {
-        window.location = "formQuestions?formId=" + document.getElementById("questionId").value;
+        window.location = "deleteQuestionAction?formId=" + document.getElementById("questionId").value;
     }
 </script>
 
 <body>
 <h2>Forms</h2>
+<br>
+<br>
+<div>
+    <form action="main">
+        <button class="action bluebtn" type="submit" id="formsToMainLink" /><span class="label">Main page</span></button>
+    </form>
+</div>
+<br>
+<br>
+<br>
 <br>
 <table id="questsTable" class="display">
     <thead>
@@ -89,7 +97,8 @@
         <th>Question ID</th>
         <th>Question name</th>
         <th>Description</th>
-        <th>Question Type</th>
+        <th>Question type</th>
+        <th>Options</th>
     </tr>
     </thead>
     <tbody>
@@ -97,7 +106,7 @@
 </table>
 <br>
 <br>
-<form:form method="post" id="inputQuestion" commandName="question" action="updateFormQuestionAction" style="display:none">
+<form:form method="post" id="inputQuestion" commandName="question" action="updateQuestionAction" style="display:none">
     <table>
         <tr>
             <td>Question ID:</td>
@@ -113,37 +122,20 @@
             <td><form:input path="questionDescr" id="questionDescr"/></td>
         </tr>
         <tr>
-            <td>Question Type:</td>
-            <td>
-                <form:select path="questionType" id="questionType">
-                    <c:forEach items="${types}" var="types">
-                        <option value="${types}">${types}</option>
-                    </c:forEach>
-                </form:select>
-            </td>
+            <td>Options:</td>
+            <td><form:input path="questionOptions" id="questionOptions"/></td>
         </tr>
         <tr>
             <td colspan="3"></td>
         </tr>
         <tr>
-            <td><button class="action redbtn" type="button" id="deleteFormLink" onclick="deleteForm()" /><span class="label">Delete</span></td>
+            <td><button class="action redbtn" type="button" id="deleteFormLink" onclick="deleteQuestion()" /><span class="label">Delete</span></td>
             <td><button class="action bluebtn" type="submit" id="updateFormSubmit" /><span class="label">Update</span></td>
-            <td><button class="action bluebtn" type="button" id="formQuestionsLink" onclick="formQuestions()" /><span class="label">Form questions</span></td>
-            <td><button class="action bluebtn" type="button" id="fillFormLink" onclick="fillForm()" /><span class="label">Fill form</span></td>
         </tr>
         <tr>
         </tr>
     </table>
 </form:form>
 <br>
-<br>
-<div>
-    <form action="addForm">
-        <button class="action bluebtn" type="submit" id="addFormLink" /><span class="label">Add form</span></button>
-    </form>
-    <form action="main">
-        <button class="action greenbtn" type="submit" id="formsToMainLink" /><span class="label">Main page</span></button>
-    </form>
-</div>
 </body>
 </html>

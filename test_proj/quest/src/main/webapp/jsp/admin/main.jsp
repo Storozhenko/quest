@@ -26,13 +26,13 @@
 <br>
 <div>
     <form action="forms">
-        <button class="action bluebtn" type="submit" id="adminFormsLink" /><span class="label"><spring:message code="label.forms"/></span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="adminFormsLink" /><span class="label"><spring:message code="label.forms"/></span></button>
     </form>
     <form action="answForms">
-        <button class="action bluebtn" type="submit" id="adminAnswFormsLink" /><span class="label"><spring:message code="label.forms.filled"/></span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="adminAnswFormsLink" /><span class="label"><spring:message code="label.forms.filled"/></span></button>
     </form>
     <form action="users">
-        <button class="action bluebtn" type="submit" id="adminUsersLink" /><span class="label"><spring:message code="label.users"/></span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="adminUsersLink" /><span class="label"><spring:message code="label.users"/></span></button>
     </form>
 </div>
 </body>

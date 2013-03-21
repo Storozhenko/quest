@@ -14,10 +14,10 @@
 <br>
 <div>
     <form action="login">
-        <button class="action bluebtn" type="submit" id="loginLink" /><span class="label">Login</span></button>
+        <button class="action bluebtn" style="margin: 5px" type="submit" id="loginLink" /><span class="label">Login</span></button>
     </form>
     <form action="registration">
-        <button class="action redbtn" type="submit" id="regLink" /><span class="label">Registration</span></button>
+        <button class="action redbtn" style="margin: 5px" type="submit" id="regLink" /><span class="label">Registration</span></button>
     </form>
 </div>
 </body>

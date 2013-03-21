@@ -62,7 +62,7 @@ public class FormController {
         }
         return "redirect:/admin/forms";
     }
-    @RequestMapping("/admin/deleteForm")
+    @RequestMapping("/admin/deleteFormAction")
     public String startInit(@RequestParam(value="formId", required=true) String formId, HttpSession session, ModelMap modelMap) {
         try {
             formService.deleteForm(formId);

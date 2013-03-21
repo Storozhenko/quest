@@ -3,6 +3,7 @@ package com.sam.quest.service;
 import com.sam.quest.command.GetListCommand;
 import com.sam.quest.command.GetListHQLCommand;
 import com.sam.quest.dto.FormDTO;
+import com.sam.quest.dto.QuestionDTO;
 import com.sam.quest.entity.Forms;
 import com.sam.quest.entity.Questions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +22,19 @@ public class FormsListService {
         return forms;
     }
 
-    public List<Questions> getFormsQuestions(long formId) throws Exception{
+    public List<QuestionDTO> getFormsQuestions(long formId) throws Exception{
         List<Questions> quests = new GetListHQLCommand<List<Questions>>("from Questions where formId = '" + formId + "'").execute(hibernateTemplate);
-        return quests;
+        List<QuestionDTO> questsDTO = new ArrayList<QuestionDTO>();
+        for (Questions q : quests) {
+            QuestionDTO qDTO = new QuestionDTO();
+            qDTO.setQuestionId(q.getQuestionId());
+            qDTO.setQuestionName(q.getQuestionName());
+            qDTO.setQuestionDescr(q.getQuestionDescr());
+            qDTO.setQuestionType(q.getQuestionType().toString());
+            List <String> options = new GetListHQLCommand<List<String>>("select optionData from QuestionsData where questionId = '" + q.getQuestionId() + "'").execute(hibernateTemplate);
+            qDTO.setQuestionOptions(options);
+            questsDTO.add(qDTO);
+        }
+        return questsDTO;
     }
 }
