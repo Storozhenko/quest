@@ -90,8 +90,8 @@
     function deleteForm() {
         window.location = "deleteForm?formId=" + document.getElementById("formId").value;
     }
-    function formsQuestions() {
-        window.location = "formsQuestions?formId=" + document.getElementById("formId").value;
+    function formQuestions() {
+        window.location = "formQuestions?formId=" + document.getElementById("formId").value;
     }
 </script>
 
@@ -134,7 +134,7 @@
         <tr>
             <td><button class="action redbtn" type="button" id="deleteFormLink" onclick="deleteForm()" /><span class="label">Delete</span></td>
             <td><button class="action bluebtn" type="submit" id="updateFormSubmit" /><span class="label">Update</span></td>
-            <td><button class="action bluebtn" type="button" id="formQuestionsLink" onclick="formsQuestions()" /><span class="label">Form questions</span></td>
+            <td><button class="action bluebtn" type="button" id="formQuestionsLink" onclick="formQuestions()" /><span class="label">Form questions</span></td>
             <td><button class="action bluebtn" type="button" id="fillFormLink" onclick="fillForm()" /><span class="label">Fill form</span></td>
         </tr>
         <tr>

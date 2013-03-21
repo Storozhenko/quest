@@ -34,7 +34,7 @@ public class FormsListController {
         modelMap.addAttribute("form", form);
         return request.getPathInfo();
     }
-    @RequestMapping("/**/formsQuestions")
+    @RequestMapping("/**/formQuestions")
     public String answList(@RequestParam(value="formId", required=true) String formId, Locale locale, HttpSession session, ModelMap modelMap, HttpServletRequest request) {
         QuestionDTO question = new QuestionDTO();
         modelMap.addAttribute("question", question);
@@ -72,7 +72,7 @@ public class FormsListController {
         return map;
     }
 
-    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/admin/formsQuestsTable")
+    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/admin/formQuestsTable")
     public @ResponseBody Map<String, Object[]> getAdminFormsQuests(@RequestParam(value="formId", required=true) String formId) {
         List<Questions> quests = null;
         try {

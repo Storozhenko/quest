@@ -8,14 +8,6 @@
 <h2>Success</h2>
 Welcome, ${username}
 <p>Congratulations! Your admin login was successful</p>
-<table>
-<c:forEach var="users" items="${users}">
-    <tr>
-        <td>${users.getUsername()}<td>
-        <td>${users.getPassword()}<td>
-    </tr>
-</c:forEach>
-</table>
 
 <br>
 <a href=main>Main page</a>

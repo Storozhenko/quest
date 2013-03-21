@@ -18,7 +18,7 @@
 <script type="text/javascript" language="javascript" src="${baseUrl}/media/js/jquery.dataTables.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#formsTable').dataTable({
+        $('#questsTable').dataTable({
             "oLanguage": {
                 "sLengthMenu": "<spring:message code="datatables.sLengthMenu"/>",
                 "sZeroRecords": "<spring:message code="datatables.sZeroRecords"/>",
@@ -33,60 +33,57 @@
                 }
             },
             "bProcessing": true,
-            "sAjaxSource" : '/quest/admin/formsQuestsTable?formId=' + ${formId}
+            "sAjaxSource" : '/quest/admin/formQuestsTable?formId=' + ${formId}
         });
     });
     $(document).ready(function() {
-        $('#formsTable tbody').on( 'click', 'td', function () {
+        $('#questsTable tbody').on( 'click', 'td', function () {
             var cells=$(this).parent('tr').children('td');
-            $('#inputForm :input[id="formId"]').val($(cells[0]).text().trim());
-            $('#inputForm :input[id="formName"]').val($(cells[1]).text().trim());
-            $('#inputForm :input[id="formDescr"]').val($(cells[2]).text().trim());
+            $('#inputQuestion :input[id="questionId"]').val($(cells[0]).text().trim());
+            $('#inputQuestion :input[id="questionName"]').val($(cells[1]).text().trim());
+            $('#inputQuestion :input[id="questionDescr"]').val($(cells[2]).text().trim());
         });
-        $('#formsTable tbody').on( 'click', 'tr', function () {
+        $('#questsTable tbody').on( 'click', 'tr', function () {
             if ($(this).hasClass("row_selected")) {
                 $(this).removeClass("row_selected");
-                var inputForm = document.getElementById('inputForm');
-                inputForm.style.display = "none";
+                var inputQuestion = document.getElementById('inputQuestion');
+                inputQuestion.style.display = "none";
             } else {
                 if($(this).parent().find('tr').hasClass("row_selected")) {
                     $(this).parent().find('tr').removeClass("row_selected");
                     $(this).addClass("row_selected");
                     $(this).removeClass("mouse_over");
-                    var inputForm = document.getElementById('inputForm');
-                    inputForm.style.display = "block";
+                    var inputQuestion = document.getElementById('inputQuestion');
+                    inputQuestion.style.display = "block";
                 } else {
                     $(this).addClass("row_selected");
                     $(this).removeClass("mouse_over");
-                    var inputForm = document.getElementById('inputForm');
-                    inputForm.style.display = "block";
+                    var inputQuestion = document.getElementById('inputQuestion');
+                    inputQuestion.style.display = "block";
                 }
             }
         });
-        $('#formsTable tbody').on( 'mouseover', 'tr', function () {
+        $('#questsTable tbody').on( 'mouseover', 'tr', function () {
             if (!$(this).hasClass("row_selected")) {
                 $(this).addClass("mouse_over");
             }
         });
-        $('#formsTable tbody').on( 'mouseout', 'tr', function () {
+        $('#questsTable tbody').on( 'mouseout', 'tr', function () {
             $(this).removeClass("mouse_over");
         });
     });
-    function fillForm() {
-        window.location = "fillForm?formId=" + document.getElementById("formId").value;
+    function deleteQuestion() {
+        window.location = "deleteQuestion?formId=" + document.getElementById("questionId").value;
     }
-    function deleteForm() {
-        window.location = "deleteForm?formId=" + document.getElementById("formId").value;
-    }
-    function formQuestions() {
-        window.location = "formQuestions?formId=" + document.getElementById("formId").value;
+    function questOptions() {
+        window.location = "formQuestions?formId=" + document.getElementById("questionId").value;
     }
 </script>
 
 <body>
 <h2>Forms</h2>
 <br>
-<table id="formsTable" class="display">
+<table id="questsTable" class="display">
     <thead>
     <tr>
         <th>Question ID</th>
@@ -118,7 +115,7 @@
         <tr>
             <td>Question Type:</td>
             <td>
-                <form:select path="questionType">
+                <form:select path="questionType" id="questionType">
                     <c:forEach items="${types}" var="types">
                         <option value="${types}">${types}</option>
                     </c:forEach>
