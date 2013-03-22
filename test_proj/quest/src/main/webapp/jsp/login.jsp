@@ -37,9 +37,18 @@
         </tr>
         <tr>
             <td><button class="action bluebtn" type="submit" id="loginSubmit"><span class="label">OK</span></button></td>
+            <td>
+                <form action="registration">
+                    <button class="action redbtn" style="margin: 5px" type="submit" id="regLink" /><span class="label">Registration</span></button>
+                </form>
+            </td>
         </tr>
     </table>
 </form:form>
+<br/>
+<br/>
+<br/>
+
 
 </body>
 </html>

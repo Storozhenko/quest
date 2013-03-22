@@ -118,7 +118,7 @@
         <th>Form name</th>
         <th>Description</th>
         <th>Username</th>
-        <th>Create date</th>
+        <th>Date of creation</th>
     </tr>
     </thead>
     <tbody>
