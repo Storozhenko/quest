@@ -21,28 +21,30 @@ public class GeneralValidator <E> implements Validator{
 
     public void validate(Object target, Errors errors) {
         E obj = (E) target;
+        String field;
         final PropertyDescriptor[] propertyDescriptors
                 = BeanUtils.getPropertyDescriptors(obj.getClass());
         for (final PropertyDescriptor propertyDescriptor : propertyDescriptors) {
             // see if the getter is annotated as required
             final Method method = propertyDescriptor.getReadMethod();
             if (method != null && method.isAnnotationPresent(Required.class)) {
-                String field = propertyDescriptor.getName();
+                field = propertyDescriptor.getName();
                 ValidationUtils.rejectIfEmpty(errors, field, "label.validator." + field + ".required");
-                if (method.isAnnotationPresent(TextLength.class)) {
-                    TextLength annotation = method.getAnnotation(TextLength.class);
-                    String value = null;
-                    try {
-                        value = (String) propertyDescriptor.getReadMethod().invoke(obj);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    if (value.length() < annotation.minLength()) {
-                        errors.rejectValue(field, "label.validator." + field + ".tooShort");
-                    } else {
-                        if (value.length() > annotation.maxLength()) {
-                            errors.rejectValue(field, "label.validator." + field + ".tooLong");
-                        }
+            }
+            if (method.isAnnotationPresent(TextLength.class)) {
+                TextLength annotation = method.getAnnotation(TextLength.class);
+                field = propertyDescriptor.getName();
+                String value = null;
+                try {
+                    value = (String) propertyDescriptor.getReadMethod().invoke(obj);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                if (value.length() < annotation.minLength()) {
+                    errors.rejectValue(field, "label.validator." + field + ".tooShort");
+                } else {
+                    if (value.length() > annotation.maxLength()) {
+                        errors.rejectValue(field, "label.validator." + field + ".tooLong");
                     }
                 }
             }

@@ -43,6 +43,10 @@
     </table>
 </form:form>
 <br>
-<a href="forms">Finish</a>
+<br>
+<br>
+<form action="forms">
+    <button class="action redbtn" type="submit" id="addFormFinish"><span class="label">Finish</span></button>
+</form>
 </body>
 </html>

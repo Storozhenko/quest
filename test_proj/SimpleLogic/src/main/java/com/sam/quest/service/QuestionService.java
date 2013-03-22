@@ -1,6 +1,7 @@
 package com.sam.quest.service;
 
 import com.sam.quest.command.DeleteCommand;
+import com.sam.quest.command.FindCommand;
 import com.sam.quest.command.InsertCommand;
 import com.sam.quest.command.UpdateCommand;
 import com.sam.quest.dto.QuestionDTO;
@@ -42,19 +43,10 @@ public class QuestionService {
         new DeleteCommand(quest).execute(hibernateTemplate);
     }
 
-    public void updateQuestion(QuestionDTO quest, List<String> typeList) throws Exception{
-        int type = 0;
-        for (String u : typeList) {
-            type++;
-            if (u.equals(quest.getQuestionType())) {
-                break;
-            }
-        }
-        Questions newQuest = new Questions();
-        newQuest.setQuestionId(quest.getQuestionId());
+    public void updateQuestion(QuestionDTO quest) throws Exception{
+        Questions newQuest = new FindCommand<Questions>(quest.getQuestionId(), new Questions()).execute(hibernateTemplate);
         newQuest.setQuestionName(quest.getQuestionName());
         newQuest.setQuestionDescr(quest.getQuestionDescr());
-        newQuest.setQuestionType(type);
         new UpdateCommand(newQuest).execute(hibernateTemplate);
     }
 }

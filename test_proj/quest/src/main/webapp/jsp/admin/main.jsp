@@ -12,8 +12,11 @@
 <h2>Quest</h2>
 <spring:message code="label.welcome"/>, ${username}
 <br>
+<br>
 <sec:authorize access="isAuthenticated()">
-    <a href="<c:url value="/logout"/>"><spring:message code="label.logout"/></a>
+    <form action="/quest/logout">
+        <button class="action redbtn" type="submit" style="margin: 5px" id="logoutLink" /><span class="label"><spring:message code="label.logout"/></span></button>
+    </form>
 </sec:authorize>
 <span style="float: right">
     <select onchange="window.location=this.options[this.selectedIndex].value">
@@ -22,7 +25,9 @@
         <option value="?locale=ru"><spring:message code="label.language.russian"/></option>
     </select>
 </span>
-<br><br>
+<br>
+<br>
+<br>
 <br>
 <div>
     <form action="forms">

@@ -13,7 +13,6 @@
     <mvc:annotation-driven />
     <context:annotation-config />
     <context:component-scan base-package="com.sam.quest.web.controller.autowired" />
-    <context:component-scan base-package="com.sam.quest.web.validator" />
     <import resource="classpath:/logicApplicationContext.xml" />
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations" value="WEB-INF/messages/config.properties" />

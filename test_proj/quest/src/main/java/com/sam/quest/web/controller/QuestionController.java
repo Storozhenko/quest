@@ -12,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -50,29 +51,35 @@ public class QuestionController {
         int qNum = (Integer)session.getAttribute("questionNum");
         qNum++;
         session.setAttribute("questionNum", qNum);
-        return "redirect:/" + role + "/addOption";
+        if (question.getQuestionType().equals(typeList.get(0))) {
+            return "redirect:/" + role + "/addQuestion";
+        } else {
+            return "redirect:/" + role + "/addOption";
+        }
     }
 
     @RequestMapping("/{role}/deleteQuestionAction")
-    public String deleteQuestion(HttpSession session, ModelMap modelMap, @PathVariable("role") String role,
-                              @ModelAttribute("question")QuestionDTO question, BindingResult result) {
-        questionValidator.validate(question, result);
-        if (result.hasErrors()) {
-            modelMap.addAttribute("types", typeList);
-            return "addQuestion";
-        }
-        Questions newQuestion = new Questions();
+    public String deleteQuestion(@RequestParam(value="questionId", required=true) String questionId, HttpSession session,
+                                 @PathVariable("role") String role) {
         try {
-            questionService.addQuestion(question, typeList, session);
+            questionService.deleteQuestion(Long.valueOf(questionId));
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";
         }
-        modelMap.addAttribute("option", new OptionDTO());
-        int qNum = (Integer)session.getAttribute("questionNum");
-        qNum++;
-        session.setAttribute("questionNum", qNum);
-        return "redirect:/" + role + "/addOption";
+        return "redirect:/" + role + "/formQuestions?formId=" + session.getAttribute("formId");
+    }
+
+    @RequestMapping("/{role}/updateQuestionAction")
+    public String updateQuestion(HttpSession session, @PathVariable("role") String role,
+                                 @ModelAttribute("question")QuestionDTO question) {
+        try {
+            questionService.updateQuestion(question);
+        } catch (Exception e) {
+            session.setAttribute("error", e.getMessage());
+            return "error";
+        }
+        return "redirect:/" + role + "/formQuestions?formId=" + session.getAttribute("formId");
     }
 
     public void setTypeList(List<String> typeList) {

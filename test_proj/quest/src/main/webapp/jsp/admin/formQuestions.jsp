@@ -74,7 +74,7 @@
         });
     });
     function deleteQuestion() {
-        window.location = "deleteQuestionAction?formId=" + document.getElementById("questionId").value;
+        window.location = "deleteQuestionAction?questionId=" + document.getElementById("questionId").value;
     }
 </script>
 

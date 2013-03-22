@@ -51,24 +51,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/DeleteHQLCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/FormController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/FormController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/FormsListController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/FormsListController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsListService.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsListService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/resources/sql_scripts/001_users.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/resources/sql_scripts/002_forms.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/resources/sql_scripts/003_questions.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/resources/sql_scripts/004_answ_forms.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/resources/sql_scripts/005_answ_questions.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/resources/sql_scripts/006_questions_data.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/java/com/sam/quest/dbunit/AbstractDbunitTransactionalJUnit4SpringContextTests.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/resources/AfterDataSet.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/resources/BeforeDataSet.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/CRUDTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/java/com/sam/quest/dbunit/DbunitDataSets.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/resources/dbmaintain.test.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../quest/src/test/resources/testLogicApplicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/GeneralValidator.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/GeneralValidator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/QuestionController.java" afterPath="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/QuestionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/QuestionDTO.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/QuestionDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/QuestionService.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/QuestionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/formQuestions.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/formQuestions.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/forms.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/forms.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/css/gstyle_buttons.css" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/css/gstyle_buttons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/index.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_en.properties" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_en.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_ru.properties" afterPath="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_ru.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.ipr" afterPath="$PROJECT_DIR$/parent.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parent.iws" afterPath="$PROJECT_DIR$/parent.iws" />
-      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\main\java\com\sam\quest\service\AddQuestionService.java" afterPath="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/QuestionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/pom.xml" afterPath="$PROJECT_DIR$/../quest/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../quest/quest.iml" afterPath="$PROJECT_DIR$/../quest/quest.iml" />
+      <change type="MOVED" beforePath="Z:\quest\test_proj\SimpleLogic\src\test\java\com\sam\quest\AppTest.java" afterPath="$PROJECT_DIR$/../quest/src/test/java/com/sam/quest/ValidationTest.java" />
     </list>
     <ignored path="parent.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/AppTest.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363612322526" ignored="false" />
-    <file path="/fragment.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363871873537" ignored="false" />
+    <file path="/AppTest.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363948145658" ignored="false" />
+    <file path="/fragment.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363955705680" ignored="false" />
     <file path="/DAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363770443785" ignored="false" />
     <file path="/HiberDAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360316450133" ignored="false" />
     <file path="/JDBCDAOFactory.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360316553155" ignored="false" />
@@ -86,7 +101,7 @@
     <file path="/JDBCFormDAO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360324339968" ignored="false" />
     <file path="/HiberFormDAO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360243209364" ignored="false" />
     <file path="/hibernate.cfg.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360328448706" ignored="false" />
-    <file path="/pom.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363595757038" ignored="false" />
+    <file path="/pom.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363947366584" ignored="false" />
     <file path="/FormsData.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361435159866" ignored="false" />
     <file path="/QuestionDAO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360227343030" ignored="false" />
     <file path="/HiberQuestionDAO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360237859375" ignored="false" />
@@ -112,7 +127,7 @@
     <file path="/FindCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363012908965" ignored="false" />
     <file path="/DeleteCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363013311226" ignored="false" />
     <file path="/TransactionalPerformer.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361801344810" ignored="false" />
-    <file path="/Dummy.txt" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363851929417" ignored="false" />
+    <file path="/Dummy.txt" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363955705680" ignored="false" />
     <file path="/GetListCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361796102479" ignored="false" />
     <file path="/MultiService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361518946041" ignored="false" />
     <file path="/MultiServiceImpl.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360583014306" ignored="false" />
@@ -122,7 +137,7 @@
     <file path="/login.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363782334304" ignored="false" />
     <file path="/controllers.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360658195058" ignored="false" />
     <file path="/Action-servlet.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362557785908" ignored="false" />
-    <file path="/main.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363875097324" ignored="false" />
+    <file path="/main.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363940367821" ignored="false" />
     <file path="/index.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363875267508" ignored="false" />
     <file path="/LoginValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363595031828" ignored="false" />
     <file path="/LoginForm.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360851570086" ignored="false" />
@@ -135,8 +150,8 @@
     <file path="/users.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360854841065" ignored="false" />
     <file path="/messages.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360828619114" ignored="false" />
     <file path="/lable_en.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360830774273" ignored="false" />
-    <file path="/messages_ru.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363610878183" ignored="false" />
-    <file path="/messages_en.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363692196824" ignored="false" />
+    <file path="/messages_ru.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363939276486" ignored="false" />
+    <file path="/messages_en.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363939282627" ignored="false" />
     <file path="/RegistrationForm.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360837835139" ignored="false" />
     <file path="/RegistrationController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362132437016" ignored="false" />
     <file path="/RegistrationValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1360837951331" ignored="false" />
@@ -153,7 +168,7 @@
     <file path="/quest.iml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361176011894" ignored="false" />
     <file path="/FormValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361178597666" ignored="false" />
     <file path="/AddQuestionController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363783291637" ignored="false" />
-    <file path="/addQuestion.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363690457808" ignored="false" />
+    <file path="/addQuestion.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363943847343" ignored="false" />
     <file path="/QuestionValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1361181418698" ignored="false" />
     <file path="/QuestionDTO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363867701500" ignored="false" />
     <file path="/OptionDTO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363609379507" ignored="false" />
@@ -172,7 +187,7 @@
     <file path="/AnswQuestionDTO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362053281620" ignored="false" />
     <file path="/success.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1362572877262" ignored="false" />
     <file path="/AnswerValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363357263878" ignored="false" />
-    <file path="/logicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363343621762" ignored="false" />
+    <file path="/logicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363950392565" ignored="false" />
     <file path="/LoginService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363612213944" ignored="false" />
     <file path="/FormsService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363770346656" ignored="false" />
     <file path="/FormsController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363770901569" ignored="false" />
@@ -203,7 +218,7 @@
     <file path="/dbmaintain.test.properties" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363356718735" ignored="false" />
     <file path="/001_initial.sql" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363341797272" ignored="false" />
     <file path="/testLogicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363346820426" ignored="false" />
-    <file path="/GeneralValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363602779801" ignored="false" />
+    <file path="/GeneralValidator.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363956387123" ignored="false" />
     <file path="/Required.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363596553256" ignored="false" />
     <file path="/TextLength.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363597060275" ignored="false" />
     <file path="/RegistrationDTO.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363607187819" ignored="false" />
@@ -216,11 +231,18 @@
     <file path="/formsQuestions.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363865920417" ignored="false" />
     <file path="/FormsListService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363869642736" ignored="false" />
     <file path="/formQuestions.jsp" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363870435817" ignored="false" />
-    <file path="/QuestionService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363872362268" ignored="false" />
+    <file path="/QuestionService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363942000030" ignored="false" />
     <file path="/a.dummy" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363871636285" ignored="false" />
     <file path="/DeleteHQLCommand.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363872105024" ignored="false" />
-    <file path="/QuestionController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363873232959" ignored="false" />
+    <file path="/QuestionController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363942862295" ignored="false" />
     <file path="/gstyle_buttons.css" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363874684392" ignored="false" />
+    <file path="/ValidationTest.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363956352382" ignored="false" />
+    <file path="$PROJECT_DIR$/../quest/src/main/webapp/META-INF/beans.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363952519844" ignored="false" />
+    <file path="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/LoginController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363955159263" ignored="false" />
+    <file path="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AnswFormsListController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363955159263" ignored="false" />
+    <file path="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AddOptionController.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363955159263" ignored="false" />
+    <file path="$PROJECT_DIR$/../SimpleLogic/src/test/resources/testLogicApplicationContext.xml" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363955159263" ignored="false" />
+    <file path="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/security/CustomUserDetailsService.java" changelist="fc334cb6-9bd7-49ee-bfda-1759b0d3833f" time="1363955159263" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,6 +335,9 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <field_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -348,10 +373,7 @@
       </breakpoint>
     </breakpoint_any>
     <exception_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <field_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -418,17 +440,7 @@
     <favorites_list name="parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="30" selection-start="496" selection-end="496" vertical-scroll-proportion="0.3709091">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -459,22 +471,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/users.jsp" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/registration.jsp" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/formsQuestions.jsp" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/QuestionDTO.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsListService.java" />
-        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/FormsListController.java" />
-        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/DeleteHQLCommand.java" />
+        <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/messages/messages_en.properties" />
+        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp" />
         <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/QuestionService.java" />
         <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/QuestionController.java" />
-        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/FormController.java" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/formQuestions.jsp" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/forms.jsp" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/css/gstyle_buttons.css" />
-        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/index.jsp" />
+        <option value="$PROJECT_DIR$/../quest/src/main/webapp/jsp/addQuestion.jsp" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/pom.xml" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/AppTest.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/CRUDTest.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/ValidationTest.java" />
+        <option value="$PROJECT_DIR$/../quest/src/test/java/com/sam/quest/CRUDTest.java" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsListService.java" />
+        <option value="$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml" />
+        <option value="$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml" />
+        <option value="$PROJECT_DIR$/../quest/pom.xml" />
+        <option value="$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/GeneralValidator.java" />
+        <option value="$PROJECT_DIR$/../quest/src/test/java/com/sam/quest/ValidationTest.java" />
       </list>
     </option>
   </component>
@@ -606,7 +618,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -621,8 +633,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -702,34 +712,8 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleLogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -756,10 +740,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -799,62 +779,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleLogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleLogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="command" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="quest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -888,174 +812,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="messages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1085,7 +841,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="validator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1112,19 +868,13 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autowired" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewSettings">
@@ -1136,8 +886,8 @@
     <view id="ClasspathPane" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_directory_selection" value="$PROJECT_DIR$/../SimpleWEB/src/main/java/com/sam/quest/web" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
@@ -1162,40 +912,40 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sam.quest" />
       <recent name="com.sam.quest.command" />
       <recent name="com.sam.quest.service" />
       <recent name="com.sam.quest.web.controller.autowired" />
       <recent name="com.sam.quest.web.validator.annotations" />
-      <recent name="com.sam.quest.web.validator" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\quest\test_proj\quest\src\test" />
+      <recent name="Z:\quest\test_proj\quest\src\test\java\com\sam\quest" />
+      <recent name="Z:\quest\test_proj\quest\src\test\java.com.sam.quest" />
       <recent name="Z:\quest\test_proj\quest\src\main\webapp\jsp\admin" />
       <recent name="Z:\quest\test_proj\quest\src\main\webapp\jsp\index" />
-      <recent name="Z:\quest\test_proj\quest\src\main\webapp\media" />
-      <recent name="Z:\quest\test_proj\quest\src\main\webapp\css" />
-      <recent name="Z:\quest\test_proj\SimpleLogic\src\test\resources" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sam.quest.dao" />
       <recent name="com.sam.quest.entity" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sam.quest" />
       <recent name="com.sam.quest.dbunit" />
       <recent name="com.sam.quest.web.controller.notinjected" />
       <recent name="com.sam.quest.web.controller" />
       <recent name="com.sam.quest.web" />
-      <recent name="com.sam.quest.service.security" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="Z:\quest\test_proj\quest\src\test\java\com\sam\quest" />
       <recent name="Z:\quest\test_proj\quest\src\main\webapp\jsp\general" />
       <recent name="Z:\quest\test_proj\SimpleLogic\src\test\resources" />
       <recent name="Z:\quest\test_proj\SimpleLogic\src\main\resources\test" />
       <recent name="Z:\quest\test_proj\SimpleLogic\src\main\resources" />
-      <recent name="Z:\quest\test_proj\SimpleLogic\src\main\resources\sql\01_v1\0" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat Server 7.x">
-    <configuration default="false" name="AppTest" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.ValidationTest">
+    <configuration default="false" name="CRUDTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.sam.quest.*" />
@@ -1206,7 +956,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.sam.quest" />
-      <option name="MAIN_CLASS_NAME" value="com.sam.quest.AppTest" />
+      <option name="MAIN_CLASS_NAME" value="com.sam.quest.CRUDTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="" />
@@ -1465,6 +1215,34 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="ValidationTest" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sam.quest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="quest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.sam.quest" />
+      <option name="MAIN_CLASS_NAME" value="com.sam.quest.ValidationTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="Tomcat Server 7.x" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.x">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -1538,14 +1316,15 @@
         </option>
       </method>
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.WebTest" />
-      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat Server 7.x" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AppTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ValidationTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CRUDTest" />
+      <item index="3" class="java.lang.String" itemvalue="Tomcat Server.Tomcat Server 7.x" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.AppTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CRUDTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1611,8 +1390,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="1002" extended-state="0" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1288" height="1002" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.431629" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1634,7 +1413,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2949757" sideWeight="0.7243816" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979977" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25364667" sideWeight="0.7243816" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25364667" sideWeight="0.7243816" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27561837" sideWeight="0.9019449" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.18311533" order="1" side_tool="true" content_ui="tabs" />
@@ -1761,122 +1540,127 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/FindCommand.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/WebTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="-0.14964789">
+        <state line="25" column="69" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.36034912">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/DeleteHQLCommand.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="672" selection-end="672" vertical-scroll-proportion="0.4190141">
-          <folding>
-            <element signature="e#806#1047#0" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/DeleteCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="172" selection-end="172" vertical-scroll-proportion="0.11971831">
+        <state line="7" column="50" selection-start="267" selection-end="267" vertical-scroll-proportion="0.20203735">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/AnswFormsListController.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/test/java/com/sam/quest/CRUDTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="5" selection-start="2260" selection-end="2260" vertical-scroll-proportion="0.21441442">
+        <state line="65" column="13" selection-start="2144" selection-end="2144" vertical-scroll-proportion="1.5297114">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/GetListCommand.java">
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="81" selection-start="276" selection-end="276" vertical-scroll-proportion="0.1443124">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1755319">
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/command/GetListHQLCommand.java">
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/resources/logicApplicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="30" selection-start="238" selection-end="238" vertical-scroll-proportion="0.1443124">
+        <state line="11" column="39" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/FormsListService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="58" selection-start="651" selection-end="651" vertical-scroll-proportion="0.265625">
+        <state line="15" column="34" selection-start="534" selection-end="534" vertical-scroll-proportion="0.140625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/AnswFormsListService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="7" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.44312394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/AnswQuestionDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="65" selection-end="65" vertical-scroll-proportion="0.11544991">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/WEB-INF/spring/ApplicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="31" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/test/resources/testLogicApplicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/test/java/com/sam/quest/dbunit/AbstractDbunitTransactionalJUnit4SpringContextTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="0" selection-start="4204" selection-end="4204" vertical-scroll-proportion="0.5572917">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="51" selection-start="2306" selection-end="2306" vertical-scroll-proportion="0.5212224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="0" selection-start="3508" selection-end="3679" vertical-scroll-proportion="0.6536503">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/dto/FormDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="206" selection-end="214" vertical-scroll-proportion="0.07640068">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/validator/GeneralValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="60" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.60611206">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../quest/src/test/java/com/sam/quest/ValidationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="55" selection-start="326" selection-end="326" vertical-scroll-proportion="0.31748727">
           <folding>
-            <element signature="e#1061#1074#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#441#450#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/autowired/FormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="43" selection-start="2418" selection-end="2418" vertical-scroll-proportion="1.5052084">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SimpleLogic/src/main/java/com/sam/quest/service/QuestionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="48" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.6536503">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="62" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.55636364">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/formQuestions.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="4" selection-start="4278" selection-end="4278" vertical-scroll-proportion="0.8454546">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/QuestionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="54" selection-start="1996" selection-end="1996" vertical-scroll-proportion="0.62478775">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/css/gstyle_buttons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="28" selection-start="663" selection-end="663" vertical-scroll-proportion="0.63497454">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/java/com/sam/quest/web/controller/FormsListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="32" selection-start="3381" selection-end="3381" vertical-scroll-proportion="0.28641975">
-          <folding>
-            <element signature="e#1021#1029#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/admin/forms.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="72" selection-start="4675" selection-end="4694" vertical-scroll-proportion="0.4987245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../quest/src/main/webapp/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="30" selection-start="496" selection-end="496" vertical-scroll-proportion="0.3709091">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1934,11 +1718,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>SimpleLogic</last-edited>
+          <last-edited>quest</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
