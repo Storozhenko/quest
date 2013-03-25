@@ -10,12 +10,22 @@ import org.springframework.validation.Errors;
 public class ValidationTest extends Assert {
 
     @Test
-    public void testGeneralValidator() {
+    public void testGeneralValidatorNoErrors() {
         GeneralValidator<FormDTO> generalValidator = new GeneralValidator<FormDTO>();
         FormDTO formDTO = new FormDTO();
         formDTO.setFormName("fdd");
         Errors errors = new BeanPropertyBindingResult(formDTO, "formDTO");
         generalValidator.validate(formDTO, errors);
         assertNull(errors.getFieldError("formName"));
+    }
+
+    @Test
+    public void testGeneralValidatorErrors() {
+        GeneralValidator<FormDTO> generalValidator = new GeneralValidator<FormDTO>();
+        FormDTO formDTO = new FormDTO();
+        formDTO.setFormName("");
+        Errors errors = new BeanPropertyBindingResult(formDTO, "formDTO");
+        generalValidator.validate(formDTO, errors);
+        assertNotNull(errors.getFieldError("formName"));
     }
 }

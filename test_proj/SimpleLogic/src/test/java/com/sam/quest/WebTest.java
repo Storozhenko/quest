@@ -21,15 +21,13 @@ public class WebTest {
         profile.setPreference("network.proxy.no_proxies_on", "sc0181");
         WebDriver driver = new FirefoxDriver(profile);
         driver.get("http://sc0181:8080/quest/");
-        WebElement element = driver.findElement(By.ById.id("loginLink"));
-        element.click();
-        element = driver.findElement(By.ById.id("j_username"));
+        WebElement element = driver.findElement(By.ById.id("j_username"));
         element.sendKeys("test");
         element = driver.findElement(By.ById.id("j_password"));
         element.sendKeys("test");
         element = driver.findElement(By.ById.id("loginSubmit"));
         element.click();
-        WebDriverWait wait = new WebDriverWait(driver, 8);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return d.getTitle().toLowerCase().equals("quest");
