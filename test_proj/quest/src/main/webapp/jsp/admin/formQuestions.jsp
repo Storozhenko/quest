@@ -98,6 +98,7 @@
         <th>Question name</th>
         <th>Description</th>
         <th>Question type</th>
+        <th>Number of options</th>
         <th>Options</th>
     </tr>
     </thead>

@@ -1,7 +1,6 @@
 package com.sam.quest;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,11 +20,11 @@ public class WebTest {
         profile.setPreference("network.proxy.no_proxies_on", "sc0181");
         WebDriver driver = new FirefoxDriver(profile);
         driver.get("http://sc0181:8080/quest/");
-        WebElement element = driver.findElement(By.ById.id("j_username"));
+        WebElement element = driver.findElement(By.id("j_username"));
         element.sendKeys("test");
-        element = driver.findElement(By.ById.id("j_password"));
+        element = driver.findElement(By.id("j_password"));
         element.sendKeys("test");
-        element = driver.findElement(By.ById.id("loginSubmit"));
+        element = driver.findElement(By.id("loginSubmit"));
         element.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(new ExpectedCondition<Boolean>() {
