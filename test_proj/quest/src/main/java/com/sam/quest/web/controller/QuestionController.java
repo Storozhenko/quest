@@ -71,8 +71,8 @@ public class QuestionController {
     }
 
     @RequestMapping("/{role}/updateQuestionAction")
-    public String updateQuestion(HttpSession session, @PathVariable("role") String role,
-                                 @ModelAttribute("question")QuestionDTO question) {
+    public String updateQuestion(@RequestParam(value="questionId", required=true) String questionId, HttpSession session,
+                                 @PathVariable("role") String role, @ModelAttribute("question")QuestionDTO question) {
         try {
             questionService.updateQuestion(question);
         } catch (Exception e) {

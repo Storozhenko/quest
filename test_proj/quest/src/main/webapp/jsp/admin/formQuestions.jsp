@@ -42,7 +42,7 @@
             $('#inputQuestion :input[id="questionId"]').val($(cells[0]).text().trim());
             $('#inputQuestion :input[id="questionName"]').val($(cells[1]).text().trim());
             $('#inputQuestion :input[id="questionDescr"]').val($(cells[2]).text().trim());
-            $('#inputQuestion :input[id="questionOptions"]').val($(cells[4]).text().trim());
+            $('#inputQuestion :input[id="questionOptionsString"]').val($(cells[5]).text().trim());
         });
         $('#questsTable tbody').on( 'click', 'tr', function () {
             if ($(this).hasClass("row_selected")) {
@@ -124,14 +124,14 @@
         </tr>
         <tr>
             <td>Options:</td>
-            <td><form:input path="questionOptions" id="questionOptions"/></td>
+            <td><form:input path="questionOptionsString" id="questionOptionsString"/></td>
         </tr>
         <tr>
             <td colspan="3"></td>
         </tr>
         <tr>
-            <td><button class="action redbtn" type="button" id="deleteFormLink" onclick="deleteQuestion()" /><span class="label">Delete</span></td>
-            <td><button class="action bluebtn" type="submit" id="updateFormSubmit" /><span class="label">Update</span></td>
+            <td><button class="action redbtn" type="button" id="deleteQuestionLink" onclick="deleteQuestion()" /><span class="label">Delete</span></td>
+            <td><button class="action bluebtn" type="submit" id="updateQuestionSubmit" /><span class="label">Update</span></td>
         </tr>
         <tr>
         </tr>

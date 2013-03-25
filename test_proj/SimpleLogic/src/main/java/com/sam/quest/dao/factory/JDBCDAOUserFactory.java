@@ -5,7 +5,7 @@ import com.sam.quest.dao.jdbc.*;
 
 import java.sql.*;
 import javax.naming.*;
-
+@Deprecated
 public class JDBCDAOUserFactory implements DAOFactory{
 
     static Connection con;

@@ -9,7 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
+@Deprecated
 public class JDBCQuestionDAO<E> implements MultiDAO<E> {
 
     public boolean insertRecord(E obj){

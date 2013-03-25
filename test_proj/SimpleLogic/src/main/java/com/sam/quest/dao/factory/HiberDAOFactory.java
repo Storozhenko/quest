@@ -4,7 +4,7 @@ import com.sam.quest.dao.*;
 import com.sam.quest.dao.hibernate.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
-
+@Deprecated
 public class HiberDAOFactory implements DAOFactory{
 
     private static SessionFactory sessionFactory;

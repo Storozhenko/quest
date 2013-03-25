@@ -5,7 +5,7 @@ import com.sam.quest.dao.jdbc.JDBCFormDAO;
 
 import javax.naming.NamingException;
 import java.sql.*;
-
+@Deprecated
 public class JDBCDAOFormFactory implements DAOFactory{
 
     static Connection con;

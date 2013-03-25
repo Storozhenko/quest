@@ -12,6 +12,7 @@ public class QuestionDTO {
     private String questionDescr;
     private String questionType;
     private List<String> questionOptions;
+    private String questionOptionsString;
 
     @Required
     public String getQuestionName() {
@@ -52,5 +53,13 @@ public class QuestionDTO {
 
     public void setQuestionOptions(List<String> questionOptions) {
         this.questionOptions = questionOptions;
+    }
+
+    public String getQuestionOptionsString() {
+        return questionOptionsString;
+    }
+
+    public void setQuestionOptionsString(String questionOptionsString) {
+        this.questionOptionsString = questionOptionsString;
     }
 }

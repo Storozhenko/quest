@@ -6,7 +6,7 @@ import com.sam.quest.dao.factory.JDBCDAOUserFactory;
 import com.sam.quest.entity.Users;
 
 import java.sql.*;
-
+@Deprecated
 public class JDBCUserDAO<E> implements MultiDAO<E> {
 
     private boolean res;

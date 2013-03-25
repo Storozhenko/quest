@@ -12,6 +12,7 @@ import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
+@Deprecated
 public class JDBCFormDAO<E> implements MultiDAO<E> {
 
     private boolean res;

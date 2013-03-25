@@ -2,6 +2,7 @@ package com.sam.quest.dao.jdbc;
 
 import com.sam.quest.dao.MultiDAO;
 
+@Deprecated
 public class JDBCFormDataDAO<E> implements MultiDAO<E> {
 
     public boolean insertRecord(E obj){

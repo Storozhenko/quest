@@ -82,24 +82,23 @@ public class FormsListController {
         }
         Object[] rdArray = new Object[quests.size()];
         int i = 0;
+        int j;
         for (QuestionDTO q : quests) {
             int type = Integer.valueOf(q.getQuestionType());
             StringBuffer sb = new StringBuffer();
-            int j = 0;
-            for (String option: q.getQuestionOptions()) {
+            j = 0;
+            for (String option : q.getQuestionOptions()) {
                 if (j > 0)
                     sb.append(", ");
                 sb.append(option);
                 j++;
             }
             Object[] us = new String[]{String.valueOf(q.getQuestionId()), q.getQuestionName(),
-                    q.getQuestionDescr(),  typeListText.get(type-1), sb.toString() };
+                    q.getQuestionDescr(), typeListText.get(type-1), String.valueOf(j), sb.toString()};
             rdArray[i] = us;
             i++;
         }
         Map map = new HashMap<String, Object[]>();
-        map.put("iTotalRecords", quests.size());
-        map.put("iTotalDisplayRecords", quests.size());
         map.put("aaData", rdArray);
         return map;
     }
