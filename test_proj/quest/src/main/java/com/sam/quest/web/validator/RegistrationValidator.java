@@ -21,13 +21,13 @@ public class RegistrationValidator implements Validator{
         String username = regForm.getUsername();
         String password = regForm.getPassword();
         if ((username.length()) > 16) {
-            errors.rejectValue("username", "label.validator.usernameTooLong");
+            errors.rejectValue("username", "label.validator.j_usernameTooLong");
         }
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "label.validator.passwordEmpty");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "confirmPassword", "label.validator.passwordEmpty");
 
         if (!regForm.getPassword().equals(regForm.getConfirmPassword())) {
-            errors.rejectValue("password", "label.validator.passwordNotMatch");
+            errors.rejectValue("password", "label.validator.j_passwordNotMatch");
         }
     }
 }

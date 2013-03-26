@@ -1,9 +1,9 @@
 package com.sam.quest.web.controller;
 
-import com.sam.quest.entity.Questions;
-import com.sam.quest.service.QuestionService;
 import com.sam.quest.dto.OptionDTO;
 import com.sam.quest.dto.QuestionDTO;
+import com.sam.quest.entity.Questions;
+import com.sam.quest.service.QuestionService;
 import com.sam.quest.web.validator.GeneralValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,27 +18,27 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-public class QuestionController {
+public class UserController {
     @Autowired
-    private GeneralValidator questionValidator;
+    private GeneralValidator userValidator;
     @Autowired
     private QuestionService questionService;
     private List<String> typeList;
 
-    @RequestMapping("/**/addQuestion")
+    @RequestMapping("/admin/addUser")
     public String startInit(HttpSession session, ModelMap modelMap) {
                 modelMap.addAttribute("question", new QuestionDTO());
         modelMap.addAttribute("types", typeList);
-        return "addQuestion";
+        return "addUser";
     }
 
-    @RequestMapping("/{role}/addQuestionAction")
-    public String addQuestion(HttpSession session, ModelMap modelMap, @PathVariable("role") String role,
-                              @ModelAttribute("question")QuestionDTO question, BindingResult result) {
-        questionValidator.validate(question, result);
+    @RequestMapping("/admin/addUserAction")
+    public String addQuestion(HttpSession session, ModelMap modelMap, @ModelAttribute("question")QuestionDTO question,
+                              BindingResult result) {
+        userValidator.validate(question, result);
         if (result.hasErrors()) {
             modelMap.addAttribute("types", typeList);
-            return "addQuestion";
+            return "addUser";
         }
         Questions newQuestion = new Questions();
         try {
@@ -47,18 +47,10 @@ public class QuestionController {
             session.setAttribute("error", e.getMessage());
             return "error";
         }
-        modelMap.addAttribute("option", new OptionDTO());
-        int qNum = (Integer)session.getAttribute("questionNum");
-        qNum++;
-        session.setAttribute("questionNum", qNum);
-        if (question.getQuestionType().equals(typeList.get(0))) {
-            return "redirect:/" + role + "/addQuestion";
-        } else {
-            return "redirect:/" + role + "/addOption";
-        }
+        return "redirect:/admin/users";
     }
 
-    @RequestMapping("/{role}/deleteQuestionAction")
+    @RequestMapping("/{role}/deleteUserAction")
     public String deleteQuestion(@RequestParam(value="questionId", required=true) String questionId, HttpSession session,
                                  @PathVariable("role") String role) {
         try {
@@ -70,9 +62,9 @@ public class QuestionController {
         return "redirect:/" + role + "/formQuestions?formId=" + session.getAttribute("formId");
     }
 
-    @RequestMapping("/{role}/updateQuestionAction")
-    public String updateQuestion(HttpSession session, @PathVariable("role") String role,
-                                 @ModelAttribute("question")QuestionDTO question) {
+    @RequestMapping("/{role}/updateUserAction")
+    public String updateQuestion(@RequestParam(value="questionId", required=true) String questionId, HttpSession session,
+                                 @PathVariable("role") String role, @ModelAttribute("question")QuestionDTO question) {
         try {
             questionService.updateQuestion(question);
         } catch (Exception e) {

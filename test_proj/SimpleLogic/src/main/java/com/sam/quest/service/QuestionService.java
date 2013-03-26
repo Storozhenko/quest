@@ -50,7 +50,7 @@ public class QuestionService {
         String[] options = questDTO.getQuestionOptionsString().split(", ");
         List<QuestionsData> listQData = new GetListHQLCommand<List<QuestionsData>>(
                 "from QuestionsData where questionId = '" + questDTO.getQuestionId() + "'").execute(hibernateTemplate);
-        if (listQData.size() != options.length) {
+        if ((listQData.size() != options.length) && (listQData.size() > 0)) {
             throw new Exception("Invalid number of options");
         } else {
             int i = 0;

@@ -18,7 +18,7 @@
         <property name="locations" value="WEB-INF/messages/config.properties" />
     </bean>
 
-    <bean id="typeList" class="java.util.ArrayList">
+    <bean id="questionTypeList" class="java.util.ArrayList">
         <constructor-arg>
             <list>
                 <value>${question.type1}</value>
@@ -28,12 +28,29 @@
         </constructor-arg>
     </bean>
 
-    <bean id="addQuestionController" class="com.sam.quest.web.controller.QuestionController">
-        <property name="typeList" ref="typeList"/>
+    <bean id="userTypeList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <value>ROLE_USER</value>
+                <value>ROLE_ADMIN</value>
+            </list>
+        </constructor-arg>
     </bean>
 
-    <bean id="formsListController" class="com.sam.quest.web.controller.FormsListController">
-        <property name="typeList" ref="typeList"/>
+    <bean id="questionController" class="com.sam.quest.web.controller.QuestionController">
+        <property name="typeList" ref="questionTypeList"/>
+    </bean>
+
+    <bean id="questionsListController" class="com.sam.quest.web.controller.QuestionsListController">
+        <property name="typeList" ref="questionTypeList"/>
+    </bean>
+
+    <bean id="userController" class="com.sam.quest.web.controller.UserController">
+        <property name="typeList" ref="userTypeList"/>
+    </bean>
+
+    <bean id="usersListController" class="com.sam.quest.web.controller.UsersListController">
+        <property name="typeList" ref="userTypeList"/>
     </bean>
 
 </beans>

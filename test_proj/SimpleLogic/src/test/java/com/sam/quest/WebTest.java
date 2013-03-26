@@ -1,5 +1,6 @@
 package com.sam.quest;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebTest {
-
+    @Ignore
     @Test
     public void testLogin() {
         FirefoxProfile profile = new FirefoxProfile();

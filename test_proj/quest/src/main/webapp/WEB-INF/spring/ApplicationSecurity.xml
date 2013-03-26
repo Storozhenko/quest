@@ -12,8 +12,8 @@
     <beans:bean id="redirectRoleStrategy" class="com.sam.quest.web.security.RoleBasedAuthSuccessHandler">
         <beans:property name="roleUrlMap">
             <beans:map>
-                <beans:entry key="ROLE_ADMIN" value="/admin/main"/>
-                <beans:entry key="ROLE_USER" value="/user/main"/>
+                <beans:entry key="ROLE_ADMIN" value="/admin/mainFirst"/>
+                <beans:entry key="ROLE_USER" value="/user/mainFirst"/>
             </beans:map>
         </beans:property>
     </beans:bean>
