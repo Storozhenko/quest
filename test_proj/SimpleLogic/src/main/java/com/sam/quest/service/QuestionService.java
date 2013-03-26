@@ -43,7 +43,6 @@ public class QuestionService {
 
     public void updateQuestion(QuestionDTO questDTO) throws Exception{
         Questions quest = new FindCommand<Questions>(questDTO.getQuestionId(), new Questions()).execute(hibernateTemplate);
-        quest.setQuestionId(questDTO.getQuestionId());
         quest.setQuestionName(questDTO.getQuestionName());
         quest.setQuestionDescr(questDTO.getQuestionDescr());
         new UpdateCommand(quest).execute(hibernateTemplate);

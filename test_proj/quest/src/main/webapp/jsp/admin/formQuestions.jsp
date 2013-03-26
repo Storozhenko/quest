@@ -94,7 +94,7 @@
 <table id="questsTable" class="display">
     <thead>
     <tr>
-        <th>Question ID</th>
+        <th>ID</th>
         <th>Question name</th>
         <th>Description</th>
         <th>Question type</th>

@@ -6,7 +6,7 @@ import com.sam.quest.dto.annotations.Validatable;
 
 @Validatable
 public class UserDTO {
-    private String userId;
+    private long userId;
     private String username;
     private String password;
     private String userType;
@@ -48,11 +48,11 @@ public class UserDTO {
         this.userLang = userLang;
     }
     @Required
-    public String getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 }

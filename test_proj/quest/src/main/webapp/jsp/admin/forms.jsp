@@ -114,7 +114,7 @@
 <table id="formsTable" class="display">
     <thead>
     <tr>
-        <th>Form ID</th>
+        <th>ID</th>
         <th>Form name</th>
         <th>Description</th>
         <th>Username</th>

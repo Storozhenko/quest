@@ -42,8 +42,8 @@
             <td><spring:message code="label.language"/>:</td>
             <td><form:select path="language">
                     <option value=""><spring:message code="label.language"/></option>
-                    <option value="en"><spring:message code="label.language.english"/></option>
-                    <option value="ru"><spring:message code="label.language.russian"/></option>
+                    <option value="en"><spring:message code="label.language.en"/></option>
+                    <option value="ru"><spring:message code="label.language.ru"/></option>
                 </form:select>
             </td>
         </tr>

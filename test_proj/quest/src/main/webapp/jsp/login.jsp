@@ -20,8 +20,8 @@
 <span style="float: right">
     <select onchange="window.location=this.options[this.selectedIndex].value">
         <option value=""><spring:message code="label.language"/></option>
-        <option value="login?locale=en"><spring:message code="label.language.english"/></option>
-        <option value="login?locale=ru"><spring:message code="label.language.russian"/></option>
+        <option value="login?locale=en"><spring:message code="label.language.en"/></option>
+        <option value="login?locale=ru"><spring:message code="label.language.ru"/></option>
     </select>
 </span>
 <br/>

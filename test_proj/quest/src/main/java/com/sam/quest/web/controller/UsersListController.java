@@ -31,18 +31,11 @@ public class UsersListController {
     public String usersList(Locale locale, HttpSession session, ModelMap modelMap, HttpServletRequest request) {
         UserDTO user = new UserDTO();
         modelMap.addAttribute("user", user);
-        /*
-        typeListText.clear();
-        for (String type : typeList) {
-            typeListText.add(messageSource.getMessage(type, null, locale));
-        }
-        */
-        modelMap.addAttribute("types", typeListText);
         return request.getPathInfo();
     }
 
     @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/admin/usersTable")
-    public @ResponseBody Map<String, Object[]> getAdminUsers() {
+    public @ResponseBody Map<String, Object[]> getAdminUsers(Locale locale) {
         List<Users> users = null;
         try {
             users = usersListService.getUsers();
@@ -52,8 +45,11 @@ public class UsersListController {
         Object[] rdArray = new Object[users.size()];
         int i = 0;
         for (Users u : users) {
+            String lang = "";
+            if (!u.getUserLang().equals(""))
+                lang = messageSource.getMessage("label.language." + u.getUserLang(), null, locale);
             Object[] us = new String[]{String.valueOf(u.getUserId()), u.getUsername(),
-                    u.getPassword(), u.getUserType(), u.getUserLang()};
+                    u.getPassword(), messageSource.getMessage("label." + u.getUserType(), null, locale), lang};
             rdArray[i] = us;
             i++;
         }

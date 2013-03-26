@@ -5,30 +5,50 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Create form</title>
+    <title>Add User</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Create Form</h2>
+<h2>Add User</h2>
+<br>
+<br>
 <br>
 <form:form method="post" commandName="user" action="addUserAction">
     <table>
         <tr>
-            <td>Form name:</td>
-            <td><form:input path="formName"/></td>
-            <td><span class="error"><form:errors path="formName" /></span></td>
+            <td><spring:message code="label.username"/>:</td>
+            <td><form:input path="username" /></td>
+            <td><span class="error"><form:errors path="username" /></span></td>
         </tr>
         <tr>
-            <td>Description:</td>
-            <td><form:input path="formDescr"/></td>
+            <td><spring:message code="label.password"/>:</td>
+            <td><form:input path="password" /></td>
+            <td><span class="error"><form:errors path="password" /></span></td>
+        </tr>
+        <tr>
+            <td><spring:message code="label.user.type"/>:</td>
+            <td><form:select path="userType">
+                <option value="ROLE_ADMIN"><spring:message code="label.ROLE_ADMIN"/></option>
+                <option value="ROLE_USER"><spring:message code="label.ROLE_USER"/></option>
+            </form:select>
+            </td>
+        </tr>
+        <tr>
+            <td><spring:message code="label.language"/>:</td>
+            <td><form:select path="userLang">
+                <option value=""><spring:message code="label.language"/></option>
+                <option value="en"><spring:message code="label.language.en"/></option>
+                <option value="ru"><spring:message code="label.language.ru"/></option>
+            </form:select>
+            </td>
         </tr>
         <tr>
             <td colspan="2"></td>
         </tr>
         <tr>
-            <td colspan="2"><button class="action bluebtn" type="submit" id="addFormSubmit" /><span class="label">OK</span></td>
+            <td colspan="2"><button class="action bluebtn" type="submit" /><span class="label">OK</span></td>
         </tr>
     </table>
 </form:form>

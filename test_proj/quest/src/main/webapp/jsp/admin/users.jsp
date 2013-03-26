@@ -125,6 +125,23 @@
             <td><span class="error"><form:errors path="password"/></span></td>
         </tr>
         <tr>
+            <td><spring:message code="label.user.type"/>:</td>
+            <td><form:select path="userType">
+                <option value="ROLE_ADMIN"><spring:message code="label.ROLE_ADMIN"/></option>
+                <option value="ROLE_USER"><spring:message code="label.ROLE_USER"/></option>
+            </form:select>
+            </td>
+        </tr>
+        <tr>
+            <td><spring:message code="label.language"/>:</td>
+            <td><form:select path="userLang">
+                <option value=""><spring:message code="label.language"/></option>
+                <option value="en"><spring:message code="label.language.en"/></option>
+                <option value="ru"><spring:message code="label.language.ru"/></option>
+            </form:select>
+            </td>
+        </tr>
+        <tr>
             <td colspan="3"></td>
         </tr>
         <tr>
