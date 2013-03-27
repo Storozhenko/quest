@@ -1,11 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@ taglib uri="http://github.com/datatables4j" prefix="datatables"  %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
     <title>Filled Forms</title>
-    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/style.css"/>
+    <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <style type="text/css" title="currentStyle">
     @import "${baseUrl}/media/css/demo_page.css";
@@ -31,30 +32,33 @@
                 }
             },
             "bProcessing": true,
-            "sAjaxSource" : '/quest/admin/answFormsTable',
-            "aoColumnDefs": [
-                {
-                    "fnRender": function ( oObj,sVal ) {
-                        return '<a href="answFormsQuestions?answId=' + sVal + '">look</a>';
-                    },
-                    "bUseRendered": false,
-                    "aTargets": [ 3 ]
-                }
-            ]
+            "sAjaxSource" : '/quest/admin/answFormsTable'
         });
     });
     $(document).ready(function() {
+        $('#answFormsTable tbody').on( 'click', 'td', function () {
+            var cells=$(this).parent('tr').children('td');
+            $('#answForm :input[id="answId"]').val($(cells[0]).text().trim());
+            $('#answForm :input[id="username"]').val($(cells[2]).text().trim());
+            $('#answForm :input[id="formName"]').val($(cells[1]).text().trim());
+        });
         $('#answFormsTable tbody').on( 'click', 'tr', function () {
             if ($(this).hasClass("row_selected")) {
                 $(this).removeClass("row_selected");
+                var inputForm = document.getElementById('answForm');
+                inputForm.style.display = "none";
             } else {
                 if($(this).parent().find('tr').hasClass("row_selected")) {
                     $(this).parent().find('tr').removeClass("row_selected");
                     $(this).addClass("row_selected");
                     $(this).removeClass("mouse_over");
+                    var inputForm = document.getElementById('answForm');
+                    inputForm.style.display = "block";
                 } else {
                     $(this).addClass("row_selected");
                     $(this).removeClass("mouse_over");
+                    var inputForm = document.getElementById('answForm');
+                    inputForm.style.display = "block";
                 }
             }
         });
@@ -67,24 +71,55 @@
             $(this).removeClass("mouse_over");
         });
     });
-
+    function deleteAnswForm() {
+        window.location = "deleteAnswForm?answId=" + document.getElementById("answId").value;
+    }
+    function answFormQuestions() {
+        window.location = "answFormQuestions?answId=" + document.getElementById("answId").value + "&fName=" +
+                document.getElementById("formName").value + "&uname=" + document.getElementById("username").value;
+    }
 </script>
 <body>
 <h2>Filled Forms</h2>
 <br>
-<table id="answFormsTable">
+<br>
+<form action="main">
+    <button class="action bluebtn" type="submit" style="margin: 5px" name="toMainLink"><span class="label">Main page</span></button>
+</form>
+<br>
+<br>
+<br>
+<br>
+<table id="answFormsTable" class="display">
     <thead>
     <tr>
+        <th>ID</th>
         <th>Form</th>
         <th>Username</th>
         <th>Date and time</th>
-        <th>Look</th>
     </tr>
     </thead>
     <tbody>
     </tbody>
 </table>
 <br>
-<a href=main>Main page</a>
+<br>
+<form id="answForm" style="display:none">
+    <table>
+        <tr>
+            <td><button class="action redbtn" style="width: 100px" type="button" id="deleteAnswFormLink" onclick="deleteAnswForm()" /><span class="label">Delete</span></td>
+            <td><button class="action bluebtn" style="width: 100px" type="button" id="answFormQuestionsLink" onclick="answFormQuestions()" /><span class="label">Look</span></td>
+        </tr>
+        <tr>
+            <td><input id="answId" readonly="true" style="display:none"/></td>
+        </tr>
+        <tr>
+            <td><input id="username" readonly="true" style="display:none"/></td>
+        </tr>
+        <tr>
+            <td><input id="formName" readonly="true" style="display:none"/></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

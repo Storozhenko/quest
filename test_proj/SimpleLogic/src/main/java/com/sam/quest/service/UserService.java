@@ -19,6 +19,17 @@ public class UserService {
     @Autowired
     private HibernateTemplate hibernateTemplate;
 
+    public UserDTO getUser(long userId) throws Exception{
+        Users user = new FindCommand<Users>(userId, new Users()).execute(hibernateTemplate);
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUserId(user.getUserId());
+        userDTO.setUsername(user.getUsername());
+        userDTO.setPassword(user.getPassword());
+        userDTO.setUserType(user.getUserType());
+        userDTO.setUserLang(user.getUserLang());
+        return userDTO;
+    }
+
     public void addUser(UserDTO userDTO) throws Exception{
         Users user = new Users();
         user.setUsername(userDTO.getUsername());

@@ -2,14 +2,13 @@ package com.sam.quest.web.controller.autowired;
 
 import com.sam.quest.dto.AnswFormDTO;
 import com.sam.quest.dto.AnswQuestionDTO;
+import com.sam.quest.entity.Users;
 import com.sam.quest.service.AnswFormsListService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -28,17 +27,27 @@ public class AnswFormsListController {
         return request.getPathInfo();
     }
 
-    @RequestMapping("/**/answFormsQuestions")
-    public String answList(@RequestParam(value="answId", required=true) String answId, HttpSession session, ModelMap modelMap, HttpServletRequest request) {
+    @RequestMapping("/**/answFormQuestions")
+    public String answList(@RequestParam(value="answId", required=true) String answId,
+                           @RequestParam(value="fName", required=true) String fName,
+                           @RequestParam(value="uname", required=true) String uname,
+                           HttpSession session, ModelMap modelMap, HttpServletRequest request) {
         session.setAttribute("answId", answId);
+        session.setAttribute("formName", fName);
+        session.setAttribute("username", uname);
         return request.getPathInfo();
     }
 
-    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/**/answFormsTable")
-    public @ResponseBody Map<String, Object[]> getAnswForms() {
+    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/{role}/answFormsTable")
+    public @ResponseBody Map<String, Object[]> getAnswForms(@PathVariable("role") String role) {
         List<AnswFormDTO> answForms = null;
         try {
-            answForms = answFormsListService.getAnswForms();
+            if (role.equals("admin")) {
+                answForms = answFormsListService.getAnswForms();
+            } else {
+                Users user = (Users) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+                answForms = answFormsListService.getUserAnswForms(user.getUserId());
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -47,7 +56,7 @@ public class AnswFormsListController {
         for (AnswFormDTO f : answForms) {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String date = sdf.format(f.getAnswDatetime());
-            Object[] us = new String[]{f.getFormName(), f.getUsername(), date, String.valueOf(f.getAnswId())};
+            Object[] us = new String[]{String.valueOf(f.getAnswId()), f.getFormName(), f.getUsername(), date};
             rdArray[i] = us;
             i++;
         }

@@ -33,6 +33,21 @@ public class AnswFormsListService {
         }
         return answFormsDTO;
     }
+
+    public List<AnswFormDTO> getUserAnswForms(long userId) throws Exception{
+        List<AnswFormDTO> answFormsDTO = new ArrayList<AnswFormDTO>();
+        List<AnswForms> answForms = new GetListHQLCommand<List<AnswForms>>("from AnswForms where userId = '" + userId + "'").execute(hibernateTemplate);
+        for (AnswForms af: answForms) {
+            AnswFormDTO afDTO = new AnswFormDTO();
+            afDTO.setAnswId(af.getAnswId());
+            afDTO.setFormName(af.getFormId().getFormName());
+            afDTO.setFormDescr(af.getFormId().getFormDescr());
+            afDTO.setUsername(af.getUserId().getUsername());
+            afDTO.setAnswDatetime(af.getAnswDatetime());
+            answFormsDTO.add(afDTO);
+        }
+        return answFormsDTO;
+    }
     public List<AnswQuestionDTO> getAnswQuestions(long answId) throws Exception{
         List<AnswQuestionDTO> answQuestDTO = new ArrayList<AnswQuestionDTO>();
         List<AnswQuestions> answQuests = new GetListHQLCommand<List<AnswQuestions>>(

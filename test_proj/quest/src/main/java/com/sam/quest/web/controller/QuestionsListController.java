@@ -40,7 +40,7 @@ public class QuestionsListController {
         return request.getPathInfo();
     }
 
-    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/admin/formQuestsTable")
+    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/**/formQuestsTable")
     public @ResponseBody Map<String, Object[]> getAdminFormsQuests(@RequestParam(value="formId", required=true) String formId) {
         List<QuestionDTO> quests = null;
         try {

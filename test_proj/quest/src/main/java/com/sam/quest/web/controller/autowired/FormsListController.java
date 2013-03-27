@@ -29,7 +29,7 @@ public class FormsListController {
         return request.getPathInfo();
     }
 
-    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/admin/formsTable")
+    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/**/formsTable")
          public @ResponseBody Map<String, Object[]> getAdminForms() {
         List<Forms> forms = null;
         try {
@@ -53,27 +53,4 @@ public class FormsListController {
         map.put("aaData", rdArray);
         return map;
     }
-
-    @RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/user/formsTable")
-    public @ResponseBody Map<String, Object[]> getUserForms() {
-        List<Forms> forms = null;
-        try {
-            forms = formsListService.getForms();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        Object[] rdArray = new Object[forms.size()];
-        int i = 0;
-        for (Forms f : forms) {
-            Object[] us = new String[]{f.getFormName(), f.getFormDescr(), String.valueOf(f.getFormId())};
-            rdArray[i] = us;
-            i++;
-        }
-        Map map = new HashMap<String, Object[]>();
-        map.put("iTotalRecords", forms.size());
-        map.put("iTotalDisplayRecords", forms.size());
-        map.put("aaData", rdArray);
-        return map;
-    }
-
 }

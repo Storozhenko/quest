@@ -83,10 +83,10 @@
 <br>
 <div>
     <form action="main">
-        <button class="action bluebtn" type="submit" style="margin: 5px" id="usersToMainLink" /><span class="label">Main page</span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="usersToMainLink"><span class="label">Main page</span></button>
     </form>
     <form action="addUser">
-        <button class="action bluebtn" type="submit" style="margin: 5px" id="addUserLink" /><span class="label">Add user</span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="addUserLink"><span class="label">Add user</span></button>
     </form>
 </div>
 <br>

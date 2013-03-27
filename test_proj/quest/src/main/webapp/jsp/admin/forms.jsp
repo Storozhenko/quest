@@ -1,7 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib uri="http://github.com/datatables4j" prefix="datatables"  %>
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
@@ -33,19 +32,7 @@
                 }
             },
             "bProcessing": true,
-            "sAjaxSource" : '/quest/admin/formsTable',
-            "aoColumnDefs": [
-                {   /*
-                    "fnRender": function ( oObj,sVal ) {
-                        return '<a href="fillForm?formId=' + sVal + '">fill</a>';
-                    },
-                    "bUseRendered": false,
-                    "aTargets": [ 2 ] */
-                    "bSearchable": true,
-                    "bVisible": true,
-                    "aTargets": [ 0 ]
-                }
-            ]
+            "sAjaxSource" : '/quest/admin/formsTable'
         });
     });
     $(document).ready(function() {
@@ -101,10 +88,10 @@
 <br>
 <div>
     <form action="main">
-        <button class="action bluebtn" type="submit" style="margin: 5px" id="formsToMainLink" /><span class="label">Main page</span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="formsToMainLink"><span class="label">Main page</span></button>
     </form>
     <form action="addForm">
-        <button class="action bluebtn" type="submit" style="margin: 5px" id="addFormLink" /><span class="label">Add form</span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="addFormLink"><span class="label">Add form</span></button>
     </form>
 </div>
 <br>

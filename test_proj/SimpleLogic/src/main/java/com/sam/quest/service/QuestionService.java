@@ -5,8 +5,10 @@ import com.sam.quest.dto.QuestionDTO;
 import com.sam.quest.entity.Forms;
 import com.sam.quest.entity.Questions;
 import com.sam.quest.entity.QuestionsData;
+import com.sam.quest.entity.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.HibernateTemplate;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
@@ -61,5 +63,42 @@ public class QuestionService {
         }
 
 
+    }
+
+    public void deleteUserQuestion(long questId) throws Exception{
+        Users user = (Users) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Questions checkQuest = new FindCommand<Questions>(questId, new Questions()).execute(hibernateTemplate);
+        if (checkQuest.getFormId().getUserId().getUserId().longValue() == user.getUserId()) {
+            Questions quest = new Questions();
+            quest.setQuestionId(questId);
+            new DeleteCommand(quest).execute(hibernateTemplate);
+        } else {
+            throw new Exception("Access denied");
+        }
+    }
+
+    public void updateUserQuestion(QuestionDTO questDTO) throws Exception{
+        Users user = (Users) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Questions quest = new FindCommand<Questions>(questDTO.getQuestionId(), new Questions()).execute(hibernateTemplate);
+        if (quest.getFormId().getUserId().getUserId().longValue() == user.getUserId()) {
+            quest.setQuestionName(questDTO.getQuestionName());
+            quest.setQuestionDescr(questDTO.getQuestionDescr());
+            new UpdateCommand(quest).execute(hibernateTemplate);
+            String[] options = questDTO.getQuestionOptionsString().split(", ");
+            List<QuestionsData> listQData = new GetListHQLCommand<List<QuestionsData>>(
+                    "from QuestionsData where questionId = '" + questDTO.getQuestionId() + "'").execute(hibernateTemplate);
+            if ((listQData.size() != options.length) && (listQData.size() > 0)) {
+                throw new Exception("Invalid number of options");
+            } else {
+                int i = 0;
+                for (QuestionsData qData : listQData) {
+                    qData.setOptionData(options[i]);
+                    new UpdateCommand(qData).execute(hibernateTemplate);
+                    i++;
+                }
+            }
+        } else {
+            throw new Exception("Access denied");
+        }
     }
 }

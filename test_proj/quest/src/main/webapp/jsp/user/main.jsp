@@ -6,27 +6,39 @@
 <head>
     <title>Quest</title>
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <h2>Quest</h2>
 <spring:message code="label.welcome"/>, ${username}
 <br>
+<br>
 <sec:authorize access="isAuthenticated()">
-    <a href="<c:url value="/logout"/>"><spring:message code="label.logout"/></a>
+    <form action="/quest/logout">
+        <button class="action redbtn" type="submit" style="margin: 5px" id="logoutLink"><span class="label"><spring:message code="label.logout"/></span></button>
+    </form>
 </sec:authorize>
 <span style="float: right">
     <select onchange="window.location=this.options[this.selectedIndex].value">
         <option value=""><spring:message code="label.language"/></option>
-        <option value="main?locale=en"><spring:message code="label.language.en"/></option>
-        <option value="main?locale=ru"><spring:message code="label.language.ru"/></option>
+        <option value="?locale=en"><spring:message code="label.language.en"/></option>
+        <option value="?locale=ru"><spring:message code="label.language.ru"/></option>
     </select>
 </span>
-<br><br>
 <br>
-<a href="forms"><spring:message code="label.forms"/></a>
 <br>
-<a href="answForms"><spring:message code="label.forms.filled"/></a>
 <br>
-<a href="users"><spring:message code="label.users"/></a>
+<br>
+<div>
+    <form action="forms">
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="userFormsLink" /><span class="label"><spring:message code="label.forms"/></span></button>
+    </form>
+    <form action="answForms">
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="userAnswFormsLink" /><span class="label"><spring:message code="label.forms.filled"/></span></button>
+    </form>
+    <form action="profile">
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="userProfileLink" /><span class="label"><spring:message code="label.profile"/></span></button>
+    </form>
+</div>
 </body>
 </html>

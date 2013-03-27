@@ -84,7 +84,7 @@
 <br>
 <div>
     <form action="main">
-        <button class="action bluebtn" type="submit" id="formsToMainLink" /><span class="label">Main page</span></button>
+        <button class="action bluebtn" type="submit" id="formsToMainLink"><span class="label">Main page</span></button>
     </form>
 </div>
 <br>

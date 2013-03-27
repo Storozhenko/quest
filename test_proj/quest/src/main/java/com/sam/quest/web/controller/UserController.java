@@ -4,10 +4,12 @@ import com.sam.quest.dto.OptionDTO;
 import com.sam.quest.dto.QuestionDTO;
 import com.sam.quest.dto.UserDTO;
 import com.sam.quest.entity.Questions;
+import com.sam.quest.entity.Users;
 import com.sam.quest.service.QuestionService;
 import com.sam.quest.service.UserService;
 import com.sam.quest.web.validator.GeneralValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -16,8 +18,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class UserController {
@@ -47,6 +51,39 @@ public class UserController {
             return "error";
         }
         return "redirect:/admin/users";
+    }
+
+
+    @RequestMapping("/user/profile")
+    public String userProfile(Locale locale, HttpSession session, ModelMap modelMap) {
+        UserDTO userDTO;
+        Users user = (Users) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        try {
+            userDTO = userService.getUser(user.getUserId());
+        } catch (Exception e) {
+            session.setAttribute("error", e.getMessage());
+            return "error";
+        }
+        modelMap.addAttribute("user", userDTO);
+        return "/user/profile";
+    }
+
+    @RequestMapping("/user/updateProfileAction")
+    public String updateProfile(HttpSession session, ModelMap modelMap, @ModelAttribute("user")UserDTO user,
+                              BindingResult result) {
+        userValidator.validate(user, result);
+        if (result.hasErrors()) {
+            return "profile";
+        }
+        try {
+            user.setUserType("ROLE_USER");
+            userService.updateUser(user);
+        } catch (Exception e) {
+            session.setAttribute("error", e.getMessage());
+            return "error";
+        }
+        session.setAttribute("username", user.getUsername());
+        return "/user/main";
     }
 
     @RequestMapping("/{role}/deleteUserAction")

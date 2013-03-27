@@ -1,11 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@ taglib uri="http://github.com/datatables4j" prefix="datatables"  %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
     <title>Filled Forms</title>
-    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/style.css"/>
+    <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <style type="text/css" title="currentStyle">
     @import "${baseUrl}/media/css/demo_page.css";
@@ -31,14 +32,46 @@
                 }
             },
             "bProcessing": true,
-            "sAjaxSource" : '/quest/admin/answQuestsTable?answId=' + ${answId}
+            "sAjaxSource" : '/quest/user/answQuestsTable?answId=' + ${answId}
+        });
+    });
+    $(document).ready(function() {
+        $('#answQuestsTable tbody').on( 'click', 'tr', function () {
+            if ($(this).hasClass("row_selected")) {
+                $(this).removeClass("row_selected");
+            } else {
+                if($(this).parent().find('tr').hasClass("row_selected")) {
+                    $(this).parent().find('tr').removeClass("row_selected");
+                    $(this).addClass("row_selected");
+                    $(this).removeClass("mouse_over");
+                } else {
+                    $(this).addClass("row_selected");
+                    $(this).removeClass("mouse_over");
+                }
+            }
+        });
+        $('#answQuestsTable tbody').on( 'mouseover', 'tr', function () {
+            if (!$(this).hasClass("row_selected")) {
+                $(this).addClass("mouse_over");
+            }
+        });
+        $('#answQuestsTable tbody').on( 'mouseout', 'tr', function () {
+            $(this).removeClass("mouse_over");
         });
     });
 </script>
 <body>
 <h2>Filled Forms</h2>
 <br>
-<table id="answQuestsTable">
+<br>
+<form action="main">
+    <button class="action bluebtn" type="submit" style="margin: 5px" id="usersToMainLink"><span class="label">Main page</span></button>
+</form>
+<br>
+<br>
+<br>
+<br>
+<table id="answQuestsTable" class="display">
     <thead>
     <tr>
         <th>Question</th>
@@ -50,6 +83,16 @@
     </tbody>
 </table>
 <br>
-<a href=main>Main page</a>
+<br>
+<table>
+    <tr>
+        <td>Author:</td>
+        <td>${username}</td>
+    </tr>
+    <tr>
+        <td>Form:</td>
+        <td>${formName}</td>
+    </tr>
+</table>
 </body>
 </html>

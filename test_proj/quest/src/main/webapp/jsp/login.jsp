@@ -41,8 +41,8 @@
             <td colspan="3"></td>
         </tr>
         <tr>
-            <td><button class="action bluebtn" type="submit" id="loginSubmit"><span class="label">OK</span></button></td>
-            <td><button class="action redbtn" type="button" id="regLink" onclick="registration()"/><span class="label">Registration</span></button></td>
+            <td><button class="action bluebtn" type="submit" id="loginSubmit"><span class="label"><spring:message code="label.login"/></span></button></td>
+            <td><button class="action redbtn" type="button" id="regLink" onclick="registration()"><span class="label"><spring:message code="label.registration"/></span></button></td>
         </tr>
     </table>
 </form:form>

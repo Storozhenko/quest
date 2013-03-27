@@ -62,7 +62,11 @@ public class QuestionController {
     public String deleteQuestion(@RequestParam(value="questionId", required=true) String questionId, HttpSession session,
                                  @PathVariable("role") String role) {
         try {
-            questionService.deleteQuestion(Long.valueOf(questionId));
+            if (role.equals("admin")) {
+                questionService.deleteQuestion(Long.valueOf(questionId));
+            } else {
+                questionService.deleteUserQuestion(Long.valueOf(questionId));
+            }
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";
@@ -74,7 +78,12 @@ public class QuestionController {
     public String updateQuestion(HttpSession session, @PathVariable("role") String role,
                                  @ModelAttribute("question")QuestionDTO question) {
         try {
-            questionService.updateQuestion(question);
+            if (role.equals("admin")) {
+                questionService.updateQuestion(question);
+            } else {
+                questionService.updateUserQuestion(question);
+            }
+
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";

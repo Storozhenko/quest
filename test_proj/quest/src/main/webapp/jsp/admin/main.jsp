@@ -15,7 +15,7 @@
 <br>
 <sec:authorize access="isAuthenticated()">
     <form action="/quest/logout">
-        <button class="action redbtn" type="submit" style="margin: 5px" id="logoutLink" /><span class="label"><spring:message code="label.logout"/></span></button>
+        <button class="action redbtn" type="submit" style="margin: 5px" id="logoutLink"><span class="label"><spring:message code="label.logout"/></span></button>
     </form>
 </sec:authorize>
 <span style="float: right">

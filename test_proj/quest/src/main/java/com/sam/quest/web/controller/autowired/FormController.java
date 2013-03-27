@@ -47,29 +47,38 @@ public class FormController {
         return "redirect:/" + role + "/addQuestion";
     }
 
-    @RequestMapping("/admin/updateFormAction")
+    @RequestMapping("/{role}/updateFormAction")
     public String updateForm(HttpSession session, ModelMap modelMap, @ModelAttribute("form")FormDTO form,
-                             BindingResult result) {
+                             @PathVariable("role") String role, BindingResult result) {
         formValidator.validate(form, result);
         if (result.hasErrors()) {
             return "addForm";
         }
         try {
-            formService.updateForm(form);
+            if (role.equals("admin")) {
+                formService.updateForm(form);
+            } else {
+                formService.updateUserForm(form);
+            }
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";
         }
-        return "redirect:/admin/forms";
+        return "redirect:/" + role + "/forms";
     }
-    @RequestMapping("/admin/deleteFormAction")
-    public String startInit(@RequestParam(value="formId", required=true) String formId, HttpSession session, ModelMap modelMap) {
+    @RequestMapping("/{role}/deleteFormAction")
+    public String startInit(@RequestParam(value="formId", required=true) String formId,
+                            @PathVariable("role") String role, HttpSession session, ModelMap modelMap) {
         try {
-            formService.deleteForm(formId);
+            if (role.equals("admin")) {
+                formService.deleteForm(Long.valueOf(formId));
+            } else {
+                formService.deleteUserForm(Long.valueOf(formId));
+            }
         } catch (Exception e) {
             session.setAttribute("error", e.getMessage());
             return "error";
         }
-        return "redirect:/admin/forms";
+        return "redirect:/" + role + "/forms";
     }
 }
