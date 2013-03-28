@@ -1,6 +1,7 @@
 package com.sam.quest.dto;
 
 import com.sam.quest.dto.annotations.Required;
+import com.sam.quest.dto.annotations.TextLength;
 import com.sam.quest.dto.annotations.Validatable;
 
 @Validatable
@@ -18,6 +19,7 @@ public class FormDTO {
     }
 
     @Required
+    @TextLength(minLength = 0, maxLength = 45)
     public String getFormName() {
         return formName;
     }

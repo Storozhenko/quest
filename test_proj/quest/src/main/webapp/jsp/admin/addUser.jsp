@@ -5,14 +5,13 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Add User</title>
+    <title><spring:message code="label.user.add"/></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Add User</h2>
-<br>
+<h2><spring:message code="label.user.add"/></h2>
 <br>
 <br>
 <form:form method="post" commandName="user" action="addUserAction">

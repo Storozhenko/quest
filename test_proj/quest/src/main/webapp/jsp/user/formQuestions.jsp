@@ -5,7 +5,7 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Forms</title>
+    <title><spring:message code="label.questions"/></title>
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
@@ -79,12 +79,12 @@
 </script>
 
 <body>
-<h2>Forms</h2>
+<h2><spring:message code="label.questions"/></h2>
 <br>
 <br>
 <div>
     <form action="main">
-        <button class="action bluebtn" type="submit" id="formsToMainLink"><span class="label">Main page</span></button>
+        <button class="action bluebtn" type="submit" id="formsToMainLink"><span class="label"><spring:message code="label.page.main"/></span></button>
     </form>
 </div>
 <br>
@@ -95,11 +95,11 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>Question name</th>
-        <th>Description</th>
-        <th>Question type</th>
-        <th>Number of options</th>
-        <th>Options</th>
+        <th><spring:message code="label.question.name"/></th>
+        <th><spring:message code="label.description"/></th>
+        <th><spring:message code="label.question.type"/></th>
+        <th><spring:message code="label.options.number"/></th>
+        <th><spring:message code="label.options"/></th>
     </tr>
     </thead>
     <tbody>
@@ -110,28 +110,28 @@
 <form:form method="post" id="inputQuestion" commandName="question" action="updateQuestionAction" style="display:none">
     <table>
         <tr>
-            <td>Question ID:</td>
-            <td><form:input path="questionId" id="questionId" readonly="true"/></td>
+            <td>ID:</td>
+            <td><form:input path="questionId" id="questionId" readonly="true" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td>Question name:</td>
-            <td><form:input path="questionName" id="questionName"/></td>
+            <td><spring:message code="label.question.name"/>:</td>
+            <td><form:input path="questionName" id="questionName" size="50" maxlength="50"/></td>
             <td><span class="error"><form:errors path="questionName"/></span></td>
         </tr>
         <tr>
-            <td>Description:</td>
-            <td><form:input path="questionDescr" id="questionDescr"/></td>
+            <td><spring:message code="label.description"/>:</td>
+            <td><form:input path="questionDescr" id="questionDescr" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td>Options:</td>
-            <td><form:input path="questionOptionsString" id="questionOptionsString"/></td>
+            <td><spring:message code="label.options"/>:</td>
+            <td><form:input path="questionOptionsString" id="questionOptionsString" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td colspan="3"></td>
         </tr>
         <tr>
-            <td><button class="action redbtn" type="button" id="deleteQuestionLink" onclick="deleteQuestion()" /><span class="label">Delete</span></td>
-            <td><button class="action bluebtn" type="submit" id="updateQuestionSubmit" /><span class="label">Update</span></td>
+            <td><button class="action redbtn" type="button" id="deleteQuestionLink" onclick="deleteQuestion()" /><span class="label"><spring:message code="label.delete"/></span></td>
+            <td><button class="action bluebtn" type="submit" id="updateQuestionSubmit" /><span class="label"><spring:message code="label.update"/></span></td>
         </tr>
         <tr>
         </tr>

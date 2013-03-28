@@ -42,7 +42,7 @@ public class UserController {
                               BindingResult result) {
         userValidator.validate(user, result);
         if (result.hasErrors()) {
-            return "addUser";
+            return "/admin/addUser";
         }
         try {
             userService.addUser(user);
@@ -73,7 +73,7 @@ public class UserController {
                               BindingResult result) {
         userValidator.validate(user, result);
         if (result.hasErrors()) {
-            return "profile";
+            return "/user/profile";
         }
         try {
             user.setUserType("ROLE_USER");

@@ -5,7 +5,7 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Users</title>
+    <title><spring:message code="label.users"/></title>
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
@@ -42,6 +42,21 @@
             $('#inputUser :input[id="userId"]').val($(cells[0]).text().trim());
             $('#inputUser :input[id="username"]').val($(cells[1]).text().trim());
             $('#inputUser :input[id="password"]').val($(cells[2]).text().trim());
+            var type = document.getElementById('userType');
+            for(var i = 0, j = type.options.length; i < j; ++i) {
+                if(type.options[i].innerHTML === $(cells[3]).text().trim()) {
+                    type.selectedIndex = i;
+                    break;
+                }
+            }
+            var lang = document.getElementById('userLang');
+            for(var i = 0, j = lang.options.length; i < j; ++i) {
+                if(lang.options[i].innerHTML === $(cells[4]).text().trim()) {
+                    lang.selectedIndex = i;
+                    break;
+                }
+            }
+
         });
         $('#usersTable tbody').on( 'click', 'tr', function () {
             if ($(this).hasClass("row_selected")) {
@@ -78,15 +93,15 @@
 </script>
 
 <body>
-<h2>Users</h2>
+<h2><spring:message code="label.users"/></h2>
 <br>
 <br>
 <div>
     <form action="main">
-        <button class="action bluebtn" type="submit" style="margin: 5px" id="usersToMainLink"><span class="label">Main page</span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="usersToMainLink"><span class="label"><spring:message code="label.page.main"/></span></button>
     </form>
     <form action="addUser">
-        <button class="action bluebtn" type="submit" style="margin: 5px" id="addUserLink"><span class="label">Add user</span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="addUserLink"><span class="label"><spring:message code="label.user.add"/></span></button>
     </form>
 </div>
 <br>
@@ -97,10 +112,10 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>Username</th>
-        <th>Password</th>
-        <th>User type</th>
-        <th>Language</th>
+        <th><spring:message code="label.username"/></th>
+        <th><spring:message code="label.password"/></th>
+        <th><spring:message code="label.user.type"/></th>
+        <th><spring:message code="label.language"/></th>
     </tr>
     </thead>
     <tbody>
@@ -112,21 +127,21 @@
     <table>
         <tr>
             <td>ID:</td>
-            <td><form:input path="userId" id="userId" readonly="true"/></td>
+            <td><form:input path="userId" id="userId" readonly="true" size="40" maxlength="40"/></td>
         </tr>
         <tr>
-            <td>Username:</td>
-            <td><form:input path="username" id="username"/></td>
+            <td><spring:message code="label.username"/>:</td>
+            <td><form:input path="username" id="username" size="40" maxlength="40"/></td>
             <td><span class="error"><form:errors path="username"/></span></td>
         </tr>
         <tr>
-            <td>Password:</td>
-            <td><form:input path="password" id="password"/></td>
+            <td><spring:message code="label.password"/>:</td>
+            <td><form:input path="password" id="password" size="40" maxlength="40"/></td>
             <td><span class="error"><form:errors path="password"/></span></td>
         </tr>
         <tr>
             <td><spring:message code="label.user.type"/>:</td>
-            <td><form:select path="userType">
+            <td><form:select path="userType" id="userType">
                 <option value="ROLE_ADMIN"><spring:message code="label.ROLE_ADMIN"/></option>
                 <option value="ROLE_USER"><spring:message code="label.ROLE_USER"/></option>
             </form:select>
@@ -134,7 +149,7 @@
         </tr>
         <tr>
             <td><spring:message code="label.language"/>:</td>
-            <td><form:select path="userLang">
+            <td><form:select path="userLang" id="userLang">
                 <option value=""><spring:message code="label.language"/></option>
                 <option value="en"><spring:message code="label.language.en"/></option>
                 <option value="ru"><spring:message code="label.language.ru"/></option>
@@ -145,8 +160,8 @@
             <td colspan="3"></td>
         </tr>
         <tr>
-            <td><button class="action redbtn" style="width: 100px" type="button" id="deleteUserLink" onclick="deleteUser()" /><span class="label">Delete</span></td>
-            <td><button class="action bluebtn" style="width: 100px" type="submit" id="updateUserSubmit" /><span class="label">Update</span></td>
+            <td><button class="action redbtn" style="width: 100px" type="button" id="deleteUserLink" onclick="deleteUser()" /><span class="label"><spring:message code="label.delete"/></span></td>
+            <td><button class="action bluebtn" style="width: 100px" type="submit" id="updateUserSubmit" /><span class="label"><spring:message code="label.update"/></span></td>
         </tr>
 
     </table>

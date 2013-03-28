@@ -4,7 +4,7 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Filled Forms</title>
+    <title><spring:message code="label.forms.filled.questions"/></title>
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
@@ -61,11 +61,11 @@
     });
 </script>
 <body>
-<h2>Filled Forms</h2>
+<h2><spring:message code="label.forms.filled.questions"/></h2>
 <br>
 <br>
 <form action="main">
-    <button class="action bluebtn" type="submit" style="margin: 5px" id="usersToMainLink"><span class="label">Main page</span></button>
+    <button class="action bluebtn" type="submit" style="margin: 5px" name="toMainLink"><span class="label"><spring:message code="label.page.main"/></span></button>
 </form>
 <br>
 <br>
@@ -74,9 +74,9 @@
 <table id="answQuestsTable" class="display">
     <thead>
     <tr>
-        <th>Question</th>
-        <th>Description</th>
-        <th>Answer</th>
+        <th><spring:message code="label.question"/></th>
+        <th><spring:message code="label.description"/></th>
+        <th><spring:message code="label.answer"/></th>
     </tr>
     </thead>
     <tbody>
@@ -84,13 +84,14 @@
 </table>
 <br>
 <br>
+<br>
 <table>
     <tr>
-        <td>Author:</td>
+        <td><spring:message code="label.username"/>:</td>
         <td>${username}</td>
     </tr>
     <tr>
-        <td>Form:</td>
+        <td><spring:message code="label.form"/>:</td>
         <td>${formName}</td>
     </tr>
 </table>

@@ -5,13 +5,18 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Profile</title>
+    <title><spring:message code="label.profile"/></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
+<script>
+    function toMain() {
+        window.location = "main";
+    }
+</script>
 <body>
-<h2>Profile</h2>
+<h2><spring:message code="label.profile"/></h2>
 <br>
 <br>
 <br>
@@ -28,7 +33,7 @@
         </tr>
         <tr>
             <td><spring:message code="label.password"/>:</td>
-            <td><form:input path="password" /></td>
+            <td><form:password path="password" /></td>
             <td><span class="error"><form:errors path="password" /></span></td>
         </tr>
         <tr>
@@ -44,11 +49,9 @@
             <td colspan="2"></td>
         </tr>
         <tr>
-            <td><button class="action bluebtn" type="submit" /><span class="label">Update</span></td>
+            <td><button class="action bluebtn" type="submit" /><span class="label"><spring:message code="label.update"/></span></td>
             <td>
-                <form action="main">
-                    <button class="action bluebtn" type="submit" id="formsToMainLink"><span class="label">Main page</span></button>
-                </form>
+                <button class="action bluebtn" type="button" id="formsToMainLink" onclick="toMain()"><span class="label"><spring:message code="label.page.main"/></span></button>
             </td>
         </tr>
     </table>

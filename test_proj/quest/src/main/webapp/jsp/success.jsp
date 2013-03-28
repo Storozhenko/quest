@@ -2,18 +2,18 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Success</title>
+    <title><spring:message code="label.success"/></title>
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Congratulations!</h2>
+<h2><spring:message code="label.congratulations"/>!</h2>
 <br>
-Form was filled successfully.
+<spring:message code="label.fill.success"/>
 <br>
 <br>
 <form action="main">
-    <button class="action bluebtn" type="submit" name="toMainLink" /><span class="label">Main page</span></button>
+    <button class="action bluebtn" type="submit" name="toMainLink" /><span class="label"><spring:message code="label.page.main"/></span></button>
 </form>
 </body>
 </html>

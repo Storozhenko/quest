@@ -2,14 +2,14 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Error</title>
+    <title><spring:message code="label.error"/></title>
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Error</h2>
+<h2><spring:message code="label.error"/></h2>
 <br>
-There was an error: ${error}
+<spring:message code="label.error.text"/> ${error}
 <br>
 </body>
 </html>

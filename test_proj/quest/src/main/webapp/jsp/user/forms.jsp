@@ -4,7 +4,7 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Forms</title>
+    <title><spring:message code="label.forms"/></title>
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
@@ -32,7 +32,14 @@
                 }
             },
             "bProcessing": true,
-            "sAjaxSource" : '/quest/user/formsTable'
+            "sAjaxSource" : '/quest/user/formsTable',
+            "aoColumnDefs": [
+                {
+                    "bSearchable": false,
+                    "bVisible":    false,
+                    "aTargets": [ 5 ]
+                }
+            ]
         });
     });
     $(document).ready(function() {
@@ -48,6 +55,19 @@
                 var inputForm = document.getElementById('inputForm');
                 inputForm.style.display = "none";
             } else {
+                var fTable = $('#formsTable').dataTable();
+                var sData = fTable.fnGetData( this );
+                var formQuestions = document.getElementById('formQuestionsLink');
+                var deleteForm = document.getElementById('deleteFormLink');
+                var updateForm = document.getElementById('updateFormSubmit');
+                formQuestions.style.display = "none";
+                deleteForm.style.display = "none";
+                updateForm.style.display = "none";
+                if(sData[5] === "true") {
+                    formQuestions.style.display = "block";
+                    deleteForm.style.display = "block";
+                    updateForm.style.display = "block";
+                }
                 if($(this).parent().find('tr').hasClass("row_selected")) {
                     $(this).parent().find('tr').removeClass("row_selected");
                     $(this).addClass("row_selected");
@@ -83,15 +103,15 @@
 </script>
 
 <body>
-<h2>Forms</h2>
+<h2><spring:message code="label.forms"/></h2>
 <br>
 <br>
 <div>
     <form action="main">
-        <button class="action bluebtn" type="submit" style="margin: 5px" id="formsToMainLink"><span class="label">Main page</span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="formsToMainLink"><span class="label"><spring:message code="label.page.main"/></span></button>
     </form>
     <form action="addForm">
-        <button class="action bluebtn" type="submit" style="margin: 5px" id="addFormLink"><span class="label">Add form</span></button>
+        <button class="action bluebtn" type="submit" style="margin: 5px" id="addFormLink"><span class="label"><spring:message code="label.form.create"/></span></button>
     </form>
 </div>
 <br>
@@ -102,10 +122,11 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>Form name</th>
-        <th>Description</th>
-        <th>Username</th>
-        <th>Date of creation</th>
+        <th><spring:message code="label.form.name"/></th>
+        <th><spring:message code="label.description"/></th>
+        <th><spring:message code="label.username"/></th>
+        <th><spring:message code="label.date"/></th>
+        <th>Access</th>
     </tr>
     </thead>
     <tbody>
@@ -116,29 +137,38 @@
 <form:form method="post" id="inputForm" commandName="form" action="updateFormAction" style="display:none">
     <table>
         <tr>
-            <td>Form ID:</td>
+            <td>ID:</td>
             <td><form:input path="formId" id="formId" readonly="true"/></td>
         </tr>
         <tr>
-            <td>Form name:</td>
+            <td><spring:message code="label.form.name"/>:</td>
             <td><form:input path="formName" id="formName"/></td>
             <td><span class="error"><form:errors path="formName"/></span></td>
         </tr>
         <tr>
-            <td>Description:</td>
+            <td><spring:message code="label.description"/>:</td>
             <td><form:input path="formDescr" id="formDescr"/></td>
         </tr>
         <tr>
             <td colspan="3"></td>
         </tr>
         <tr>
-            <td><button class="action redbtn" style="width: 100px" type="button" id="deleteFormLink" onclick="deleteForm()" /><span class="label">Delete</span></td>
-            <td><button class="action bluebtn" style="width: 100px" type="submit" id="updateFormSubmit" /><span class="label">Update</span></td>
+            <td>
+                <button class="action bluebtn" style="width: 100px" type="button" id="fillFormLink" onclick="fillForm()"/><span class="label"><spring:message code="label.form.fill"/></span>
+            </td>
+            <td>
+                <button style="display:none; width: 100px" class="action bluebtn" type="button" id="formQuestionsLink" onclick="formQuestions()"/><span class="label"><spring:message code="label.questions"/></span>
+            </td>
         </tr>
         <tr>
-            <td><button class="action bluebtn" style="width: 100px" type="button" id="formQuestionsLink" onclick="formQuestions()" /><span class="label">Questions</span></td>
-            <td><button class="action bluebtn" style="width: 100px" type="button" id="fillFormLink" onclick="fillForm()" /><span class="label">Fill form</span></td>
+            <td>
+                <button style="display:none; width: 100px" class="action redbtn" type="button" id="deleteFormLink" onclick="deleteForm()"/><span class="label"><spring:message code="label.delete"/></span>
+            </td>
+            <td>
+                <button style="display:none; width: 100px" class="action bluebtn" type="submit" id="updateFormSubmit" /><span class="label"><spring:message code="label.update"/></span>
+            </td>
         </tr>
+
     </table>
 </form:form>
 <br>

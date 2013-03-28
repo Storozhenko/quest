@@ -5,45 +5,24 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Add Option</title>
+    <title><spring:message code="label.option.add"/></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Add Option</h2>
+<h2><spring:message code="label.option.add"/></h2>
 <br>
 <c:choose>
-    <c:when test="${type == 1}">
-        <form:form method="post" commandName="option" action="addOptionAction">
-            <table>
-                <tr>
-                    <td>Option number:</td>
-                    <td><form:input path="optionNum" readonly="true"/></td>
-                </tr>
-                <tr>
-                    <td>Question data:</td>
-                    <td><form:input path="optionData"/></td>
-                    <td><span class="error"><form:errors path="optionData" /></span></td>
-                </tr>
-                <tr>
-                    <td colspan="2"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button class="action bluebtn" type="submit" id="addTextQuestionFinish"><span class="label">Finish</span></button></td>
-                </tr>
-            </table>
-        </form:form>
-    </c:when>
     <c:when test="${type >= 2}">
         <form:form method="post" commandName="option" action="addOptionAction">
             <table>
                 <tr>
-                    <td>Option number:</td>
+                    <td><spring:message code="label.option.num"/>:</td>
                     <td><form:input path="optionNum" readonly="true"/></td>
                 </tr>
                 <tr>
-                    <td>Option data:</td>
+                    <td><spring:message code="label.option.data"/>:</td>
                     <td><form:input path="optionData"/></td>
                     <td><span class="error"><form:errors path="optionData" /></span></td>
                 </tr>
@@ -61,7 +40,7 @@
                 <tr>
                     <td colspan="2">
                         <form action="addQuestion">
-                            <button class="action redbtn" type="submit" id="addQuestionFinish"><span class="label">Finish</span></button>
+                            <button class="action redbtn" type="submit" id="addQuestionFinish"><span class="label"><spring:message code="label.finish"/></span></button>
                         </form>
                     </td>
                 </tr>

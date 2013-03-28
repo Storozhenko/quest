@@ -10,8 +10,8 @@
 </head>
 <body>
 <h2>Quest</h2>
-<spring:message code="label.welcome"/>, ${username}
 <br>
+<spring:message code="label.welcome"/>, ${username}
 <br>
 <sec:authorize access="isAuthenticated()">
     <form action="/quest/logout">

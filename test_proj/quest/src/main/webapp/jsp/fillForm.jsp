@@ -5,27 +5,32 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Fill form</title>
+    <title><spring:message code="label.fill.form"/></title>
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Fill form</h2>
+<h2><spring:message code="label.fill.form"/></h2>
+<br>
+<br>
 <c:choose>
     <c:when test="${questType == 1}">
         <form:form method="post" commandName="answQuestion" action="addAnswerAction">
             <table>
                 <tr>
-                    <td><b>Question № ${questNum}:</b></td>
+                    <td><b><spring:message code="label.question"/> № ${questNum}:</b></td>
                     <td colspan="5"><b>${currentQuest.questionName}</b></td>
                 </tr>
                 <tr>
-                    <td>Description:</td>
+                    <td><spring:message code="label.description"/>:</td>
                     <td colspan="5">${currentQuest.questionDescr}</td>
                 </tr>
                 <tr>
                     <td colspan="6"><form:input path="questionAnswer" size="60"/></td>
                     <td><span class="error"><form:errors path="questionAnswer" /></span></td>
+                </tr>
+                <tr>
+                    <td colspan="6"></td>
                 </tr>
                 <tr>
                     <td colspan="6"><button class="action bluebtn" type="submit" name="fillFormSubmit" /><span class="label">OK</span></td>
@@ -37,12 +42,12 @@
         <form:form method="post" commandName="answQuestion" action="addAnswerAction">
             <table>
                 <tr>
-                    <td><b>Question № ${questNum}:</b></td>
+                    <td><b><spring:message code="label.question"/> № ${questNum}:</b></td>
                     <td colspan="5"><b>${currentQuest.questionName}</b></td>
 
                 </tr>
                 <tr>
-                    <td>Description:</td>
+                    <td><spring:message code="label.description"/>:</td>
                     <td colspan="5">${currentQuest.questionDescr}</td>
                 </tr>
                 <tr>
@@ -59,12 +64,12 @@
         <form:form method="post" commandName="answQuestion" action="addAnswerAction">
             <table>
                 <tr>
-                    <td><b>Question № ${questNum}:</b></td>
+                    <td><b><spring:message code="label.question"/> № ${questNum}:</b></td>
                     <td colspan="5"><b>${currentQuest.questionName}</b></td>
 
                 </tr>
                 <tr>
-                    <td>Description:</td>
+                    <td><spring:message code="label.description"/>:</td>
                     <td colspan="5">${currentQuest.questionDescr}</td>
                 </tr>
                 <tr>

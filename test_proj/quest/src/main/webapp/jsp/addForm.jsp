@@ -5,24 +5,24 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Create form</title>
+    <title><spring:message code="label.form.create"/></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Create Form</h2>
+<h2><spring:message code="label.form.create"/></h2>
 <br>
 <form:form method="post" commandName="form" action="addFormAction">
     <table>
         <tr>
-            <td>Form name:</td>
-            <td><form:input path="formName"/></td>
+            <td><spring:message code="label.form.name"/>:</td>
+            <td><form:input path="formName" size="50" maxlength="100"/></td>
             <td><span class="error"><form:errors path="formName" /></span></td>
         </tr>
         <tr>
-            <td>Description:</td>
-            <td><form:input path="formDescr"/></td>
+            <td><spring:message code="label.description"/>:</td>
+            <td><form:input path="formDescr" size="50" maxlength="100"/></td>
         </tr>
         <tr>
             <td colspan="2"></td>

@@ -4,7 +4,7 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Filled Forms</title>
+    <title><spring:message code="label.forms.filled"/></title>
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
@@ -80,11 +80,11 @@
     }
 </script>
 <body>
-<h2>Filled Forms</h2>
+<h2><spring:message code="label.forms.filled"/></h2>
 <br>
 <br>
 <form action="main">
-    <button class="action bluebtn" type="submit" style="margin: 5px" id="usersToMainLink"><span class="label">Main page</span></button>
+    <button class="action bluebtn" type="submit" style="margin: 5px" name="toMainLink"><span class="label"><spring:message code="label.page.main"/></span></button>
 </form>
 <br>
 <br>
@@ -94,9 +94,9 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>Form</th>
-        <th>Username</th>
-        <th>Date and time</th>
+        <th><spring:message code="label.form.name"/></th>
+        <th><spring:message code="label.username"/></th>
+        <th><spring:message code="label.date"/></th>
     </tr>
     </thead>
     <tbody>
@@ -107,8 +107,8 @@
 <form id="answForm" style="display:none">
     <table>
         <tr>
-            <td><button class="action redbtn" style="width: 100px" type="button" id="deleteAnswFormLink" onclick="deleteAnswForm()" /><span class="label">Delete</span></td>
-            <td><button class="action bluebtn" style="width: 100px" type="button" id="answFormQuestionsLink" onclick="answFormQuestions()" /><span class="label">Look</span></td>
+            <td><button class="action redbtn" style="width: 100px" type="button" id="deleteAnswFormLink" onclick="deleteAnswForm()" /><span class="label"><spring:message code="label.delete"/></span></td>
+            <td><button class="action bluebtn" style="width: 100px" type="button" id="answFormQuestionsLink" onclick="answFormQuestions()" /><span class="label"><spring:message code="label.look"/></span></td>
         </tr>
         <tr>
             <td><input id="answId" readonly="true" style="display:none"/></td>

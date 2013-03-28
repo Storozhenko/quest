@@ -5,27 +5,27 @@
 <spring:url value="/" var="baseUrl" />
 <html>
 <head>
-    <title>Add Question</title>
+    <title><spring:message code="label.question.add"/></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="${baseUrl}/css/style.css" rel="stylesheet" type="text/css" />
     <link href="${baseUrl}/css/gstyle_buttons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h2>Add Question №${questionNum}</h2>
+<h2><spring:message code="label.question.add"/> №${questionNum}</h2>
 <br>
 <form:form method="post" commandName="question" action="addQuestionAction">
     <table>
         <tr>
-            <td>Question name:</td>
-            <td><form:input path="questionName" size="40"/></td>
+            <td><spring:message code="label.question.name"/>:</td>
+            <td><form:input path="questionName" size="50" maxlength="100"/></td>
             <td><span class="error"><form:errors path="questionName" /></span></td>
         </tr>
         <tr>
-            <td>Description:</td>
-            <td><form:input path="questionDescr" size="40" /></td>
+            <td><spring:message code="label.description"/>:</td>
+            <td><form:input path="questionDescr" size="50" maxlength="100" /></td>
         </tr>
         <tr>
-            <td>Question Type:</td>
+            <td><spring:message code="label.question.type"/>:</td>
             <td>
                 <form:select path="questionType">
                     <c:forEach items="${types}" var="types">
@@ -46,7 +46,7 @@
 <br>
 <br>
 <form action="forms">
-    <button class="action redbtn" type="submit" id="addFormFinish"><span class="label">Finish</span></button>
+    <button class="action redbtn" type="submit" id="addFormFinish"><span class="label"><spring:message code="label.finish"/></span></button>
 </form>
 </body>
 </html>
